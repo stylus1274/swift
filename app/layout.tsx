@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Swift Construction & Painting" }],
   creator: "Swift Construction & Painting",
   publisher: "Swift Construction & Painting",
-  alternates: { canonical: "/" },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
