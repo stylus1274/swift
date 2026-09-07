@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 type SiteHeaderProps = {
   active?: "home" | "services" | "about" | "blog";
   contactHref?: string;
@@ -34,11 +37,11 @@ const serviceColumns = [
 export default function SiteHeader({ active, contactHref = "/contact" }: SiteHeaderProps) {
   return (
     <header className="site-header">
-      <a className="brand" href="/" aria-label="Swift Construction and Painting home">
-        <img src="/assets/swift-logo.png" alt="Swift Construction and Painting, LLC" />
-      </a>
+      <Link className="brand" href="/" aria-label="Swift Construction and Painting home">
+        <Image src="/assets/swift-logo.png" alt="Swift Construction and Painting, LLC" width={360} height={120} priority />
+      </Link>
       <nav className="desktop-nav" aria-label="Main navigation">
-        <a className={active === "home" ? "active" : ""} href="/">Home</a>
+        <Link className={active === "home" ? "active" : ""} href="/">Home</Link>
         <details className={`services-mega${active === "services" ? " active" : ""}`}>
           <summary>Services <span aria-hidden="true">⌄</span></summary>
           <div className="mega-panel">
@@ -46,36 +49,36 @@ export default function SiteHeader({ active, contactHref = "/contact" }: SiteHea
               <section className="mega-column" key={column.heading}>
                 <p>{column.heading}</p>
                 {column.items.map((item) => (
-                  <a href={item.href} key={item.title}>
+                  <Link href={item.href} key={item.title}>
                     <span><strong>{item.title}</strong><small>{item.copy}</small></span>
                     <b aria-hidden="true">→</b>
-                  </a>
+                  </Link>
                 ))}
               </section>
             ))}
-            <a className="mega-all-services" href="/#services">View All Services <span aria-hidden="true">→</span></a>
+            <Link className="mega-all-services" href="/#services">View All Services <span aria-hidden="true">→</span></Link>
           </div>
         </details>
-        <a href="/gallery">Portfolio</a>
-        <a className={active === "about" ? "active" : ""} href="/about">About</a>
-        <a className={active === "blog" ? "active" : ""} href="/blog">Blog</a>
-        <a href={contactHref}>Contact</a>
+        <Link href="/gallery">Portfolio</Link>
+        <Link className={active === "about" ? "active" : ""} href="/about">About</Link>
+        <Link className={active === "blog" ? "active" : ""} href="/blog">Blog</Link>
+        <Link href={contactHref}>Contact</Link>
       </nav>
       <a className="header-call" href="tel:3527017458"><span>CALL</span>(352) 701-7458</a>
       <details className="mobile-menu">
         <summary aria-label="Open navigation">Menu</summary>
         <nav>
-          <a href="/">Home</a>
+          <Link href="/">Home</Link>
           <details className="mobile-services">
             <summary>Services</summary>
             <div>
-              {serviceColumns.flatMap((column) => column.items).map((item) => <a href={item.href} key={item.title}>{item.title}</a>)}
+              {serviceColumns.flatMap((column) => column.items).map((item) => <Link href={item.href} key={item.title}>{item.title}</Link>)}
             </div>
           </details>
-          <a href="/gallery">Portfolio</a>
-          <a href="/about">About</a>
-          <a href="/blog">Blog</a>
-          <a href={contactHref}>Contact</a>
+          <Link href="/gallery">Portfolio</Link>
+          <Link href="/about">About</Link>
+          <Link href="/blog">Blog</Link>
+          <Link href={contactHref}>Contact</Link>
         </nav>
       </details>
     </header>
