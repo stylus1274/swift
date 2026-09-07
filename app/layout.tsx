@@ -23,31 +23,50 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const businessSchema = {
-    "@context": "https://schema.org",
-    "@type": "GeneralContractor",
-    "@id": "https://swiftconstructionandpainting.com/#business",
-    name: "Swift Construction & Painting, LLC",
-    url: "https://swiftconstructionandpainting.com",
-    logo: "https://swiftconstructionandpainting.com/assets/swift-logo.png",
-    image: "https://swiftconstructionandpainting.com/assets/swift-logo.png",
-    telephone: "+1-352-701-7458",
-    foundingDate: "2003",
-    areaServed: [
-      { "@type": "AdministrativeArea", name: "Hernando County, Florida" },
-      { "@type": "AdministrativeArea", name: "Citrus County, Florida" },
-      { "@type": "AdministrativeArea", name: "Pasco County, Florida" },
-    ],
-    knowsAbout: [
-      "Residential painting",
-      "Residential remodeling",
-      "New home construction",
-      "Commercial construction",
-      "Flooring installation",
-      "Window and door installation",
-      "Pressure washing",
-    ],
-  };
+  const siteSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "GeneralContractor",
+      "@id": "https://swiftconstructionandpainting.com/#business",
+      name: "Swift Construction & Painting, LLC",
+      url: "https://swiftconstructionandpainting.com",
+      logo: "https://swiftconstructionandpainting.com/assets/swift-logo.png",
+      image: "https://swiftconstructionandpainting.com/assets/swift-logo.png",
+      telephone: "+1-352-701-7458",
+      email: "swiftconstruction.william@gmail.com",
+      foundingDate: "2003",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "16215 Forzando Ave",
+        addressLocality: "Brooksville",
+        addressRegion: "FL",
+        postalCode: "34604",
+        addressCountry: "US",
+      },
+      areaServed: [
+        { "@type": "AdministrativeArea", name: "Hernando County, Florida" },
+        { "@type": "AdministrativeArea", name: "Citrus County, Florida" },
+        { "@type": "AdministrativeArea", name: "Pasco County, Florida" },
+      ],
+      knowsAbout: [
+        "Residential painting",
+        "Residential remodeling",
+        "New home construction",
+        "Commercial construction",
+        "Flooring installation",
+        "Window and door installation",
+        "Pressure washing",
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://swiftconstructionandpainting.com/#website",
+      name: "Swift Construction & Painting",
+      url: "https://swiftconstructionandpainting.com",
+      publisher: { "@id": "https://swiftconstructionandpainting.com/#business" },
+    },
+  ];
 
   return (
     <html lang="en">
@@ -55,7 +74,7 @@ export default function RootLayout({
         {children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
       </body>
     </html>
