@@ -8,24 +8,29 @@ type SiteHeaderProps = {
 
 const serviceColumns = [
   {
-    heading: "Residential Services",
+    heading: "Painting & Remodeling",
     items: [
-      { title: "Residential Painting", copy: "Interior and exterior finishes built for Florida homes.", href: "/residential-painting" },
-      { title: "Exterior Painting", copy: "Careful preparation and durable finishes for Florida exteriors.", href: "/exterior-painting" },
-      { title: "Interior Painting", copy: "Clean preparation and consistent finishes for every room.", href: "/interior-painting" },
-      { title: "Residential Remodeling", copy: "Bathrooms, kitchens and full-home renovations.", href: "/residential-remodeling" },
-      { title: "Home Additions", copy: "Room additions and expanded living space built to belong.", href: "/home-additions" },
-      { title: "Kitchen Remodeling", copy: "Layout, cabinetry and finish work managed under one plan.", href: "/kitchen-remodeling" },
-      { title: "Bathroom Remodeling", copy: "Showers, vanities, tile and finish work coordinated together.", href: "/bathroom-remodeling" },
+      { title: "Residential Painting", copy: "Interior and exterior finishes for Florida homes.", href: "/residential-painting" },
+      { title: "Exterior Painting", copy: "Durable finishes for Florida exteriors.", href: "/exterior-painting" },
+      { title: "Interior Painting", copy: "Clean, consistent finishes for every room.", href: "/interior-painting" },
+      { title: "Residential Remodeling", copy: "Bathrooms, kitchens and whole-home renovations.", href: "/residential-remodeling" },
+      { title: "Flooring", copy: "Flooring and finish work planned room by room.", href: "/flooring" },
+    ],
+  },
+  {
+    heading: "Home Improvement",
+    items: [
+      { title: "Kitchen Remodeling", copy: "Layout, cabinetry and finish work under one plan.", href: "/kitchen-remodeling" },
+      { title: "Bathroom Remodeling", copy: "Showers, vanities, tile and finish work.", href: "/bathroom-remodeling" },
+      { title: "Home Additions", copy: "Room additions and expanded living space.", href: "/home-additions" },
       { title: "New Home Construction", copy: "Ground-up homes managed from plan to walkthrough.", href: "/new-home-construction" },
-      { title: "Windows & Doors", copy: "Replacement and installation coordinated by one contractor.", href: "/windows-doors" },
-      { title: "Flooring", copy: "Durable flooring and finish work planned room by room.", href: "/flooring" },
+      { title: "Windows & Doors", copy: "Replacement and installation by one contractor.", href: "/windows-doors" },
     ],
   },
   {
     heading: "Commercial & Property",
     items: [
-      { title: "Multi-Family Construction", copy: "Multi-unit residential projects managed from plan to turnover.", href: "/multi-family-construction" },
+      { title: "Multi-Family Construction", copy: "Multi-unit projects managed from plan to turnover.", href: "/multi-family-construction" },
       { title: "Commercial Construction", copy: "Buildouts, renovations and property improvements.", href: "/commercial-services" },
       { title: "Commercial Painting", copy: "Durable coatings scheduled around your operation.", href: "/commercial-painting" },
       { title: "Pressure Washing", copy: "Exterior cleaning for homes and commercial properties.", href: "/pressure-washing" },
