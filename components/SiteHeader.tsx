@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -47,7 +49,23 @@ export default function SiteHeader({ active, contactHref = "/contact" }: SiteHea
       </Link>
       <nav className="desktop-nav" aria-label="Main navigation">
         <Link className={active === "home" ? "active" : ""} href="/">Home</Link>
-        <details className={`services-mega${active === "services" ? " active" : ""}`}>
+        <details
+          className={`services-mega${active === "services" ? " active" : ""}`}
+          onMouseEnter={(event) => {
+            event.currentTarget.open = true;
+          }}
+          onMouseLeave={(event) => {
+            event.currentTarget.open = false;
+          }}
+          onFocus={(event) => {
+            event.currentTarget.open = true;
+          }}
+          onBlur={(event) => {
+            if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+              event.currentTarget.open = false;
+            }
+          }}
+        >
           <summary>Services <span aria-hidden="true">⌄</span></summary>
           <div className="mega-panel">
             {serviceColumns.map((column) => (
