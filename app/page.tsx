@@ -26,6 +26,7 @@ const services = [
   {
     number: "03",
     title: "New Home Construction",
+    href: "/new-home-construction",
     description:
       "Ground-up construction managed with a steady hand, clear communication and close attention to every detail.",
     image: "/assets/new-home-exterior.jpg",
@@ -34,6 +35,7 @@ const services = [
   {
     number: "04",
     title: "Commercial Construction",
+    href: "/commercial-services",
     description:
       "Renovations, painting and facility improvements built around your schedule and business needs.",
     image: "/assets/commercial-renovation.jpg",
