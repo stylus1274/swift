@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const siteUrl = "https://swiftconstructionandpainting.com";
+const siteLastModified = new Date("2026-09-07T00:00:00-04:00");
 
 const routes = [
   "",
@@ -31,6 +32,7 @@ const routes = [
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `${siteUrl}${route}`,
+    lastModified: siteLastModified,
     changeFrequency: route.startsWith("/blog/") ? "monthly" : "weekly",
     priority: route === "" ? 1 : route === "/blog" ? 0.8 : 0.7,
   }));
