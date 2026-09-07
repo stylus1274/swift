@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.swiftconstructionandpainting.com" }],
+        destination: "https://swiftconstructionandpainting.com/:path*",
+        permanent: true,
+      },
+      {
         source: "/services",
         destination: "/#services",
         permanent: true,
