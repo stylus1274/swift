@@ -1,0 +1,43 @@
+@media (min-width: 981px) {
+  .mega-panel {
+    width: min(1180px, calc(100vw - 64px));
+    padding: 26px 26px 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 26px;
+  }
+
+  .mega-column > p {
+    margin-bottom: 10px;
+  }
+
+  .desktop-nav .mega-column > a {
+    min-height: 66px;
+    padding: 10px 8px;
+    gap: 12px;
+  }
+
+  .mega-column a > span {
+    gap: 3px;
+  }
+
+  .mega-column strong {
+    font-size: 16px;
+  }
+
+  .mega-column small {
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .mega-column a > b {
+    flex: 0 0 auto;
+    margin-left: 8px;
+    font-size: 15px;
+  }
+
+  .desktop-nav .mega-all-services {
+    height: 50px;
+    margin: 14px -26px 0;
+    padding: 0 26px;
+  }
+}
