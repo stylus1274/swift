@@ -5,9 +5,18 @@ const checked = new Map();
 const issues = [];
 const warnings = [];
 
+function decodeHtml(value) {
+  return value
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
 function normalizeInternal(raw, fromUrl) {
   if (!raw) return null;
-  const value = raw.trim();
+  const value = decodeHtml(raw).trim();
   if (!value || value === "#" || /^javascript:/i.test(value)) return { invalid: true, value };
   if (/^(mailto:|tel:|sms:|data:)/i.test(value)) return null;
   try {
@@ -53,7 +62,7 @@ function extract(html, attr) {
   const values = [];
   const re = new RegExp(`\\b${attr}\\s*=\\s*["']([^"']*)["']`, "gi");
   let match;
-  while ((match = re.exec(html))) values.push(match[1]);
+  while ((match = re.exec(html))) values.push(decodeHtml(match[1]));
   return values;
 }
 
