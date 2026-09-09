@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   creator: "Swift Construction & Painting",
   publisher: "Swift Construction & Painting",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    shortcut: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
 };
 
