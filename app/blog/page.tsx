@@ -80,6 +80,14 @@ export default function BlogPage() {
     });
   }, [activeCategory, search]);
 
+  function selectFooterCategory(category: string) {
+    setActiveCategory(category);
+    setSearch("");
+    window.requestAnimationFrame(() => {
+      document.getElementById("latest-guides")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
   return (
     <main className="blog-page">
       <SiteHeader active="blog" />
@@ -99,10 +107,14 @@ export default function BlogPage() {
       </section>
 
       <article className="blog-featured">
-        <div className="blog-featured-image"><img src="/assets/custom-home-building-hernando-county.png" alt="Concrete block custom home under construction in Hernando County, Florida" /></div>
+        <div className="blog-featured-image">
+          <a href="/blog/custom-home-building-hernando-county" aria-label="Read Custom Home Building in Hernando County">
+            <img src="/assets/custom-home-building-hernando-county.png" alt="Concrete block custom home under construction in Hernando County, Florida" />
+          </a>
+        </div>
         <div className="blog-featured-copy">
           <p className="eyebrow">FEATURED NEW HOME GUIDE</p>
-          <h2>Custom Home Building in Hernando County</h2>
+          <h2><a href="/blog/custom-home-building-hernando-county">Custom Home Building in Hernando County</a></h2>
           <p>Follow the complete process from property review and site clearing through the structural build, inspections, final walkthrough and certificate of occupancy.</p>
           <div><span>NEW HOMES</span><span>10 MIN READ</span></div>
           <a href="/blog/custom-home-building-hernando-county">Read the Featured Guide <b>→</b></a>
@@ -164,7 +176,7 @@ export default function BlogPage() {
         <div className="footer-main">
           <div className="footer-brand"><img src="/assets/swift-logo.png" alt="Swift Construction and Painting, LLC" /><p>Licensed and insured general contractor<br />serving Hernando, Citrus and Pasco Counties<br />since 2003.</p></div>
           <div className="footer-column"><h3>Site</h3><a href="/">Home</a><a href="/#services">Services</a><a href="/gallery">Portfolio</a><a href="/about">About</a><a href="/blog">Blog</a><a href="/contact">Contact</a></div>
-          <div className="footer-column"><h3>Topics</h3><button onClick={() => setActiveCategory("Painting")} type="button">Painting</button><button onClick={() => setActiveCategory("Remodeling")} type="button">Remodeling</button><button onClick={() => setActiveCategory("New Homes")} type="button">New Homes</button><button onClick={() => setActiveCategory("Commercial")} type="button">Commercial</button></div>
+          <div className="footer-column"><h3>Topics</h3><button onClick={() => selectFooterCategory("Painting")} type="button">Painting</button><button onClick={() => selectFooterCategory("Remodeling")} type="button">Remodeling</button><button onClick={() => selectFooterCategory("New Homes")} type="button">New Homes</button><button onClick={() => selectFooterCategory("Commercial")} type="button">Commercial</button></div>
           <div className="footer-contact"><h3>Contact</h3><a className="footer-phone" href="tel:3527017458">(352) 701-7458</a><a href="mailto:swiftconstruction.william@gmail.com">swiftconstruction.william@gmail.com</a><div><a href="/gallery">Project Gallery</a><a href="/contact">Free Estimate</a></div></div>
         </div>
         <div className="footer-bottom"><span>© 2026 SWIFT CONSTRUCTION AND PAINTING, LLC</span><span>“WHEN QUALITY MATTERS”</span></div>
