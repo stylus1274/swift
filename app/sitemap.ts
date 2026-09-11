@@ -21,6 +21,7 @@ const routes = [
   "/pressure-washing",
   "/residential-painting",
   "/residential-remodeling",
+  "/services",
   "/windows-doors",
   "/blog",
   "/blog/custom-home-building-hernando-county",
@@ -34,6 +35,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${siteUrl}${route}`,
     lastModified: siteLastModified,
     changeFrequency: route.startsWith("/blog/") ? "monthly" : "weekly",
-    priority: route === "" ? 1 : route === "/blog" ? 0.8 : 0.7,
+    priority: route === "" ? 1 : route === "/blog" || route === "/services" ? 0.8 : 0.7,
   }));
 }
