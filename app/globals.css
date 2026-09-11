@@ -1349,6 +1349,7 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
 .footer-column h3, .footer-contact h3 { margin: 0 0 10px; color: #667069; font-family: "Courier New", monospace; font-size: 11px; font-weight: 700; letter-spacing: .12em; }
 .footer-contact .footer-phone { margin-bottom: 10px; color: var(--navy); font-family: Georgia, serif; font-size: 27px; font-weight: 700; }
 .footer-contact > a { font-size: 14px; }
+.footer-address { margin: 11px 0 0; color: #44544d; font-style: normal; font-size: 14px; line-height: 1.6; }
 .footer-contact div { margin-top: 11px; display: flex; gap: 22px; color: #287fc3; font-size: 14px; }
 .footer-bottom { height: 63px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #deded8; color: #9a9a92; font-family: "Courier New", monospace; font-size: 11px; letter-spacing: .04em; }
 .footer-bottom .site-credit { color: #7b817d; text-decoration: none; transition: color .2s ease; }
