@@ -444,8 +444,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
           <div className="footer-contact">
             <h3>Contact</h3>
             <a className="footer-phone" href="tel:3527017458">(352) 701-7458</a>
-            <a href="mailto:swiftconstruction.william@gmail.com">swiftconstruction.william@gmail.com</a>
-            <address className="footer-address">11105 Lomita Wren Rd<br />Weeki Wachee, FL 34614</address>
+                        <address className="footer-address">11105 Lomita Wren Rd<br />Weeki Wachee, FL 34614</address>
           </div>
         </div>
         <div className="footer-bottom">
