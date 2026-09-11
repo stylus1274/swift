@@ -431,7 +431,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
         <div className="footer-main">
           <div className="footer-brand">
             <img src="/assets/swift-logo.png" alt="Swift Construction and Painting, LLC" />
-            <p>Licensed and insured general contractor<br />serving Spring Hill, Brooksville and communities<br />throughout Hernando, Citrus and Pasco Counties<br />since 2003.</p>
+            <p>Licensed and insured building contractor<br />serving Spring Hill, Brooksville and communities<br />throughout Hernando, Citrus and Pasco Counties<br />since 2003.</p>
           </div>
           <div className="footer-column">
             <h3>Site</h3>

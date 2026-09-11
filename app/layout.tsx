@@ -27,7 +27,7 @@ export default function RootLayout({
   const siteSchema = [
     {
       "@context": "https://schema.org",
-      "@type": "GeneralContractor",
+      "@type": "HomeAndConstructionBusiness",
       "@id": "https://swiftconstructionandpainting.com/#business",
       name: "Swift Construction & Painting, LLC",
       url: "https://swiftconstructionandpainting.com",

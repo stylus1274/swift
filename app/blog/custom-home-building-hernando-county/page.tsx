@@ -35,7 +35,7 @@ const articleSchema = {
         {
           "@type": "Question",
           name: "Who Handles Permits and Inspections for a New Home?",
-          acceptedAnswer: { "@type": "Answer", text: "The general contractor usually coordinates permit submissions, inspection scheduling and corrections, while design professionals provide the signed and sealed documents required for their disciplines." },
+          acceptedAnswer: { "@type": "Answer", text: "The building contractor usually coordinates permit submissions, inspection scheduling and corrections, while design professionals provide the signed and sealed documents required for their disciplines." },
         },
         {
           "@type": "Question",
@@ -201,7 +201,7 @@ export default function CustomHomeBuildingArticlePage() {
             <h2>Custom Home Building FAQs</h2>
             <details open><summary>How Long Does It Take to Build a Custom Home in Hernando County?<span>+</span></summary><p>A custom home commonly requires several months of preconstruction followed by roughly 8 to 14 months of active construction. The property, plans, permitting, weather, material lead times and owner decisions can all change the schedule.</p></details>
             <details><summary>Do I Need Plans Before Talking to a Custom Home Builder?<span>+</span></summary><p>No. An early builder conversation can help test the budget, lot conditions and overall feasibility before architectural and engineering work is finalized.</p></details>
-            <details><summary>Who Handles Permits and Inspections for a New Home?<span>+</span></summary><p>The general contractor usually coordinates permit submissions, inspection scheduling and corrections. Design professionals provide the signed and sealed documents required for their disciplines.</p></details>
+            <details><summary>Who Handles Permits and Inspections for a New Home?<span>+</span></summary><p>The building contractor usually coordinates permit submissions, inspection scheduling and corrections. Design professionals provide the signed and sealed documents required for their disciplines.</p></details>
             <details><summary>Can Swift Build on Land I Already Own?<span>+</span></summary><p>Yes. The first step is reviewing the property, access, utilities, zoning, flood information and likely site-work requirements before the scope is finalized.</p></details>
             <details><summary>What Happens Before a Certificate of Occupancy Is Issued?<span>+</span></summary><p>Required trade, building and zoning inspections must be completed, outstanding corrections must be resolved and the property must meet the approved plans and applicable requirements before occupancy is authorized.</p></details>
           </section>
@@ -230,7 +230,7 @@ export default function CustomHomeBuildingArticlePage() {
 
       <footer className="site-footer blog-footer">
         <div className="footer-main">
-          <div className="footer-brand"><img src="/assets/swift-logo.png" alt="Swift Construction and Painting, LLC" /><p>Licensed and insured general contractor<br />serving Hernando, Citrus and Pasco Counties<br />since 2003.</p></div>
+          <div className="footer-brand"><img src="/assets/swift-logo.png" alt="Swift Construction and Painting, LLC" /><p>Licensed and insured building contractor<br />serving Hernando, Citrus and Pasco Counties<br />since 2003.</p></div>
           <div className="footer-column"><h3>Site</h3><a href="/">Home</a><a href="/#services">Services</a><a href="/gallery">Portfolio</a><a href="/about">About</a><a href="/blog">Blog</a><a href="/contact">Contact</a></div>
           <div className="footer-column"><h3>Services</h3><a href="/new-home-construction">New Home Construction</a><a href="/residential-remodeling">Residential Remodeling</a><a href="/residential-painting">Residential Painting</a><a href="/commercial-services">Commercial Services</a></div>
           <div className="footer-contact"><h3>Contact</h3><a className="footer-phone" href="tel:3527017458">(352) 701-7458</a><a href="mailto:swiftconstruction.william@gmail.com">swiftconstruction.william@gmail.com</a><div><a href="/gallery">Project Gallery</a><a href="/contact">Free Estimate</a></div></div>

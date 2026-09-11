@@ -73,7 +73,7 @@ export default function InteriorPaintingPage() {
     "@type": "Service",
     name: "Interior House Painting",
     provider: {
-      "@type": "GeneralContractor",
+      "@type": "HomeAndConstructionBusiness",
       name: "Swift Construction & Painting, LLC",
       telephone: "+1-352-701-7458",
     },
@@ -188,7 +188,7 @@ export default function InteriorPaintingPage() {
         <div>
           <p className="eyebrow">PAINTING WITH A CONTRACTOR’S EYE</p>
           <h2>Repairs, Carpentry and Finish Work Can Stay Under One Plan.</h2>
-          <p>When fresh paint is part of a larger room update, Swift can coordinate connected repairs and improvements under one licensed general contractor.</p>
+          <p>When fresh paint is part of a larger room update, Swift can coordinate connected repairs and improvements under one licensed building contractor.</p>
         </div>
         <div className="commercial-painting-proof-actions">
           <a className="button remodel-primary" href="#interior-painting-estimate">Request a Free Estimate</a>
@@ -231,7 +231,7 @@ export default function InteriorPaintingPage() {
 
       <footer className="site-footer remodel-footer">
         <div className="footer-main">
-          <div className="footer-brand"><img src="/assets/swift-logo.png" alt="Swift Construction and Painting, LLC" /><p>Licensed and insured general contractor<br />serving Hernando, Citrus and Pasco Counties<br />since 2003.</p></div>
+          <div className="footer-brand"><img src="/assets/swift-logo.png" alt="Swift Construction and Painting, LLC" /><p>Licensed and insured building contractor<br />serving Hernando, Citrus and Pasco Counties<br />since 2003.</p></div>
           <div className="footer-column"><h3>Site</h3><a href="/">Home</a><a href="/#services">Services</a><a href="/gallery">Portfolio</a><a href="/about">About</a><a href="#interior-painting-estimate">Contact</a></div>
           <div className="footer-column"><h3>Interior Painting</h3><a href="#interior-painting-services">Painting Services</a><a href="#interior-painting-process">Our Process</a><a href="/residential-painting">Residential Painting</a><a href="#interior-painting-estimate">Request an Estimate</a></div>
           <div className="footer-contact"><h3>Contact</h3><a className="footer-phone" href="tel:3527017458">(352) 701-7458</a><a href="mailto:swiftconstruction.william@gmail.com">swiftconstruction.william@gmail.com</a><div><a href="/gallery">Project Gallery</a><a href="/contact">Free Estimate</a></div></div>
