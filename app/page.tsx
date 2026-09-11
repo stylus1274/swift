@@ -435,7 +435,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
           </div>
           <div className="footer-column">
             <h3>Site</h3>
-            <a href="#home">Home</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a>
+            <a href="/">Home</a><a href="/services">Services</a><a href="/gallery">Portfolio</a><a href="/about">About</a><a href="/blog">Blog</a><a href="/contact">Contact</a>
           </div>
           <div className="footer-column">
             <h3>Area</h3>

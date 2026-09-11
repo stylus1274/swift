@@ -144,7 +144,7 @@ export default function PressureWashingPage() {
       <footer className="site-footer remodel-footer">
         <div className="footer-main">
           <div className="footer-brand"><img src="/assets/swift-logo.png" alt="Swift Construction and Painting, LLC" /><p>Licensed and insured building contractor<br />serving Hernando, Citrus and Pasco Counties<br />since 2003.</p></div>
-          <div className="footer-column"><h3>Site</h3><a href="/">Home</a><a href="/#services">Services</a><a href="/gallery">Portfolio</a><a href="/about">About</a><a href="#pressure-washing-estimate">Contact</a></div>
+          <div className="footer-column"><h3>Site</h3><a href="/">Home</a><a href="/services">Services</a><a href="/gallery">Portfolio</a><a href="/about">About</a><a href="#pressure-washing-estimate">Contact</a></div>
           <div className="footer-column"><h3>Pressure Washing</h3><a href="#pressure-washing-services">Cleaning Services</a><a href="#pressure-washing-process">Our Process</a><a href="/exterior-painting">Exterior Painting</a><a href="#pressure-washing-estimate">Request an Estimate</a></div>
           <div className="footer-contact"><h3>Contact</h3><a className="footer-phone" href="tel:3527017458">(352) 701-7458</a><a href="mailto:swiftconstruction.william@gmail.com">swiftconstruction.william@gmail.com</a><div><a href="/gallery">Project Gallery</a><a href="/contact">Free Estimate</a></div></div>
         </div>
