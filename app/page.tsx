@@ -450,6 +450,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
         </div>
         <div className="footer-bottom">
           <span>© 2026 SWIFT CONSTRUCTION AND PAINTING, LLC</span>
+          <a className="site-credit" href="http://velvetinkmedia.com/">Site by Velvet Ink Media</a>
           <span>"WHEN QUALITY MATTERS"</span>
         </div>
       </footer>
