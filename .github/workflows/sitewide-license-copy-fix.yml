@@ -19,7 +19,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Replace General Contractor references
+      - name: Replace General Contractor references sitewide
         run: |
           python - <<'PY'
           from pathlib import Path
