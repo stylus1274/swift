@@ -18,7 +18,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Update footer spacing and site credit
+      - name: Update footer spacing and Velvet Ink site credit
         run: |
           python - <<'PY'
           from pathlib import Path
