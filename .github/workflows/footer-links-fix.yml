@@ -18,7 +18,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Update footer navigation
+      - name: Update footer navigation sitewide
         run: |
           python - <<'PY'
           from pathlib import Path
