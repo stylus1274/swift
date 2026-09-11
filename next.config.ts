@@ -12,11 +12,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/services",
-        destination: "/#services",
-        permanent: true,
-      },
-      {
         source: "/home-alternate",
         destination: "/",
         permanent: true,
