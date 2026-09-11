@@ -1346,7 +1346,7 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
 .footer-brand img { width: 150px; height: auto; }
 .footer-brand p { margin: 26px 0 0; color: var(--body); font-size: 16px; line-height: 1.7; }
 .footer-column, .footer-contact { display: flex; flex-direction: column; gap: 8px; color: #44544d; font-size: 16px; }
-.footer-column h3, .footer-contact h3 { margin: 0 0 10px; color: #93938b; font-family: "Courier New", monospace; font-size: 10px; letter-spacing: .16em; }
+.footer-column h3, .footer-contact h3 { margin: 0 0 10px; color: #667069; font-family: "Courier New", monospace; font-size: 11px; font-weight: 700; letter-spacing: .12em; }
 .footer-contact .footer-phone { margin-bottom: 10px; color: var(--navy); font-family: Georgia, serif; font-size: 27px; font-weight: 700; }
 .footer-contact > a { font-size: 14px; }
 .footer-contact div { margin-top: 11px; display: flex; gap: 22px; color: #287fc3; font-size: 14px; }
