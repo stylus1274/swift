@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SiteHeader from "../../components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 const serviceGroups = [
   {
@@ -90,6 +91,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <SiteFooter />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
     </main>
   );
