@@ -38,8 +38,8 @@ export default function SiteFooter() {
       </div>
       <style>{`
         .footer-socials { margin-top: 14px; display: flex; align-items: center; gap: 12px; }
-        .footer-socials a { width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #d7ddd9; border-radius: 50%; color: #667069; transition: color .2s ease, border-color .2s ease, background-color .2s ease, transform .2s ease; }
-        .footer-socials a:hover { color: #287fc3; border-color: #287fc3; background: #f4f9fd; transform: translateY(-1px); }
+        .footer-socials a { width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #287fc3; border-radius: 50%; color: #287fc3; transition: color .2s ease, border-color .2s ease, background-color .2s ease, transform .2s ease; }
+        .footer-socials a:hover { color: #1f669e; border-color: #1f669e; background: #f4f9fd; transform: translateY(-1px); }
         .footer-socials a:focus-visible { outline: 2px solid #287fc3; outline-offset: 3px; }
         .footer-socials svg { width: 18px; height: 18px; display: block; }
       `}</style>
