@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
+import SiteFooter from "@/components/SiteFooter";
 const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 
 const articles = [
@@ -172,15 +173,7 @@ export default function BlogPage() {
         <div><a className="button blog-primary" href="/contact">Request a Free Estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
       </section>
 
-      <footer className="site-footer blog-footer">
-        <div className="footer-main">
-          <div className="footer-brand"><img src="/assets/swift-logo.png" alt="Swift Construction and Painting, LLC" /><p>Licensed and insured building contractor<br />serving Hernando, Citrus and Pasco Counties<br />since 2003.</p></div>
-          <div className="footer-column"><h3>Site</h3><a href="/">Home</a><a href="/services">Services</a><a href="/gallery">Portfolio</a><a href="/about">About</a><a href="/blog">Blog</a><a href="/contact">Contact</a></div>
-          <div className="footer-column"><h3>Topics</h3><button onClick={() => selectFooterCategory("Painting")} type="button">Painting</button><button onClick={() => selectFooterCategory("Remodeling")} type="button">Remodeling</button><button onClick={() => selectFooterCategory("New Homes")} type="button">New Homes</button><button onClick={() => selectFooterCategory("Commercial")} type="button">Commercial</button></div>
-          <div className="footer-contact"><h3>Contact</h3><a className="footer-phone" href="tel:3527017458">(352) 701-7458</a><a href="mailto:swiftconstruction.william@gmail.com">swiftconstruction.william@gmail.com</a><address className="footer-address">11105 Lomita Wren Rd<br />Weeki Wachee, FL 34614</address></div>
-        </div>
-        <div className="footer-bottom"><span>© 2026 SWIFT CONSTRUCTION AND PAINTING, LLC</span><span>“WHEN QUALITY MATTERS”</span></div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

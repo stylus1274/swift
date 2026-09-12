@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
+import SiteFooter from "@/components/SiteFooter";
 const bathroomServices = [
   { number: "01", title: "Full Bathroom Remodeling", copy: "A connected renovation plan for the shower or tub, vanity, flooring, lighting, storage and finish work." },
   { number: "02", title: "Walk-In Showers and Tub Conversions", copy: "Replace an underused tub or dated enclosure with a shower designed around comfort, access and easier upkeep." },
@@ -168,15 +169,7 @@ export default function BathroomRemodelingPage() {
         </form>
       </section>
 
-      <footer className="site-footer remodel-footer">
-        <div className="footer-main">
-          <div className="footer-brand"><img src="/assets/swift-logo.png" alt="Swift Construction and Painting, LLC" /><p>Licensed and insured building contractor<br />serving Hernando, Citrus and Pasco Counties<br />since 2003.</p></div>
-          <div className="footer-column"><h3>Site</h3><a href="/">Home</a><a href="/services">Services</a><a href="/gallery">Portfolio</a><a href="/about">About</a><a href="#bathroom-estimate">Contact</a></div>
-          <div className="footer-column"><h3>Bathroom Remodeling</h3><a href="#bathroom-services">Services</a><a href="#bathroom-process">Our Process</a><a href="#bathroom-estimate">Request an Estimate</a><a href="/residential-remodeling">Residential Remodeling</a></div>
-          <div className="footer-contact"><h3>Contact</h3><a className="footer-phone" href="tel:3527017458">(352) 701-7458</a><a href="mailto:swiftconstruction.william@gmail.com">swiftconstruction.william@gmail.com</a><address className="footer-address">11105 Lomita Wren Rd<br />Weeki Wachee, FL 34614</address></div>
-        </div>
-        <div className="footer-bottom"><span>© 2026 SWIFT CONSTRUCTION AND PAINTING, LLC</span><span>“WHEN QUALITY MATTERS”</span></div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
