@@ -1,4 +1,4 @@
-const siteUrl = "https://swiftconstructionandpainting.com";
+const siteUrl = "https://swift-nine-wheat.vercel.app";
 
 const blogRoutes = [
   "/blog",
