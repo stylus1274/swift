@@ -25,6 +25,7 @@ const routes = [
   "/windows-doors",
   "/blog",
   "/blog/custom-home-building-hernando-county",
+  "/blog/how-often-repaint-home-florida-humidity",
   "/blog/kitchen-remodeling-spring-hill-fl-adds-value",
   "/blog/realistic-bathroom-remodel-budget",
   "/blog/realistic-kitchen-remodel-budget",
