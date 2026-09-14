@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./mega-menu.css";
+import "./sticky-header.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://swiftconstructionandpainting.com"),
