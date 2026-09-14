@@ -8,6 +8,15 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 
 const articles = [
   {
+    category: "Remodeling",
+    title: "How Long Does a Home Addition Take in Florida?",
+    excerpt: "A practical timeline for design, permitting, construction and inspections, plus the factors that can make a Florida home addition take longer.",
+    image: "/assets/home-additions-hero.png",
+    alt: "Finished home addition on a Florida stucco house",
+    readTime: "8 MIN READ",
+    href: "/blog/how-long-home-addition-florida",
+  },
+  {
     category: "Painting",
     title: "How Often Should You Repaint Your Home in Florida's Humidity?",
     excerpt: "How Florida sun, rain and humidity affect exterior paint life, plus the warning signs that tell you it is time to repaint.",
