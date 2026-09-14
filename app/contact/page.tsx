@@ -91,10 +91,9 @@ export default function ContactPage() {
       </section>
 
       <section className="contact-options">
-        <div className="contact-options-copy"><p className="eyebrow">CONTACT SWIFT</p><h2>Prefer a Direct Conversation?</h2><p>Call or email Swift if you would rather discuss the project before completing the estimate form.</p></div>
+        <div className="contact-options-copy"><p className="eyebrow">CONTACT SWIFT</p><h2>Prefer a Direct Conversation?</h2><p>Call Swift if you would rather discuss the project before completing the estimate form.</p></div>
         <div className="contact-option-grid">
           <a href="tel:3527017458"><span>CALL</span><strong>(352) 701-7458</strong><b>Speak With Swift →</b></a>
-          <a href="mailto:swiftconstruction.william@gmail.com"><span>EMAIL</span><strong>swiftconstruction.william@gmail.com</strong><b>Send an Email →</b></a>
         </div>
       </section>
 
