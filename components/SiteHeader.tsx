@@ -48,7 +48,6 @@ export default function SiteHeader({ active, contactHref = "/contact" }: SiteHea
         <Image src="/assets/swift-logo.png" alt="Swift Construction and Painting, LLC" width={360} height={120} priority />
       </Link>
       <nav className="desktop-nav" aria-label="Main navigation">
-        <Link className={active === "home" ? "active" : ""} href="/">Home</Link>
         <details
           className={`services-mega${active === "services" ? " active" : ""}`}
           onMouseEnter={(event) => {
@@ -91,7 +90,6 @@ export default function SiteHeader({ active, contactHref = "/contact" }: SiteHea
       <details className="mobile-menu">
         <summary aria-label="Open navigation">Menu</summary>
         <nav>
-          <Link href="/">Home</Link>
           <details className="mobile-services">
             <summary>Services</summary>
             <div>
