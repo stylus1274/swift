@@ -10,6 +10,7 @@ const blogRoutes = [
   "/blog/kitchen-remodeling-spring-hill-fl-adds-value",
   "/blog/realistic-bathroom-remodel-budget",
   "/blog/realistic-kitchen-remodel-budget",
+  "/blog/why-local-contractor-licensing-matters-hernando-county",
 ];
 
 export function GET() {
