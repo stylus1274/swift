@@ -8,6 +8,15 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 
 const articles = [
   {
+    category: "Painting",
+    title: "How Often Should You Repaint Your Home in Florida's Humidity?",
+    excerpt: "How Florida sun, rain and humidity affect exterior paint life, plus the warning signs that tell you it is time to repaint.",
+    image: "/assets/florida-stucco-painting.jpg",
+    alt: "Fresh exterior paint being applied to a Florida stucco home",
+    readTime: "8 MIN READ",
+    href: "/blog/how-often-repaint-home-florida-humidity",
+  },
+  {
     category: "Remodeling",
     title: "Kitchen Remodeling in Spring Hill, FL: What Actually Adds Value",
     excerpt: "The practical layout, storage, lighting and finish decisions that improve daily use without pushing a Spring Hill kitchen beyond the home.",
