@@ -1,0 +1,13 @@
+.site-header {
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(12, 44, 70, 0.08);
+}
+
+.site-header .mega-panel,
+.site-header .mobile-menu nav {
+  z-index: 1001;
+}
