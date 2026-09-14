@@ -34,7 +34,6 @@ export default function RootLayout({
       logo: "https://swiftconstructionandpainting.com/assets/swift-logo.png",
       image: "https://swiftconstructionandpainting.com/assets/swift-logo.png",
       telephone: "+1-352-701-7458",
-      email: "swiftconstruction.william@gmail.com",
       foundingDate: "2003",
       address: {
         "@type": "PostalAddress",
