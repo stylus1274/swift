@@ -9,6 +9,15 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 const articles = [
   {
     category: "Remodeling",
+    title: "Energy-Efficient Windows: What Spring Hill Homeowners Should Know Before Replacing",
+    excerpt: "What U-factor, SHGC, low-E glass and installation quality mean for Spring Hill homeowners comparing replacement windows.",
+    image: "/assets/windows-doors-hero.png",
+    alt: "Installer fitting a replacement window into a Florida stucco home",
+    readTime: "8 MIN READ",
+    href: "/blog/energy-efficient-windows-spring-hill",
+  },
+  {
+    category: "Remodeling",
     title: "20 Years of Building Trust in Hernando County",
     excerpt: "The licensing, permit history, local experience and project standards behind more than two decades of Swift Construction & Painting work in Hernando County.",
     image: "/assets/about-contractor-hero.webp",
