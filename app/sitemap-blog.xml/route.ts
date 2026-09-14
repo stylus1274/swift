@@ -4,6 +4,7 @@ const blogRoutes = [
   "/blog",
   "/blog/20-years-building-trust-hernando-county",
   "/blog/custom-home-building-hernando-county",
+  "/blog/energy-efficient-windows-spring-hill",
   "/blog/how-long-home-addition-florida",
   "/blog/how-often-repaint-home-florida-humidity",
   "/blog/kitchen-remodeling-spring-hill-fl-adds-value",
