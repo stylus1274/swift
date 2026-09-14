@@ -51,7 +51,7 @@ export default function ContractorLicensingHernandoCountyArticlePage() {
       </header>
 
       <figure className="article-hero-image">
-        <img src="/assets/about-contractor-hero.webp" alt="Licensed contractor reviewing plans for a Florida home project" />
+        <img src="/assets/contact-planning-hero.webp" alt="Project plans and finish samples prepared for contractor review" />
         <figcaption>Licensing, permitting and a clear written scope give homeowners a better way to evaluate a contractor before work begins.</figcaption>
       </figure>
 
