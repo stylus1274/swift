@@ -9,6 +9,15 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 const articles = [
   {
     category: "Remodeling",
+    title: "Why Local Contractor Licensing Matters in Hernando County",
+    excerpt: "What Hernando County homeowners should verify about licensing, permits, insurance and written project scope before hiring a contractor.",
+    image: "/assets/about-contractor-hero.webp",
+    alt: "Licensed contractor reviewing plans for a Florida home project",
+    readTime: "7 MIN READ",
+    href: "/blog/why-local-contractor-licensing-matters-hernando-county",
+  },
+  {
+    category: "Remodeling",
     title: "Energy-Efficient Windows: What Spring Hill Homeowners Should Know Before Replacing",
     excerpt: "What U-factor, SHGC, low-E glass and installation quality mean for Spring Hill homeowners comparing replacement windows.",
     image: "/assets/windows-doors-hero.png",
