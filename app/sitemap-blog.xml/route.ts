@@ -2,6 +2,7 @@ const siteUrl = "https://swift-nine-wheat.vercel.app";
 
 const blogRoutes = [
   "/blog",
+  "/blog/20-years-building-trust-hernando-county",
   "/blog/custom-home-building-hernando-county",
   "/blog/how-long-home-addition-florida",
   "/blog/how-often-repaint-home-florida-humidity",
