@@ -3,6 +3,7 @@ const siteUrl = "https://swift-nine-wheat.vercel.app";
 const blogRoutes = [
   "/blog",
   "/blog/custom-home-building-hernando-county",
+  "/blog/how-long-home-addition-florida",
   "/blog/how-often-repaint-home-florida-humidity",
   "/blog/kitchen-remodeling-spring-hill-fl-adds-value",
   "/blog/realistic-bathroom-remodel-budget",
