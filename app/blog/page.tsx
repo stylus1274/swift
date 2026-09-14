@@ -9,6 +9,15 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 const articles = [
   {
     category: "Remodeling",
+    title: "How to Verify a Florida Contractor License, Insurance, and Permit History Before Hiring",
+    excerpt: "A practical checklist for checking Florida licensing, workers' compensation coverage, general liability proof and local permit records before you hire.",
+    image: "/assets/blog-hero-walkthrough.webp",
+    alt: "Homeowners reviewing a Florida construction project with a contractor",
+    readTime: "8 MIN READ",
+    href: "/blog/how-to-verify-florida-contractor-license-insurance-permit-history",
+  },
+  {
+    category: "Remodeling",
     title: "Why Local Contractor Licensing Matters in Hernando County",
     excerpt: "What Hernando County homeowners should verify about licensing, permits, insurance and written project scope before hiring a contractor.",
     image: "/assets/contact-planning-hero.webp",
