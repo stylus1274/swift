@@ -7,6 +7,7 @@ const blogRoutes = [
   "/blog/energy-efficient-windows-spring-hill",
   "/blog/how-long-home-addition-florida",
   "/blog/how-often-repaint-home-florida-humidity",
+  "/blog/how-to-verify-florida-contractor-license-insurance-permit-history",
   "/blog/kitchen-remodeling-spring-hill-fl-adds-value",
   "/blog/realistic-bathroom-remodel-budget",
   "/blog/realistic-kitchen-remodel-budget",
