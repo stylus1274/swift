@@ -9,6 +9,15 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 const articles = [
   {
     category: "Remodeling",
+    title: "20 Years of Building Trust in Hernando County",
+    excerpt: "The licensing, permit history, local experience and project standards behind more than two decades of Swift Construction & Painting work in Hernando County.",
+    image: "/assets/about-contractor-hero.webp",
+    alt: "Contractor reviewing project plans inside a Florida home renovation",
+    readTime: "7 MIN READ",
+    href: "/blog/20-years-building-trust-hernando-county",
+  },
+  {
+    category: "Remodeling",
     title: "How Long Does a Home Addition Take in Florida?",
     excerpt: "A practical timeline for design, permitting, construction and inspections, plus the factors that can make a Florida home addition take longer.",
     image: "/assets/home-additions-hero.png",
