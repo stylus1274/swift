@@ -1,11 +1,5 @@
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-import {
-  bertoliKitchenAfter,
-  bertoliKitchenBefore,
-  bertoliMasterBathAfter,
-  bertoliMasterBathBefore,
-} from "@/app/projectImages";
 import styles from "./page.module.css";
 
 const scopeItems = [
@@ -49,7 +43,7 @@ export default function WholeHomeRemodelSpringHillPage() {
           </div>
         </div>
         <div className={styles.heroImage}>
-          <img src={bertoliKitchenAfter} alt="Completed Spring Hill kitchen remodel with white cabinetry, light counters, black hardware and updated lighting" />
+          <img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.webp" alt="Completed Spring Hill kitchen remodel with white cabinetry, light counters, black hardware and updated lighting" />
         </div>
       </section>
 
@@ -93,11 +87,11 @@ export default function WholeHomeRemodelSpringHillPage() {
         </div>
         <div className={styles.comparisonGrid}>
           <figure className={styles.imageCard}>
-            <div className={styles.imageWrap}><img src={bertoliKitchenBefore} alt="Kitchen before the Spring Hill remodel" /></div>
+            <div className={styles.imageWrap}><img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-before.webp" alt="Kitchen before the Spring Hill remodel" /></div>
             <figcaption>Before</figcaption>
           </figure>
           <figure className={styles.imageCard}>
-            <div className={styles.imageWrap}><img src={bertoliKitchenAfter} alt="Kitchen after the Spring Hill remodel" /></div>
+            <div className={styles.imageWrap}><img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.webp" alt="Kitchen after the Spring Hill remodel" /></div>
             <figcaption>After</figcaption>
           </figure>
         </div>
@@ -115,11 +109,11 @@ export default function WholeHomeRemodelSpringHillPage() {
         </div>
         <div className={styles.comparisonGrid}>
           <figure className={styles.imageCard}>
-            <div className={styles.imageWrap}><img src={bertoliMasterBathBefore} alt="Primary bathroom before the Spring Hill remodel" /></div>
+            <div className={styles.imageWrap}><img src="/assets/projects/spring-hill-whole-home-remodel/primary-bath-before.webp" alt="Primary bathroom before the Spring Hill remodel" /></div>
             <figcaption>Before</figcaption>
           </figure>
           <figure className={styles.imageCard}>
-            <div className={styles.imageWrap}><img src={bertoliMasterBathAfter} alt="Primary bathroom after the Spring Hill remodel with tiled shower and glass enclosure" /></div>
+            <div className={styles.imageWrap}><img src="/assets/projects/spring-hill-whole-home-remodel/primary-bath-after.webp" alt="Primary bathroom after the Spring Hill remodel with tiled shower and glass enclosure" /></div>
             <figcaption>After</figcaption>
           </figure>
         </div>
