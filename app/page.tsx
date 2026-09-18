@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 import InteractiveServiceMap from "../components/InteractiveServiceMap";
 import SiteHeader from "../components/SiteHeader";
 
-import SiteFooter from "@/components/SiteFooter";
+import SiteFooter from "@/components/SiteFooter";\nimport { bertoliKitchenAfter } from "./projectImages";
 const services = [
   {
     number: "01",
@@ -249,12 +249,12 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
         </div>
         <div className="project-grid">
           <article className="project project-large">
-            <div className="project-image">
-              <img src="/assets/florida-stucco-painting.jpg" alt="Painter coating the stucco exterior of a Florida home" />
-            </div>
+            <a className="project-image" href="/projects/whole-home-remodel-spring-hill-fl" aria-label="View the Spring Hill whole-home remodel project">
+              <img src={bertoliKitchenAfter} alt="Completed Spring Hill whole-home kitchen remodel with white cabinetry and black hardware" />
+            </a>
             <div className="project-meta">
-              <div><h3>Full Exterior Repaint</h3><p>Spring Hill</p></div>
-              <small>Painting</small>
+              <div><h3><a href="/projects/whole-home-remodel-spring-hill-fl">Whole-Home Remodel</a></h3><p>Spring Hill</p></div>
+              <small>Remodeling</small>
             </div>
           </article>
           <div className="project-stack">
