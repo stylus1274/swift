@@ -18,6 +18,7 @@ const pages = [
   "/pressure-washing",
   "/projects/whole-home-remodel-spring-hill-fl",
   "/projects/custom-farmhouse-home-brooksville-fl",
+  "/projects/new-construction-duplex-spring-hill-fl",
   "/residential-painting",
   "/residential-remodeling",
   "/services",
