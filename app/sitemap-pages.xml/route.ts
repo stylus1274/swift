@@ -16,7 +16,7 @@ const pages = [
   "/multi-family-construction",
   "/new-home-construction",
   "/pressure-washing",
-  "/projects/whole-home-remodel-spring-hill-fl",
+  "/projects/whole-home-remodel-spring-hill-fl",\n  "/projects/custom-farmhouse-home-brooksville-fl",
   "/residential-painting",
   "/residential-remodeling",
   "/services",

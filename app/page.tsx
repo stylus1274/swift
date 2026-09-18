@@ -265,10 +265,10 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
               <div className="project-meta"><h3>Commercial Interior Renovation</h3><p>Brooksville</p></div>
             </article>
             <article className="project project-small">
-              <div className="project-image">
-                <img src="/assets/new-home-exterior.jpg" alt="Modern Florida home exterior with impact windows" />
-              </div>
-              <div className="project-meta"><h3>Four-Bedroom New Build</h3><p>Weeki Wachee</p></div>
+              <a className="project-image" href="/projects/custom-farmhouse-home-brooksville-fl" aria-label="View the Brooksville custom farmhouse project">
+                <img src="/assets/projects/brooksville-custom-farmhouse/exterior.jpg" alt="Completed custom farmhouse home in Brooksville, Florida" />
+              </a>
+              <div className="project-meta"><h3><a href="/projects/custom-farmhouse-home-brooksville-fl">Custom Farmhouse Home</a></h3><p>Brooksville</p></div>
             </article>
           </div>
         </div>
