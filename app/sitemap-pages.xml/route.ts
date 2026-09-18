@@ -15,7 +15,7 @@ const pages = [
   "/kitchen-remodeling",
   "/multi-family-construction",
   "/new-home-construction",
-  "/pressure-washing",
+  "/pressure-washing",\n  "/projects/whole-home-remodel-spring-hill-fl",
   "/residential-painting",
   "/residential-remodeling",
   "/services",
