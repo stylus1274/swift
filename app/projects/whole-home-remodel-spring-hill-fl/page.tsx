@@ -43,7 +43,7 @@ export default function WholeHomeRemodelSpringHillPage() {
           </div>
         </div>
         <div className={styles.heroImage}>
-          <img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.webp" alt="Completed Spring Hill kitchen remodel with white cabinetry, light counters, black hardware and updated lighting" />
+          <img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg" alt="Completed Spring Hill kitchen remodel with white cabinetry, light counters, black hardware and updated lighting" />
         </div>
       </section>
 
@@ -87,11 +87,11 @@ export default function WholeHomeRemodelSpringHillPage() {
         </div>
         <div className={styles.comparisonGrid}>
           <figure className={styles.imageCard}>
-            <div className={styles.imageWrap}><img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-before.webp" alt="Kitchen before the Spring Hill remodel" /></div>
+            <div className={styles.imageWrap}><img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-before.jpg" alt="Kitchen before the Spring Hill remodel" /></div>
             <figcaption>Before</figcaption>
           </figure>
           <figure className={styles.imageCard}>
-            <div className={styles.imageWrap}><img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.webp" alt="Kitchen after the Spring Hill remodel" /></div>
+            <div className={styles.imageWrap}><img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg" alt="Kitchen after the Spring Hill remodel" /></div>
             <figcaption>After</figcaption>
           </figure>
         </div>
@@ -109,11 +109,11 @@ export default function WholeHomeRemodelSpringHillPage() {
         </div>
         <div className={styles.comparisonGrid}>
           <figure className={styles.imageCard}>
-            <div className={styles.imageWrap}><img src="/assets/projects/spring-hill-whole-home-remodel/primary-bath-before.webp" alt="Primary bathroom before the Spring Hill remodel" /></div>
+            <div className={styles.imageWrap}><img src="/assets/projects/spring-hill-whole-home-remodel/primary-bath-before.jpg" alt="Primary bathroom before the Spring Hill remodel" /></div>
             <figcaption>Before</figcaption>
           </figure>
           <figure className={styles.imageCard}>
-            <div className={styles.imageWrap}><img src="/assets/projects/spring-hill-whole-home-remodel/primary-bath-after.webp" alt="Primary bathroom after the Spring Hill remodel with tiled shower and glass enclosure" /></div>
+            <div className={styles.imageWrap}><img src="/assets/projects/spring-hill-whole-home-remodel/primary-bath-after.jpg" alt="Primary bathroom after the Spring Hill remodel with tiled shower and glass enclosure" /></div>
             <figcaption>After</figcaption>
           </figure>
         </div>
