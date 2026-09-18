@@ -216,20 +216,29 @@
 }
 .scopeGrid strong { font-size: 16px; font-weight: 700; }
 .cta {
-  max-width: 1340px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 100px 42px 110px;
+  padding: 88px 42px 96px;
   display: grid;
-  grid-template-columns: 1.25fr .75fr;
-  gap: 80px;
-  align-items: end;
+  grid-template-columns: 1.3fr .7fr;
+  gap: 56px;
+  align-items: center;
 }
-.cta h2 { max-width: 800px; }
-.cta > div > p:not(.eyebrow) { max-width: 720px; margin-top: 24px; }
+.cta h2 { max-width: 720px; }
+.cta > div > p:not(.eyebrow) {
+  max-width: 680px;
+  margin-top: 22px;
+  margin-bottom: 0;
+}
 .ctaActions {
+  min-height: 170px;
   margin: 0;
+  padding-left: 46px;
+  border-left: 1px solid #d9e2e4;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
+  gap: 26px;
 }
 @media (max-width: 1000px) {
   .hero { grid-template-columns: 1fr; gap: 45px; padding-top: 55px; }
@@ -239,7 +248,12 @@
   .facts div { border-right: 1px solid #dfe7e5; }
   .facts div:last-child { grid-column: 1 / -1; }
   .intro { grid-template-columns: 1fr; gap: 34px; }
-  .cta { grid-template-columns: 1fr; gap: 35px; }
+  .cta { grid-template-columns: 1fr; gap: 34px; }
+  .ctaActions {
+    min-height: 0;
+    padding-left: 0;
+    border-left: 0;
+  }
 }
 @media (max-width: 700px) {
   .breadcrumb { padding: 20px 20px 0; }
@@ -257,5 +271,5 @@
   .scope { padding: 80px 20px 85px; }
   .scopeGrid { grid-template-columns: 1fr; }
   .scopeGrid div:nth-last-child(2) { border-bottom: 0; }
-  .cta { padding: 78px 20px 88px; }
+  .cta { padding: 72px 20px 82px; }
 }
