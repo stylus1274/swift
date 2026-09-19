@@ -105,16 +105,47 @@ export default function SpringHillDuplexPage() {
         </div>
       </section>
 
-      <section className={styles.photoNote}>
-        <div>
-          <p className={styles.eyebrow}>PROJECT PHOTOS</p>
-          <h2>Photos Have Not Been Added to This Project Yet.</h2>
+      <section className={styles.processSection}>
+        <div className={styles.processHeading}>
+          <p className={styles.eyebrow}>SWIFT&apos;S NEW-CONSTRUCTION PROCESS</p>
+          <h2>What “Beginning to End” Means at Swift.</h2>
           <p>
-            Swift has not submitted a photo set that can be confidently matched to
-            the Usher St duplex. Rather than display images from another job, this
-            case study currently uses only the verified project information.
+            Swift&apos;s discovery questionnaire describes its general new-construction
+            work as ground-up building from site clearing through certificate of
+            occupancy. These steps describe Swift&apos;s broader process, not additional
+            project-specific details for the Usher St duplex.
           </p>
         </div>
+        <div className={styles.processGrid}>
+          <article>
+            <span>01</span>
+            <h3>Planning &amp; Design</h3>
+            <p>
+              Swift can begin with one of its existing home designs or assist the
+              customer during the design phase before construction starts.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Site to Structure</h3>
+            <p>
+              The company describes its new-home scope as starting with site clearing
+              and continuing through the ground-up construction process.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Through Completion</h3>
+            <p>
+              Swift&apos;s stated new-construction process continues through completion
+              and certificate of occupancy.
+            </p>
+          </article>
+        </div>
+        <p className={styles.photoDisclosure}>
+          Swift has not submitted a photo set that can be confidently matched to the
+          Usher St duplex, so no unrelated project photography is shown on this page.
+        </p>
       </section>
 
       <section className={styles.cta}>
