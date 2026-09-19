@@ -52,7 +52,6 @@ const additionalServices = [
   "Facility Services",
 ];
 
-const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 const estimateServices = [
   "Painting",
   "Remodeling",
@@ -100,7 +99,6 @@ function GoogleReviewBadge() {
 }
 
 export default function Home({ alternateHero = false }: { alternateHero?: boolean }) {
-  const [category, setCategory] = useState("All");
   const [estimateService, setEstimateService] = useState("Painting");
   const [submitted, setSubmitted] = useState(false);
   const [heroSubmitted, setHeroSubmitted] = useState(false);
@@ -231,23 +229,12 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
       <section className="portfolio-section" id="portfolio">
         <div className="portfolio-heading">
           <div>
-            <p className="eyebrow">02 — SELECTED PROJECTS</p>
+            <p className="eyebrow">02 — REAL SWIFT PROJECTS</p>
             <h2>Recent Work, Close to Home.</h2>
           </div>
-          <div className="filter-buttons" aria-label="Filter projects">
-            {categories.map((item) => (
-              <button
-                className={category === item ? "selected" : ""}
-                key={item}
-                onClick={() => setCategory(item)}
-                type="button"
-              >
-                {item}
-              </button>
-            ))}
-          </div>
+          <p className="portfolio-proof-note">Only documented Swift projects with verified project photography are featured here.</p>
         </div>
-        <div className="project-grid">
+        <div className="project-grid project-grid-real">
           <article className="project project-large">
             <a className="project-image" href="/projects/whole-home-remodel-spring-hill-fl" aria-label="View the Spring Hill whole-home remodel project">
               <img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg" alt="Completed Spring Hill whole-home kitchen remodel with white cabinetry and black hardware" />
@@ -257,20 +244,15 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
               <small>Remodeling</small>
             </div>
           </article>
-          <div className="project-stack">
-            <article className="project project-small">
-              <div className="project-image">
-                <img src="/assets/commercial-renovation.jpg" alt="Finished commercial bar and millwork renovation" />
-              </div>
-              <div className="project-meta"><h3>Commercial Interior Renovation</h3><p>Brooksville</p></div>
-            </article>
-            <article className="project project-small">
-              <a className="project-image" href="/projects/custom-farmhouse-home-brooksville-fl" aria-label="View the Brooksville custom farmhouse project">
-                <img src="/assets/projects/brooksville-custom-farmhouse/exterior.jpg" alt="Completed custom farmhouse home in Brooksville, Florida" />
-              </a>
-              <div className="project-meta"><h3><a href="/projects/custom-farmhouse-home-brooksville-fl">Custom Farmhouse Home</a></h3><p>Brooksville</p></div>
-            </article>
-          </div>
+          <article className="project project-large">
+            <a className="project-image" href="/projects/custom-farmhouse-home-brooksville-fl" aria-label="View the Brooksville custom farmhouse project">
+              <img src="/assets/projects/brooksville-custom-farmhouse/exterior.jpg" alt="Completed custom farmhouse home in Brooksville, Florida" />
+            </a>
+            <div className="project-meta">
+              <div><h3><a href="/projects/custom-farmhouse-home-brooksville-fl">Custom Farmhouse Home</a></h3><p>Brooksville</p></div>
+              <small>New Construction</small>
+            </div>
+          </article>
         </div>
       </section>
 

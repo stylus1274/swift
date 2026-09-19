@@ -1239,6 +1239,8 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
 .filter-buttons button, .estimate-services button { min-height: 36px; padding: 0 16px; border: 1px solid #dcdcd6; background: #fff; color: #3f5b74; font-size: 13px; cursor: pointer; }
 .filter-buttons button.selected, .estimate-services button.selected { border-color: var(--blue); background: #f0f7fd; color: var(--navy); font-weight: 700; }
 .project-grid { width: 100%; max-width: 1240px; height: 595px; min-height: 0; margin: 28px auto 0; display: grid; grid-template-columns: 60% 40%; gap: 20px; }
+.project-grid-real { height: 520px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.portfolio-proof-note { max-width: 430px; margin: 12px 0 0; color: var(--body); font-size: 15px; line-height: 1.6; text-align: right; }
 .project { min-height: 0; padding: 12px; overflow: hidden; background: #fff; }
 .project-large { height: 100%; display: grid; grid-template-rows: minmax(0, 1fr) 68px; }
 .project-image { min-height: 0; position: relative; overflow: hidden; background: #e7eef2; }
