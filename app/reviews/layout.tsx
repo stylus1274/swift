@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+const path="/reviews";
+const title="Swift Construction Reviews | Spring Hill & Brooksville, FL";
+const description="Read Swift Construction and Painting reviews and see real completed work from remodeling and new-construction projects in Hernando County.";
+export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"website"}};
+export default function ReviewsLayout({children}:{children:React.ReactNode}){const url=`https://swiftconstructionandpainting.com${path}`;const schema=[{"@context":"https://schema.org","@type":"CollectionPage",name:"Swift Construction Reviews",description,url,isPartOf:{"@id":"https://swiftconstructionandpainting.com/#website"}},{"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:"https://swiftconstructionandpainting.com/"},{"@type":"ListItem",position:2,name:"Reviews",item:url}]}];return <>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/></>}

@@ -83,6 +83,7 @@ export default function SiteHeader({ active, contactHref = "/contact" }: SiteHea
         </details>
         <Link href="/gallery">Portfolio</Link>
         <Link className={active === "about" ? "active" : ""} href="/about">About</Link>
+        <Link href="/reviews">Reviews</Link>
         <Link className={active === "blog" ? "active" : ""} href="/blog">Blog</Link>
         <Link href={contactHref}>Contact</Link>
       </nav>
@@ -98,6 +99,7 @@ export default function SiteHeader({ active, contactHref = "/contact" }: SiteHea
           </details>
           <Link href="/gallery">Portfolio</Link>
           <Link href="/about">About</Link>
+          <Link href="/reviews">Reviews</Link>
           <Link href="/blog">Blog</Link>
           <Link href={contactHref}>Contact</Link>
         </nav>
