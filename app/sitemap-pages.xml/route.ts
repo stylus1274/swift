@@ -20,6 +20,8 @@ const pages = [
   "/locations/spring-hill-fl",
   "/locations/brooksville-fl",
   "/locations/hernando-county-fl",
+  "/locations/weeki-wachee-fl",
+  "/locations/citrus-county-fl",
   "/projects/whole-home-remodel-spring-hill-fl",
   "/projects/custom-farmhouse-home-brooksville-fl",
   "/projects/new-construction-duplex-spring-hill-fl",
