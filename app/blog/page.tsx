@@ -8,6 +8,24 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 
 const articles = [
   {
+    category: "New Homes",
+    title: "Multi-Family Construction in Hernando County: Duplex to 10-Plex",
+    excerpt: "What owners should know about property fit, unit count, trade coordination and planning before a multi-family build begins.",
+    image: "/assets/blog-home-framing.webp",
+    alt: "Residential construction framing used to illustrate multi-family construction planning",
+    readTime: "9 MIN READ",
+    href: "/blog/multi-family-construction-hernando-county-duplex-to-10-plex",
+  },
+  {
+    category: "Remodeling",
+    title: "What Not to Do in a Kitchen Remodel",
+    excerpt: "Six common mistakes involving layout, storage, lighting, selections, scope changes and contractor estimates.",
+    image: "/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg",
+    alt: "Completed Swift kitchen remodel in Spring Hill, Florida",
+    readTime: "8 MIN READ",
+    href: "/blog/what-not-to-do-kitchen-remodel",
+  },
+  {
     category: "Remodeling",
     title: "How to Verify a Florida Contractor License, Insurance, and Permit History Before Hiring",
     excerpt: "A practical checklist for checking Florida licensing, workers' compensation coverage, general liability proof and local permit records before you hire.",
