@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+const path="/locations/brooksville-fl";
+const title="Contractor in Brooksville, FL | Swift Construction & Painting";
+const description="Custom homes, remodeling, painting and construction services in Brooksville, FL from Swift Construction & Painting. Free estimates.";
+export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"website"}};
+export default function Layout({children}:{children:React.ReactNode}){const url=`https://swiftconstructionandpainting.com${path}`;const schema=[{"@context":"https://schema.org","@type":"WebPage",name:"Construction, Remodeling & Home Building in Brooksville, FL",description,url,isPartOf:{"@id":"https://swiftconstructionandpainting.com/#website"},about:{"@id":"https://swiftconstructionandpainting.com/#business"}},{"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:"https://swiftconstructionandpainting.com/"},{"@type":"ListItem",position:2,name:"Brooksville, FL",item:url}]}];return <>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/></>}

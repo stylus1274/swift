@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+const path="/locations/hernando-county-fl";
+const title="Contractor in Hernando County, FL | Swift Construction & Painting";
+const description="New construction, remodeling, painting, additions and commercial services across Hernando County, FL. Free estimates from Swift Construction & Painting.";
+export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"website"}};
+export default function Layout({children}:{children:React.ReactNode}){const url=`https://swiftconstructionandpainting.com${path}`;const schema=[{"@context":"https://schema.org","@type":"WebPage",name:"Construction & Remodeling Contractor in Hernando County, FL",description,url,isPartOf:{"@id":"https://swiftconstructionandpainting.com/#website"},about:{"@id":"https://swiftconstructionandpainting.com/#business"}},{"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:"https://swiftconstructionandpainting.com/"},{"@type":"ListItem",position:2,name:"Hernando County, FL",item:url}]}];return <>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/></>}

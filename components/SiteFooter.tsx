@@ -12,7 +12,7 @@ export default function SiteFooter() {
         </div>
         <div className="footer-column">
           <h3>Area</h3>
-          <a href="/locations/spring-hill-fl">Spring Hill</a><span>Brooksville</span><span>Weeki Wachee</span><span>Hernando Beach</span><span>Ridge Manor</span><span>Citrus County</span><span>Pasco County</span>
+          <a href="/locations/spring-hill-fl">Spring Hill</a><a href="/locations/brooksville-fl">Brooksville</a><a href="/locations/hernando-county-fl">Hernando County</a><span>Weeki Wachee</span><span>Hernando Beach</span><span>Ridge Manor</span><span>Citrus County</span><span>Pasco County</span>
         </div>
         <div className="footer-contact">
           <h3>Contact</h3>
