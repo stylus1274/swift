@@ -9,6 +9,24 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 const articles = [
   {
     category: "Remodeling",
+    title: "What Not to Do in a Bathroom Remodel",
+    excerpt: "Six common bathroom remodeling mistakes involving layout, waterproofing, plumbing, ventilation and scope.",
+    image: "/assets/projects/spring-hill-whole-home-remodel/primary-bath-after.jpg",
+    alt: "Completed Swift primary bathroom remodel in Spring Hill, Florida",
+    readTime: "8 MIN READ",
+    href: "/blog/what-not-to-do-bathroom-remodel",
+  },
+  {
+    category: "Remodeling",
+    title: "No Deposit, No Surprises: How Swift Prices and Invoices Every Project",
+    excerpt: "Swift's stated no-deposit policy, how projects get scheduled and what happens before the final invoice.",
+    image: "/assets/contact-planning-hero.webp",
+    alt: "Construction plans and finish samples prepared for a project estimate",
+    readTime: "7 MIN READ",
+    href: "/blog/swift-no-deposit-invoice-on-completion",
+  },
+  {
+    category: "Remodeling",
     title: "Two-Time Best of Florida Regional Winner: What the Award Means for Homeowners",
     excerpt: "How to use contractor recognition as one part of a broader hiring decision that also includes licensing, scope and documented work.",
     image: "/assets/projects/brooksville-custom-farmhouse/exterior.jpg",

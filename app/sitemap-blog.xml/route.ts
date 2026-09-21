@@ -16,6 +16,8 @@ const blogRoutes = [
   "/blog/what-not-to-do-kitchen-remodel",
   "/blog/best-of-florida-regional-winner-swift",
   "/blog/bathroom-remodeling-brooksville-fl",
+  "/blog/what-not-to-do-bathroom-remodel",
+  "/blog/swift-no-deposit-invoice-on-completion",
 ];
 
 export function GET() {
