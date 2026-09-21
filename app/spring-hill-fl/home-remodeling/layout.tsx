@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+const path="/spring-hill-fl/home-remodeling";
+const title="Home Remodeling in Spring Hill, FL | Swift";
+const description="Kitchen, bathroom and whole-home remodeling in Spring Hill, FL. See a real Swift remodel and request a free on-site estimate.";
+export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"website"}};
+export default function Layout({children}:{children:React.ReactNode}){const url=`https://swiftconstructionandpainting.com${path}`;const schema=[{"@context":"https://schema.org","@type":"Service",name:"Home Remodeling in Spring Hill, FL",serviceType:"Home Remodeling",provider:{"@id":"https://swiftconstructionandpainting.com/#business"},areaServed:{"@type":"City",name:"Spring Hill, Florida"},url},{"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:"https://swiftconstructionandpainting.com/"},{"@type":"ListItem",position:2,name:"Spring Hill",item:"https://swiftconstructionandpainting.com/locations/spring-hill-fl"},{"@type":"ListItem",position:3,name:"Home Remodeling",item:url}]}];return <>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/></>}

@@ -8,7 +8,7 @@ export default function SiteFooter() {
         </div>
         <div className="footer-column">
           <h3>Site</h3>
-          <a href="/">Home</a><a href="/services">Services</a><a href="/gallery">Portfolio</a><a href="/about">About</a><a href="/reviews">Reviews</a><a href="/blog">Blog</a><a href="/contact">Contact</a>
+          <a href="/">Home</a><a href="/services">Services</a><a href="/gallery">Portfolio</a><a href="/about">About</a><a href="/reviews">Reviews</a><a href="/blog">Blog</a><a href="/cost-guides">Cost Guides</a><a href="/contact">Contact</a>
         </div>
         <div className="footer-column">
           <h3>Area</h3>

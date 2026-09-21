@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+const path="/cost-guides";
+const title="Construction & Remodeling Cost Guides | Swift";
+const description="Florida construction and remodeling cost guides for kitchens, bathrooms, additions and new homes. Learn what drives project pricing.";
+export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"website"}};
+export default function Layout({children}:{children:React.ReactNode}){const url=`https://swiftconstructionandpainting.com${path}`;const schema=[{"@context":"https://schema.org","@type":"CollectionPage",name:"Construction & Remodeling Cost Guides",description,url,isPartOf:{"@id":"https://swiftconstructionandpainting.com/#website"}},{"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:"https://swiftconstructionandpainting.com/"},{"@type":"ListItem",position:2,name:"Cost Guides",item:url}]}];return <>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/></>}

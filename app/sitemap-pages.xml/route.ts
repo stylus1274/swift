@@ -24,6 +24,8 @@ const pages = [
   "/locations/citrus-county-fl",
   "/hernando-county-fl/new-construction",
   "/brooksville-fl/new-construction",
+  "/spring-hill-fl/home-remodeling",
+  "/cost-guides",
   "/projects/whole-home-remodel-spring-hill-fl",
   "/projects/custom-farmhouse-home-brooksville-fl",
   "/projects/new-construction-duplex-spring-hill-fl",

@@ -20,7 +20,7 @@ export default function SpringHillLocationPage(){
         <p className={styles.eyebrow}>SPRING HILL, FLORIDA</p>
         <h1>Construction, Remodeling & Painting Contractor in Spring Hill, FL</h1>
         <p className={styles.deck}>Swift Construction & Painting serves Spring Hill homeowners with remodeling, new construction, painting, additions, windows and doors, and other building services backed by more than two decades in the local market.</p>
-        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a><a className={styles.secondaryLink} href="/gallery">View Local Projects <span aria-hidden="true">→</span></a></div>
+        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a><a className={styles.secondaryLink} href="/spring-hill-fl/home-remodeling">Explore Spring Hill Remodeling <span aria-hidden="true">→</span></a></div>
       </div>
       <div className={styles.heroImage}><img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg" alt="Completed whole-home remodeling project in Spring Hill, Florida by Swift Construction and Painting"/></div>
     </section>
