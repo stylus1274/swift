@@ -39,7 +39,7 @@ export default function WholeHomeRemodelSpringHillPage() {
           </p>
           <div className={styles.heroActions}>
             <a className={styles.primaryButton} href="/contact">Request a Free Estimate</a>
-            <a className={styles.secondaryLink} href="/residential-remodeling">Explore Remodeling Services <span aria-hidden="true">→</span></a>
+            <a className={styles.secondaryLink} href="/home-remodeling">Explore Remodeling Services <span aria-hidden="true">→</span></a>
           </div>
         </div>
         <div className={styles.heroImage}>
@@ -146,7 +146,7 @@ export default function WholeHomeRemodelSpringHillPage() {
         </div>
         <div className={styles.ctaActions}>
           <a className={styles.primaryButton} href="/contact">Request a Free Estimate</a>
-          <a className={styles.secondaryLink} href="/residential-remodeling">Residential Remodeling <span aria-hidden="true">→</span></a>
+          <a className={styles.secondaryLink} href="/home-remodeling">Residential Remodeling <span aria-hidden="true">→</span></a>
         </div>
       </section>
 

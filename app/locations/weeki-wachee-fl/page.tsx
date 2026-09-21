@@ -3,8 +3,8 @@ import SiteFooter from "@/components/SiteFooter";
 import styles from "../spring-hill-fl/page.module.css";
 
 const services=[
-  ["Residential Remodeling","/residential-remodeling","Whole-home renovations, kitchens, bathrooms, flooring and coordinated interior improvements."],
-  ["New Home Construction","/new-home-construction","Ground-up homes managed from planning through completion."],
+  ["Residential Remodeling","/home-remodeling","Whole-home renovations, kitchens, bathrooms, flooring and coordinated interior improvements."],
+  ["New Home Construction","/custom-home-building","Ground-up homes managed from planning through completion."],
   ["Interior & Exterior Painting","/residential-painting","Residential painting with preparation and durable finishes for Florida homes."],
   ["Home Additions","/home-additions","Room additions and expanded living space planned around the existing structure."],
   ["Windows & Doors","/windows-doors","Window and door replacement and installation for Florida properties."],

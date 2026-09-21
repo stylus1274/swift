@@ -48,7 +48,7 @@ export default function BrooksvilleCustomFarmhousePage() {
           </p>
           <div className={styles.heroActions}>
             <a className={styles.primaryButton} href="/contact">Request a Free Estimate</a>
-            <a className={styles.secondaryLink} href="/new-home-construction">Explore New Home Construction <span aria-hidden="true">→</span></a>
+            <a className={styles.secondaryLink} href="/custom-home-building">Explore New Home Construction <span aria-hidden="true">→</span></a>
           </div>
         </div>
         <div className={styles.heroImage}>
@@ -132,7 +132,7 @@ export default function BrooksvilleCustomFarmhousePage() {
         </div>
         <div className={styles.ctaActions}>
           <a className={styles.primaryButton} href="/contact">Request a Free Estimate</a>
-          <a className={styles.secondaryLink} href="/new-home-construction">New Home Construction <span aria-hidden="true">→</span></a>
+          <a className={styles.secondaryLink} href="/custom-home-building">New Home Construction <span aria-hidden="true">→</span></a>
         </div>
       </section>
 

@@ -44,8 +44,8 @@ export default function NewHomeConstructionPage() {
 
       <section className="build-hero">
         <div className="build-hero-copy">
-          <p className="eyebrow">NEW HOME CONSTRUCTION • FLORIDA NATURE COAST</p>
-          <h1>Build a Home That Fits the Way You Live.</h1>
+          <p className="eyebrow">CUSTOM HOME BUILDING • FLORIDA NATURE COAST</p>
+          <h1>Custom Home Building for the Way You Live.</h1>
           <p>One experienced contractor to coordinate your new home from early planning and site preparation through construction, finishes and final walkthrough.</p>
           <div className="build-hero-actions">
             <a className="button build-primary" href="#build-quick-lot">Plan Your New Home</a>

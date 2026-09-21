@@ -14,7 +14,7 @@ const pages = [
   "/interior-painting",
   "/kitchen-remodeling",
   "/multi-family-construction",
-  "/new-home-construction",
+  "/custom-home-building",
   "/pressure-washing",
   "/reviews",
   "/locations/spring-hill-fl",
@@ -30,7 +30,7 @@ const pages = [
   "/projects/custom-farmhouse-home-brooksville-fl",
   "/projects/new-construction-duplex-spring-hill-fl",
   "/residential-painting",
-  "/residential-remodeling",
+  "/home-remodeling",
   "/services",
   "/windows-doors",
 ];

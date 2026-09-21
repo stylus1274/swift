@@ -3,11 +3,11 @@ import SiteFooter from "@/components/SiteFooter";
 import styles from "../../locations/spring-hill-fl/page.module.css";
 
 const services=[
-  ["Custom Home Building","/new-home-construction","Ground-up custom homes managed from early planning through completion."],
+  ["Custom Home Building","/custom-home-building","Ground-up custom homes managed from early planning through completion."],
   ["Property & Plan Review","/contact","Review of the property, goals, plans and practical requirements before construction begins."],
-  ["Permits & Site Preparation","/new-home-construction","Coordination of the approved permit scope and early site work."],
-  ["Trade Coordination","/new-home-construction","Licensed subcontractors coordinated for the trades required by the project."],
-  ["Finish Selections","/new-home-construction","Interior and exterior finish decisions organized as the build progresses."],
+  ["Permits & Site Preparation","/custom-home-building","Coordination of the approved permit scope and early site work."],
+  ["Trade Coordination","/custom-home-building","Licensed subcontractors coordinated for the trades required by the project."],
+  ["Finish Selections","/custom-home-building","Interior and exterior finish decisions organized as the build progresses."],
   ["Final Walkthrough","/contact","Review of the completed scope before final project handoff."],
 ];
 

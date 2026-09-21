@@ -3,8 +3,8 @@ import SiteFooter from "@/components/SiteFooter";
 import styles from "../spring-hill-fl/page.module.css";
 
 const services=[
-  ["Custom Home Building","/new-home-construction","Ground-up homes and design-assisted construction for homeowners planning to build in Citrus County."],
-  ["Residential Remodeling","/residential-remodeling","Whole-home renovations, kitchens, bathrooms and coordinated interior upgrades."],
+  ["Custom Home Building","/custom-home-building","Ground-up homes and design-assisted construction for homeowners planning to build in Citrus County."],
+  ["Residential Remodeling","/home-remodeling","Whole-home renovations, kitchens, bathrooms and coordinated interior upgrades."],
   ["Home Additions","/home-additions","Expanded living space and additions designed to work with the existing home."],
   ["Interior & Exterior Painting","/residential-painting","Residential painting for interiors, exteriors and renovation projects."],
   ["Windows & Doors","/windows-doors","Replacement and installation for windows, doors and impact-rated openings."],
@@ -20,7 +20,7 @@ export default function CitrusCountyLocationPage(){
         <p className={styles.eyebrow}>CITRUS COUNTY, FLORIDA</p>
         <h1>Custom Home Builder & Contractor in Citrus County, FL</h1>
         <p className={styles.deck}>Swift Construction & Painting serves Citrus County with custom home construction, remodeling, additions, painting, windows and doors, and related residential and commercial building services.</p>
-        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a><a className={styles.secondaryLink} href="/new-home-construction">Explore New Home Construction <span aria-hidden="true">→</span></a></div>
+        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a><a className={styles.secondaryLink} href="/custom-home-building">Explore New Home Construction <span aria-hidden="true">→</span></a></div>
       </div>
       <div className={styles.heroImage}><img src="/assets/projects/brooksville-custom-farmhouse/exterior.jpg" alt="Example of a completed Swift custom home project"/></div>
     </section>

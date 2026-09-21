@@ -3,9 +3,9 @@ import SiteFooter from "@/components/SiteFooter";
 import styles from "../spring-hill-fl/page.module.css";
 
 const services=[
-  ["Custom & New Home Construction","/new-home-construction","Ground-up residential construction and custom home building across Hernando County."],
+  ["Custom & New Home Construction","/custom-home-building","Ground-up residential construction and custom home building across Hernando County."],
   ["Multi-Family Construction","/multi-family-construction","Duplex and multi-unit construction for residential investment projects."],
-  ["Residential Remodeling","/residential-remodeling","Whole-home remodeling, kitchens, bathrooms and coordinated interior upgrades."],
+  ["Residential Remodeling","/home-remodeling","Whole-home remodeling, kitchens, bathrooms and coordinated interior upgrades."],
   ["Painting","/residential-painting","Interior and exterior painting for homes and other properties."],
   ["Home Additions","/home-additions","Additions and expanded living space integrated with the existing structure."],
   ["Commercial Services","/commercial-services","Commercial renovations, buildouts, painting and facility improvements."],

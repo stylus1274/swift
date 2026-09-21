@@ -6,7 +6,7 @@ const guides=[
   {title:"Kitchen Remodeling Budget",copy:"See the major variables that change kitchen remodeling costs and how to think about a realistic project budget.",href:"/blog/realistic-kitchen-remodel-budget",image:"/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg"},
   {title:"Bathroom Remodeling Budget",copy:"Understand the scope decisions that affect bathroom remodeling costs before you compare estimates.",href:"/blog/realistic-bathroom-remodel-budget",image:"/assets/projects/spring-hill-whole-home-remodel/primary-bath-after.jpg"},
   {title:"Home Addition Planning",copy:"Learn what affects the timing and scope of a Florida home addition before construction begins.",href:"/blog/how-long-home-addition-florida",image:"/assets/projects/brooksville-custom-farmhouse/exterior.jpg"},
-  {title:"Custom Home Construction",copy:"Start with the property, plans, home size and finish level before trying to estimate a new-build budget.",href:"/new-home-construction",image:"/assets/projects/brooksville-custom-farmhouse/kitchen.jpg"},
+  {title:"Custom Home Construction",copy:"Start with the property, plans, home size and finish level before trying to estimate a new-build budget.",href:"/custom-home-building",image:"/assets/projects/brooksville-custom-farmhouse/kitchen.jpg"},
 ];
 
 export default function CostGuidesPage(){

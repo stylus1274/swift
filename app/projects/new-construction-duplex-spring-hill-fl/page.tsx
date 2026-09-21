@@ -33,7 +33,7 @@ export default function SpringHillDuplexPage() {
           </p>
           <div className={styles.heroActions}>
             <a className={styles.primaryButton} href="/contact">Request a Free Estimate</a>
-            <a className={styles.secondaryLink} href="/new-home-construction">
+            <a className={styles.secondaryLink} href="/custom-home-building">
               Explore New Home Construction <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -159,7 +159,7 @@ export default function SpringHillDuplexPage() {
         </div>
         <div className={styles.ctaActions}>
           <a className={styles.primaryButton} href="/contact">Request a Free Estimate</a>
-          <a className={styles.secondaryLink} href="/new-home-construction">
+          <a className={styles.secondaryLink} href="/custom-home-building">
             New Home Construction <span aria-hidden="true">→</span>
           </a>
         </div>

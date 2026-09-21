@@ -3,7 +3,7 @@ import SiteFooter from "@/components/SiteFooter";
 import styles from "../../locations/spring-hill-fl/page.module.css";
 
 const services=[
-  ["Whole-Home Remodeling","/residential-remodeling","Coordinated renovations across multiple rooms under one project plan."],
+  ["Whole-Home Remodeling","/home-remodeling","Coordinated renovations across multiple rooms under one project plan."],
   ["Kitchen Remodeling","/kitchen-remodeling","Cabinetry, counters, flooring, lighting and layout improvements."],
   ["Bathroom Remodeling","/bathroom-remodeling","Showers, tile, vanities, fixtures and complete bathroom updates."],
   ["Flooring & Carpentry","/flooring","Flooring, trim, doors and finish carpentry that complete the renovation."],

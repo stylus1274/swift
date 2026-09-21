@@ -3,11 +3,11 @@ import SiteFooter from "@/components/SiteFooter";
 import styles from "../../locations/spring-hill-fl/page.module.css";
 
 const services=[
-  ["Custom Home Construction","/new-home-construction","Ground-up homes planned from property review through construction and final walkthrough."],
+  ["Custom Home Construction","/custom-home-building","Ground-up homes planned from property review through construction and final walkthrough."],
   ["Multi-Family Construction","/multi-family-construction","Duplex and multi-unit construction for owners and investors."],
   ["Site & Plan Review","/contact","Early review of the property, goals, plans and practical construction considerations."],
-  ["Permits & Coordination","/new-home-construction","Construction sequencing, permitting and licensed trade coordination under one project plan."],
-  ["Interior & Exterior Finishes","/new-home-construction","Finish selections and final details coordinated as the build moves toward completion."],
+  ["Permits & Coordination","/custom-home-building","Construction sequencing, permitting and licensed trade coordination under one project plan."],
+  ["Interior & Exterior Finishes","/custom-home-building","Finish selections and final details coordinated as the build moves toward completion."],
   ["Post-Build Walkthrough","/contact","A final walkthrough to review the completed scope and remaining project details."],
 ];
 
@@ -20,7 +20,7 @@ export default function HernandoCountyNewConstructionPage(){
         <p className={styles.eyebrow}>NEW CONSTRUCTION • HERNANDO COUNTY, FL</p>
         <h1>New Home Construction in Hernando County, FL</h1>
         <p className={styles.deck}>Swift Construction & Painting builds custom homes and multi-family projects across Hernando County, coordinating the major phases from early planning through construction and final walkthrough.</p>
-        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Discuss Your Build</a><a className={styles.secondaryLink} href="/new-home-construction">New Home Construction Services <span>→</span></a></div>
+        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Discuss Your Build</a><a className={styles.secondaryLink} href="/custom-home-building">New Home Construction Services <span>→</span></a></div>
       </div>
       <div className={styles.heroImage}><img src="/assets/projects/brooksville-custom-farmhouse/exterior.jpg" alt="Completed Swift custom farmhouse in Hernando County, Florida"/></div>
     </section>

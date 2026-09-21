@@ -17,7 +17,7 @@ const serviceGroups = [
     title: "Remodeling & Home Improvement",
     intro: "Renovation and improvement work coordinated under one building contractor from planning through final walkthrough.",
     links: [
-      ["Residential Remodeling", "/residential-remodeling"],
+      ["Home Remodeling", "/home-remodeling"],
       ["Kitchen Remodeling", "/kitchen-remodeling"],
       ["Bathroom Remodeling", "/bathroom-remodeling"],
       ["Home Additions", "/home-additions"],
@@ -29,7 +29,7 @@ const serviceGroups = [
     title: "Construction & Commercial",
     intro: "Ground-up construction, multi-family work and commercial improvements managed around the property and project requirements.",
     links: [
-      ["New Home Construction", "/new-home-construction"],
+      ["Custom Home Building", "/custom-home-building"],
       ["Commercial Construction", "/commercial-services"],
       ["Multi-Family Construction", "/multi-family-construction"],
       ["Pressure Washing", "/pressure-washing"],

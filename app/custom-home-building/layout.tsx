@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+const path="/custom-home-building";
+const title="Custom Home Builder in Hernando County, FL | Swift";
+const description="Custom home building across Hernando, Citrus and Pasco Counties. Swift manages planning, construction, trades and final walkthrough.";
+export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"website"}};
+export default function Layout({children}:{children:React.ReactNode}){const url=`https://swiftconstructionandpainting.com${path}`;const schema=[{"@context":"https://schema.org","@type":"Service",name:"Custom Home Building",serviceType:"Custom Home Building",provider:{"@id":"https://swiftconstructionandpainting.com/#business"},areaServed:[{"@type":"AdministrativeArea",name:"Hernando County, Florida"},{"@type":"AdministrativeArea",name:"Citrus County, Florida"},{"@type":"AdministrativeArea",name:"Pasco County, Florida"}],url},{"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:"https://swiftconstructionandpainting.com/"},{"@type":"ListItem",position:2,name:"Custom Home Building",item:url}]}];return <>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/></>}

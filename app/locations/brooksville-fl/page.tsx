@@ -3,8 +3,8 @@ import SiteFooter from "@/components/SiteFooter";
 import styles from "../spring-hill-fl/page.module.css";
 
 const services=[
-  ["New Home Construction","/new-home-construction","Custom and ground-up homes planned from design through completion."],
-  ["Residential Remodeling","/residential-remodeling","Whole-home and room-by-room remodeling coordinated under one contractor."],
+  ["New Home Construction","/custom-home-building","Custom and ground-up homes planned from design through completion."],
+  ["Residential Remodeling","/home-remodeling","Whole-home and room-by-room remodeling coordinated under one contractor."],
   ["Kitchen Remodeling","/kitchen-remodeling","Kitchen layout, cabinetry, surfaces and finish work."],
   ["Bathroom Remodeling","/bathroom-remodeling","Bathroom renovations including showers, tile, vanities and finish work."],
   ["Commercial Services","/commercial-services","Commercial buildouts, renovations, painting and facility improvements."],

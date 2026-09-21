@@ -74,8 +74,8 @@ export default function ResidentialRemodelingPage() {
 
       <section className="remodel-hero">
         <div className="remodel-hero-copy">
-          <p className="eyebrow">RESIDENTIAL REMODELING • SPRING HILL, FL</p>
-          <h1>Residential Remodeling That Brings the Whole Home Together.</h1>
+          <p className="eyebrow">HOME REMODELING • HERNANDO COUNTY, FL</p>
+          <h1>Home Remodeling That Brings the Whole Home Together.</h1>
           <p>One contractor for the planning, coordination and finish work your kitchen, bathroom or full-home renovation needs.</p>
           <div className="remodel-hero-actions">
             <a className="button remodel-primary" href="#remodel-quick-project">Get a Free Remodeling Estimate</a>

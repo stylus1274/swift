@@ -3,8 +3,8 @@ import SiteFooter from "@/components/SiteFooter";
 import styles from "./page.module.css";
 
 const services=[
-  ["Residential Remodeling","/residential-remodeling","Whole-home renovations, kitchens, bathrooms, flooring, carpentry and coordinated interior improvements."],
-  ["New Home Construction","/new-home-construction","Ground-up homes and multi-family construction managed from planning through completion."],
+  ["Residential Remodeling","/home-remodeling","Whole-home renovations, kitchens, bathrooms, flooring, carpentry and coordinated interior improvements."],
+  ["New Home Construction","/custom-home-building","Ground-up homes and multi-family construction managed from planning through completion."],
   ["Interior & Exterior Painting","/residential-painting","Residential painting with preparation, finish work and Florida-specific exterior considerations."],
   ["Home Additions","/home-additions","Room additions and expanded living space planned around the existing home."],
   ["Windows & Doors","/windows-doors","Replacement and installation for windows, doors and impact-rated openings."],
