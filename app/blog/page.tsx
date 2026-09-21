@@ -8,6 +8,24 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 
 const articles = [
   {
+    category: "Remodeling",
+    title: "Two-Time Best of Florida Regional Winner: What the Award Means for Homeowners",
+    excerpt: "How to use contractor recognition as one part of a broader hiring decision that also includes licensing, scope and documented work.",
+    image: "/assets/projects/brooksville-custom-farmhouse/exterior.jpg",
+    alt: "Completed Swift custom farmhouse in Brooksville, Florida",
+    readTime: "6 MIN READ",
+    href: "/blog/best-of-florida-regional-winner-swift",
+  },
+  {
+    category: "Remodeling",
+    title: "Bathroom Remodeling in Brooksville, FL: Small Update vs. Full Renovation",
+    excerpt: "How to decide whether a Brooksville bathroom needs a lighter update or a complete renovation.",
+    image: "/assets/projects/spring-hill-whole-home-remodel/primary-bath-after.jpg",
+    alt: "Completed Swift bathroom remodel in nearby Spring Hill, Florida",
+    readTime: "8 MIN READ",
+    href: "/blog/bathroom-remodeling-brooksville-fl",
+  },
+  {
     category: "New Homes",
     title: "Multi-Family Construction in Hernando County: Duplex to 10-Plex",
     excerpt: "What owners should know about property fit, unit count, trade coordination and planning before a multi-family build begins.",

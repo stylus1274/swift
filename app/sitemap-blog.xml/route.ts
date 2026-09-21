@@ -14,6 +14,8 @@ const blogRoutes = [
   "/blog/why-local-contractor-licensing-matters-hernando-county",
   "/blog/multi-family-construction-hernando-county-duplex-to-10-plex",
   "/blog/what-not-to-do-kitchen-remodel",
+  "/blog/best-of-florida-regional-winner-swift",
+  "/blog/bathroom-remodeling-brooksville-fl",
 ];
 
 export function GET() {
