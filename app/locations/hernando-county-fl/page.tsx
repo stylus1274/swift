@@ -20,7 +20,7 @@ export default function HernandoCountyLocationPage(){
         <p className={styles.eyebrow}>HERNANDO COUNTY, FLORIDA</p>
         <h1>Construction & Remodeling Contractor in Hernando County, FL</h1>
         <p className={styles.deck}>Swift Construction & Painting provides new construction, multi-family building, remodeling, painting, additions and commercial services throughout Hernando County.</p>
-        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a><a className={styles.secondaryLink} href="/gallery">View Completed Work <span aria-hidden="true">→</span></a></div>
+        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a><a className={styles.secondaryLink} href="/hernando-county-fl/new-construction">Explore New Construction <span aria-hidden="true">→</span></a></div>
       </div>
       <div className={styles.heroImage}><img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg" alt="Completed Swift remodeling project in Hernando County, Florida"/></div>
     </section>

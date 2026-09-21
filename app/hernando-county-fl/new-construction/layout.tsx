@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+const path="/hernando-county-fl/new-construction";
+const title="New Home Construction in Hernando County, FL | Swift";
+const description="Custom home and multi-family new construction in Hernando County, FL. See real Swift projects and request a construction consultation.";
+export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"website"}};
+export default function Layout({children}:{children:React.ReactNode}){const url=`https://swiftconstructionandpainting.com${path}`;const schema=[{"@context":"https://schema.org","@type":"Service",name:"New Home Construction in Hernando County, FL",serviceType:"New Home Construction",provider:{"@id":"https://swiftconstructionandpainting.com/#business"},areaServed:{"@type":"AdministrativeArea",name:"Hernando County, Florida"},url},{"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:"https://swiftconstructionandpainting.com/"},{"@type":"ListItem",position:2,name:"Hernando County",item:"https://swiftconstructionandpainting.com/locations/hernando-county-fl"},{"@type":"ListItem",position:3,name:"New Construction",item:url}]}];return <>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/></>}

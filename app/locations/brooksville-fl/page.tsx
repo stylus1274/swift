@@ -20,7 +20,7 @@ export default function BrooksvilleLocationPage(){
         <p className={styles.eyebrow}>BROOKSVILLE, FLORIDA</p>
         <h1>Construction, Remodeling & Home Building in Brooksville, FL</h1>
         <p className={styles.deck}>Swift Construction & Painting serves Brooksville with custom home construction, remodeling, painting, commercial improvements, windows and doors, and related building services.</p>
-        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a><a className={styles.secondaryLink} href="/projects/custom-farmhouse-home-brooksville-fl">View Brooksville Project <span aria-hidden="true">→</span></a></div>
+        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a><a className={styles.secondaryLink} href="/brooksville-fl/new-construction">Explore Brooksville New Construction <span aria-hidden="true">→</span></a></div>
       </div>
       <div className={styles.heroImage}><img src="/assets/projects/brooksville-custom-farmhouse/exterior.jpg" alt="Completed custom farmhouse in Brooksville, Florida by Swift Construction and Painting"/></div>
     </section>
