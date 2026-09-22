@@ -36,7 +36,6 @@ export default function Page(){
         <div className="article-contents">
           <p>Article Contents</p>
           <a href="#quick">Quick Answer</a>
-          <a href="#takeaways">Key Takeaways</a>
           <a href="#difference">Why the Difference Matters</a>
           <a href="#inhouse">In-House Crews</a>
           <a href="#subs">Specialized Subcontractors</a>
@@ -58,17 +57,16 @@ export default function Page(){
           <p className="eyebrow">QUICK ANSWER</p>
           <h2>Is an In-House Crew Better Than Subcontractors?</h2>
           <p>Not automatically. In-house crews can give a contractor more direct control over recurring work, communication and finish expectations. Specialized subcontractors can be the right choice for electrical, plumbing, HVAC and other work that requires dedicated expertise or licensing. The best project is not the one with the fewest subcontractors. It is the one where responsibility is clear, the trades are coordinated properly and the homeowner is never left wondering who is accountable.</p>
-        </section>
-
-        <section className="article-takeaways" id="takeaways">
-          <strong>Key Takeaways</strong>
-          <ul>
-            <li>In-house does not automatically mean better, and subcontracted does not automatically mean lower quality.</li>
-            <li>The general contractor should remain responsible for schedule, coordination, communication and the finished scope.</li>
-            <li>Specialized trades are normal on larger remodels, additions and new-construction projects.</li>
-            <li>Homeowners should know who their primary contact is before work begins.</li>
-            <li>The most important question is not “Who employs this person?” but “Who is accountable for this part of the project?”</li>
-          </ul>
+          <div className="article-takeaways">
+            <strong>Key Takeaways</strong>
+            <ul>
+              <li>In-house does not automatically mean better, and subcontracted does not automatically mean lower quality.</li>
+              <li>The general contractor should remain responsible for schedule, coordination, communication and the finished scope.</li>
+              <li>Specialized trades are normal on larger remodels, additions and new-construction projects.</li>
+              <li>Homeowners should know who their primary contact is before work begins.</li>
+              <li>The most important question is not “Who employs this person?” but “Who is accountable for this part of the project?”</li>
+            </ul>
+          </div>
         </section>
 
         <section id="difference">
