@@ -22,6 +22,8 @@ const blogRoutes = [
   "/blog/how-to-choose-commercial-painter",
   "/blog/swift-service-area-spring-hill-citrus-county",
   "/blog/commercial-construction-facility-services-hernando-county",
+  "/blog/what-is-commercial-remodeling",
+  "/blog/20-plus-years-projects-hernando-county",
 ];
 
 export function GET() {

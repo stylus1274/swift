@@ -8,6 +8,24 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 
 const articles = [
   {
+    category: "Commercial",
+    title: "What Is Commercial Remodeling?",
+    excerpt: "What commercial remodeling includes, how it differs from new construction and why existing property operations affect the project plan.",
+    image: "/assets/commercial-office-reception.webp",
+    alt: "Finished modern office reception and commercial interior renovation",
+    readTime: "7 MIN READ",
+    href: "/blog/what-is-commercial-remodeling",
+  },
+  {
+    category: "Remodeling",
+    title: "A Look Back: 20+ Years of Projects Across Hernando County",
+    excerpt: "A look at Swift's local work since 2003, from remodeling and painting to custom homes, multi-family construction and commercial improvements.",
+    image: "/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg",
+    alt: "Completed Swift whole-home remodeling project in Spring Hill, Florida",
+    readTime: "8 MIN READ",
+    href: "/blog/20-plus-years-projects-hernando-county",
+  },
+  {
     category: "Remodeling",
     title: "Where Swift Works: From Spring Hill to Citrus County",
     excerpt: "A practical look at Swift's core service area, local project proof and how project type affects the distance the company serves.",
