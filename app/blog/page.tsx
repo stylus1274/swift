@@ -9,6 +9,15 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 const articles = [
   {
     category: "Remodeling",
+    title: "Why Swift Turns Down Projects That Don’t Meet Its Quality Standard",
+    excerpt: "Why project fit, a clear scope, proper preparation and realistic expectations matter before Swift accepts a construction or painting project.",
+    image: "/assets/contact-planning-hero.webp",
+    alt: "Construction plans and finish samples prepared for project planning",
+    readTime: "8 MIN READ",
+    href: "/blog/why-swift-turns-down-projects-quality-standard",
+  },
+  {
+    category: "Remodeling",
     title: "Kitchen Remodeling in Brooksville, FL: Layout Changes That Are Worth the Investment",
     excerpt: "How to decide which layout changes improve flow, storage and daily use enough to justify the added remodeling scope.",
     image: "/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg",
