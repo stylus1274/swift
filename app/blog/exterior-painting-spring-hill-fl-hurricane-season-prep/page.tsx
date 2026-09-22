@@ -36,7 +36,6 @@ export default function Page(){
         <div className="article-contents">
           <p>Article Contents</p>
           <a href="#quick">Quick Answer</a>
-          <a href="#takeaways">Key Takeaways</a>
           <a href="#timing">Why Timing Matters</a>
           <a href="#inspect">What to Inspect</a>
           <a href="#prep">Preparation Before Paint</a>
@@ -59,17 +58,16 @@ export default function Page(){
           <h2>What Does Hurricane Season Have to Do With Exterior Painting?</h2>
           <p>Painting does not strengthen a home against hurricane-force wind or replace shutters, impact protection, roof maintenance or other storm-preparation measures. The connection is maintenance. Before the wettest and stormiest part of the year, an exterior inspection can identify peeling paint, failed caulk, stucco cracks, exposed substrate and damaged trim that should be corrected before repeated rain and moisture make those conditions worse.</p>
           <p>For Spring Hill homeowners, the goal is not to “paint for hurricanes.” It is to keep the exterior envelope maintained, schedule coating work during appropriate weather and avoid discovering preventable surface problems after weeks of summer rain.</p>
-        </section>
-
-        <section className="article-takeaways" id="takeaways">
-          <strong>Key Takeaways</strong>
-          <ul>
-            <li>Exterior paint is routine weather protection, not hurricane hardening.</li>
-            <li>Inspect caulk, stucco, trim and existing coatings before the summer rainy season when possible.</li>
-            <li>Surface preparation matters more than rushing to apply a new finish coat.</li>
-            <li>Do not paint into an approaching tropical system or extended stretch of wet weather.</li>
-            <li>After severe weather, inspect for new cracking, impact damage, failed sealant and moisture-related problems before repainting.</li>
-          </ul>
+          <div className="article-takeaways">
+            <strong>Key Takeaways</strong>
+            <ul>
+              <li>Exterior paint is routine weather protection, not hurricane hardening.</li>
+              <li>Inspect caulk, stucco, trim and existing coatings before the summer rainy season when possible.</li>
+              <li>Surface preparation matters more than rushing to apply a new finish coat.</li>
+              <li>Do not paint into an approaching tropical system or extended stretch of wet weather.</li>
+              <li>After severe weather, inspect for new cracking, impact damage, failed sealant and moisture-related problems before repainting.</li>
+            </ul>
+          </div>
         </section>
 
         <section id="timing">
