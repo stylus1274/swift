@@ -18,6 +18,8 @@ const blogRoutes = [
   "/blog/bathroom-remodeling-brooksville-fl",
   "/blog/what-not-to-do-bathroom-remodel",
   "/blog/swift-no-deposit-invoice-on-completion",
+  "/blog/commercial-painting-contractor-spring-hill-fl",
+  "/blog/how-to-choose-commercial-painter",
 ];
 
 export function GET() {

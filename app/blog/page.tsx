@@ -8,6 +8,24 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 
 const articles = [
   {
+    category: "Commercial",
+    title: "Commercial Painting Contractor in Spring Hill, FL: What Property Managers Should Know",
+    excerpt: "How to plan commercial painting around preparation, occupied spaces, access, operating hours and a clearly defined written scope.",
+    image: "/assets/commercial-painting-hero.png",
+    alt: "Commercial painter coating a Florida building from a lift",
+    readTime: "8 MIN READ",
+    href: "/blog/commercial-painting-contractor-spring-hill-fl",
+  },
+  {
+    category: "Commercial",
+    title: "How to Choose a Commercial Painter",
+    excerpt: "What to compare beyond price, including the property walkthrough, preparation, written scope, scheduling and project responsibility.",
+    image: "/assets/commercial-painting-hero.png",
+    alt: "Commercial painter working on a Florida property",
+    readTime: "7 MIN READ",
+    href: "/blog/how-to-choose-commercial-painter",
+  },
+  {
     category: "Remodeling",
     title: "What Not to Do in a Bathroom Remodel",
     excerpt: "Six common bathroom remodeling mistakes involving layout, waterproofing, plumbing, ventilation and scope.",
