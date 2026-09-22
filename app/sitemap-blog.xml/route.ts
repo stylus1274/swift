@@ -28,6 +28,7 @@ const blogRoutes = [
   "/blog/30-percent-rule-remodeling",
   "/blog/kitchen-remodeling-brooksville-layout-changes",
   "/blog/average-cost-paint-house-exterior-florida",
+  "/blog/why-swift-turns-down-projects-quality-standard",
 ];
 
 export function GET() {
