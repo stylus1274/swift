@@ -22,4 +22,4 @@ export default function Page(){return <main className="blog-page article-page"><
 <section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Hernando County Commercial Services FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary>{x.question}<span>+</span></summary><p>{x.answer}</p></details>)}</section>
 </article></div>
 <section className="blog-cta"><div><p className="eyebrow">COMMERCIAL PROJECT IN HERNANDO COUNTY?</p><h2>Bring the Property, Priorities and Timeline to the Walkthrough.</h2><p>Swift can review the site and prepare a written commercial proposal around the actual scope.</p></div><div><a className="button blog-primary" href="/contact">Request a Commercial Estimate</a><a href="/commercial-services">Commercial Services</a></div></section>
-<SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>
+<SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

@@ -22,4 +22,4 @@ export default function Page(){return <main className="blog-page article-page"><
 <section id="proof"><p className="eyebrow">LOCAL PROJECT PROOF</p><h2>Documented Work in Spring Hill and Brooksville.</h2><ul className="article-checklist"><li><a href="/projects/whole-home-remodel-spring-hill-fl">Whole-home remodel in Spring Hill</a></li><li><a href="/projects/new-construction-duplex-spring-hill-fl">New-construction duplex in Spring Hill</a></li><li><a href="/projects/custom-farmhouse-home-brooksville-fl">Custom farmhouse home in Brooksville</a></li></ul><p>These projects provide direct examples of Swift&apos;s work inside its core Hernando County market.</p></section>
 </article></div>
 <section className="blog-cta"><div><p className="eyebrow">NOT SURE IF YOUR PROPERTY IS IN RANGE?</p><h2>Send Swift the Location and Project Type.</h2><p>The team can confirm whether the scope and location fit the current service area.</p></div><div><a className="button blog-primary" href="/contact">Request a Free Estimate</a><a href="/locations/hernando-county-fl">Hernando County Services</a></div></section>
-<SiteFooter/></main>
+<SiteFooter/></main>}
