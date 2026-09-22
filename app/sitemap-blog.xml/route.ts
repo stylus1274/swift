@@ -24,6 +24,8 @@ const blogRoutes = [
   "/blog/commercial-construction-facility-services-hernando-county",
   "/blog/what-is-commercial-remodeling",
   "/blog/20-plus-years-projects-hernando-county",
+  "/blog/custom-home-building-brooksville-process",
+  "/blog/30-percent-rule-remodeling",
 ];
 
 export function GET() {

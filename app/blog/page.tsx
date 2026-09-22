@@ -8,6 +8,24 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 
 const articles = [
   {
+    category: "New Homes",
+    title: "Building a Custom Home in Brooksville: What the Process Actually Looks Like",
+    excerpt: "How a Brooksville custom home moves from the first project conversation through scope, pre-construction, trade coordination and completion.",
+    image: "/assets/projects/brooksville-custom-farmhouse/exterior.jpg",
+    alt: "Completed Swift custom farmhouse in Brooksville Florida",
+    readTime: "9 MIN READ",
+    href: "/blog/custom-home-building-brooksville-process",
+  },
+  {
+    category: "Remodeling",
+    title: "What Is the 30% Rule in Remodeling?",
+    excerpt: "What the common 30% remodeling guideline means, how to calculate it and why a percentage cannot replace a project-specific estimate.",
+    image: "/assets/contact-planning-hero.webp",
+    alt: "Construction plans and finish samples prepared for remodeling budget planning",
+    readTime: "7 MIN READ",
+    href: "/blog/30-percent-rule-remodeling",
+  },
+  {
     category: "Commercial",
     title: "What Is Commercial Remodeling?",
     excerpt: "What commercial remodeling includes, how it differs from new construction and why existing property operations affect the project plan.",
