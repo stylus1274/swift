@@ -30,6 +30,9 @@ const blogRoutes = [
   "/blog/average-cost-paint-house-exterior-florida",
   "/blog/why-swift-turns-down-projects-quality-standard",
   "/blog/bathroom-remodeling-spring-hill-full-gut-renovation",
+  "/blog/interior-painting-cost-2000-square-foot-house",
+  "/blog/25-percent-rule-windows-florida",
+  "/blog/20x20-home-addition-cost-florida",
 ];
 
 export function GET() {
