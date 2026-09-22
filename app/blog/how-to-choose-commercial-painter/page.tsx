@@ -14,7 +14,17 @@ export default function Page(){return <main className="blog-page article-page"><
 <figure className="article-hero-image"><img src="/assets/commercial-painting-hero.png" alt="Commercial painter working on a Florida property"/><figcaption>A useful commercial painting estimate should reflect the actual property and operating conditions.</figcaption></figure>
 <div className="article-shell"><aside className="article-sidebar"><div className="article-contents"><p>Article Contents</p><a href="#quick-answer">Quick Answer</a><a href="#walkthrough">1. Property Walkthrough</a><a href="#prep">2. Preparation</a><a href="#scope">3. Written Scope</a><a href="#schedule">4. Scheduling</a><a href="#contractor">5. Contractor</a><a href="#faqs">FAQs</a></div><div className="article-sidebar-cta"><p>Comparing Painters?</p><h2>Compare the Scope Before the Price.</h2><a className="button blog-primary" href="/contact">Request an Estimate</a></div></aside>
 <article className="article-body">
-<section className="article-answer" id="quick-answer"><p className="eyebrow">QUICK ANSWER</p><h2>How Do You Choose a Commercial Painter?</h2><p>Choose a contractor who inspects the property before pricing, explains preparation, provides a written scope, plans around access and operating needs, and makes it clear who is responsible for managing the project through the final walkthrough.</p></section>
+<section className="article-answer" id="quick-answer"><p className="eyebrow">QUICK ANSWER</p><h2>How Do You Choose a Commercial Painter?</h2><p>Choose a contractor who inspects the property before pricing, explains preparation, provides a written scope, plans around access and operating needs, and makes it clear who is responsible for managing the project through the final walkthrough.</p>
+          <div className="article-takeaways">
+            <strong>Key Takeaways</strong>
+            <ul>
+              <li>Compare preparation, written scope, scheduling and accountability before comparing price.</li>
+              <li>Ask how the contractor will work around tenants, customers, employees and operating hours.</li>
+              <li>Make sure the proposal identifies surfaces, coatings, repairs and exclusions.</li>
+              <li>The contractor should have a clear plan for access, communication and final punch-list responsibility.</li>
+            </ul>
+          </div>
+        </section>
 <section id="walkthrough"><p className="eyebrow">CHECK 1</p><h2>They Inspect the Property Before Pricing It.</h2><p>A contractor cannot see coating failure, access challenges, repair needs or occupied work areas from a generic square-foot number. The walkthrough is where the actual scope begins.</p></section>
 <section id="prep"><p className="eyebrow">CHECK 2</p><h2>They Explain What Preparation Is Included.</h2><p>Ask what happens before paint is applied. Cleaning, scraping, patching, caulking, priming and protection can materially change both the quality of the finish and the amount of labor in the proposal.</p></section>
 <section id="scope"><p className="eyebrow">CHECK 3</p><h2>The Proposal Identifies the Work in Writing.</h2><p>The proposal should tell you which surfaces are included, what preparation is planned and what is excluded. That gives property owners and managers a useful basis for comparing contractors.</p></section>
