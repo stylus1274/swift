@@ -20,6 +20,8 @@ const blogRoutes = [
   "/blog/swift-no-deposit-invoice-on-completion",
   "/blog/commercial-painting-contractor-spring-hill-fl",
   "/blog/how-to-choose-commercial-painter",
+  "/blog/swift-service-area-spring-hill-citrus-county",
+  "/blog/commercial-construction-facility-services-hernando-county",
 ];
 
 export function GET() {

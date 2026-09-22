@@ -8,6 +8,24 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 
 const articles = [
   {
+    category: "Remodeling",
+    title: "Where Swift Works: From Spring Hill to Citrus County",
+    excerpt: "A practical look at Swift's core service area, local project proof and how project type affects the distance the company serves.",
+    image: "/assets/projects/brooksville-custom-farmhouse/exterior.jpg",
+    alt: "Completed Swift custom farmhouse in Brooksville, Florida",
+    readTime: "7 MIN READ",
+    href: "/blog/swift-service-area-spring-hill-citrus-county",
+  },
+  {
+    category: "Commercial",
+    title: "Commercial Construction & Facility Services in Hernando County",
+    excerpt: "How Swift coordinates build-outs, painting, property improvements and facility work around commercial property operations.",
+    image: "/assets/commercial-office-reception.webp",
+    alt: "Finished modern office reception and commercial interior renovation",
+    readTime: "8 MIN READ",
+    href: "/blog/commercial-construction-facility-services-hernando-county",
+  },
+  {
     category: "Commercial",
     title: "Commercial Painting Contractor in Spring Hill, FL: What Property Managers Should Know",
     excerpt: "How to plan commercial painting around preparation, occupied spaces, access, operating hours and a clearly defined written scope.",
