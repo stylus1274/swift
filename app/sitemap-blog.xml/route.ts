@@ -33,6 +33,8 @@ const blogRoutes = [
   "/blog/interior-painting-cost-2000-square-foot-house",
   "/blog/25-percent-rule-windows-florida",
   "/blog/20x20-home-addition-cost-florida",
+  "/blog/lvp-flooring-installation-cost-florida",
+  "/blog/best-month-pressure-wash-house-florida",
 ];
 
 export function GET() {
