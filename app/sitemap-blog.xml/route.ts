@@ -29,6 +29,7 @@ const blogRoutes = [
   "/blog/kitchen-remodeling-brooksville-layout-changes",
   "/blog/average-cost-paint-house-exterior-florida",
   "/blog/why-swift-turns-down-projects-quality-standard",
+  "/blog/bathroom-remodeling-spring-hill-full-gut-renovation",
 ];
 
 export function GET() {
