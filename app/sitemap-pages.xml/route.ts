@@ -1,4 +1,4 @@
-const siteUrl = "https://swift-nine-wheat.vercel.app";
+const siteUrl = "https://swiftconstructionandpainting.com";
 
 const pages = [
   "",
@@ -14,6 +14,7 @@ const pages = [
   "/interior-painting",
   "/kitchen-remodeling",
   "/multi-family-construction",
+  "/new-home-construction",
   "/custom-home-building",
   "/pressure-washing",
   "/reviews",
@@ -30,6 +31,7 @@ const pages = [
   "/projects/custom-farmhouse-home-brooksville-fl",
   "/projects/new-construction-duplex-spring-hill-fl",
   "/residential-painting",
+  "/residential-remodeling",
   "/home-remodeling",
   "/services",
   "/windows-doors",
