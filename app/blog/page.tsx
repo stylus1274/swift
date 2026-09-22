@@ -9,6 +9,15 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 const articles = [
   {
     category: "Remodeling",
+    title: "Bathroom Remodeling in Spring Hill, FL: What a Full Gut Renovation Actually Involves",
+    excerpt: "What happens during a full bathroom renovation, from demolition and rough work through waterproofing, tile, fixtures and finish work.",
+    image: "/assets/projects/spring-hill-whole-home-remodel/primary-bath-after.jpg",
+    alt: "Completed Swift full bathroom remodel in Spring Hill Florida",
+    readTime: "9 MIN READ",
+    href: "/blog/bathroom-remodeling-spring-hill-full-gut-renovation",
+  },
+  {
+    category: "Remodeling",
     title: "Why Swift Turns Down Projects That Don’t Meet Its Quality Standard",
     excerpt: "Why project fit, a clear scope, proper preparation and realistic expectations matter before Swift accepts a construction or painting project.",
     image: "/assets/contact-planning-hero.webp",
