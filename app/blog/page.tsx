@@ -22,7 +22,7 @@ const articles = [
     excerpt: "What homeowners should understand about direct crews, specialized trades, coordination and accountability on a construction project.",
     image: "/assets/blog-hero-walkthrough.webp",
     alt: "Contractor reviewing a residential construction project with homeowners",
-    readTime: "8 MIN READ",
+    readTime: "11 MIN READ",
     href: "/blog/in-house-crews-vs-subcontractors-construction-project",
   },
   {
@@ -31,7 +31,7 @@ const articles = [
     excerpt: "How to inspect paint, caulk, stucco and trim before the wettest months and why exterior paint is maintenance, not hurricane protection.",
     image: "/assets/florida-stucco-painting.jpg",
     alt: "Exterior painting on a Florida stucco home",
-    readTime: "8 MIN READ",
+    readTime: "11 MIN READ",
     href: "/blog/exterior-painting-spring-hill-fl-hurricane-season-prep",
   },
   {
