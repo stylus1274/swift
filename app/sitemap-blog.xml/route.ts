@@ -35,6 +35,9 @@ const blogRoutes = [
   "/blog/20x20-home-addition-cost-florida",
   "/blog/lvp-flooring-installation-cost-florida",
   "/blog/best-month-pressure-wash-house-florida",
+  "/blog/home-additions-hernando-county-planning-20x20-room-addition",
+  "/blog/in-house-crews-vs-subcontractors-construction-project",
+  "/blog/exterior-painting-spring-hill-fl-hurricane-season-prep",
 ];
 
 export function GET() {
