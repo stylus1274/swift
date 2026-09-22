@@ -8,6 +8,33 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 
 const articles = [
   {
+    category: "Remodeling",
+    title: "Meet the Owner: Why Swift Is On-Site on Almost Every Job",
+    excerpt: "How Swift's owner stays hands-on with local projects while coordinating crews, specialized trades and the written project scope.",
+    image: "/assets/about-contractor-hero.webp",
+    alt: "Contractor reviewing plans inside a Florida renovation",
+    readTime: "7 MIN READ",
+    href: "/blog/meet-owner-swift-on-site",
+  },
+  {
+    category: "Remodeling",
+    title: "Kitchen Remodeling in Brooksville, FL: Layout Changes That Are Worth the Investment",
+    excerpt: "How to decide which layout changes improve flow, storage and daily use enough to justify the added remodeling scope.",
+    image: "/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg",
+    alt: "Completed Swift kitchen remodel in nearby Spring Hill Florida",
+    readTime: "9 MIN READ",
+    href: "/blog/kitchen-remodeling-brooksville-layout-changes",
+  },
+  {
+    category: "Painting",
+    title: "What Is the Average Cost to Paint the Exterior of a House in Florida?",
+    excerpt: "2026 exterior painting cost benchmarks plus the Florida-specific preparation, stucco, access and scope factors that change a real quote.",
+    image: "/assets/florida-stucco-painting.jpg",
+    alt: "Exterior paint being applied to a Florida stucco home",
+    readTime: "8 MIN READ",
+    href: "/blog/average-cost-paint-house-exterior-florida",
+  },
+  {
     category: "New Homes",
     title: "Building a Custom Home in Brooksville: What the Process Actually Looks Like",
     excerpt: "How a Brooksville custom home moves from the first project conversation through scope, pre-construction, trade coordination and completion.",

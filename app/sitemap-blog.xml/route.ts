@@ -26,6 +26,9 @@ const blogRoutes = [
   "/blog/20-plus-years-projects-hernando-county",
   "/blog/custom-home-building-brooksville-process",
   "/blog/30-percent-rule-remodeling",
+  "/blog/meet-owner-swift-on-site",
+  "/blog/kitchen-remodeling-brooksville-layout-changes",
+  "/blog/average-cost-paint-house-exterior-florida",
 ];
 
 export function GET() {
