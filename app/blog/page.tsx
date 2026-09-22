@@ -8,6 +8,24 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 
 const articles = [
   {
+    category: "Remodeling",
+    title: "How Much Does It Cost to Install LVP Flooring in Florida?",
+    excerpt: "2026 LVP flooring cost benchmarks plus the removal, subfloor, trim and layout factors that change a real installation price.",
+    image: "/assets/flooring-hero.png",
+    alt: "Luxury vinyl plank flooring installation in a Florida home",
+    readTime: "8 MIN READ",
+    href: "/blog/lvp-flooring-installation-cost-florida",
+  },
+  {
+    category: "Remodeling",
+    title: "What Is the Best Month to Pressure Wash a House in Florida?",
+    excerpt: "Why November is a practical cleaning window for many Florida homes and when visible buildup matters more than the calendar.",
+    image: "/assets/pressure-washing-hero.png",
+    alt: "Pressure washing the exterior of a Florida home",
+    readTime: "8 MIN READ",
+    href: "/blog/best-month-pressure-wash-house-florida",
+  },
+  {
     category: "Painting",
     title: "How Much Should It Cost to Paint the Interior of a 2,000 Sq. Ft. House?",
     excerpt: "A 2026 planning range for painting a 2,000-square-foot home interior, plus the prep, ceilings, trim and finish details that change the price.",
