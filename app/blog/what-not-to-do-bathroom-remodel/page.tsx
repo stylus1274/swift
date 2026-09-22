@@ -24,7 +24,17 @@ export default function Page(){return <main className="blog-page article-page"><
 <figure className="article-hero-image"><img src="/assets/projects/spring-hill-whole-home-remodel/primary-bath-after.jpg" alt="Completed Swift primary bathroom remodel in Spring Hill, Florida"/><figcaption>A good bathroom remodel starts with layout, waterproofing and scope before the visible finishes are selected.</figcaption></figure>
 <div className="article-shell"><aside className="article-sidebar"><div className="article-contents"><p>Article Contents</p><a href="#quick-answer">Quick Answer</a>{mistakes.map((x,i)=><a href={"#mistake-"+(i+1)} key={x[0]}>{i+1}. {x[0]}</a>)}<a href="#faqs">FAQs</a></div><div className="article-sidebar-cta"><p>Planning a Bathroom?</p><h2>Define the Scope Before Demolition.</h2><a className="button blog-primary" href="/contact">Request a Free Estimate</a></div></aside>
 <article className="article-body">
-<section className="article-answer" id="quick-answer"><p className="eyebrow">QUICK ANSWER</p><h2>What Should You Avoid in a Bathroom Remodel?</h2><p>Avoid starting with finishes before the layout is settled, treating waterproofing as an afterthought, assuming a small room means a small scope, moving plumbing without a clear benefit, ignoring ventilation and comparing estimates without comparing what is actually included.</p></section>
+<section className="article-answer" id="quick-answer"><p className="eyebrow">QUICK ANSWER</p><h2>What Should You Avoid in a Bathroom Remodel?</h2><p>Avoid starting with finishes before the layout is settled, treating waterproofing as an afterthought, assuming a small room means a small scope, moving plumbing without a clear benefit, ignoring ventilation and comparing estimates without comparing what is actually included.</p>
+          <div className="article-takeaways">
+            <strong>Key Takeaways</strong>
+            <ul>
+              <li>Do not treat waterproofing, ventilation and substrate preparation as cosmetic details.</li>
+              <li>Changing plumbing or layout without a clear reason can add cost and complexity quickly.</li>
+              <li>Selections should be coordinated before installation so sizes and finish details work together.</li>
+              <li>Hidden conditions and trade sequencing deserve room in both the budget and schedule.</li>
+            </ul>
+          </div>
+        </section>
 {mistakes.map((x,i)=><section id={"mistake-"+(i+1)} key={x[0]}><p className="eyebrow">MISTAKE {i+1}</p><h2>{x[0]}</h2><p>{x[1]}</p></section>)}
 <section><p className="eyebrow">REAL PROJECT CONTEXT</p><h2>One Bathroom Can Be Part of a Much Larger Remodeling Scope.</h2><p>Swift&apos;s documented Spring Hill whole-home remodel included the primary bathroom, pool bathroom and hallway bathroom along with the kitchen, laundry, living spaces, bedrooms and patio. That kind of project shows why sequencing and finish coordination matter across multiple rooms.</p><p><a href="/projects/whole-home-remodel-spring-hill-fl">View the Spring Hill whole-home remodel</a> or read <a href="/blog/realistic-bathroom-remodel-budget">the bathroom remodeling budget guide</a>.</p></section>
 <section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Bathroom Remodeling Mistake FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary>{x.question}<span>+</span></summary><p>{x.answer}</p></details>)}</section>
