@@ -8,6 +8,33 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 
 const articles = [
   {
+    category: "Painting",
+    title: "How Much Should It Cost to Paint the Interior of a 2,000 Sq. Ft. House?",
+    excerpt: "A 2026 planning range for painting a 2,000-square-foot home interior, plus the prep, ceilings, trim and finish details that change the price.",
+    image: "/assets/interior-painting-hero.png",
+    alt: "Interior painting project in a Florida home",
+    readTime: "8 MIN READ",
+    href: "/blog/interior-painting-cost-2000-square-foot-house",
+  },
+  {
+    category: "Remodeling",
+    title: "What Is the 25% Rule for Windows in Florida?",
+    excerpt: "What Florida's 25% window rule actually refers to, what it does not exempt and why permit and wind requirements still matter.",
+    image: "/assets/windows-doors-hero.png",
+    alt: "Replacement window installation on a Florida home",
+    readTime: "8 MIN READ",
+    href: "/blog/25-percent-rule-windows-florida",
+  },
+  {
+    category: "Remodeling",
+    title: "How Much Would a 20x20 Addition Cost in Florida?",
+    excerpt: "A 2026 planning range for a 400-square-foot home addition and the structure, utilities, room type and finishes that change the final price.",
+    image: "/assets/home-additions-hero.png",
+    alt: "Finished home addition on a Florida house",
+    readTime: "9 MIN READ",
+    href: "/blog/20x20-home-addition-cost-florida",
+  },
+  {
     category: "Remodeling",
     title: "Bathroom Remodeling in Spring Hill, FL: What a Full Gut Renovation Actually Involves",
     excerpt: "What happens during a full bathroom renovation, from demolition and rough work through waterproofing, tile, fixtures and finish work.",
