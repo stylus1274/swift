@@ -744,7 +744,8 @@
 .article-sidebar-cta > p { margin: 0; color: var(--blog-blue); font-family: "Courier New", monospace; font-size: 10px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
 .article-sidebar-cta h2 { margin: 17px 0 24px; font-size: 27px; line-height: 1.17; }
 .article-sidebar-cta .button { width: 100%; min-height: 49px; padding: 0 14px; }
-.article-sidebar-cta > a:last-child { margin-top: 18px; display: block; color: var(--blog-navy); font-family: Georgia, serif; font-size: 19px; font-weight: 700; text-align: center; }
+.article-sidebar-cta > a:last-child:not(.button) { margin-top: 18px; display: block; color: var(--blog-navy); font-family: Georgia, serif; font-size: 19px; font-weight: 700; text-align: center; }
+.article-sidebar-cta .button.blog-primary, .blog-cta .button.blog-primary { color: #fff; }
 .article-body > section { margin-bottom: 78px; scroll-margin-top: 30px; }
 .article-body h2 { margin: 21px 0 23px; font-size: 44px; line-height: 1.12; letter-spacing: -.03em; }
 .article-body h3 { margin: 42px 0 14px; font-size: 28px; line-height: 1.24; }
