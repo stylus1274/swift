@@ -9,6 +9,33 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 const articles = [
   {
     category: "Remodeling",
+    title: "Home Additions in Hernando County: Planning a 20x20 Room Addition",
+    excerpt: "How to plan a 400-square-foot addition around property fit, layout, utilities, roof tie-ins, budget and everyday use.",
+    image: "/assets/home-additions-hero.png",
+    alt: "Finished room addition on a Florida home",
+    readTime: "9 MIN READ",
+    href: "/blog/home-additions-hernando-county-planning-20x20-room-addition",
+  },
+  {
+    category: "Remodeling",
+    title: "In-House Crews vs. Subcontractors: Who Does What on Your Project",
+    excerpt: "What homeowners should understand about direct crews, specialized trades, coordination and accountability on a construction project.",
+    image: "/assets/blog-hero-walkthrough.webp",
+    alt: "Contractor reviewing a residential construction project with homeowners",
+    readTime: "8 MIN READ",
+    href: "/blog/in-house-crews-vs-subcontractors-construction-project",
+  },
+  {
+    category: "Painting",
+    title: "Exterior Painting in Spring Hill, FL: Hurricane Season Prep",
+    excerpt: "How to inspect paint, caulk, stucco and trim before the wettest months and why exterior paint is maintenance, not hurricane protection.",
+    image: "/assets/florida-stucco-painting.jpg",
+    alt: "Exterior painting on a Florida stucco home",
+    readTime: "8 MIN READ",
+    href: "/blog/exterior-painting-spring-hill-fl-hurricane-season-prep",
+  },
+  {
+    category: "Remodeling",
     title: "How Much Does It Cost to Install LVP Flooring in Florida?",
     excerpt: "2026 LVP flooring cost benchmarks plus the removal, subfloor, trim and layout factors that change a real installation price.",
     image: "/assets/flooring-hero.png",
