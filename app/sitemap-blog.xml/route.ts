@@ -1,6 +1,7 @@
 const siteUrl = "https://swiftconstructionandpainting.com";
 
 const blogRoutes = [
+  "/blog/compare-remodeling-estimates-spring-hill",
   "/blog",
   "/blog/20-years-building-trust-hernando-county",
   "/blog/custom-home-building-hernando-county",
