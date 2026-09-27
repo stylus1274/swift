@@ -86,7 +86,12 @@ export default function KitchenRemodelingValueArticlePage() {
         <p className="eyebrow">KITCHEN REMODELING • SPRING HILL, FL</p>
         <h1>Kitchen Remodeling in Spring Hill, FL: What Actually Adds Value</h1>
         <p className="article-deck">The most valuable kitchen upgrades solve real problems, hold up to daily use and fit the home. Here is how to prioritize your budget without paying for features that look impressive but do little for function or resale appeal.</p>
-        <div className="article-meta"><span>KITCHEN REMODELING</span><span>11 MIN READ</span><span>UPDATED SEPTEMBER 7, 2026</span></div>
+        <div className="article-meta"><span>KITCHEN REMODELING</span><span>UPDATED SEPTEMBER 7, 2026</span></div>
+      <div className="article-byline">
+        <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
+        <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
+        <div className="article-read-time"><span>Read Time</span><strong>11 min read</strong></div>
+      </div>
       </header>
 
       <figure className="article-hero-image">
