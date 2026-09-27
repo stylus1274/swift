@@ -10,7 +10,12 @@ const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:fa
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>Building a Custom Home in Brooksville</span></nav>
-<header className="article-header"><p className="eyebrow">CUSTOM HOME BUILDING • BROOKSVILLE, FL</p><h1>Building a Custom Home in Brooksville: What the Process Actually Looks Like</h1><p className="article-deck">A custom home moves through a long chain of decisions, trades and inspections. Here is how Swift describes the process from the first conversation through construction and completion.</p><div className="article-meta"><span>NEW HOMES</span><span>9 MIN READ</span><span>UPDATED SEPTEMBER 22, 2026</span></div></header>
+<header className="article-header"><p className="eyebrow">CUSTOM HOME BUILDING • BROOKSVILLE, FL</p><h1>Building a Custom Home in Brooksville: What the Process Actually Looks Like</h1><p className="article-deck">A custom home moves through a long chain of decisions, trades and inspections. Here is how Swift describes the process from the first conversation through construction and completion.</p><div className="article-meta"><span>NEW HOMES</span><span>UPDATED SEPTEMBER 22, 2026</span></div>
+      <div className="article-byline">
+        <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
+        <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
+        <div className="article-read-time"><span>Read Time</span><strong>9 min read</strong></div>
+      </div></header>
 <figure className="article-hero-image"><img src="/assets/projects/brooksville-custom-farmhouse/exterior.jpg" alt="Completed Swift custom farmhouse in Brooksville Florida"/><figcaption>Swift completed this documented custom farmhouse in Brooksville in June 2025.</figcaption></figure>
 <div className="article-shell"><aside className="article-sidebar"><div className="article-contents"><p>Article Contents</p><a href="#quick-answer">Quick Answer</a><a href="#planning">1. Planning</a><a href="#scope">2. Scope & Schedule</a><a href="#preconstruction">3. Pre-Construction</a><a href="#build">4. Construction</a><a href="#completion">5. Completion</a><a href="#proof">Brooksville Project</a><a href="#faqs">FAQs</a></div><div className="article-sidebar-cta"><p>Planning a Custom Home?</p><h2>Start With the Property and Your Priorities.</h2><a className="button blog-primary" href="/contact">Request a Free Estimate</a></div></aside>
 <article className="article-body">
