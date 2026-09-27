@@ -11,7 +11,12 @@ const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:fa
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>Bathroom Remodeling in Brooksville</span></nav>
-<header className="article-header"><p className="eyebrow">BATHROOM REMODELING • BROOKSVILLE, FL</p><h1>Bathroom Remodeling in Brooksville, FL: Small Update vs. Full Renovation</h1><p className="article-deck">Not every bathroom needs to be gutted. The right scope depends on what is failing, what you want to change and how much of the existing layout and finish work still makes sense.</p><div className="article-meta"><span>REMODELING</span><span>8 MIN READ</span><span>UPDATED SEPTEMBER 21, 2026</span></div></header>
+<header className="article-header"><p className="eyebrow">BATHROOM REMODELING • BROOKSVILLE, FL</p><h1>Bathroom Remodeling in Brooksville, FL: Small Update vs. Full Renovation</h1><p className="article-deck">Not every bathroom needs to be gutted. The right scope depends on what is failing, what you want to change and how much of the existing layout and finish work still makes sense.</p><div className="article-meta"><span>REMODELING</span><span>UPDATED SEPTEMBER 21, 2026</span></div>
+      <div className="article-byline">
+        <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
+        <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
+        <div className="article-read-time"><span>Read Time</span><strong>8 min read</strong></div>
+      </div></header>
 <figure className="article-hero-image"><img src="/assets/projects/spring-hill-whole-home-remodel/primary-bath-after.jpg" alt="Completed Swift bathroom remodel in nearby Spring Hill, Florida"/><figcaption>This documented Swift bathroom is in Spring Hill and is shown as an example of completed remodeling work, not as a Brooksville project.</figcaption></figure>
 <div className="article-shell"><aside className="article-sidebar"><div className="article-contents"><p>Article Contents</p><a href="#quick-answer">Quick Answer</a><a href="#update">Small Update</a><a href="#full">Full Renovation</a><a href="#drivers">What Drives Scope</a><a href="#estimate">How to Decide</a><a href="#faqs">FAQs</a></div><div className="article-sidebar-cta"><p>Brooksville Bathroom Project?</p><h2>Walk the Space Before Choosing the Scope.</h2><a className="button blog-primary" href="/contact">Request a Free Estimate</a></div></aside>
 <article className="article-body">
