@@ -196,7 +196,7 @@ export default function BathroomRemodelBudgetArticlePage() {
           <section>
             <p className="eyebrow">ESTIMATE COMPARISON</p>
             <h2>Why the Lowest Estimate May Not Be the Best Comparison</h2>
-            <p>Collecting more than one estimate is sensible. The mistake is comparing only the final numbers. One proposal may include demolition, disposal, waterproofing, permits, plumbing, electrical work, painting and finish carpentry. Another may leave several of those items unclear.</p>
+            <p>Collecting more than one estimate is sensible. The mistake is comparing only the final numbers. One proposal may include demolition, disposal, waterproofing, permits, plumbing, electrical work, painting and finish carpentry. Another may leave several of those items unclear. Our guide to <a href="/blog/compare-remodeling-estimates-spring-hill">comparing remodeling estimates in Spring Hill</a> explains how to evaluate scope, credentials, materials, timelines and payment terms side by side.</p>
             <div className="article-table-wrap budget-table">
               <table>
                 <thead><tr><th>What to Compare</th><th>Why It Matters</th></tr></thead>
