@@ -10,7 +10,12 @@ const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:fa
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>Commercial Construction & Facility Services</span></nav>
-<header className="article-header"><p className="eyebrow">COMMERCIAL SERVICES • HERNANDO COUNTY</p><h1>Commercial Construction & Facility Services in Hernando County</h1><p className="article-deck">Commercial properties often need more than one trade. Swift coordinates build-outs, painting, property improvements and facility work around the needs of the space and the people using it.</p><div className="article-meta"><span>COMMERCIAL</span><span>8 MIN READ</span><span>UPDATED SEPTEMBER 22, 2026</span></div></header>
+<header className="article-header"><p className="eyebrow">COMMERCIAL SERVICES • HERNANDO COUNTY</p><h1>Commercial Construction & Facility Services in Hernando County</h1><p className="article-deck">Commercial properties often need more than one trade. Swift coordinates build-outs, painting, property improvements and facility work around the needs of the space and the people using it.</p><div className="article-meta"><span>COMMERCIAL</span><span>UPDATED SEPTEMBER 22, 2026</span></div>
+      <div className="article-byline">
+        <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
+        <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
+        <div className="article-read-time"><span>Read Time</span><strong>8 min read</strong></div>
+      </div></header>
 <figure className="article-hero-image"><img src="/assets/commercial-office-reception.webp" alt="Finished modern office reception and commercial interior renovation"/><figcaption>Commercial improvement work should begin with the property, operating needs and a clearly defined scope.</figcaption></figure>
 <div className="article-shell"><aside className="article-sidebar"><div className="article-contents"><p>Article Contents</p><a href="#quick-answer">Quick Answer</a><a href="#services">Services</a><a href="#coordination">One Project Plan</a><a href="#operations">Working Around Operations</a><a href="#process">Process</a><a href="#faqs">FAQs</a></div><div className="article-sidebar-cta"><p>Commercial Property?</p><h2>Start With a Property Walkthrough.</h2><a className="button blog-primary" href="/contact">Request an Estimate</a></div></aside>
 <article className="article-body">
