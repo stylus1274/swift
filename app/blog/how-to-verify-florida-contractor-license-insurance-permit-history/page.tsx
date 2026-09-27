@@ -84,7 +84,7 @@ export default function VerifyFloridaContractorArticlePage() {
           <section className="article-answer" id="quick-answer">
             <p className="eyebrow">QUICK ANSWER</p>
             <h2>What Should You Verify Before Hiring a Florida Contractor?</h2>
-            <p>Start with the contractor's Florida license, then verify workers' compensation coverage and review local permit records when they are available. Finally, compare the names and business information on those records with the company presenting the proposal. None of these checks replaces a good contract, but together they give you a much clearer picture of who you are hiring.</p>
+            <p>Start with the contractor's Florida license, then verify workers' compensation coverage and review local permit records when they are available. Finally, compare the names and business information on those records with the company presenting the proposal. None of these checks replaces a good contract, but together they give you a much clearer picture of who you are hiring. Once the credentials check out, our guide to <a href="/blog/compare-remodeling-estimates-spring-hill">comparing remodeling estimates in Spring Hill</a> can help you evaluate the proposals themselves.</p>
             <div className="article-takeaways">
               <strong>Verification Order</strong>
               <ul>
