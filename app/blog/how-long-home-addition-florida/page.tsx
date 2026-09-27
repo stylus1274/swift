@@ -66,7 +66,12 @@ export default function FloridaHomeAdditionTimelineArticlePage() {
         <p className="eyebrow">HOME ADDITIONS • FLORIDA PROJECT PLANNING</p>
         <h1>How Long Does a Home Addition Take in Florida?</h1>
         <p className="article-deck">A home addition is more than the weeks spent framing and finishing new space. The full schedule also includes design, engineering, permitting, inspections and the work required to connect the addition to the existing home.</p>
-        <div className="article-meta"><span>HOME ADDITIONS</span><span>8 MIN READ</span><span>UPDATED SEPTEMBER 14, 2026</span></div>
+        <div className="article-meta"><span>HOME ADDITIONS</span><span>UPDATED SEPTEMBER 14, 2026</span></div>
+      <div className="article-byline">
+        <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
+        <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
+        <div className="article-read-time"><span>Read Time</span><strong>8 min read</strong></div>
+      </div>
       </header>
 
       <figure className="article-hero-image">
