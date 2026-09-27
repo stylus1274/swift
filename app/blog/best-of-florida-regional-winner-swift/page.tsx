@@ -3,7 +3,12 @@ import SiteFooter from "@/components/SiteFooter";
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>Best of Florida Regional Winner</span></nav>
-<header className="article-header"><p className="eyebrow">TRUST & RECOGNITION</p><h1>Two-Time Best of Florida Regional Winner: What the Award Means for Homeowners</h1><p className="article-deck">Swift Construction & Painting reports being named a Best of Florida Regional Winner in the Residential Construction/Remodeling Contractors category in 2023 and again in 2025.</p><div className="article-meta"><span>TRUST</span><span>6 MIN READ</span><span>UPDATED SEPTEMBER 21, 2026</span></div></header>
+<header className="article-header"><p className="eyebrow">TRUST & RECOGNITION</p><h1>Two-Time Best of Florida Regional Winner: What the Award Means for Homeowners</h1><p className="article-deck">Swift Construction & Painting reports being named a Best of Florida Regional Winner in the Residential Construction/Remodeling Contractors category in 2023 and again in 2025.</p><div className="article-meta"><span>TRUST</span><span>UPDATED SEPTEMBER 21, 2026</span></div>
+      <div className="article-byline">
+        <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
+        <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
+        <div className="article-read-time"><span>Read Time</span><strong>6 min read</strong></div>
+      </div></header>
 <figure className="article-hero-image"><img src="/assets/projects/brooksville-custom-farmhouse/exterior.jpg" alt="Completed Swift custom farmhouse in Brooksville, Florida"/><figcaption>Third-party recognition matters most when it is backed by real work homeowners can review.</figcaption></figure>
 <div className="article-shell"><aside className="article-sidebar"><div className="article-contents"><p>Article Contents</p><a href="#quick-answer">Quick Answer</a><a href="#recognition">The Recognition</a><a href="#meaning">What It Means</a><a href="#proof">Look Beyond Awards</a><a href="#projects">Review the Work</a></div><div className="article-sidebar-cta"><p>Comparing Contractors?</p><h2>Look at the Recognition and the Work Behind It.</h2><a className="button blog-primary" href="/gallery">View Projects</a></div></aside>
 <article className="article-body">
