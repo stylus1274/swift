@@ -3,7 +3,12 @@ import SiteFooter from "@/components/SiteFooter";
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>A Look Back at 20+ Years of Projects</span></nav>
-<header className="article-header"><p className="eyebrow">LOCAL EXPERIENCE • HERNANDO COUNTY</p><h1>A Look Back: 20+ Years of Projects Across Hernando County</h1><p className="article-deck">Swift Construction &amp; Painting has served local homeowners, businesses and property owners since 2003. The work has expanded across remodeling, custom homes, multi-family construction, painting and commercial property improvements.</p><div className="article-meta"><span>TRUST</span><span>8 MIN READ</span><span>UPDATED SEPTEMBER 22, 2026</span></div></header>
+<header className="article-header"><p className="eyebrow">LOCAL EXPERIENCE • HERNANDO COUNTY</p><h1>A Look Back: 20+ Years of Projects Across Hernando County</h1><p className="article-deck">Swift Construction &amp; Painting has served local homeowners, businesses and property owners since 2003. The work has expanded across remodeling, custom homes, multi-family construction, painting and commercial property improvements.</p><div className="article-meta"><span>TRUST</span><span>UPDATED SEPTEMBER 22, 2026</span></div>
+      <div className="article-byline">
+        <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
+        <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
+        <div className="article-read-time"><span>Read Time</span><strong>8 min read</strong></div>
+      </div></header>
 <figure className="article-hero-image"><img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg" alt="Completed Swift whole-home remodeling project in Spring Hill, Florida"/><figcaption>Swift&apos;s documented recent work includes remodeling and new construction in Spring Hill and Brooksville.</figcaption></figure>
 <div className="article-shell"><aside className="article-sidebar"><div className="article-contents"><p>Article Contents</p><a href="#quick-answer">Quick Answer</a><a href="#since-2003">Since 2003</a><a href="#work">How the Work Expanded</a><a href="#projects">Recent Project Proof</a><a href="#today">What Swift Prioritizes Today</a></div><div className="article-sidebar-cta"><p>See the Work</p><h2>Review Documented Swift Projects.</h2><a className="button blog-primary" href="/gallery">View Project Gallery</a></div></aside>
 <article className="article-body">
