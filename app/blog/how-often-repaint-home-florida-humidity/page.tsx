@@ -66,7 +66,12 @@ export default function FloridaHumidityRepaintingArticlePage() {
         <p className="eyebrow">EXTERIOR PAINTING • FLORIDA HOME MAINTENANCE</p>
         <h1>How Often Should You Repaint Your Home in Florida&apos;s Humidity?</h1>
         <p className="article-deck">Florida paint does more than change the color of a house. It helps protect stucco, trim and other exterior surfaces from sun, rain and persistent moisture. The right repainting schedule starts with the condition of the coating, not just the year it was applied.</p>
-        <div className="article-meta"><span>PAINTING</span><span>8 MIN READ</span><span>UPDATED SEPTEMBER 14, 2026</span></div>
+        <div className="article-meta"><span>PAINTING</span><span>UPDATED SEPTEMBER 14, 2026</span></div>
+      <div className="article-byline">
+        <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
+        <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
+        <div className="article-read-time"><span>Read Time</span><strong>8 min read</strong></div>
+      </div>
       </header>
 
       <figure className="article-hero-image">
