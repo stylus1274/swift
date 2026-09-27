@@ -9,6 +9,15 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 const articles = [
   {
     category: "Remodeling",
+    title: "How to Compare Remodeling Estimates in Spring Hill: A Comprehensive Guide",
+    excerpt: "How to compare scope, contractor credentials, materials, timelines, payment terms and overall value before choosing a remodeling bid.",
+    image: "/assets/contact-planning-hero.webp",
+    alt: "Home remodeling plans and material samples prepared for an estimate",
+    readTime: "9 MIN READ",
+    href: "/blog/compare-remodeling-estimates-spring-hill",
+  },
+  {
+    category: "Remodeling",
     title: "Home Additions in Hernando County: Planning a 20x20 Room Addition",
     excerpt: "How to plan a 400-square-foot addition around property fit, layout, utilities, roof tie-ins, budget and everyday use.",
     image: "/assets/home-additions-hero.png",
