@@ -66,7 +66,12 @@ export default function CustomHomeBuildingArticlePage() {
         <p className="eyebrow">CUSTOM HOME BUILDING • HERNANDO COUNTY, FL</p>
         <h1>Custom Home Building in Hernando County: From Site Clearing to Certificate of Occupancy</h1>
         <p className="article-deck">A custom home is not one construction task. It is a coordinated sequence of property research, design, permitting, site work, inspections and hundreds of decisions that need to happen in the right order.</p>
-        <div className="article-meta"><span>NEW HOME CONSTRUCTION</span><span>10 MIN READ</span><span>UPDATED SEPTEMBER 2, 2026</span></div>
+        <div className="article-meta"><span>NEW HOME CONSTRUCTION</span><span>UPDATED SEPTEMBER 2, 2026</span></div>
+      <div className="article-byline">
+        <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
+        <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
+        <div className="article-read-time"><span>Read Time</span><strong>10 min read</strong></div>
+      </div>
       </header>
 
       <figure className="article-hero-image">
