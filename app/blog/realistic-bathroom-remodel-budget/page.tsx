@@ -66,7 +66,12 @@ export default function BathroomRemodelBudgetArticlePage() {
         <p className="eyebrow">BATHROOM REMODELING • COST GUIDE</p>
         <h1>What Is a Realistic Budget for a Bathroom Remodel?</h1>
         <p className="article-deck">A useful bathroom budget starts with the actual scope. Keeping the layout, rebuilding the shower, moving plumbing and repairing hidden moisture damage can turn similar-looking rooms into very different projects.</p>
-        <div className="article-meta"><span>BATHROOM REMODELING</span><span>10 MIN READ</span><span>UPDATED SEPTEMBER 4, 2026</span></div>
+        <div className="article-meta"><span>BATHROOM REMODELING</span><span>UPDATED SEPTEMBER 4, 2026</span></div>
+      <div className="article-byline">
+        <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
+        <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
+        <div className="article-read-time"><span>Read Time</span><strong>10 min read</strong></div>
+      </div>
       </header>
 
       <figure className="article-hero-image">
