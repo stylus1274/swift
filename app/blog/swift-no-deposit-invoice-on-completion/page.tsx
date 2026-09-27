@@ -11,7 +11,12 @@ const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:fa
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>No Deposit, No Surprises</span></nav>
-<header className="article-header"><p className="eyebrow">PRICING & PROCESS • SWIFT</p><h1>No Deposit, No Surprises: How Swift Prices and Invoices Every Project</h1><p className="article-deck">One of the first questions homeowners ask is whether a deposit is required. Swift&apos;s stated policy is straightforward: no deposit up front, with invoicing on completion.</p><div className="article-meta"><span>TRUST</span><span>7 MIN READ</span><span>UPDATED SEPTEMBER 21, 2026</span></div></header>
+<header className="article-header"><p className="eyebrow">PRICING & PROCESS • SWIFT</p><h1>No Deposit, No Surprises: How Swift Prices and Invoices Every Project</h1><p className="article-deck">One of the first questions homeowners ask is whether a deposit is required. Swift&apos;s stated policy is straightforward: no deposit up front, with invoicing on completion.</p><div className="article-meta"><span>TRUST</span><span>UPDATED SEPTEMBER 21, 2026</span></div>
+      <div className="article-byline">
+        <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
+        <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
+        <div className="article-read-time"><span>Read Time</span><strong>7 min read</strong></div>
+      </div></header>
 <figure className="article-hero-image"><img src="/assets/contact-planning-hero.webp" alt="Construction plans and finish samples prepared for a project estimate"/><figcaption>Swift says the process starts with an in-person estimate and written scope before the project is placed on the schedule.</figcaption></figure>
 <div className="article-shell"><aside className="article-sidebar"><div className="article-contents"><p>Article Contents</p><a href="#quick-answer">Quick Answer</a><a href="#estimate">Estimate First</a><a href="#schedule">Scheduling</a><a href="#deposit">No Deposit Policy</a><a href="#completion">Invoice on Completion</a><a href="#faqs">FAQs</a></div><div className="article-sidebar-cta"><p>Planning a Project?</p><h2>Start With an In-Person Estimate.</h2><a className="button blog-primary" href="/contact">Request a Free Estimate</a></div></aside>
 <article className="article-body">
