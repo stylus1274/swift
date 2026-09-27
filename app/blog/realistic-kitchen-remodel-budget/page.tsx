@@ -66,7 +66,12 @@ export default function KitchenRemodelBudgetArticlePage() {
         <p className="eyebrow">KITCHEN REMODELING • COST GUIDE</p>
         <h1>What Is a Realistic Budget for a Kitchen Remodel?</h1>
         <p className="article-deck">A useful budget starts with the work you expect the project to include. Keeping the layout, replacing every cabinet, moving plumbing and removing a wall are four very different remodeling projects.</p>
-        <div className="article-meta"><span>KITCHEN REMODELING</span><span>9 MIN READ</span><span>UPDATED SEPTEMBER 2, 2026</span></div>
+        <div className="article-meta"><span>KITCHEN REMODELING</span><span>UPDATED SEPTEMBER 2, 2026</span></div>
+      <div className="article-byline">
+        <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
+        <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
+        <div className="article-read-time"><span>Read Time</span><strong>9 min read</strong></div>
+      </div>
       </header>
 
       <figure className="article-hero-image">
