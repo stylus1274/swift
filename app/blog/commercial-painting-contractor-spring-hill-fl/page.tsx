@@ -10,7 +10,12 @@ const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:fa
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>Commercial Painting Contractor in Spring Hill</span></nav>
-<header className="article-header"><p className="eyebrow">COMMERCIAL PAINTING • SPRING HILL, FL</p><h1>Commercial Painting Contractor in Spring Hill, FL: What Property Managers Should Know</h1><p className="article-deck">A commercial repaint affects more than the walls. Property managers also have to plan around access, tenants, customers, surface preparation, operating hours and a finish that can hold up to daily use.</p><div className="article-meta"><span>COMMERCIAL</span><span>8 MIN READ</span><span>UPDATED SEPTEMBER 22, 2026</span></div></header>
+<header className="article-header"><p className="eyebrow">COMMERCIAL PAINTING • SPRING HILL, FL</p><h1>Commercial Painting Contractor in Spring Hill, FL: What Property Managers Should Know</h1><p className="article-deck">A commercial repaint affects more than the walls. Property managers also have to plan around access, tenants, customers, surface preparation, operating hours and a finish that can hold up to daily use.</p><div className="article-meta"><span>COMMERCIAL</span><span>UPDATED SEPTEMBER 22, 2026</span></div>
+      <div className="article-byline">
+        <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
+        <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
+        <div className="article-read-time"><span>Read Time</span><strong>8 min read</strong></div>
+      </div></header>
 <figure className="article-hero-image"><img src="/assets/commercial-painting-hero.png" alt="Commercial painter coating a Florida building from a lift"/><figcaption>Commercial painting should be planned around the property, its occupants and the surfaces being coated.</figcaption></figure>
 <div className="article-shell"><aside className="article-sidebar"><div className="article-contents"><p>Article Contents</p><a href="#quick-answer">Quick Answer</a><a href="#scope">Define the Scope</a><a href="#operations">Plan Around Operations</a><a href="#prep">Preparation</a><a href="#proposal">Compare Proposals</a><a href="#faqs">FAQs</a></div><div className="article-sidebar-cta"><p>Managing a Property?</p><h2>Walk the Building Before Pricing the Repaint.</h2><a className="button blog-primary" href="/contact">Request an Estimate</a></div></aside>
 <article className="article-body">
