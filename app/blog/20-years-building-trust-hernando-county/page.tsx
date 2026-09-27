@@ -31,7 +31,12 @@ export default function BuildingTrustHernandoCountyArticlePage() {
         <p className="eyebrow">LOCAL CONTRACTOR • HERNANDO COUNTY, FL</p>
         <h1>20 Years of Building Trust in Hernando County</h1>
         <p className="article-deck">A contractor earns trust over time by showing up, doing the work, standing behind the finished result and building a record that homeowners can verify. Swift Construction &amp; Painting has served local property owners since 2003.</p>
-        <div className="article-meta"><span>LOCAL TRUST</span><span>7 MIN READ</span><span>UPDATED SEPTEMBER 14, 2026</span></div>
+        <div className="article-meta"><span>LOCAL TRUST</span><span>UPDATED SEPTEMBER 14, 2026</span></div>
+      <div className="article-byline">
+        <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
+        <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
+        <div className="article-read-time"><span>Read Time</span><strong>7 min read</strong></div>
+      </div>
       </header>
 
       <figure className="article-hero-image">
