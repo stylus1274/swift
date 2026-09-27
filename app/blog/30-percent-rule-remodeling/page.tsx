@@ -10,7 +10,12 @@ const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:fa
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>What Is the 30% Rule in Remodeling?</span></nav>
-<header className="article-header"><p className="eyebrow">REMODELING BUDGET • FAQ</p><h1>What Is the 30% Rule in Remodeling?</h1><p className="article-deck">The 30% rule is a rough way to compare renovation spending with the value of the home. It can be useful as a reality check, but it is not a law, a contractor pricing formula or a substitute for a project-specific estimate.</p><div className="article-meta"><span>REMODELING FAQ</span><span>7 MIN READ</span><span>UPDATED SEPTEMBER 22, 2026</span></div></header>
+<header className="article-header"><p className="eyebrow">REMODELING BUDGET • FAQ</p><h1>What Is the 30% Rule in Remodeling?</h1><p className="article-deck">The 30% rule is a rough way to compare renovation spending with the value of the home. It can be useful as a reality check, but it is not a law, a contractor pricing formula or a substitute for a project-specific estimate.</p><div className="article-meta"><span>REMODELING FAQ</span><span>UPDATED SEPTEMBER 22, 2026</span></div>
+      <div className="article-byline">
+        <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
+        <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
+        <div className="article-read-time"><span>Read Time</span><strong>7 min read</strong></div>
+      </div></header>
 <figure className="article-hero-image"><img src="/assets/contact-planning-hero.webp" alt="Construction plans and finish samples prepared for remodeling budget planning"/><figcaption>Budget rules of thumb are most useful as a starting point before the actual remodeling scope is defined.</figcaption></figure>
 <div className="article-shell"><aside className="article-sidebar"><div className="article-contents"><p>Article Contents</p><a href="#quick-answer">Quick Answer</a><a href="#math">The Math</a><a href="#meaning">What It Means</a><a href="#limits">Where It Falls Short</a><a href="#swift">Swift's Planning Ranges</a><a href="#faqs">FAQs</a></div><div className="article-sidebar-cta"><p>Planning a Remodel?</p><h2>Price the Scope, Not a Percentage.</h2><a className="button blog-primary" href="/contact">Request a Free Estimate</a></div></aside>
 <article className="article-body">
