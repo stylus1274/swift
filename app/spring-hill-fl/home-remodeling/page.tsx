@@ -46,7 +46,7 @@ export default function SpringHillHomeRemodelingPage(){
       </div>
     </section>
     <section className={styles.processSection}><div><p className={styles.eyebrow}>REMODELING PROCESS</p><h2>Start With the Rooms and Problems You Want to Solve.</h2></div><div className={styles.steps}><p><strong>01</strong><span>Walk the home and define what should change.</span></p><p><strong>02</strong><span>Build a written scope around the rooms, selections and required work.</span></p><p><strong>03</strong><span>Coordinate construction and review the finished work together.</span></p></div></section>
-    <section className={styles.cta}><div><p className={styles.eyebrow}>PLANNING A REMODEL IN SPRING HILL?</p><h2>Start With an On-Site Walkthrough.</h2><p>Show Swift the spaces you want to change and discuss the scope before pricing the project.</p></div><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a></section>
+    <section className={styles.cta}><div><p className={styles.eyebrow}>PLANNING A REMODEL IN SPRING HILL?</p><h2>Start With an On-Site Walkthrough.</h2><p>Show Swift the spaces you want to change and discuss the scope before pricing the project. Already collecting bids? Read how to <a href="/blog/compare-remodeling-estimates-spring-hill">compare remodeling estimates in Spring Hill</a> before choosing a contractor.</p></div><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a></section>
     <SiteFooter />
   </main>;
 }
