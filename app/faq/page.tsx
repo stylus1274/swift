@@ -87,7 +87,7 @@ export default function FaqHubPage() {
         <div className="faq-hub-hero-copy">
           <p className="eyebrow">SWIFT CONSTRUCTION &amp; PAINTING • FAQ CENTER</p>
           <h1>Clear Answers Before You Start the Project.</h1>
-          <p>Find practical answers about remodeling, permits, window and door replacement, and custom home planning in Hernando County. Each page is built around one specific homeowner question so you can get to the answer quickly.</p>
+          <p>Find practical answers about remodeling timelines, permits, home additions, window and door replacement, and custom home planning. Each page is built around one specific homeowner question so you can get to the answer quickly.</p>
           <div className="faq-hub-hero-actions">
             <a className="button faq-primary" href="#faq-topics">Browse FAQ Topics</a>
             <a href="/contact">Ask About Your Project <span aria-hidden="true">→</span></a>
@@ -98,7 +98,7 @@ export default function FaqHubPage() {
           <div className="faq-hub-hero-note">
             <span>LOCAL PROJECT QUESTIONS</span>
             <strong>Hernando County</strong>
-            <p>Remodeling • Permits • Windows &amp; Doors • Custom Homes</p>
+            <p>Remodeling • Permits • Additions • Windows &amp; Doors • Custom Homes</p>
           </div>
         </div>
       </section>
