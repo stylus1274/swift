@@ -183,7 +183,7 @@ export default function ResidentialRemodelingPage() {
           <h2>What Homeowners Ask Before Starting a Renovation.</h2>
           <p>Clear expectations make it easier to compare contractors and prepare for the project ahead.</p>
         </div>
-        <div className="remodel-faq-list">
+        <p><a href="/faq/what-home-remodeling-projects-require-permit-hernando-county">See which remodeling projects may require a permit in Hernando County →</a></p><div className="remodel-faq-list">
           {remodelingFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
             return (
