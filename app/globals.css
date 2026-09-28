@@ -1826,7 +1826,7 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
 .faq-topic-nav-heading { max-width: 770px; }
 .faq-topic-nav-heading .eyebrow { color: var(--blue); }
 .faq-topic-nav-heading h2 { margin: 21px 0 0; font-size: clamp(44px, 4vw, 60px); line-height: 1.07; letter-spacing: -.035em; }
-.faq-topic-nav-grid { margin-top: 50px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.faq-topic-nav-grid { margin-top: 50px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 .faq-topic-nav-grid > a { min-height: 250px; padding: 31px 29px; display: grid; grid-template-columns: 42px 1fr 24px; gap: 16px; align-items: start; border: 1px solid #dde5e2; background: #fff; box-shadow: 0 12px 32px rgba(14,43,66,.07); transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
 .faq-topic-nav-grid > a:hover { transform: translateY(-4px); border-color: #bfd4df; box-shadow: 0 20px 42px rgba(14,43,66,.12); }
 .faq-topic-nav-grid > a > span { color: var(--blue); font-family: Georgia, serif; font-size: 25px; font-style: italic; }
