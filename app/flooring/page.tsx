@@ -203,7 +203,7 @@ export default function FlooringPage() {
           <h2>What Homeowners Ask Before Flooring Installation Begins.</h2>
           <p>Clear answers make it easier to compare materials, preparation and the contractor responsible for your home.</p>
         </div>
-        <div className="remodel-faq-list">
+        <p><a href="/faq/best-flooring-for-florida-home">Compare the best flooring options for a Florida home →</a></p><div className="remodel-faq-list">
           {flooringFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
             return <article className={isOpen ? "open" : ""} key={faq.question}><button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b></button><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
