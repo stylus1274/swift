@@ -42,6 +42,8 @@ const pages = [
   "/faq/do-i-need-permit-home-addition-hernando-county",
   "/faq/how-long-does-kitchen-remodel-take-florida",
   "/faq/how-long-does-bathroom-remodel-take-florida",
+  "/faq/can-homeowner-pull-own-building-permit-florida",
+  "/faq/best-flooring-for-florida-home",
 ];
 
 export function GET() {
