@@ -166,9 +166,15 @@ export default function FaqHubPage() {
             </div>
 
             <div className="faq-question-grid">
-              {group.questions.map((question) => (
+              {group.questions.map((question, questionIndex) => {
+                const questionNumber =
+                  faqGroups.slice(0, index).reduce((total, item) => total + item.questions.length, 0) +
+                  questionIndex +
+                  1;
+
+                return (
                 <a className="faq-question-card" href={question.href} key={question.href}>
-                  <div className="faq-question-number">{String(index + 1).padStart(2, "0")}</div>
+                  <div className="faq-question-number">{String(questionNumber).padStart(2, "0")}</div>
                   <div>
                     <p className="eyebrow">FAQ</p>
                     <h3>{question.title}</h3>
@@ -176,7 +182,8 @@ export default function FaqHubPage() {
                     <strong>Read the Full Answer <span aria-hidden="true">→</span></strong>
                   </div>
                 </a>
-              ))}
+                );
+              })}
             </div>
           </section>
         ))}
