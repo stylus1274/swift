@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 type SiteHeaderProps = {
-  active?: "home" | "services" | "about" | "blog";
+  active?: "home" | "services" | "about" | "blog" | "faq";
   contactHref?: string;
 };
 
@@ -85,6 +85,7 @@ export default function SiteHeader({ active, contactHref = "/contact" }: SiteHea
         <Link className={active === "about" ? "active" : ""} href="/about">About</Link>
         <Link href="/reviews">Reviews</Link>
         <Link className={active === "blog" ? "active" : ""} href="/blog">Blog</Link>
+        <Link className={active === "faq" ? "active" : ""} href="/faq">FAQs</Link>
         <Link href={contactHref}>Contact</Link>
       </nav>
       <a className="header-call" href="tel:3527017458"><span>CALL</span>(352) 701-7458</a>
@@ -101,6 +102,7 @@ export default function SiteHeader({ active, contactHref = "/contact" }: SiteHea
           <Link href="/about">About</Link>
           <Link href="/reviews">Reviews</Link>
           <Link href="/blog">Blog</Link>
+          <Link href="/faq">FAQs</Link>
           <Link href={contactHref}>Contact</Link>
         </nav>
       </details>
