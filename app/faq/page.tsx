@@ -15,6 +15,31 @@ const faqGroups = [
         copy: "See common remodeling work that may require a permit and examples of residential work Hernando County currently lists as exempt.",
         href: "/faq/what-home-remodeling-projects-require-permit-hernando-county",
       },
+      {
+        title: "Do I Need a Permit for a Home Addition in Hernando County?",
+        copy: "See why room additions should be planned as permitted construction and what to know about zoning, plans and inspections.",
+        href: "/faq/do-i-need-permit-home-addition-hernando-county",
+      },
+    ],
+  },
+  {
+    id: "kitchen-bathroom",
+    eyebrow: "KITCHEN & BATHROOM",
+    title: "Kitchen & Bathroom Remodeling Timelines",
+    copy: "Understand how long common kitchen and bathroom projects can take, what happens during each phase and what tends to slow the schedule down.",
+    serviceHref: "/residential-remodeling",
+    serviceLabel: "Explore Residential Remodeling",
+    questions: [
+      {
+        title: "How Long Does a Kitchen Remodel Take in Florida?",
+        copy: "Compare cosmetic updates with full remodels and see how cabinets, countertops, permits and layout changes affect the schedule.",
+        href: "/faq/how-long-does-kitchen-remodel-take-florida",
+      },
+      {
+        title: "How Long Does a Bathroom Remodel Take in Florida?",
+        copy: "See how a simple update differs from a full gut renovation and why plumbing, waterproofing, tile and inspections affect timing.",
+        href: "/faq/how-long-does-bathroom-remodel-take-florida",
+      },
     ],
   },
   {
