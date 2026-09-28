@@ -20,6 +20,11 @@ const faqGroups = [
         copy: "See why room additions should be planned as permitted construction and what to know about zoning, plans and inspections.",
         href: "/faq/do-i-need-permit-home-addition-hernando-county",
       },
+      {
+        title: "Can I Pull My Own Building Permit as a Homeowner in Florida?",
+        copy: "Understand Florida's owner-builder exemption, direct-supervision requirement and the risks of using a homeowner permit to cover unlicensed work.",
+        href: "/faq/can-homeowner-pull-own-building-permit-florida",
+      },
     ],
   },
   {
@@ -58,6 +63,21 @@ const faqGroups = [
     ],
   },
   {
+    id: "flooring",
+    eyebrow: "FLOORING",
+    title: "Flooring for Florida Homes",
+    copy: "Compare practical flooring options for Florida humidity, concrete slabs, wet areas and whole-home remodeling projects.",
+    serviceHref: "/flooring",
+    serviceLabel: "Explore Flooring Installation",
+    questions: [
+      {
+        title: "What Is the Best Flooring for a Florida Home?",
+        copy: "Compare LVP, tile and engineered wood based on moisture exposure, room use, slab conditions and maintenance.",
+        href: "/faq/best-flooring-for-florida-home",
+      },
+    ],
+  },
+  {
     id: "custom-homes",
     eyebrow: "CUSTOM HOMES",
     title: "Building on Your Own Property",
@@ -87,7 +107,7 @@ export default function FaqHubPage() {
         <div className="faq-hub-hero-copy">
           <p className="eyebrow">SWIFT CONSTRUCTION &amp; PAINTING • FAQ CENTER</p>
           <h1>Clear Answers Before You Start the Project.</h1>
-          <p>Find practical answers about remodeling timelines, permits, home additions, window and door replacement, and custom home planning. Each page is built around one specific homeowner question so you can get to the answer quickly.</p>
+          <p>Find practical answers about remodeling timelines, permits, owner-builder responsibilities, flooring, home additions, window and door replacement, and custom home planning. Each page is built around one specific homeowner question so you can get to the answer quickly.</p>
           <div className="faq-hub-hero-actions">
             <a className="button faq-primary" href="#faq-topics">Browse FAQ Topics</a>
             <a href="/contact">Ask About Your Project <span aria-hidden="true">→</span></a>
@@ -98,7 +118,7 @@ export default function FaqHubPage() {
           <div className="faq-hub-hero-note">
             <span>LOCAL PROJECT QUESTIONS</span>
             <strong>Hernando County</strong>
-            <p>Remodeling • Permits • Additions • Windows &amp; Doors • Custom Homes</p>
+            <p>Remodeling • Permits • Flooring • Windows &amp; Doors • Custom Homes</p>
           </div>
         </div>
       </section>
