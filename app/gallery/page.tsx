@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
-import SiteFooter from "@/components/SiteFooter";
+import SiteFooter from "@/components/SiteFooter";\nimport { submitLeadForm } from "@/lib/submitLead";
 const categories = ["All Projects", "Remodeling", "Painting", "Construction", "Exterior Improvements"];
 
 const projects = [
@@ -23,9 +23,15 @@ export default function GalleryPage() {
   const [submitted, setSubmitted] = useState(false);
   const visibleProjects = activeCategory === "All Projects" ? projects : projects.filter((project) => project.category === activeCategory);
 
-  function submitEstimate(event: FormEvent<HTMLFormElement>) {
+  async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    try {
+      await submitLeadForm(event.currentTarget, "Gallery Estimate");
+      setSubmitted(true);
+    } catch (error) {
+      console.error(error);
+      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
+    }
   }
 
   return (

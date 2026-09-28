@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
-import SiteFooter from "@/components/SiteFooter";
+import SiteFooter from "@/components/SiteFooter";\nimport { submitLeadForm } from "@/lib/submitLead";
 const commercialServices = [
   { number: "01", title: "Commercial Build-Outs", copy: "Interior construction, layout changes and finish work coordinated around the needs of your space and operation." },
   { number: "02", title: "Commercial Painting", copy: "Interior and exterior painting with durable coatings, organized work areas and scheduling built around your business." },
@@ -33,9 +33,15 @@ export default function CommercialServicesPage() {
     window.setTimeout(() => document.getElementById("commercial-lead-name")?.focus(), 550);
   }
 
-  function submitEstimate(event: FormEvent<HTMLFormElement>) {
+  async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    try {
+      await submitLeadForm(event.currentTarget, "Commercial Services Estimate");
+      setSubmitted(true);
+    } catch (error) {
+      console.error(error);
+      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
+    }
   }
 
   return (

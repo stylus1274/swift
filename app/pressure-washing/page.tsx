@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
-import SiteFooter from "@/components/SiteFooter";
+import SiteFooter from "@/components/SiteFooter";\nimport { submitLeadForm } from "@/lib/submitLead";
 const pressureWashingServices = [
   { number: "01", title: "Driveways & Walkways", copy: "Lift dirt, algae and surface buildup from concrete driveways, sidewalks and entry paths for a cleaner arrival." },
   { number: "02", title: "House Exterior Washing", copy: "Clean stucco, siding, soffits and exterior details with a method selected for the material and condition." },
@@ -33,9 +33,15 @@ export default function PressureWashingPage() {
     window.setTimeout(() => document.getElementById("pressure-washing-name")?.focus(), 550);
   }
 
-  function submitEstimate(event: FormEvent<HTMLFormElement>) {
+  async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    try {
+      await submitLeadForm(event.currentTarget, "Pressure Washing Estimate");
+      setSubmitted(true);
+    } catch (error) {
+      console.error(error);
+      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
+    }
   }
 
   const serviceSchema = {

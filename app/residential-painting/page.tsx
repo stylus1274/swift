@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
-import SiteFooter from "@/components/SiteFooter";
+import SiteFooter from "@/components/SiteFooter";\nimport { submitLeadForm } from "@/lib/submitLead";
 const paintServices = [
   {
     number: "01",
@@ -70,14 +70,26 @@ export default function ResidentialPaintingPage() {
   const [submitted, setSubmitted] = useState(false);
   const [heroSubmitted, setHeroSubmitted] = useState(false);
 
-  function submitEstimate(event: FormEvent<HTMLFormElement>) {
+  async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    try {
+      await submitLeadForm(event.currentTarget, "Residential Painting Estimate");
+      setSubmitted(true);
+    } catch (error) {
+      console.error(error);
+      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
+    }
   }
 
-  function submitHeroEstimate(event: FormEvent<HTMLFormElement>) {
+  async function submitHeroEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setHeroSubmitted(true);
+    try {
+      await submitLeadForm(event.currentTarget, "Residential Painting Hero Estimate");
+      setHeroSubmitted(true);
+    } catch (error) {
+      console.error(error);
+      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
+    }
   }
 
   return (

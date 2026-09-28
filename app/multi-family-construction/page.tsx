@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
-import SiteFooter from "@/components/SiteFooter";
+import SiteFooter from "@/components/SiteFooter";\nimport { submitLeadForm } from "@/lib/submitLead";
 const multiFamilyServices = [
   { number: "01", title: "Ground-Up Multi-Family Construction", copy: "Coordinated construction for new multi-unit properties, with the scope, sequencing and communication managed under one project plan." },
   { number: "02", title: "Duplex and Townhome Projects", copy: "Practical construction management for attached homes and smaller developments planned around repeatable quality and efficient delivery." },
@@ -33,9 +33,15 @@ export default function MultiFamilyConstructionPage() {
     window.setTimeout(() => document.getElementById("multi-family-lead-name")?.focus(), 550);
   }
 
-  function submitEstimate(event: FormEvent<HTMLFormElement>) {
+  async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    try {
+      await submitLeadForm(event.currentTarget, "Multi-Family Construction Estimate");
+      setSubmitted(true);
+    } catch (error) {
+      console.error(error);
+      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
+    }
   }
 
   return (

@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
-import SiteFooter from "@/components/SiteFooter";
+import SiteFooter from "@/components/SiteFooter";\nimport { submitLeadForm } from "@/lib/submitLead";
 const bathroomServices = [
   { number: "01", title: "Full Bathroom Remodeling", copy: "A connected renovation plan for the shower or tub, vanity, flooring, lighting, storage and finish work." },
   { number: "02", title: "Walk-In Showers and Tub Conversions", copy: "Replace an underused tub or dated enclosure with a shower designed around comfort, access and easier upkeep." },
@@ -33,9 +33,15 @@ export default function BathroomRemodelingPage() {
     window.setTimeout(() => document.getElementById("bathroom-lead-name")?.focus(), 550);
   }
 
-  function submitEstimate(event: FormEvent<HTMLFormElement>) {
+  async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    try {
+      await submitLeadForm(event.currentTarget, "Bathroom Remodeling Estimate");
+      setSubmitted(true);
+    } catch (error) {
+      console.error(error);
+      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
+    }
   }
 
   return (

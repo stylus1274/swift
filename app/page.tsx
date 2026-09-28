@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 import InteractiveServiceMap from "../components/InteractiveServiceMap";
 import SiteHeader from "../components/SiteHeader";
 
-import SiteFooter from "@/components/SiteFooter";
+import SiteFooter from "@/components/SiteFooter";\nimport { submitLeadForm } from "@/lib/submitLead";
 const services = [
   {
     number: "01",
@@ -104,14 +104,26 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
   const [heroSubmitted, setHeroSubmitted] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
 
-  function submitEstimate(event: FormEvent<HTMLFormElement>) {
+  async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    try {
+      await submitLeadForm(event.currentTarget, "Homepage Estimate");
+      setSubmitted(true);
+    } catch (error) {
+      console.error(error);
+      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
+    }
   }
 
-  function submitHeroEstimate(event: FormEvent<HTMLFormElement>) {
+  async function submitHeroEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setHeroSubmitted(true);
+    try {
+      await submitLeadForm(event.currentTarget, "Homepage Hero Estimate");
+      setHeroSubmitted(true);
+    } catch (error) {
+      console.error(error);
+      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
+    }
   }
 
   return (

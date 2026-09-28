@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
-import SiteFooter from "@/components/SiteFooter";
+import SiteFooter from "@/components/SiteFooter";\nimport { submitLeadForm } from "@/lib/submitLead";
 const buildServices = [
   { number: "01", title: "Lot & Plan Review", copy: "We discuss your lot, plans, priorities and practical considerations before the construction scope is finalized." },
   { number: "02", title: "Permits & Preparation", copy: "Required permitting, site preparation and early project coordination are organized before vertical construction begins." },
@@ -33,9 +33,15 @@ export default function NewHomeConstructionPage() {
     window.setTimeout(() => document.getElementById("build-lead-name")?.focus(), 550);
   }
 
-  function submitEstimate(event: FormEvent<HTMLFormElement>) {
+  async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    try {
+      await submitLeadForm(event.currentTarget, "New Home Construction Estimate");
+      setSubmitted(true);
+    } catch (error) {
+      console.error(error);
+      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
+    }
   }
 
   return (
