@@ -118,7 +118,7 @@ export default function NewHomeConstructionPage() {
 
       <section className="build-faq">
         <div className="build-faq-heading"><p className="eyebrow">NEW HOME QUESTIONS</p><h2>What Homeowners Ask Before Building.</h2><p>Clear answers early can prevent expensive surprises later.</p></div>
-        <div className="build-faq-list">
+        <p><a href="/faq/can-homeowner-pull-own-building-permit-florida">Read what Florida homeowners take on when pulling an owner-builder permit →</a></p><div className="build-faq-list">
           {buildFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
             return <article className={isOpen ? "open" : ""} key={faq.question}><button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b></button><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
