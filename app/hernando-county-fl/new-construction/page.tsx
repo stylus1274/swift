@@ -46,7 +46,7 @@ export default function HernandoCountyNewConstructionPage(){
       </div>
     </section>
     <section className={styles.processSection}><div><p className={styles.eyebrow}>NEW CONSTRUCTION PROCESS</p><h2>Start With the Property and the Build Plan.</h2></div><div className={styles.steps}><p><strong>01</strong><span>Review the property, plans, priorities and build goals.</span></p><p><strong>02</strong><span>Define scope, permitting needs, selections and construction sequencing.</span></p><p><strong>03</strong><span>Coordinate construction, trade work, inspections and the final walkthrough.</span></p></div></section>
-    <section className={styles.cta}><div><p className={styles.eyebrow}>BUILDING IN HERNANDO COUNTY?</p><h2>Talk Through Your Property and Plans.</h2><p>Start with a project conversation so Swift can understand the site, scope and next steps.</p></div><a className={styles.primaryButton} href="/contact">Request a Project Conversation</a></section>
+    <section className={styles.cta}><div><p className={styles.eyebrow}>BUILDING IN HERNANDO COUNTY?</p><h2>Talk Through Your Property and Plans.</h2><p>Start with a project conversation so Swift can understand the site, scope and next steps. If you already own land, read <a href="/faq/can-i-build-custom-home-on-my-own-lot-hernando-county">what to check before building a custom home on your Hernando County lot</a>.</p></div><a className={styles.primaryButton} href="/contact">Request a Project Conversation</a></section>
     <SiteFooter />
   </main>;
 }
