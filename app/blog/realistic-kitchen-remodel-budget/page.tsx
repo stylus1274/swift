@@ -210,7 +210,7 @@ export default function KitchenRemodelBudgetArticlePage() {
             <h2>More Expensive Does Not Always Mean a Better Return.</h2>
             <p>The 2025 Cost vs. Value report lists national job costs of $28,458 for a minor midrange kitchen remodel, $82,793 for a major midrange remodel and $164,104 for a major upscale remodel. The report also found a much stronger percentage return for the minor project than for the two major renovations.</p>
             <p>That does not mean a major remodel is a bad decision. It means homeowners should separate two goals: improving daily life and maximizing short-term resale return. If you expect to sell soon, restraint may matter more. If you plan to stay, layout, storage and durability may justify a larger project.</p>
-            <p>For a closer look at where the budget tends to create the strongest practical benefit, read <a href="/blog/kitchen-remodeling-spring-hill-fl-adds-value">which kitchen remodeling improvements actually add value in Spring Hill</a>.</p>
+            <p>For a closer look at where the budget tends to create the strongest practical benefit, read <a href="/blog/kitchen-remodeling-spring-hill-fl-adds-value">which kitchen remodeling improvements actually add value in Spring Hill</a>. For scheduling, see <a href="/faq/how-long-does-kitchen-remodel-take-florida">how long a kitchen remodel can take in Florida</a>.</p>
           </section>
 
           <section className="article-faqs" id="faqs">
