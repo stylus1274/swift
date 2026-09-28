@@ -4,7 +4,8 @@ import { FormEvent, useState } from "react";
 import InteractiveServiceMap from "../components/InteractiveServiceMap";
 import SiteHeader from "../components/SiteHeader";
 
-import SiteFooter from "@/components/SiteFooter";\nimport { submitLeadForm } from "@/lib/submitLead";
+import SiteFooter from "@/components/SiteFooter";
+import { submitLeadForm } from "@/lib/submitLead";
 const services = [
   {
     number: "01",

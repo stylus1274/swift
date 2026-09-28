@@ -3,7 +3,8 @@
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
-import SiteFooter from "@/components/SiteFooter";\nimport { submitLeadForm } from "@/lib/submitLead";
+import SiteFooter from "@/components/SiteFooter";
+import { submitLeadForm } from "@/lib/submitLead";
 const kitchenServices = [
   { number: "01", title: "Full Kitchen Remodeling", copy: "A connected renovation plan for layout changes, cabinetry, counters, flooring, lighting and finish work." },
   { number: "02", title: "Cabinetry and Storage", copy: "Cabinet replacement and practical storage improvements designed around how your household uses the kitchen." },

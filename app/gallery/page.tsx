@@ -3,7 +3,8 @@
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
-import SiteFooter from "@/components/SiteFooter";\nimport { submitLeadForm } from "@/lib/submitLead";
+import SiteFooter from "@/components/SiteFooter";
+import { submitLeadForm } from "@/lib/submitLead";
 const categories = ["All Projects", "Remodeling", "Painting", "Construction", "Exterior Improvements"];
 
 const projects = [

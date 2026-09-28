@@ -3,7 +3,8 @@
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
-import SiteFooter from "@/components/SiteFooter";\nimport { submitLeadForm } from "@/lib/submitLead";
+import SiteFooter from "@/components/SiteFooter";
+import { submitLeadForm } from "@/lib/submitLead";
 const pressureWashingServices = [
   { number: "01", title: "Driveways & Walkways", copy: "Lift dirt, algae and surface buildup from concrete driveways, sidewalks and entry paths for a cleaner arrival." },
   { number: "02", title: "House Exterior Washing", copy: "Clean stucco, siding, soffits and exterior details with a method selected for the material and condition." },

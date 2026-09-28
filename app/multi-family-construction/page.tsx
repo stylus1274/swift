@@ -3,7 +3,8 @@
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
-import SiteFooter from "@/components/SiteFooter";\nimport { submitLeadForm } from "@/lib/submitLead";
+import SiteFooter from "@/components/SiteFooter";
+import { submitLeadForm } from "@/lib/submitLead";
 const multiFamilyServices = [
   { number: "01", title: "Ground-Up Multi-Family Construction", copy: "Coordinated construction for new multi-unit properties, with the scope, sequencing and communication managed under one project plan." },
   { number: "02", title: "Duplex and Townhome Projects", copy: "Practical construction management for attached homes and smaller developments planned around repeatable quality and efficient delivery." },
