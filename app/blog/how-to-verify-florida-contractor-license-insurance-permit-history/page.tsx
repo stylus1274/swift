@@ -163,7 +163,7 @@ export default function VerifyFloridaContractorArticlePage() {
               <li>Compare the names on the proposal, license and insurance documents.</li>
               <li>Get the scope, exclusions, payment terms and permit responsibility in writing.</li>
             </ul>
-            <p>Once the verification checks are complete, compare the actual project scope. Swift provides written proposals for <a href="/services">construction, remodeling and painting services</a> across the Florida Nature Coast.</p>
+            <p>Once the verification checks are complete, compare the actual project scope. If you are considering managing the permit yourself, read <a href="/faq/can-homeowner-pull-own-building-permit-florida">how Florida&apos;s owner-builder permit exemption works</a>. Swift provides written proposals for <a href="/services">construction, remodeling and painting services</a> across the Florida Nature Coast.</p>
           </section>
 
           <section className="article-faqs" id="faqs">
