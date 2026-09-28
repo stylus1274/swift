@@ -191,7 +191,7 @@ export default function HomeAdditionsPage() {
           <h2>What Homeowners Ask Before Adding More Space.</h2>
           <p>Clear answers help you evaluate the property, define the scope and prepare for a major improvement.</p>
         </div>
-        <div className="remodel-faq-list">
+        <p><a href="/faq/do-i-need-permit-home-addition-hernando-county">Read the Hernando County home addition permit FAQ →</a></p><div className="remodel-faq-list">
           {additionFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
             return (
