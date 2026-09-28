@@ -39,6 +39,9 @@ const pages = [
   "/faq/what-home-remodeling-projects-require-permit-hernando-county",
   "/faq/do-i-need-permit-replace-windows-doors-hernando-county",
   "/faq/can-i-build-custom-home-on-my-own-lot-hernando-county",
+  "/faq/do-i-need-permit-home-addition-hernando-county",
+  "/faq/how-long-does-kitchen-remodel-take-florida",
+  "/faq/how-long-does-bathroom-remodel-take-florida",
 ];
 
 export function GET() {
