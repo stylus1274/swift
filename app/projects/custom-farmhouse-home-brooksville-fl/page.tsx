@@ -64,7 +64,7 @@ export default function BrooksvilleCustomFarmhousePage() {
         <div><span>Project Type</span><strong>New Construction Home</strong></div>
         <div><span>Duration</span><strong>8 Months</strong></div>
         <div><span>Completed</span><strong>June 2025</strong></div>
-        <div><span>Project Investment</span><strong>$421,920</strong></div>
+        <div><span>Project Type</span><strong>Custom Farmhouse</strong></div>
       </section>
 
       <section className={styles.intro}>

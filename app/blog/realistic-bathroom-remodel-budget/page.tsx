@@ -25,13 +25,13 @@ const articleSchema = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "Can You Remodel a Bathroom for $10,000?",
+          name: "What Affects the Cost of a Bathroom Remodel?",
           acceptedAnswer: { "@type": "Answer", text: "It may be possible when the room is small, the layout remains unchanged and the scope is focused. A complete renovation with custom tile, major plumbing changes or concealed damage will usually require a larger budget." },
         },
         {
           "@type": "Question",
           name: "How Much Should I Budget for a Small Bathroom Remodel?",
-          acceptedAnswer: { "@type": "Answer", text: "A practical starting range is about $8,000 to $17,000, depending on the scope, materials and existing conditions. Swift's verified average bathroom remodel falls between $10,000 and $17,000." },
+          acceptedAnswer: { "@type": "Answer", text: "Bathroom remodeling cost depends on the room size, layout changes, plumbing, tile, fixtures, cabinetry, accessibility needs and any concealed repairs discovered during the work." },
         },
         {
           "@type": "Question",
@@ -103,7 +103,7 @@ export default function BathroomRemodelBudgetArticlePage() {
           <section className="article-answer" id="quick-answer">
             <p className="eyebrow">QUICK ANSWER</p>
             <h2>How Much Should You Budget for a Bathroom Remodel?</h2>
-            <p>Swift&apos;s typical bathroom remodel falls between <strong>$10,000 and $17,000</strong>. A smaller, focused update may fall below that range when the layout remains unchanged and the work is limited. A larger primary bathroom, custom tiled shower, relocated plumbing, accessibility improvements or concealed damage can move the project above it.</p>
+            <p>Bathroom remodeling cost depends on the scope of work rather than a single published range. A smaller update with the existing layout intact is very different from a larger primary bathroom with custom tile, relocated plumbing, accessibility improvements or concealed repairs.</p>
             <div className="article-takeaways">
               <strong>Key Takeaways</strong>
               <ul>
@@ -122,19 +122,19 @@ export default function BathroomRemodelBudgetArticlePage() {
             <div className="budget-tier-grid">
               <article>
                 <span>01</span>
-                <p className="budget-range">Under $10K</p>
+                <p className="budget-range">Smaller Scope</p>
                 <h3>Focused Bathroom Update</h3>
                 <ul><li>Existing layout remains</li><li>Selected fixture replacements</li><li>Paint, lighting or hardware updates</li><li>Limited flooring or vanity work</li><li>No major concealed repairs</li></ul>
               </article>
               <article>
                 <span>02</span>
-                <p className="budget-range">$10K to $17K</p>
+                <p className="budget-range">Full Remodel</p>
                 <h3>Typical Swift Remodel</h3>
                 <ul><li>Coordinated demolition and installation</li><li>New vanity, flooring and fixtures</li><li>Shower or tub improvements</li><li>Lighting and finish updates</li><li>Existing layout largely retained</li></ul>
               </article>
               <article>
                 <span>03</span>
-                <p className="budget-range">$18K to $35K+</p>
+                <p className="budget-range">Expanded Scope</p>
                 <h3>Expanded or Custom Remodel</h3>
                 <ul><li>Custom tiled walk-in shower</li><li>Frameless glass enclosure</li><li>Plumbing or layout changes</li><li>Premium surfaces or cabinetry</li><li>Accessibility or repair work</li></ul>
               </article>
@@ -217,15 +217,15 @@ export default function BathroomRemodelBudgetArticlePage() {
             <p className="eyebrow">COST VERSUS VALUE</p>
             <h2>Is a Bathroom Remodel Worth the Investment?</h2>
             <p>A bathroom remodel can improve comfort, function, safety, storage and resale appeal. The value is not limited to what you may recover when selling the home.</p>
-            <p>The 2025 Cost vs. Value Report lists a national midrange bathroom remodel at approximately $26,138, a universal-design remodel at approximately $42,183 and an upscale remodel at approximately $81,612. Those national figures provide context, but they are not local quotes and should not replace a property-specific estimate.</p>
+            <p>Industry cost-versus-value reports show that bathroom projects vary widely by scope and finish level. Those reports can provide general planning context, but they should not replace a property-specific estimate.</p>
             <p>The strongest decision usually balances how the room needs to work now, how long you expect to remain in the home and whether the design makes sense for the surrounding market.</p>
           </section>
 
           <section className="article-faqs" id="faqs">
             <p className="eyebrow">COMMON QUESTIONS</p>
             <h2>Bathroom Remodel Budget FAQs</h2>
-            <details open><summary>Can You Remodel a Bathroom for $10,000?<span>+</span></summary><p>It may be possible when the room is small, the layout remains unchanged and the scope is focused. A complete renovation with custom tile, major plumbing changes or concealed damage will usually require a larger budget.</p></details>
-            <details><summary>How Much Should I Budget for a Small Bathroom Remodel?<span>+</span></summary><p>A practical starting range is about $8,000 to $17,000, depending on the scope, materials and existing conditions. Swift&apos;s verified average bathroom remodel falls between $10,000 and $17,000.</p></details>
+            <details open><summary>What Affects the Cost of a Bathroom Remodel?<span>+</span></summary><p>Room size, layout changes, plumbing, tile, fixtures, cabinetry, accessibility needs and concealed repairs can all change the final scope and estimate.</p></details>
+            <details><summary>How Should I Budget for a Small Bathroom Remodel?<span>+</span></summary><p>Start by defining what will stay, what will change and which finishes matter most. Swift can then price the actual room after an on-site walkthrough instead of relying on a generic online range.</p></details>
             <details><summary>What Is Usually the Most Expensive Part of a Bathroom Remodel?<span>+</span></summary><p>The shower is often one of the largest individual costs, especially when it includes custom tile, waterproofing, a bench, niche, frameless glass or relocated plumbing.</p></details>
             <details><summary>Does a Bathroom Remodel Require a Permit in Florida?<span>+</span></summary><p>Permit requirements depend on the project and jurisdiction. Plumbing, electrical, structural and certain ventilation changes commonly require permits. Confirm the requirements for the property before construction begins.</p></details>
             <details><summary>Does Swift Require a Deposit for a Bathroom Remodel?<span>+</span></summary><p>No. Swift Construction and Painting does not require an upfront deposit. Customers are invoiced after the work is complete.</p></details>

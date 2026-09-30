@@ -67,7 +67,7 @@ export default function BuildingTrustHernandoCountyArticlePage() {
           <section className="article-answer" id="quick-answer">
             <p className="eyebrow">QUICK ANSWER</p>
             <h2>What Does Long-Term Local Experience Actually Tell You?</h2>
-            <p>Time in business does not guarantee a perfect project, but it gives homeowners something important to evaluate: a track record. Swift Construction &amp; Painting has served Hernando County and surrounding communities since 2003, carries Florida building contractor license CBC1260893, holds an A+ Better Business Bureau rating, and has more than $1.2 million in documented permitted project history identified during the company&apos;s recent local SEO audit.</p>
+            <p>Time in business does not guarantee a perfect project, but it gives homeowners something important to evaluate: a track record. Swift Construction &amp; Painting has served Hernando County and surrounding communities since 2003, carries Florida building contractor license CBC1260893, holds an A+ Better Business Bureau rating, and has documented permitted project history identified during the company&apos;s recent local SEO audit.</p>
             <div className="article-takeaways">
               <strong>What That Means for Homeowners</strong>
               <ul>
@@ -90,10 +90,10 @@ export default function BuildingTrustHernandoCountyArticlePage() {
           <section id="record">
             <p className="eyebrow">DOCUMENTED HISTORY</p>
             <h2>Trust Is Stronger When There Is a Record Behind It</h2>
-            <p>Marketing language is easy to write. Public records are harder to fake. One of the strongest proof points identified in Swift&apos;s recent business audit was more than $1.2 million in permitted project history. That figure does not describe every job the company has completed, but it does provide a documented trail of work that required permitting and local oversight.</p>
+            <p>Marketing language is easy to write. Public records are harder to fake. One of the strongest proof points identified in Swift&apos;s recent business audit was documented permitted project history across the local area. That record does not describe every job the company has completed, but it does provide a traceable history of work that required permitting and local oversight.</p>
             <p>Permit history matters because it shows that at least part of a contractor&apos;s work can be traced through the jurisdictions where projects were performed. For homeowners considering structural changes, additions or new construction, that kind of record is more useful than a vague claim about experience.</p>
             <div className="article-factor-grid">
-              <div><strong>$1.2M+</strong><p>Documented permitted project history identified in Swift&apos;s business audit.</p></div>
+              <div><strong>Permitted Work</strong><p>Documented project history identified in Swift&apos;s business audit.</p></div>
               <div><strong>A+ BBB</strong><p>An A+ Better Business Bureau rating was also identified as part of Swift&apos;s trust profile.</p></div>
               <div><strong>Since 2003</strong><p>More than two decades serving homeowners and property owners across the local area.</p></div>
               <div><strong>CBC1260893</strong><p>Florida building contractor license used across the site and project communications.</p></div>

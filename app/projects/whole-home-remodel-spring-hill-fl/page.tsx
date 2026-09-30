@@ -52,7 +52,7 @@ export default function WholeHomeRemodelSpringHillPage() {
         <div><span>Project Type</span><strong>Whole-Home Remodeling</strong></div>
         <div><span>Duration</span><strong>4 Months</strong></div>
         <div><span>Completed</span><strong>February 2026</strong></div>
-        <div><span>Project Investment</span><strong>$104,760</strong></div>
+        <div><span>Project Scope</span><strong>Whole-Home Remodel</strong></div>
       </section>
 
       <section className={styles.intro}>

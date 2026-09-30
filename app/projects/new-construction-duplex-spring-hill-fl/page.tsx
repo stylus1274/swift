@@ -7,7 +7,7 @@ const facts = [
   ["Project Type", "New Construction Duplex"],
   ["Duration", "5 Months"],
   ["Completed", "May 2026"],
-  ["Project Investment", "$314,490"],
+  ["Project Type", "Ground-Up Duplex"],
 ];
 
 export default function SpringHillDuplexPage() {
@@ -74,7 +74,7 @@ export default function SpringHillDuplexPage() {
           </p>
           <p>
             The project began on December 29, 2025 and was completed on May 26, 2026,
-            with a documented project investment of $314,490.
+            as a documented ground-up duplex project for a repeat customer.
           </p>
           <p>
             The customer had worked with Swift before. That repeat relationship is
