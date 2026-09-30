@@ -22,10 +22,10 @@ export default function ReviewsPage() {
       <div>
         <p className={styles.eyebrow}>SWIFT CONSTRUCTION REVIEWS</p>
         <h1>What Customers Say About Working With Swift.</h1>
-        <p className={styles.deck}>Reviews matter more when they line up with the finished work. Swift&apos;s Google profile currently shows a 5.0 rating from 5 reviews, and the themes customers mention most are quality, communication, service, timing, and budget.</p>
+        <p className={styles.deck}>Reviews matter more when they line up with the finished work. Swift&apos;s Google profile currently shows a 5.0 rating from 9 reviews, and the themes customers mention most are quality, communication, service, timing, and budget.</p>
         <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a><a className={styles.secondaryLink} href="/gallery">See Completed Work <span aria-hidden="true">→</span></a></div>
       </div>
-      <aside className={styles.ratingCard}><p>GOOGLE REVIEW SNAPSHOT</p><strong>5.0</strong><div className={styles.stars} aria-label="5 out of 5 stars">★★★★★</div><span>5 Google reviews</span><small>Snapshot checked September 2026. Review counts can change over time.</small></aside>
+      <aside className={styles.ratingCard}><p>GOOGLE REVIEW SNAPSHOT</p><strong>5.0</strong><div className={styles.stars} aria-label="5 out of 5 stars">★★★★★</div><span>9 Google reviews</span><small>Snapshot checked September 2026. Review counts can change over time.</small></aside>
     </section>
     <section className={styles.reviewSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>CUSTOMER FEEDBACK</p><h2>What Shows Up Repeatedly in the Reviews.</h2></div>
