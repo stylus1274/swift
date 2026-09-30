@@ -43,9 +43,9 @@ export default function SpringHillLocationPage(){
       <div className={styles.projectGrid}>
         <article>
           <a className={styles.projectImage} href="/projects/whole-home-remodel-spring-hill-fl"><img src="/assets/projects/spring-hill-whole-home-remodel/primary-bath-after.jpg" alt="Completed primary bathroom remodel in Spring Hill, Florida"/></a>
-          <div><p className={styles.eyebrow}>REMODELING • SPRING HILL</p><h3><a href="/projects/whole-home-remodel-spring-hill-fl">Whole-Home Remodel</a></h3><p>Four-month remodel covering the kitchen, bathrooms, laundry, living spaces, bedrooms and patio.</p></div>
+          <div><p className={styles.eyebrow}>REMODELING • SPRING HILL</p><h3><a href="/projects/whole-home-remodel-spring-hill-fl">Whole-Home Remodel</a></h3><p>Four-month remodel covering the kitchen, bathrooms, laundry, living spaces, bedrooms and patio. Documented investment: $104,760.</p></div>
         </article>
-        <article><div className={styles.textProject}><p className={styles.eyebrow}>NEW CONSTRUCTION • SPRING HILL</p><h3><a href="/projects/new-construction-duplex-spring-hill-fl">New Construction Duplex</a></h3><p>Five-month ground-up duplex project completed from December 2025 through May 2026 for a repeat customer.</p><a href="/projects/new-construction-duplex-spring-hill-fl">View Project Details →</a></div></article>
+        <article><div className={styles.textProject}><p className={styles.eyebrow}>NEW CONSTRUCTION • SPRING HILL</p><h3><a href="/projects/new-construction-duplex-spring-hill-fl">New Construction Duplex</a></h3><p>Five-month ground-up duplex project completed from December 2025 through May 2026 for a repeat customer. Documented investment: $314,490.</p><a href="/projects/new-construction-duplex-spring-hill-fl">View Project Details →</a></div></article>
       </div>
     </section>
     <section className={styles.processSection}>

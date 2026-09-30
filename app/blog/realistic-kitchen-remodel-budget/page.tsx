@@ -25,8 +25,8 @@ const articleSchema = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "What Affects the Cost of a Kitchen Remodel?",
-          acceptedAnswer: { "@type": "Answer", text: "Kitchen remodeling cost depends on the layout, cabinetry, countertops, appliances, flooring, plumbing, electrical work, structural changes and finish selections." },
+          name: "Can You Remodel a Kitchen for $30,000?",
+          acceptedAnswer: { "@type": "Answer", text: "Yes, when the layout stays in place and the work focuses on selected surfaces, fixtures and finishes. A $30,000 budget is less realistic for a full gut remodel with new cabinetry, major system changes and premium appliances." },
         },
         {
           "@type": "Question",
@@ -103,7 +103,7 @@ export default function KitchenRemodelBudgetArticlePage() {
           <section className="article-answer" id="quick-answer">
             <p className="eyebrow">QUICK ANSWER</p>
             <h2>How Much Should You Budget for a Kitchen Remodel?</h2>
-            <p>Kitchen remodeling cost depends on the actual scope. A targeted update that keeps the existing layout is very different from a full remodel with new cabinetry, system changes, structural work or premium finish selections.</p>
+            <p>A realistic early planning range is about <strong>$20,000 to $35,000 for a targeted update</strong>, <strong>$45,000 to $85,000 for a full midrange remodel</strong>, and <strong>$90,000 to $165,000 or more for a major custom renovation</strong>. Local labor, kitchen size, material selections and changes to the layout can move a project outside those ranges.</p>
             <div className="article-takeaways">
               <strong>Key Takeaways</strong>
               <ul>
@@ -122,19 +122,19 @@ export default function KitchenRemodelBudgetArticlePage() {
             <div className="budget-tier-grid">
               <article>
                 <span>01</span>
-                <p className="budget-range">Targeted Update</p>
+                <p className="budget-range">$20K to $35K</p>
                 <h3>Targeted Kitchen Update</h3>
                 <ul><li>Existing layout remains</li><li>Cabinets painted, refaced or selectively replaced</li><li>New counters, backsplash or sink</li><li>Limited lighting and fixture updates</li><li>Midrange finish selections</li></ul>
               </article>
               <article>
                 <span>02</span>
-                <p className="budget-range">Full Remodel</p>
+                <p className="budget-range">$45K to $85K</p>
                 <h3>Full Midrange Remodel</h3>
                 <ul><li>New semi-custom cabinetry</li><li>New countertops and backsplash</li><li>Flooring, paint and lighting</li><li>Coordinated appliance package</li><li>Moderate plumbing or electrical changes</li></ul>
               </article>
               <article>
                 <span>03</span>
-                <p className="budget-range">Major Custom Renovation</p>
+                <p className="budget-range">$90K to $165K+</p>
                 <h3>Major Custom Renovation</h3>
                 <ul><li>New or expanded layout</li><li>Custom cabinetry and premium surfaces</li><li>Structural wall changes</li><li>Relocated plumbing, electrical or HVAC</li><li>High-end appliances and detailed finish work</li></ul>
               </article>
@@ -151,19 +151,19 @@ export default function KitchenRemodelBudgetArticlePage() {
 
           <section id="budget-example">
             <p className="eyebrow">PLANNING EXAMPLE</p>
-            <h2>How a Kitchen Remodel Budget Is Commonly Divided</h2>
+            <h2>How a $60,000 Kitchen Budget Might Be Divided</h2>
             <p>This sample is not a universal formula. It shows why spending the entire budget on cabinets, appliances and countertops leaves no room for the work required to install them.</p>
             <div className="article-table-wrap budget-table">
               <table>
-                <thead><tr><th>Budget Category</th><th>Cost Role</th><th>What It May Cover</th></tr></thead>
+                <thead><tr><th>Budget Category</th><th>Example Amount</th><th>What It May Cover</th></tr></thead>
                 <tbody>
-                  <tr><td>Cabinets and Installation</td><td>Major category</td><td>Cabinet package, hardware and installation</td></tr>
-                  <tr><td>Countertops and Backsplash</td><td>Scope dependent</td><td>Fabrication, installation, tile and setting materials</td></tr>
-                  <tr><td>Appliances</td><td>Selection dependent</td><td>Appliance package and installation coordination</td></tr>
-                  <tr><td>Plumbing, Electrical and HVAC</td><td>Scope dependent</td><td>Fixture connections, lighting, outlets and system changes</td></tr>
-                  <tr><td>Flooring, Paint and Trim</td><td>Finish dependent</td><td>Finish materials and installation labor</td></tr>
-                  <tr><td>Demolition, General Labor and Management</td><td>Core project cost</td><td>Protection, removal, coordination, cleanup and project labor</td></tr>
-                  <tr><td>Contingency Reserve</td><td>Planning allowance</td><td>Unknown conditions or approved scope adjustments</td></tr>
+                  <tr><td>Cabinets and Installation</td><td>$18,000</td><td>Semi-custom cabinet package, hardware and installation</td></tr>
+                  <tr><td>Countertops and Backsplash</td><td>$8,000</td><td>Fabrication, installation, tile and setting materials</td></tr>
+                  <tr><td>Appliances</td><td>$7,000</td><td>Coordinated midrange appliance package</td></tr>
+                  <tr><td>Plumbing, Electrical and HVAC</td><td>$7,000</td><td>Fixture connections, lighting, outlets and limited system changes</td></tr>
+                  <tr><td>Flooring, Paint and Trim</td><td>$6,000</td><td>Finish materials and installation labor</td></tr>
+                  <tr><td>Demolition, General Labor and Management</td><td>$9,000</td><td>Protection, removal, coordination, cleanup and project labor</td></tr>
+                  <tr><td>Contingency Reserve</td><td>$5,000</td><td>Unknown conditions or approved scope adjustments</td></tr>
                 </tbody>
               </table>
             </div>
@@ -208,7 +208,7 @@ export default function KitchenRemodelBudgetArticlePage() {
           <section id="value">
             <p className="eyebrow">COST VERSUS VALUE</p>
             <h2>More Expensive Does Not Always Mean a Better Return.</h2>
-            <p>Industry cost-versus-value reports consistently show that project scope and finish level affect both total cost and resale return. They also show that a smaller, focused update can produce a different return profile than a major renovation.</p>
+            <p>The 2025 Cost vs. Value report lists national job costs of $28,458 for a minor midrange kitchen remodel, $82,793 for a major midrange remodel and $164,104 for a major upscale remodel. The report also found a much stronger percentage return for the minor project than for the two major renovations.</p>
             <p>That does not mean a major remodel is a bad decision. It means homeowners should separate two goals: improving daily life and maximizing short-term resale return. If you expect to sell soon, restraint may matter more. If you plan to stay, layout, storage and durability may justify a larger project.</p>
             <p>For a closer look at where the budget tends to create the strongest practical benefit, read <a href="/blog/kitchen-remodeling-spring-hill-fl-adds-value">which kitchen remodeling improvements actually add value in Spring Hill</a>. For scheduling, see <a href="/faq/how-long-does-kitchen-remodel-take-florida">how long a kitchen remodel can take in Florida</a>.</p>
           </section>
@@ -216,7 +216,7 @@ export default function KitchenRemodelBudgetArticlePage() {
           <section className="article-faqs" id="faqs">
             <p className="eyebrow">COMMON QUESTIONS</p>
             <h2>Kitchen Remodel Budget FAQs</h2>
-            <details open><summary>What Affects the Cost of a Kitchen Remodel?<span>+</span></summary><p>Layout changes, cabinetry, countertops, appliances, flooring, plumbing, electrical work, structural changes and finish selections all affect the final scope and estimate.</p></details>
+            <details open><summary>Can You Remodel a Kitchen for $30,000?<span>+</span></summary><p>Yes, when the layout stays in place and the work focuses on selected surfaces, fixtures and finishes. A $30,000 budget is less realistic for a full gut remodel with new cabinetry, major system changes and premium appliances.</p></details>
             <details><summary>What Is Usually the Most Expensive Part of a Kitchen Remodel?<span>+</span></summary><p>Cabinetry is often one of the largest individual costs. The total can also rise quickly when the project changes the layout, moves plumbing, upgrades electrical service or adds structural work.</p></details>
             <details><summary>How Much Contingency Should a Kitchen Remodel Budget Include?<span>+</span></summary><p>A planning reserve of 10% to 15% is common when the scope is well understood. Older homes, concealed damage and extensive layout changes may justify a larger reserve.</p></details>
             <details><summary>Does Moving the Sink Make a Kitchen Remodel More Expensive?<span>+</span></summary><p>Usually. Moving a sink can affect supply lines, drainage, venting, cabinetry, flooring and inspections. The impact depends on the new location and how accessible the existing systems are.</p></details>

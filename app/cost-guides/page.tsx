@@ -23,14 +23,14 @@ export default function CostGuidesPage(){
       <div className={styles.heroImage}><img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg" alt="Completed Swift remodeling project used to illustrate project cost planning"/></div>
     </section>
     <section className={styles.localProof}>
-      <div><span>Remodeling</span><strong>Scope Specific</strong></div>
-      <div><span>New Builds</span><strong>Scope Specific</strong></div>
+      <div><span>Remodeling Range</span><strong>Often $8K–$80K</strong></div>
+      <div><span>New Builds</span><strong>Often $300K–$550K</strong></div>
       <div><span>Estimate Method</span><strong>On-Site Walkthrough</strong></div>
-      <div><span>Written Estimate</span><strong>After Walkthrough</strong></div>
+      <div><span>Pricing</span><strong>Scope Specific</strong></div>
     </section>
     <section className={styles.intro}>
       <div><p className={styles.eyebrow}>HOW TO USE THESE GUIDES</p><h2>Start With Scope, Not a Single Number.</h2></div>
-      <div><p>Swift does not publish fixed project pricing online because remodeling and new-construction costs depend on the property, project size, structural work, materials, selections, permitting, trade requirements and the final written scope.</p><p>The most accurate way to estimate a project is an on-site walkthrough followed by a written estimate based on the actual work required.</p></div>
+      <div><p>Swift&apos;s client discovery material gives broad typical ranges of about $8,000 to $80,000 for remodeling and about $300,000 to $550,000 for new builds. Those figures are not quotes and should not be treated as fixed pricing.</p><p>Actual cost depends on the property, project size, structural work, materials, selections, permitting, trade requirements and the final written scope. Swift says the most accurate way to estimate a project is an on-site walkthrough.</p></div>
     </section>
     <section className={styles.projectsSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>START WITH THE RIGHT GUIDE</p><h2>Project Planning by Type.</h2><p>Each guide focuses on the decisions that have the biggest effect on cost and scope.</p></div>
