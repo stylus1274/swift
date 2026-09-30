@@ -334,26 +334,20 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
         <div className="review-cards">
           <article>
             <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>"The crew treated our home with care and the finished paintwork looks flawless. Every detail was handled professionally."</blockquote>
-            <p><strong>Amanda Reynolds</strong></p>
+            <blockquote>"That commitment to quality shows in the finished work."</blockquote>
+            <p><strong>Google Review</strong></p>
             <GoogleReviewBadge />
           </article>
           <article>
             <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>"Our bathroom remodel exceeded expectations. Communication was clear, the schedule stayed on track and the craftsmanship is outstanding."</blockquote>
-            <p><strong>Marcus Thompson</strong></p>
+            <blockquote>"Excellent work and outstanding service."</blockquote>
+            <p><strong>Google Review</strong></p>
             <GoogleReviewBadge />
           </article>
           <article>
             <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>"From the estimate through the final walkthrough, the entire process felt organized and honest. We would confidently hire Swift again."</blockquote>
-            <p><strong>Elena Parker</strong></p>
-            <GoogleReviewBadge />
-          </article>
-          <article>
-            <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>"Beautiful work, dependable people and excellent attention to detail. Our renovation finally feels like the high-end home we envisioned."</blockquote>
-            <p><strong>Daniel Foster</strong></p>
+            <blockquote>"Communication was great, and they completed the work on time and within budget."</blockquote>
+            <p><strong>Google Review</strong></p>
             <GoogleReviewBadge />
           </article>
         </div>
