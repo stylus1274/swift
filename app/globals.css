@@ -1316,7 +1316,7 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
 .featured-review p, .review-cards p { margin: 0; color: #23435e; font-size: 14px; }
 .google-review-badge { margin-top: 8px; display: inline-flex; align-items: center; gap: 6px; color: #657483; font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 600; line-height: 1; }
 .google-review-badge svg { width: 15px; height: 15px; display: block; }
-.review-cards { max-width: 1180px; margin: 54px auto 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 21px; }
+.review-cards { max-width: 1180px; margin: 54px auto 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 21px; }
 .review-cards article { min-height: 250px; padding: 31px 35px 29px; display: flex; flex-direction: column; align-items: flex-start; background: rgba(255,255,255,.66); }
 .review-cards blockquote { flex: 1; margin: 18px 0 22px; font-size: 20px; line-height: 1.42; }
 
