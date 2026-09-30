@@ -220,20 +220,20 @@ export default function ResidentialPaintingPage() {
 
       <section className="paint-review-section">
         <div className="paint-review-intro">
-          <p className="eyebrow">LOCAL HOMEOWNERS</p>
+          <p className="eyebrow">CUSTOMER REVIEWS</p>
           <h2>Chosen for the Details.<br />Recommended for the Experience.</h2>
           <a href="#paint-estimate">Start your project <span>→</span></a>
         </div>
         <article className="paint-review-card">
           <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>“The crew treated our home with care and the finished paintwork looks flawless. Every detail was handled professionally.”</blockquote>
-          <p><strong>Amanda Reynolds</strong><br /><span>Spring Hill homeowner</span></p>
+          <blockquote>“That commitment to quality shows in the finished work.”</blockquote>
+          <p><strong>Google Review</strong></p>
           <GoogleMark />
         </article>
         <article className="paint-review-card second">
           <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>“From the estimate to the final walkthrough, communication was clear and the house looks completely refreshed.”</blockquote>
-          <p><strong>Daniel Foster</strong><br /><span>Brooksville homeowner</span></p>
+          <blockquote>“Communication was great, and they completed the work on time and within budget.”</blockquote>
+          <p><strong>Google Review</strong></p>
           <GoogleMark />
         </article>
       </section>
