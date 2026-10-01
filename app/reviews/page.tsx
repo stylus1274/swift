@@ -11,7 +11,6 @@ const reviewHighlights = [
 const projectPhotos = [
   {src:"/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg",alt:"Completed Spring Hill whole-home kitchen remodel by Swift Construction and Painting",label:"Spring Hill Whole-Home Remodel",href:"/projects/whole-home-remodel-spring-hill-fl"},
   {src:"/assets/projects/brooksville-custom-farmhouse/exterior.jpg",alt:"Completed Brooksville custom farmhouse by Swift Construction and Painting",label:"Brooksville Custom Farmhouse",href:"/projects/custom-farmhouse-home-brooksville-fl"},
-  {src:"/assets/projects/brooksville-custom-farmhouse/primary-bath.jpg",alt:"Completed primary bathroom in a Swift custom home project",label:"Custom Home Interior",href:"/projects/custom-farmhouse-home-brooksville-fl"},
 ];
 
 export default function ReviewsPage() {
