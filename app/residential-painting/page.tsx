@@ -232,7 +232,19 @@ export default function ResidentialPaintingPage() {
         </article>
         <article className="paint-review-card second">
           <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>“So glad I found Swift Construction and Painting! Very skilled crew took care of both my home and business. Even fixing an issue that the original builder failed to find or correct. They left the jobsite as clean as it was when they arrived. Great communication throughout the process and prices were very reasonable for quality work. Next time I need anything done at my property, I will be calling Swift again.”</blockquote>
+          <blockquote>“I highly recommend Swift Construction for any home remodeling project. They did an excellent job remodeling my kitchen, and I am extremely happy with the results. From start to finish, the team was professional, reliable, and paid close attention to detail.”</blockquote>
+          <p><strong>Suanny Mercedes</strong></p>
+          <GoogleMark />
+        </article>
+        <article className="paint-review-card">
+          <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“My family real estate company has used Swift Construction and Painting on multiple projects large and small, including interior renovation all the way up to ground up construction. William has proven to be reliable, reasonable and honest. His attention to detail is impeccable.”</blockquote>
+          <p><strong>michael Lopez</strong></p>
+          <GoogleMark />
+        </article>
+        <article className="paint-review-card second">
+          <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“So glad I found Swift Construction and Painting! Very skilled crew took care of both my home and business. Even fixing an issue that the original builder failed to find or correct.”</blockquote>
           <p><strong>Kristen Tooley</strong></p>
           <GoogleMark />
         </article>
