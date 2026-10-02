@@ -174,8 +174,8 @@ export default function ResidentialRemodelingPage() {
       <section className="remodel-review">
         <div className="remodel-review-quote">
           <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>“Swift kept the project organized, communicated clearly and made the entire renovation feel manageable. The finished space looks better than we imagined.”</blockquote>
-          <p><strong>Melissa Carter</strong><span>Spring Hill homeowner • Google Review</span></p>
+          <blockquote>“I highly recommend Swift Construction for any home remodeling project. They did an excellent job remodeling my kitchen, and I am extremely happy with the results. From start to finish, the team was professional, reliable, and paid close attention to detail.”</blockquote>
+          <p><strong>Suanny Mercedes</strong><span>Google Review</span></p>
         </div>
         <div className="remodel-review-cta">
           <p className="eyebrow">READY TO TALK?</p>
