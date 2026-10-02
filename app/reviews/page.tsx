@@ -18,14 +18,6 @@ const reviews = [
   {
     "author": "Kristen Tooley",
     "quote": "So glad I found Swift Construction and Painting! Very skilled crew took care of both my home and business. Even fixing an issue that the original builder failed to find or correct. They left the jobsite as clean as it was when they arrived. Great communication throughout the process and prices were very reasonable for quality work. Next time I need anything done at my property, I will be calling Swift again."
-  },
-  {
-    "author": "Bill Merritt",
-    "quote": "I have been working with Swift construction for many years. Being in real estate many of my customers want to update their properties. Will Swift has always worked with me to assist these customers. They are always impressed with his knowledge and skills. No project is too large! Will has also done projects at my home and I am very satisfied with the quality of his work!"
-  },
-  {
-    "author": "Dawn Healy",
-    "quote": "Words truly cannot express how highly we recommend Swift Construction. Our experience from start to finish was exceptional, and hiring William and his team was absolutely the best decision we could have made."
   }
 ];
 
