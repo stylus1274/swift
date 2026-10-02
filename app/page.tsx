@@ -325,6 +325,10 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
       </section>
 
       <section className="reviews-section">
+        <div className="reviews-heading">
+          <p className="eyebrow">WHAT CUSTOMERS ARE SAYING</p>
+          <h2>Real Feedback From Swift Customers.</h2>
+        </div>
         <div className="featured-review">
           <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
           <blockquote>"We are beyond happy with the work William and his crew did for us. They are extremely professional, punctual and efficient! Highly recommend and will be using them from here on out!"</blockquote>
@@ -340,16 +344,19 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
           </article>
           <article>
             <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>"My family real estate company has used Swift Construction and Painting on multiple projects large and small, including interior renovation all the way up to ground up construction. William has proven to be reliable, reasonable and honest. His attention to detail is impeccable. We look forward to many more projects together."</blockquote>
+            <blockquote>"My family real estate company has used Swift Construction and Painting on multiple projects large and small, including interior renovation all the way up to ground up construction. William has proven to be reliable, reasonable and honest. His attention to detail is impeccable."</blockquote>
             <p><strong>michael Lopez</strong></p>
             <GoogleReviewBadge />
           </article>
           <article>
             <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>"So glad I found Swift Construction and Painting! Very skilled crew took care of both my home and business. Even fixing an issue that the original builder failed to find or correct. They left the jobsite as clean as it was when they arrived. Great communication throughout the process and prices were very reasonable for quality work. Next time I need anything done at my property, I will be calling Swift again."</blockquote>
+            <blockquote>"So glad I found Swift Construction and Painting! Very skilled crew took care of both my home and business. Even fixing an issue that the original builder failed to find or correct."</blockquote>
             <p><strong>Kristen Tooley</strong></p>
             <GoogleReviewBadge />
           </article>
+        </div>
+        <div className="reviews-more">
+          <a className="button button-dark" href="/reviews">Read More Reviews</a>
         </div>
       </section>
 
