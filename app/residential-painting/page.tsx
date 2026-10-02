@@ -226,14 +226,14 @@ export default function ResidentialPaintingPage() {
         </div>
         <article className="paint-review-card">
           <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>“That commitment to quality shows in the finished work.”</blockquote>
-          <p><strong>Google Review</strong></p>
+          <blockquote>“We are beyond happy with the work William and his crew did for us. They are extremely professional, punctual and efficient! Highly recommend and will be using them from here on out!”</blockquote>
+          <p><strong>CHAD ALAN FORD</strong></p>
           <GoogleMark />
         </article>
         <article className="paint-review-card second">
           <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>“Communication was great, and they completed the work on time and within budget.”</blockquote>
-          <p><strong>Google Review</strong></p>
+          <blockquote>“So glad I found Swift Construction and Painting! Very skilled crew took care of both my home and business. Even fixing an issue that the original builder failed to find or correct. They left the jobsite as clean as it was when they arrived. Great communication throughout the process and prices were very reasonable for quality work. Next time I need anything done at my property, I will be calling Swift again.”</blockquote>
+          <p><strong>Kristen Tooley</strong></p>
           <GoogleMark />
         </article>
       </section>

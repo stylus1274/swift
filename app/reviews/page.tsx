@@ -2,10 +2,31 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import styles from "./page.module.css";
 
-const reviewHighlights = [
-  "That commitment to quality shows in the finished work.",
-  "Excellent work and outstanding service.",
-  "Communication was great, and they completed the work on time and within budget.",
+const reviews = [
+  {
+    "author": "CHAD ALAN FORD",
+    "quote": "We are beyond happy with the work William and his crew did for us. They are extremely professional, punctual and efficient! Highly recommend and will be using them from here on out!"
+  },
+  {
+    "author": "Suanny Mercedes",
+    "quote": "I highly recommend Swift Construction for any home remodeling project. They did an excellent job remodeling my kitchen, and I am extremely happy with the results. From start to finish, the team was professional, reliable, and paid close attention to detail."
+  },
+  {
+    "author": "michael Lopez",
+    "quote": "My family real estate company has used Swift Construction and Painting on multiple projects large and small, including interior renovation all the way up to ground up construction. William has proven to be reliable, reasonable and honest. His attention to detail is impeccable. We look forward to many more projects together."
+  },
+  {
+    "author": "Kristen Tooley",
+    "quote": "So glad I found Swift Construction and Painting! Very skilled crew took care of both my home and business. Even fixing an issue that the original builder failed to find or correct. They left the jobsite as clean as it was when they arrived. Great communication throughout the process and prices were very reasonable for quality work. Next time I need anything done at my property, I will be calling Swift again."
+  },
+  {
+    "author": "Bill Merritt",
+    "quote": "I have been working with Swift construction for many years. Being in real estate many of my customers want to update their properties. Will Swift has always worked with me to assist these customers. They are always impressed with his knowledge and skills. No project is too large! Will has also done projects at my home and I am very satisfied with the quality of his work!"
+  },
+  {
+    "author": "Dawn Healy",
+    "quote": "Words truly cannot express how highly we recommend Swift Construction. Our experience from start to finish was exceptional, and hiring William and his team was absolutely the best decision we could have made."
+  }
 ];
 
 const projectPhotos = [
@@ -28,7 +49,7 @@ export default function ReviewsPage() {
     </section>
     <section className={styles.reviewSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>CUSTOMER FEEDBACK</p><h2>What Shows Up Repeatedly in the Reviews.</h2></div>
-      <div className={styles.reviewGrid}>{reviewHighlights.map((quote)=><blockquote key={quote}><div className={styles.stars} aria-hidden="true">★★★★★</div><p>“{quote}”</p><cite>Google Review</cite></blockquote>)}</div>
+      <div className={styles.reviewGrid}>{reviews.map((review)=><blockquote key={review.author}><div className={styles.stars} aria-hidden="true">★★★★★</div><p>“{review.quote}”</p><cite>{review.author} · Google Review</cite></blockquote>)}</div>
     </section>
     <section className={styles.proofSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>THE WORK BEHIND THE REVIEWS</p><h2>Real Swift Projects, Not Stock Photography.</h2><p>These are client-submitted project photos from completed Swift jobs in Spring Hill and Brooksville.</p></div>
