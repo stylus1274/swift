@@ -5,6 +5,7 @@ import SiteHeader from "../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
+import LeadProtection from "@/components/LeadProtection";
 const contactFaqs = [
   {
     question: "Is the Project Estimate Free?",
@@ -64,6 +65,7 @@ export default function ContactPage() {
       </section>
 
       <form className="contact-estimate-form" id="contact-form" onSubmit={submitEstimate}>
+          <LeadProtection />
         <div className="contact-form-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>Tell Us What You Are Planning.</h2>

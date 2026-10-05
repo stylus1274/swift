@@ -25,5 +25,8 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Contact spam protection tests
+        run: npm run test:contact
+
       - name: Build
         run: npm run build

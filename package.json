@@ -9,9 +9,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test:contact": "node scripts/test-contact-protection.mjs"
   },
   "dependencies": {
+    "botid": "^1.5.11",
     "leaflet": "1.9.4",
     "next": "16.2.6",
     "react": "19.2.6",

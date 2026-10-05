@@ -5,6 +5,7 @@ import SiteHeader from "../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
+import LeadProtection from "@/components/LeadProtection";
 const paintingServices = [
   {
     number: "01",
@@ -124,6 +125,7 @@ export default function CommercialPaintingPage() {
       </section>
 
       <form className="remodel-quick-form commercial-painting-quick-form" onSubmit={continueEstimate}>
+          <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>What Needs to Be Painted?</h2>
@@ -227,6 +229,7 @@ export default function CommercialPaintingPage() {
           <p className="remodel-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
         <form className="remodel-estimate-form" onSubmit={submitEstimate}>
+          <LeadProtection />
           <div className="remodel-form-row"><label>Name<input id="commercial-painting-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
           <div className="remodel-form-row"><label>Business Email<input name="email" placeholder="you@company.com" type="email" /></label><label>Project City or ZIP<input name="zip" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
           <div className="remodel-form-row"><label>Painting Scope<select value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select scope</option><option>Interior painting</option><option>Exterior painting</option><option>Interior and exterior</option><option>Maintenance repaint</option><option>Other painting project</option></select></label><label>Property Type<select value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Office</option><option>Retail</option><option>Restaurant or hospitality</option><option>Medical or professional</option><option>Multi-tenant property</option><option>Other</option></select></label></div>

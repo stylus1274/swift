@@ -5,6 +5,7 @@ import SiteHeader from "../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
+import LeadProtection from "@/components/LeadProtection";
 const principles = [
   {
     number: "01",
@@ -91,6 +92,7 @@ export default function AboutPage() {
       </section>
 
       <form className="about-quick-form" onSubmit={continueEstimate}>
+          <LeadProtection />
         <div className="about-quick-heading"><p className="eyebrow">START A CONVERSATION</p><h2>What Are You Planning?</h2></div>
         <label htmlFor="about-quick-project">Project Type<select id="about-quick-project" value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select project</option><option>Residential painting</option><option>Residential remodeling</option><option>New home construction</option><option>Commercial services</option><option>Other project</option></select></label>
         <label htmlFor="about-quick-zip">Project ZIP<input id="about-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
@@ -162,6 +164,7 @@ export default function AboutPage() {
           <p className="about-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
         <form className="about-estimate-form" onSubmit={submitEstimate}>
+          <LeadProtection />
           <div className="about-form-row"><label>Name<input id="about-lead-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
           <div className="about-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>City or ZIP<input name="zip" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
           <div className="about-form-row"><label>Project Type<select value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select project</option><option>Residential painting</option><option>Residential remodeling</option><option>New home construction</option><option>Commercial services</option><option>Other project</option></select></label><label>Ideal Timing<select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Just researching</option></select></label></div>

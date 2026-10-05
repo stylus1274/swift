@@ -5,6 +5,7 @@ import SiteHeader from "../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
+import LeadProtection from "@/components/LeadProtection";
 const categories = ["All Projects", "Remodeling", "Painting", "Construction", "Exterior Improvements"];
 
 const projects = [
@@ -91,6 +92,7 @@ export default function GalleryPage() {
           <a href="tel:3527017458">Prefer to call? <strong>(352) 701-7458</strong></a>
         </div>
         <form className="gallery-estimate-form" onSubmit={submitEstimate}>
+          <LeadProtection />
           <div className="remodel-form-row"><label>Name<input name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
           <div className="remodel-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>Project City or ZIP<input name="location" placeholder="Spring Hill" required /></label></div>
           <label>Project Type<select defaultValue="" required><option value="" disabled>Select a project</option><option>Painting</option><option>Residential remodeling</option><option>New construction or addition</option><option>Windows, doors or flooring</option><option>Pressure washing</option><option>Commercial property</option><option>Not sure yet</option></select></label>

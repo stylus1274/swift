@@ -5,6 +5,7 @@ import SiteHeader from "../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
+import LeadProtection from "@/components/LeadProtection";
 const paintServices = [
   {
     number: "01",
@@ -111,6 +112,7 @@ export default function ResidentialPaintingPage() {
           </div>
         </div>
         <form className="paint-hero-panel paint-hero-form" onSubmit={submitHeroEstimate}>
+          <LeadProtection />
           <p className="paint-panel-label">GET A FREE PAINTING ESTIMATE</p>
           <h2>Start Your Free Painting Estimate.</h2>
           <p className="paint-hero-form-intro">Tell us what you would like painted and when you are hoping to begin.</p>
@@ -284,6 +286,7 @@ export default function ResidentialPaintingPage() {
           <p className="paint-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
         <form className="paint-estimate-form" onSubmit={submitEstimate}>
+          <LeadProtection />
           <div className="paint-form-row">
             <label>Name<input name="name" placeholder="Your name" required /></label>
             <label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label>

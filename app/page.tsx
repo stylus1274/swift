@@ -6,6 +6,7 @@ import SiteHeader from "../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
+import LeadProtection from "@/components/LeadProtection";
 const services = [
   {
     number: "01",
@@ -146,6 +147,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
             </div>
           </div>
           <form className="paint-hero-panel paint-hero-form" onSubmit={submitHeroEstimate}>
+          <LeadProtection />
             <p className="paint-panel-label">GET A FREE ESTIMATE</p>
             <h2>Start Your Free Estimate.</h2>
             <p className="paint-hero-form-intro">Tell us what you are planning and when you are hoping to begin.</p>
@@ -395,6 +397,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
       <section className="estimate-section" id="contact">
         <InteractiveServiceMap />
         <form className="estimate-card" onSubmit={submitEstimate}>
+          <LeadProtection />
           <p className="eyebrow">03 — FREE ESTIMATE</p>
           <h2>Serving Hernando,<br />Citrus &amp; Pasco Counties.</h2>
           <p className="estimate-copy">Spring Hill, Brooksville, Weeki Wachee, Hernando Beach and Ridge Manor,<br />plus communities throughout Citrus and Pasco Counties.</p>

@@ -5,6 +5,7 @@ import SiteHeader from "../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
+import LeadProtection from "@/components/LeadProtection";
 const multiFamilyServices = [
   { number: "01", title: "Ground-Up Multi-Family Construction", copy: "Coordinated construction for new multi-unit properties, with the scope, sequencing and communication managed under one project plan." },
   { number: "02", title: "Duplex and Townhome Projects", copy: "Practical construction management for attached homes and smaller developments planned around repeatable quality and efficient delivery." },
@@ -70,6 +71,7 @@ export default function MultiFamilyConstructionPage() {
       </section>
 
       <form className="remodel-quick-form multifamily-quick-form" onSubmit={continueEstimate}>
+          <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR PROJECT</p>
           <h2>What Are You Planning?</h2>
@@ -166,6 +168,7 @@ export default function MultiFamilyConstructionPage() {
           <p className="remodel-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
         <form className="remodel-estimate-form" onSubmit={submitEstimate}>
+          <LeadProtection />
           <div className="remodel-form-row"><label>Name<input id="multi-family-lead-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
           <div className="remodel-form-row"><label>Business Email<input name="email" placeholder="you@company.com" type="email" /></label><label>Project City or ZIP<input name="zip" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
           <div className="remodel-form-row"><label>Project Stage<select value={projectStage} onChange={(event) => setProjectStage(event.target.value)} required><option value="" disabled>Select stage</option><option>Evaluating a property</option><option>Early planning</option><option>Plans in development</option><option>Ready for contractor review</option><option>Existing property renovation</option></select></label><label>Approximate Units<select value={unitCount} onChange={(event) => setUnitCount(event.target.value)} required><option value="" disabled>Select units</option><option>2 to 4 units</option><option>5 to 12 units</option><option>13 to 30 units</option><option>More than 30 units</option><option>Not sure yet</option></select></label></div>

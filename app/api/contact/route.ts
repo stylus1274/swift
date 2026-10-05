@@ -1,3 +1,6 @@
+import { checkBotId } from "botid/server";
+import { allowLeadAttempt, leadIdempotencyKey, validateLead } from "@/lib/leadProtection";
+
 type LeadField = {
   label: string;
   value: string;
@@ -7,6 +10,8 @@ type LeadPayload = {
   formName?: unknown;
   page?: unknown;
   fields?: unknown;
+  website?: unknown;
+  elapsedMs?: unknown;
 };
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -56,15 +61,42 @@ export async function POST(request: Request) {
 
   const origin = request.headers.get("origin");
   const requestOrigin = new URL(request.url).origin;
-  if (origin && origin !== requestOrigin) {
+  if (!origin || origin !== requestOrigin) {
     return Response.json({ error: "Invalid request origin." }, { status: 403 });
+  }
+
+  if (!request.headers.get("content-type")?.toLowerCase().startsWith("application/json")) {
+    return Response.json({ error: "Invalid request." }, { status: 415 });
+  }
+  const ip = request.headers.get("x-vercel-forwarded-for")?.split(",")[0]?.trim()
+    || (process.env.VERCEL ? "unknown" : request.headers.get("x-forwarded-for")?.split(",")[0]?.trim()) || "unknown";
+  if (!allowLeadAttempt(ip)) {
+    return Response.json({ error: "Too many attempts. Please wait a few minutes or call us." }, { status: 429, headers: { "Retry-After": "600" } });
   }
 
   let payload: LeadPayload;
   try {
-    payload = (await request.json()) as LeadPayload;
+    const body = await request.text();
+    if (new TextEncoder().encode(body).length > 20000) return Response.json({ error: "Request too large." }, { status: 413 });
+    const parsed: unknown = JSON.parse(body);
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) throw new Error("Invalid payload");
+    payload = parsed as LeadPayload;
   } catch {
     return Response.json({ error: "Invalid request." }, { status: 400 });
+  }
+
+  if (typeof payload.website !== "string" || payload.website.trim()) {
+    return Response.json({ error: "We could not verify your request. Please call us." }, { status: 403 });
+  }
+  if (typeof payload.elapsedMs !== "number" || !Number.isFinite(payload.elapsedMs) || payload.elapsedMs < 2000) {
+    return Response.json({ error: "Please wait a moment and try again." }, { status: 400 });
+  }
+  try {
+    const verification = await checkBotId({ advancedOptions: { checkLevel: "basic" } });
+    if (verification.isBot) return Response.json({ error: "We could not verify your request. Please call us at (352) 701-7458." }, { status: 403 });
+  } catch {
+    console.error("Contact bot verification unavailable.");
+    return Response.json({ error: "Verification is temporarily unavailable. Please try again or call (352) 701-7458." }, { status: 503 });
   }
 
   const formName = cleanText(payload.formName, 120) || "Website Contact Form";
@@ -74,6 +106,9 @@ export async function POST(request: Request) {
   if (fields.length === 0) {
     return Response.json({ error: "No form fields were submitted." }, { status: 400 });
   }
+
+  const validationError = validateLead(fields);
+  if (validationError) return Response.json({ error: validationError }, { status: 400 });
 
   const emailField = fields.find((field) => /email/i.test(field.label) && EMAIL_PATTERN.test(field.value));
   const nameField = fields.find((field) => /(^|\s)name($|\s)/i.test(field.label));
@@ -111,6 +146,7 @@ export async function POST(request: Request) {
     method: "POST",
     headers: {
       Authorization: `Bearer ${apiKey}`,
+      "Idempotency-Key": leadIdempotencyKey([...fields, { label: "Source Form", value: formName }, { label: "Source Page", value: page }]),
       "Content-Type": "application/json",
     },
     body: JSON.stringify({

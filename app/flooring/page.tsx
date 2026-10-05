@@ -5,6 +5,7 @@ import SiteHeader from "../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
+import LeadProtection from "@/components/LeadProtection";
 const flooringServices = [
   {
     number: "01",
@@ -124,6 +125,7 @@ export default function FlooringPage() {
       </section>
 
       <form className="remodel-quick-form commercial-painting-quick-form" onSubmit={continueEstimate}>
+          <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>What Flooring Are You Planning?</h2>
@@ -227,6 +229,7 @@ export default function FlooringPage() {
           <p className="remodel-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
         <form className="remodel-estimate-form" onSubmit={submitEstimate}>
+          <LeadProtection />
           <div className="remodel-form-row"><label>Name<input id="flooring-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
           <div className="remodel-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>Project City or ZIP<input name="zip" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
           <div className="remodel-form-row"><label>Flooring Type<select value={flooringType} onChange={(event) => setFlooringType(event.target.value)} required><option value="" disabled>Select flooring</option><option>Luxury vinyl plank</option><option>Tile flooring</option><option>Laminate flooring</option><option>Not sure yet</option><option>Other flooring project</option></select></label><label>Approximate Size<select value={projectSize} onChange={(event) => setProjectSize(event.target.value)} required><option value="" disabled>Select size</option><option>One room</option><option>Two to three rooms</option><option>Several rooms</option><option>Whole-home flooring</option><option>Not sure yet</option></select></label></div>

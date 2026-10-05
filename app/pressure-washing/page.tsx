@@ -5,6 +5,7 @@ import SiteHeader from "../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
+import LeadProtection from "@/components/LeadProtection";
 const pressureWashingServices = [
   { number: "01", title: "Driveways & Walkways", copy: "Lift dirt, algae and surface buildup from concrete driveways, sidewalks and entry paths for a cleaner arrival." },
   { number: "02", title: "House Exterior Washing", copy: "Clean stucco, siding, soffits and exterior details with a method selected for the material and condition." },
@@ -74,6 +75,7 @@ export default function PressureWashingPage() {
       </section>
 
       <form className="remodel-quick-form commercial-painting-quick-form" onSubmit={continueEstimate}>
+          <LeadProtection />
         <div className="remodel-quick-heading"><p className="eyebrow">START YOUR ESTIMATE</p><h2>What Would You Like Cleaned?</h2></div>
         <label htmlFor="pressure-washing-quick-project">Cleaning Scope<select id="pressure-washing-quick-project" value={scope} onChange={(event) => setScope(event.target.value)} required><option value="" disabled>Select an area</option><option>Driveway and walkways</option><option>House exterior</option><option>Pool deck or patio</option><option>Commercial property</option><option>Multiple areas</option></select></label>
         <label htmlFor="pressure-washing-quick-property">Property Type<select id="pressure-washing-quick-property" value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Single-family home</option><option>HOA or multi-family</option><option>Commercial property</option><option>Other property</option></select></label>
@@ -139,6 +141,7 @@ export default function PressureWashingPage() {
           <p className="remodel-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
         <form className="remodel-estimate-form" onSubmit={submitEstimate}>
+          <LeadProtection />
           <div className="remodel-form-row"><label>Name<input id="pressure-washing-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
           <div className="remodel-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>Project City or ZIP<input name="zip" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
           <div className="remodel-form-row"><label>Cleaning Scope<select value={scope} onChange={(event) => setScope(event.target.value)} required><option value="" disabled>Select an area</option><option>Driveway and walkways</option><option>House exterior</option><option>Pool deck or patio</option><option>Commercial property</option><option>Multiple areas</option></select></label><label>Property Type<select value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Single-family home</option><option>HOA or multi-family</option><option>Commercial property</option><option>Other property</option></select></label></div>
