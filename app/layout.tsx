@@ -6,6 +6,7 @@ import "./sticky-header.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://swiftconstructionandpainting.com"),
+  alternates: { canonical: "/" },
   title: {
     default: "Swift Construction & Painting | Florida Nature Coast Contractor",
     template: "%s",

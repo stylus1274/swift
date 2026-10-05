@@ -45,7 +45,7 @@ export function GET() {
   const urls = blogRoutes
     .map((path) => {
       const priority = path === "/blog" ? "0.8" : "0.7";
-      return `  <url>\n    <loc>${siteUrl}${path}</loc>\n    <lastmod>2026-09-22</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+      return `  <url>\n    <loc>${siteUrl}${path}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
     })
     .join("\n");
 
