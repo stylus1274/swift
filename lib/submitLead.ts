@@ -58,7 +58,7 @@ function collectFields(form: HTMLFormElement): LeadField[] {
   );
 
   controls.forEach((control, index) => {
-    if (control.disabled) return;
+    if (control.disabled || control.dataset.leadProtection) return;
 
     if (control instanceof HTMLInputElement) {
       const ignoredTypes = new Set(["submit", "button", "reset", "hidden", "file"]);
@@ -83,6 +83,11 @@ export async function submitLeadForm(form: HTMLFormElement, formName: string) {
   if (submitButton) submitButton.disabled = true;
 
   try {
+    const started = Number((form.elements.namedItem("form_started") as HTMLInputElement | null)?.value);
+    if (!started) throw new Error("Please refresh the page and try again.");
+    // Autofill users can submit quickly. Wait rather than rejecting their lead.
+    const remaining = 2100 - (Date.now() - started);
+    if (remaining > 0) await new Promise((resolve) => setTimeout(resolve, remaining));
     const response = await fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -90,6 +95,8 @@ export async function submitLeadForm(form: HTMLFormElement, formName: string) {
       },
       body: JSON.stringify({
         formName,
+        website: (form.elements.namedItem("company_website") as HTMLInputElement | null)?.value || "",
+        elapsedMs: Date.now() - started,
         page: window.location.href,
         fields: collectFields(form),
       }),

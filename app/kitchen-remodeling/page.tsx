@@ -5,6 +5,7 @@ import SiteHeader from "../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
+import LeadProtection from "@/components/LeadProtection";
 const kitchenServices = [
   { number: "01", title: "Full Kitchen Remodeling", copy: "A connected renovation plan for layout changes, cabinetry, counters, flooring, lighting and finish work." },
   { number: "02", title: "Cabinetry and Storage", copy: "Cabinet replacement and practical storage improvements designed around how your household uses the kitchen." },
@@ -70,6 +71,7 @@ export default function KitchenRemodelingPage() {
       </section>
 
       <form className="remodel-quick-form kitchen-quick-form" onSubmit={continueEstimate}>
+          <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>What Are You Planning?</h2>
@@ -166,6 +168,7 @@ export default function KitchenRemodelingPage() {
           <p className="remodel-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
         <form className="remodel-estimate-form" onSubmit={submitEstimate}>
+          <LeadProtection />
           <div className="remodel-form-row"><label>Name<input id="kitchen-lead-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
           <div className="remodel-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>Project City or ZIP<input name="zip" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
           <div className="remodel-form-row"><label>Project Scope<select value={projectScope} onChange={(event) => setProjectScope(event.target.value)} required><option value="" disabled>Select scope</option><option>Full kitchen remodel</option><option>Cabinets and counters</option><option>Layout changes</option><option>Flooring, lighting and finishes</option><option>Not sure yet</option></select></label><label>Main Priority<select value={mainPriority} onChange={(event) => setMainPriority(event.target.value)} required><option value="" disabled>Select priority</option><option>Better layout</option><option>More storage</option><option>Updated appearance</option><option>Durability and easier upkeep</option><option>Preparing to sell</option></select></label></div>

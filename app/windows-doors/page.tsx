@@ -5,6 +5,7 @@ import SiteHeader from "../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
+import LeadProtection from "@/components/LeadProtection";
 const openingServices = [
   {
     number: "01",
@@ -124,6 +125,7 @@ export default function WindowsDoorsPage() {
       </section>
 
       <form className="remodel-quick-form commercial-painting-quick-form" onSubmit={continueEstimate}>
+          <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>What Are You Planning to Replace?</h2>
@@ -227,6 +229,7 @@ export default function WindowsDoorsPage() {
           <p className="remodel-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
         <form className="remodel-estimate-form" onSubmit={submitEstimate}>
+          <LeadProtection />
           <div className="remodel-form-row"><label>Name<input id="windows-doors-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
           <div className="remodel-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>Project City or ZIP<input name="zip" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
           <div className="remodel-form-row"><label>Project Type<select value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select project</option><option>Replacement windows</option><option>Exterior entry doors</option><option>Sliding or patio doors</option><option>Windows and doors</option><option>Other opening project</option></select></label><label>Number of Openings<select value={openingCount} onChange={(event) => setOpeningCount(event.target.value)} required><option value="" disabled>Select quantity</option><option>1 opening</option><option>2 to 5 openings</option><option>6 to 10 openings</option><option>More than 10</option><option>Not sure yet</option></select></label></div>

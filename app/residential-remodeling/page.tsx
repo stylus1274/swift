@@ -5,6 +5,7 @@ import SiteHeader from "../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
+import LeadProtection from "@/components/LeadProtection";
 const remodelingServices = [
   {
     number: "01",
@@ -100,6 +101,7 @@ export default function ResidentialRemodelingPage() {
       </section>
 
       <form className="remodel-quick-form" onSubmit={submitQuickEstimate}>
+          <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>What Are You Planning?</h2>
@@ -214,6 +216,7 @@ export default function ResidentialRemodelingPage() {
           <p className="remodel-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
         <form className="remodel-estimate-form" onSubmit={submitEstimate}>
+          <LeadProtection />
           <div className="remodel-form-row"><label>Name<input id="remodel-lead-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
           <div className="remodel-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>City or ZIP<input name="city" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
           <div className="remodel-form-row"><label>What would you like to remodel?<select name="project" value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select your project</option><option>Bathroom remodeling</option><option>Kitchen remodeling</option><option>Whole-home renovation</option><option>Flooring or carpentry</option><option>Other remodeling project</option></select></label><label>Ideal Timing<select name="timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Just researching</option></select></label></div>

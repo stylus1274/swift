@@ -5,6 +5,7 @@ import SiteHeader from "../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
+import LeadProtection from "@/components/LeadProtection";
 const buildServices = [
   { number: "01", title: "Lot & Plan Review", copy: "We discuss your lot, plans, priorities and practical considerations before the construction scope is finalized." },
   { number: "02", title: "Permits & Preparation", copy: "Required permitting, site preparation and early project coordination are organized before vertical construction begins." },
@@ -66,6 +67,7 @@ export default function NewHomeConstructionPage() {
       </section>
 
       <form className="build-quick-form" onSubmit={continueEstimate}>
+          <LeadProtection />
         <div className="build-quick-heading">
           <p className="eyebrow">START YOUR PROJECT</p>
           <h2>What Are You Planning?</h2>
@@ -142,6 +144,7 @@ export default function NewHomeConstructionPage() {
           <p className="build-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
         <form className="build-estimate-form" onSubmit={submitEstimate}>
+          <LeadProtection />
           <div className="build-form-row"><label>Name<input id="build-lead-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
           <div className="build-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>Build City or ZIP<input name="zip" placeholder="Spring Hill" value={buildZip} onChange={(event) => setBuildZip(event.target.value)} required /></label></div>
           <div className="build-form-row"><label>Lot Status<select value={lotStatus} onChange={(event) => setLotStatus(event.target.value)} required><option value="" disabled>Select one</option><option>I own a lot</option><option>I am under contract</option><option>I am looking for land</option><option>I need guidance</option></select></label><label>Approximate Home Size<select value={homeSize} onChange={(event) => setHomeSize(event.target.value)} required><option value="" disabled>Select size</option><option>Under 1,800 sq. ft.</option><option>1,800–2,500 sq. ft.</option><option>2,500–3,500 sq. ft.</option><option>Over 3,500 sq. ft.</option><option>Not sure yet</option></select></label></div>
