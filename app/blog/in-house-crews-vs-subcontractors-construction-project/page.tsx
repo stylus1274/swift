@@ -23,7 +23,7 @@ export default function Page(){
       <p className="eyebrow">PROJECT PROCESS • CONTRACTOR TRANSPARENCY</p>
       <h1>In-House Crews vs. Subcontractors: Who Does What on Your Project</h1>
       <p className="article-deck">Homeowners often ask whether the people working on their project are employees or subcontractors. That is a fair question, but it is not the most important one. The bigger issue is who is responsible for coordinating the work, protecting the schedule, checking quality and getting the entire project to completion.</p>
-      <div className="article-meta"><span>TRUST &amp; PROCESS</span><span>UPDATED SEPTEMBER 22, 2026</span></div>
+      <div className="article-meta"><span>TRUST &amp; PROCESS</span><span>UPDATED SEPTEMBER 27, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>

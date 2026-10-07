@@ -1,1 +1,10 @@
-import type { Metadata } from "next"; const path="/blog/kitchen-remodeling-brooksville-layout-changes"; const title="Kitchen Remodeling Brooksville, FL: Layout Changes | Swift"; const description="See which kitchen layout changes can improve flow, storage and daily use in a Brooksville remodel and when added construction may be worthwhile."; export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"article"}}; export default function Layout({children}:{children:React.ReactNode}){return children}
+import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogMetadata } from "@/lib/blog";
+
+const slug = "kitchen-remodeling-brooksville-layout-changes";
+
+export const metadata = getBlogMetadata(slug);
+
+export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <BlogArticleLayout slug={slug}>{children}</BlogArticleLayout>;
+}

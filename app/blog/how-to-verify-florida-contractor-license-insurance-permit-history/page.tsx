@@ -47,7 +47,7 @@ export default function VerifyFloridaContractorArticlePage() {
         <p className="eyebrow">CONTRACTOR CHECKLIST • FLORIDA</p>
         <h1>How to Verify a Florida Contractor License, Insurance, and Permit History Before Hiring</h1>
         <p className="article-deck">Before comparing prices, verify who you are hiring. A few official searches can help confirm a Florida contractor's license status, workers' compensation coverage and local permit record.</p>
-        <div className="article-meta"><span>HOMEOWNER CHECKLIST</span><span>UPDATED SEPTEMBER 14, 2026</span></div>
+        <div className="article-meta"><span>HOMEOWNER CHECKLIST</span><span>UPDATED SEPTEMBER 28, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>

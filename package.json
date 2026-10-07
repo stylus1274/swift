@@ -10,7 +10,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "test:contact": "node scripts/test-contact-protection.mjs"
+    "test:contact": "node scripts/test-contact-protection.mjs",
+    "check:blog": "node scripts/check-blog-schema.mjs",
+    "check:blog:rendered": "node scripts/check-blog-schema.mjs --rendered",
+    "prebuild": "npm run check:blog",
+    "postbuild": "npm run check:blog:rendered",
+    "blog:register": "node scripts/register-blog-post.mjs"
   },
   "dependencies": {
     "botid": "^1.5.11",

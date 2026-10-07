@@ -24,24 +24,10 @@ const faqItems = [
   },
 ];
 
-const articleSchema = {
+const faqSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Article",
-      headline: "How Often Should You Repaint Your Home in Florida's Humidity?",
-      description: "Learn how Florida humidity, sun, rain and surface conditions affect exterior paint life and the warning signs that tell homeowners it is time to repaint.",
-      datePublished: "2026-09-14",
-      dateModified: "2026-09-14",
-      author: { "@type": "Organization", name: "Swift Construction & Painting" },
-      publisher: {
-        "@type": "Organization",
-        name: "Swift Construction & Painting",
-        logo: { "@type": "ImageObject", url: "https://swiftconstructionandpainting.com/assets/swift-logo.png" },
-      },
-      image: "https://swiftconstructionandpainting.com/assets/florida-stucco-painting.jpg",
-      mainEntityOfPage: "https://swiftconstructionandpainting.com/blog/how-often-repaint-home-florida-humidity",
-    },
+
     {
       "@type": "FAQPage",
       mainEntity: faqItems.map((item) => ({
@@ -66,7 +52,7 @@ export default function FloridaHumidityRepaintingArticlePage() {
         <p className="eyebrow">EXTERIOR PAINTING • FLORIDA HOME MAINTENANCE</p>
         <h1>How Often Should You Repaint Your Home in Florida&apos;s Humidity?</h1>
         <p className="article-deck">Florida paint does more than change the color of a house. It helps protect stucco, trim and other exterior surfaces from sun, rain and persistent moisture. The right repainting schedule starts with the condition of the coating, not just the year it was applied.</p>
-        <div className="article-meta"><span>PAINTING</span><span>UPDATED SEPTEMBER 14, 2026</span></div>
+        <div className="article-meta"><span>PAINTING</span><span>UPDATED SEPTEMBER 27, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
@@ -205,7 +191,7 @@ export default function FloridaHumidityRepaintingArticlePage() {
       </section>
 
       <SiteFooter />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     </main>
   );
 }

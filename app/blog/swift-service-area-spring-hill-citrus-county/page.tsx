@@ -11,7 +11,7 @@ const areas=[
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>Where Swift Works</span></nav>
-<header className="article-header"><p className="eyebrow">SERVICE AREA • FLORIDA NATURE COAST</p><h1>Where Swift Works: From Spring Hill to Citrus County</h1><p className="article-deck">Swift Construction & Painting serves homeowners, property owners and commercial clients across Hernando County, Citrus County and nearby communities, with project availability based on scope and location.</p><div className="article-meta"><span>TRUST</span><span>UPDATED SEPTEMBER 22, 2026</span></div>
+<header className="article-header"><p className="eyebrow">SERVICE AREA • FLORIDA NATURE COAST</p><h1>Where Swift Works: From Spring Hill to Citrus County</h1><p className="article-deck">Swift Construction & Painting serves homeowners, property owners and commercial clients across Hernando County, Citrus County and nearby communities, with project availability based on scope and location.</p><div className="article-meta"><span>TRUST</span><span>UPDATED SEPTEMBER 27, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>

@@ -1,1 +1,10 @@
-import type { Metadata } from "next"; const path="/blog/average-cost-paint-house-exterior-florida"; const title="Average Cost to Paint a House Exterior in Florida | Swift"; const description="See 2026 exterior house painting cost benchmarks for Florida and the factors that change a real quote, including prep, stucco, size and stories."; export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"article"}}; export default function Layout({children}:{children:React.ReactNode}){return children}
+import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogMetadata } from "@/lib/blog";
+
+const slug = "average-cost-paint-house-exterior-florida";
+
+export const metadata = getBlogMetadata(slug);
+
+export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <BlogArticleLayout slug={slug}>{children}</BlogArticleLayout>;
+}

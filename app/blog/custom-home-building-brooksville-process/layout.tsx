@@ -1,6 +1,10 @@
-import type { Metadata } from "next";
-const path="/blog/custom-home-building-brooksville-process";
-const title="Building a Custom Home in Brooksville: The Process | Swift";
-const description="See how a Brooksville custom home moves from planning and written scope through pre-construction, trade coordination and completion.";
-export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"article"}};
-export default function Layout({children}:{children:React.ReactNode}){return children}
+import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogMetadata } from "@/lib/blog";
+
+const slug = "custom-home-building-brooksville-process";
+
+export const metadata = getBlogMetadata(slug);
+
+export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <BlogArticleLayout slug={slug}>{children}</BlogArticleLayout>;
+}

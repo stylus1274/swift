@@ -1,25 +1,10 @@
 import SiteHeader from "../../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
-const articleSchema = {
+const faqSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Article",
-      headline: "Custom Home Building in Hernando County: From Site Clearing to Certificate of Occupancy",
-      description:
-        "A practical guide to the custom home building process in Hernando County, Florida, from site evaluation and clearing through final inspections and certificate of occupancy.",
-      datePublished: "2026-09-02",
-      dateModified: "2026-09-02",
-      author: { "@type": "Organization", name: "Swift Construction & Painting" },
-      publisher: {
-        "@type": "Organization",
-        name: "Swift Construction & Painting",
-        logo: { "@type": "ImageObject", url: "https://swiftconstructionandpainting.com/assets/swift-logo.png" },
-      },
-      image: "https://swiftconstructionandpainting.com/assets/custom-home-building-hernando-county.png",
-      mainEntityOfPage: "https://swiftconstructionandpainting.com/blog/custom-home-building-hernando-county",
-    },
+
     {
       "@type": "FAQPage",
       mainEntity: [
@@ -66,7 +51,7 @@ export default function CustomHomeBuildingArticlePage() {
         <p className="eyebrow">CUSTOM HOME BUILDING • HERNANDO COUNTY, FL</p>
         <h1>Custom Home Building in Hernando County: From Site Clearing to Certificate of Occupancy</h1>
         <p className="article-deck">A custom home is not one construction task. It is a coordinated sequence of property research, design, permitting, site work, inspections and hundreds of decisions that need to happen in the right order.</p>
-        <div className="article-meta"><span>NEW HOME CONSTRUCTION</span><span>UPDATED SEPTEMBER 2, 2026</span></div>
+        <div className="article-meta"><span>NEW HOME CONSTRUCTION</span><span>UPDATED SEPTEMBER 27, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
@@ -236,7 +221,7 @@ export default function CustomHomeBuildingArticlePage() {
 
       <SiteFooter />
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     </main>
   );
 }

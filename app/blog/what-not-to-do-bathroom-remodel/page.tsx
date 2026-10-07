@@ -20,7 +20,7 @@ const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:fa
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>Bathroom Remodel Mistakes</span></nav>
-<header className="article-header"><p className="eyebrow">BATHROOM REMODELING • HOMEOWNER FAQ</p><h1>What Not to Do in a Bathroom Remodel</h1><p className="article-deck">Bathroom remodels can go wrong long before the tile is installed. The biggest problems usually come from unclear scope, poor sequencing and treating hidden systems like waterproofing as secondary details.</p><div className="article-meta"><span>REMODELING FAQ</span><span>UPDATED SEPTEMBER 21, 2026</span></div>
+<header className="article-header"><p className="eyebrow">BATHROOM REMODELING • HOMEOWNER FAQ</p><h1>What Not to Do in a Bathroom Remodel</h1><p className="article-deck">Bathroom remodels can go wrong long before the tile is installed. The biggest problems usually come from unclear scope, poor sequencing and treating hidden systems like waterproofing as secondary details.</p><div className="article-meta"><span>REMODELING FAQ</span><span>UPDATED SEPTEMBER 27, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>

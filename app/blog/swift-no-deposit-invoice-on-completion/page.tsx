@@ -11,7 +11,7 @@ const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:fa
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>No Deposit, No Surprises</span></nav>
-<header className="article-header"><p className="eyebrow">PRICING & PROCESS • SWIFT</p><h1>No Deposit, No Surprises: How Swift Prices and Invoices Every Project</h1><p className="article-deck">One of the first questions homeowners ask is whether a deposit is required. Swift&apos;s stated policy is straightforward: no deposit up front, with invoicing on completion.</p><div className="article-meta"><span>TRUST</span><span>UPDATED SEPTEMBER 21, 2026</span></div>
+<header className="article-header"><p className="eyebrow">PRICING & PROCESS • SWIFT</p><h1>No Deposit, No Surprises: How Swift Prices and Invoices Every Project</h1><p className="article-deck">One of the first questions homeowners ask is whether a deposit is required. Swift&apos;s stated policy is straightforward: no deposit up front, with invoicing on completion.</p><div className="article-meta"><span>TRUST</span><span>UPDATED SEPTEMBER 27, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>

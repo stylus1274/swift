@@ -1,1 +1,10 @@
-import type { Metadata } from "next"; const path="/blog/exterior-painting-spring-hill-fl-hurricane-season-prep"; const title="Exterior Painting Spring Hill FL: Hurricane Season Prep | Swift"; const description="See how Spring Hill homeowners can inspect paint, caulk, stucco and trim before hurricane season and why exterior paint is maintenance, not storm protection."; export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"article"}}; export default function Layout({children}:{children:React.ReactNode}){return children}
+import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogMetadata } from "@/lib/blog";
+
+const slug = "exterior-painting-spring-hill-fl-hurricane-season-prep";
+
+export const metadata = getBlogMetadata(slug);
+
+export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <BlogArticleLayout slug={slug}>{children}</BlogArticleLayout>;
+}

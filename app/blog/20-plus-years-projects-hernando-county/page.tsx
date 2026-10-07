@@ -3,7 +3,7 @@ import SiteFooter from "@/components/SiteFooter";
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>A Look Back at 20+ Years of Projects</span></nav>
-<header className="article-header"><p className="eyebrow">LOCAL EXPERIENCE • HERNANDO COUNTY</p><h1>A Look Back: 20+ Years of Projects Across Hernando County</h1><p className="article-deck">Swift Construction &amp; Painting has served local homeowners, businesses and property owners since 2003. The work has expanded across remodeling, custom homes, multi-family construction, painting and commercial property improvements.</p><div className="article-meta"><span>TRUST</span><span>UPDATED SEPTEMBER 22, 2026</span></div>
+<header className="article-header"><p className="eyebrow">LOCAL EXPERIENCE • HERNANDO COUNTY</p><h1>A Look Back: 20+ Years of Projects Across Hernando County</h1><p className="article-deck">Swift Construction &amp; Painting has served local homeowners, businesses and property owners since 2003. The work has expanded across remodeling, custom homes, multi-family construction, painting and commercial property improvements.</p><div className="article-meta"><span>TRUST</span><span>UPDATED SEPTEMBER 27, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>

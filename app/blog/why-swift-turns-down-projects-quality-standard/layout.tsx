@@ -1,1 +1,10 @@
-import type { Metadata } from "next"; const path="/blog/why-swift-turns-down-projects-quality-standard"; const title="Why Swift Turns Down Projects That Don't Meet Its Quality Standard"; const description="Why project fit, a clear scope, proper preparation and realistic expectations matter before Swift Construction & Painting accepts a job."; export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"article"}}; export default function Layout({children}:{children:React.ReactNode}){return children}
+import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogMetadata } from "@/lib/blog";
+
+const slug = "why-swift-turns-down-projects-quality-standard";
+
+export const metadata = getBlogMetadata(slug);
+
+export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <BlogArticleLayout slug={slug}>{children}</BlogArticleLayout>;
+}

@@ -1,1 +1,10 @@
-import type { Metadata } from "next"; const path="/blog/best-month-pressure-wash-house-florida"; const title="Best Month to Pressure Wash a House in Florida | Swift"; const description="November is a strong time to pressure wash many Florida homes. See how rain, humidity, pollen and visible buildup should guide your cleaning schedule."; export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"article"}}; export default function Layout({children}:{children:React.ReactNode}){return children}
+import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogMetadata } from "@/lib/blog";
+
+const slug = "best-month-pressure-wash-house-florida";
+
+export const metadata = getBlogMetadata(slug);
+
+export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <BlogArticleLayout slug={slug}>{children}</BlogArticleLayout>;
+}

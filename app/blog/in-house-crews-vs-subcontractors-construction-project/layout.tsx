@@ -1,1 +1,10 @@
-import type { Metadata } from "next"; const path="/blog/in-house-crews-vs-subcontractors-construction-project"; const title="In-House Crews vs. Subcontractors | Swift Construction"; const description="Learn how in-house crews and specialized subcontractors can fit into a construction project and what homeowners should ask about coordination and accountability."; export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"article"}}; export default function Layout({children}:{children:React.ReactNode}){return children}
+import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogMetadata } from "@/lib/blog";
+
+const slug = "in-house-crews-vs-subcontractors-construction-project";
+
+export const metadata = getBlogMetadata(slug);
+
+export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <BlogArticleLayout slug={slug}>{children}</BlogArticleLayout>;
+}

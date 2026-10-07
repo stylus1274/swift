@@ -1,25 +1,10 @@
 import SiteHeader from "../../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
-const articleSchema = {
+const faqSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Article",
-      headline: "What Is a Realistic Budget for a Bathroom Remodel?",
-      description:
-        "Realistic bathroom remodel budget ranges, cost drivers and planning guidance for Florida homeowners in Hernando, Citrus and Pasco Counties.",
-      datePublished: "2026-09-04",
-      dateModified: "2026-09-04",
-      author: { "@type": "Organization", name: "Swift Construction & Painting" },
-      publisher: {
-        "@type": "Organization",
-        name: "Swift Construction & Painting",
-        logo: { "@type": "ImageObject", url: "https://swiftconstructionandpainting.com/assets/swift-logo.png" },
-      },
-      image: "https://swiftconstructionandpainting.com/assets/bathroom-remodel-budget-florida.webp",
-      mainEntityOfPage: "https://swiftconstructionandpainting.com/blog/realistic-bathroom-remodel-budget",
-    },
+
     {
       "@type": "FAQPage",
       mainEntity: [
@@ -66,7 +51,7 @@ export default function BathroomRemodelBudgetArticlePage() {
         <p className="eyebrow">BATHROOM REMODELING • COST GUIDE</p>
         <h1>What Is a Realistic Budget for a Bathroom Remodel?</h1>
         <p className="article-deck">A useful bathroom budget starts with the actual scope. Keeping the layout, rebuilding the shower, moving plumbing and repairing hidden moisture damage can turn similar-looking rooms into very different projects.</p>
-        <div className="article-meta"><span>BATHROOM REMODELING</span><span>UPDATED SEPTEMBER 4, 2026</span></div>
+        <div className="article-meta"><span>BATHROOM REMODELING</span><span>UPDATED SEPTEMBER 30, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
@@ -255,7 +240,7 @@ export default function BathroomRemodelBudgetArticlePage() {
 
       <SiteFooter />
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     </main>
   );
 }

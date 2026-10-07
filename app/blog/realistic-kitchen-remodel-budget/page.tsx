@@ -1,25 +1,10 @@
 import SiteHeader from "../../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
-const articleSchema = {
+const faqSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Article",
-      headline: "What Is a Realistic Budget for a Kitchen Remodel?",
-      description:
-        "Realistic kitchen remodel planning ranges, cost drivers and budget guidance for homeowners in Hernando County and Florida's Nature Coast.",
-      datePublished: "2026-09-02",
-      dateModified: "2026-09-02",
-      author: { "@type": "Organization", name: "Swift Construction & Painting" },
-      publisher: {
-        "@type": "Organization",
-        name: "Swift Construction & Painting",
-        logo: { "@type": "ImageObject", url: "https://swiftconstructionandpainting.com/assets/swift-logo.png" },
-      },
-      image: "https://swiftconstructionandpainting.com/assets/kitchen-remodel-budget-guide.png",
-      mainEntityOfPage: "https://swiftconstructionandpainting.com/blog/realistic-kitchen-remodel-budget",
-    },
+
     {
       "@type": "FAQPage",
       mainEntity: [
@@ -66,7 +51,7 @@ export default function KitchenRemodelBudgetArticlePage() {
         <p className="eyebrow">KITCHEN REMODELING • COST GUIDE</p>
         <h1>What Is a Realistic Budget for a Kitchen Remodel?</h1>
         <p className="article-deck">A useful budget starts with the work you expect the project to include. Keeping the layout, replacing every cabinet, moving plumbing and removing a wall are four very different remodeling projects.</p>
-        <div className="article-meta"><span>KITCHEN REMODELING</span><span>UPDATED SEPTEMBER 2, 2026</span></div>
+        <div className="article-meta"><span>KITCHEN REMODELING</span><span>UPDATED SEPTEMBER 30, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
@@ -246,7 +231,7 @@ export default function KitchenRemodelBudgetArticlePage() {
 
       <SiteFooter />
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     </main>
   );
 }

@@ -24,24 +24,10 @@ const faqItems = [
   },
 ];
 
-const articleSchema = {
+const faqSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Article",
-      headline: "How Long Does a Home Addition Take in Florida?",
-      description: "A practical Florida home addition timeline covering design, engineering, permitting, construction, inspections and the factors that can change the schedule.",
-      datePublished: "2026-09-14",
-      dateModified: "2026-09-14",
-      author: { "@type": "Organization", name: "Swift Construction & Painting" },
-      publisher: {
-        "@type": "Organization",
-        name: "Swift Construction & Painting",
-        logo: { "@type": "ImageObject", url: "https://swiftconstructionandpainting.com/assets/swift-logo.png" },
-      },
-      image: "https://swiftconstructionandpainting.com/assets/home-additions-hero.png",
-      mainEntityOfPage: "https://swiftconstructionandpainting.com/blog/how-long-home-addition-florida",
-    },
+
     {
       "@type": "FAQPage",
       mainEntity: faqItems.map((item) => ({
@@ -66,7 +52,7 @@ export default function FloridaHomeAdditionTimelineArticlePage() {
         <p className="eyebrow">HOME ADDITIONS • FLORIDA PROJECT PLANNING</p>
         <h1>How Long Does a Home Addition Take in Florida?</h1>
         <p className="article-deck">A home addition is more than the weeks spent framing and finishing new space. The full schedule also includes design, engineering, permitting, inspections and the work required to connect the addition to the existing home.</p>
-        <div className="article-meta"><span>HOME ADDITIONS</span><span>UPDATED SEPTEMBER 14, 2026</span></div>
+        <div className="article-meta"><span>HOME ADDITIONS</span><span>UPDATED SEPTEMBER 27, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
@@ -206,7 +192,7 @@ export default function FloridaHomeAdditionTimelineArticlePage() {
       </section>
 
       <SiteFooter />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     </main>
   );
 }

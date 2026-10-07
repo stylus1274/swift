@@ -1,30 +1,10 @@
 import SiteHeader from "../../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
-const articleSchema = {
+const faqSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Article",
-      headline: "Kitchen Remodeling in Spring Hill, FL: What Actually Adds Value",
-      description:
-        "A practical guide to kitchen remodeling improvements that add function, durability and resale appeal for Spring Hill, Florida homeowners.",
-      datePublished: "2026-09-07",
-      dateModified: "2026-09-07",
-      author: { "@type": "Organization", name: "Swift Construction & Painting" },
-      publisher: {
-        "@type": "Organization",
-        name: "Swift Construction & Painting",
-        logo: {
-          "@type": "ImageObject",
-          url: "https://swiftconstructionandpainting.com/assets/swift-logo.png",
-        },
-      },
-      image:
-        "https://swiftconstructionandpainting.com/assets/kitchen-remodeling-spring-hill-value.webp",
-      mainEntityOfPage:
-        "https://swiftconstructionandpainting.com/blog/kitchen-remodeling-spring-hill-fl-adds-value",
-    },
+
     {
       "@type": "FAQPage",
       mainEntity: [
@@ -86,7 +66,7 @@ export default function KitchenRemodelingValueArticlePage() {
         <p className="eyebrow">KITCHEN REMODELING • SPRING HILL, FL</p>
         <h1>Kitchen Remodeling in Spring Hill, FL: What Actually Adds Value</h1>
         <p className="article-deck">The most valuable kitchen upgrades solve real problems, hold up to daily use and fit the home. Here is how to prioritize your budget without paying for features that look impressive but do little for function or resale appeal.</p>
-        <div className="article-meta"><span>KITCHEN REMODELING</span><span>UPDATED SEPTEMBER 7, 2026</span></div>
+        <div className="article-meta"><span>KITCHEN REMODELING</span><span>UPDATED SEPTEMBER 27, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
@@ -279,7 +259,7 @@ export default function KitchenRemodelingValueArticlePage() {
 
       <SiteFooter />
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     </main>
   );
 }

@@ -47,7 +47,7 @@ export default function EnergyEfficientWindowsSpringHillPage() {
         <p className="eyebrow">WINDOWS &amp; DOORS • SPRING HILL, FL</p>
         <h1>Energy-Efficient Windows: What Spring Hill Homeowners Should Know Before Replacing</h1>
         <p className="article-deck">Replacement windows can improve comfort and help reduce unwanted heat gain, but the label matters more than the marketing language. Here is what Spring Hill homeowners should compare before choosing a window package.</p>
-        <div className="article-meta"><span>WINDOWS &amp; DOORS</span><span>UPDATED SEPTEMBER 14, 2026</span></div>
+        <div className="article-meta"><span>WINDOWS &amp; DOORS</span><span>UPDATED SEPTEMBER 27, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>

@@ -23,7 +23,7 @@ export default function Page(){
       <p className="eyebrow">EXTERIOR PAINTING • SPRING HILL, FL</p>
       <h1>Exterior Painting in Spring Hill, FL: Hurricane Season Prep</h1>
       <p className="article-deck">Exterior paint is not hurricane protection. What matters is the maintenance around it: finding failed caulk, stucco cracks, peeling coatings, exposed surfaces and damaged trim before months of heavy rain and severe weather put more stress on the exterior.</p>
-      <div className="article-meta"><span>EXTERIOR PAINTING</span><span>UPDATED SEPTEMBER 22, 2026</span></div>
+      <div className="article-meta"><span>EXTERIOR PAINTING</span><span>UPDATED SEPTEMBER 27, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>

@@ -1,22 +1,6 @@
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
-const articleSchema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: "20 Years of Building Trust in Hernando County",
-  description: "A look at the local experience, licensing, permit history and project standards behind Swift Construction & Painting's work in Hernando County.",
-  datePublished: "2026-09-14",
-  dateModified: "2026-09-14",
-  author: { "@type": "Organization", name: "Swift Construction & Painting" },
-  publisher: {
-    "@type": "Organization",
-    name: "Swift Construction & Painting",
-    logo: { "@type": "ImageObject", url: "https://swiftconstructionandpainting.com/assets/swift-logo.png" },
-  },
-  image: "https://swiftconstructionandpainting.com/assets/about-contractor-hero.webp",
-  mainEntityOfPage: "https://swiftconstructionandpainting.com/blog/20-years-building-trust-hernando-county",
-};
 
 export default function BuildingTrustHernandoCountyArticlePage() {
   return (
@@ -31,7 +15,7 @@ export default function BuildingTrustHernandoCountyArticlePage() {
         <p className="eyebrow">LOCAL CONTRACTOR • HERNANDO COUNTY, FL</p>
         <h1>20 Years of Building Trust in Hernando County</h1>
         <p className="article-deck">A contractor earns trust over time by showing up, doing the work, standing behind the finished result and building a record that homeowners can verify. Swift Construction &amp; Painting has served local property owners since 2003.</p>
-        <div className="article-meta"><span>LOCAL TRUST</span><span>UPDATED SEPTEMBER 14, 2026</span></div>
+        <div className="article-meta"><span>LOCAL TRUST</span><span>UPDATED SEPTEMBER 30, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
@@ -142,7 +126,6 @@ export default function BuildingTrustHernandoCountyArticlePage() {
       </section>
 
       <SiteFooter />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
     </main>
   );
 }

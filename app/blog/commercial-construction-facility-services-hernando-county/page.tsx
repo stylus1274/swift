@@ -10,7 +10,7 @@ const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:fa
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>Commercial Construction & Facility Services</span></nav>
-<header className="article-header"><p className="eyebrow">COMMERCIAL SERVICES • HERNANDO COUNTY</p><h1>Commercial Construction & Facility Services in Hernando County</h1><p className="article-deck">Commercial properties often need more than one trade. Swift coordinates build-outs, painting, property improvements and facility work around the needs of the space and the people using it.</p><div className="article-meta"><span>COMMERCIAL</span><span>UPDATED SEPTEMBER 22, 2026</span></div>
+<header className="article-header"><p className="eyebrow">COMMERCIAL SERVICES • HERNANDO COUNTY</p><h1>Commercial Construction & Facility Services in Hernando County</h1><p className="article-deck">Commercial properties often need more than one trade. Swift coordinates build-outs, painting, property improvements and facility work around the needs of the space and the people using it.</p><div className="article-meta"><span>COMMERCIAL</span><span>UPDATED SEPTEMBER 27, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>

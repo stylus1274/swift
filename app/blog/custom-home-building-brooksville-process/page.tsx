@@ -10,7 +10,7 @@ const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:fa
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>Building a Custom Home in Brooksville</span></nav>
-<header className="article-header"><p className="eyebrow">CUSTOM HOME BUILDING • BROOKSVILLE, FL</p><h1>Building a Custom Home in Brooksville: What the Process Actually Looks Like</h1><p className="article-deck">A custom home moves through a long chain of decisions, trades and inspections. Here is how Swift Construction &amp; Painting describes the process.</p><div className="article-meta"><span>NEW HOMES</span><span>UPDATED SEPTEMBER 22, 2026</span></div>
+<header className="article-header"><p className="eyebrow">CUSTOM HOME BUILDING • BROOKSVILLE, FL</p><h1>Building a Custom Home in Brooksville: What the Process Actually Looks Like</h1><p className="article-deck">A custom home moves through a long chain of decisions, trades and inspections. Here is how Swift Construction &amp; Painting describes the process.</p><div className="article-meta"><span>NEW HOMES</span><span>UPDATED OCTOBER 2, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>

@@ -1,1 +1,10 @@
-import type { Metadata } from "next"; const path="/blog/25-percent-rule-windows-florida"; const title="What Is the 25% Rule for Windows in Florida? | Swift"; const description="Learn what Florida's 25% window rule actually refers to, what it does not exempt, and why permit and wind requirements still matter."; export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"article"}}; export default function Layout({children}:{children:React.ReactNode}){return children}
+import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogMetadata } from "@/lib/blog";
+
+const slug = "25-percent-rule-windows-florida";
+
+export const metadata = getBlogMetadata(slug);
+
+export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <BlogArticleLayout slug={slug}>{children}</BlogArticleLayout>;
+}

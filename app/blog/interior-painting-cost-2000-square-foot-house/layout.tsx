@@ -1,1 +1,10 @@
-import type { Metadata } from "next"; const path="/blog/interior-painting-cost-2000-square-foot-house"; const title="Cost to Paint a 2,000 Sq. Ft. House Interior | Swift"; const description="See 2026 planning costs for painting a 2,000 sq. ft. Florida home interior and the prep, ceilings, trim and finish details that change the price."; export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"article"}}; export default function Layout({children}:{children:React.ReactNode}){return children}
+import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogMetadata } from "@/lib/blog";
+
+const slug = "interior-painting-cost-2000-square-foot-house";
+
+export const metadata = getBlogMetadata(slug);
+
+export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <BlogArticleLayout slug={slug}>{children}</BlogArticleLayout>;
+}

@@ -1,1 +1,10 @@
-import type { Metadata } from "next"; const path="/blog/home-additions-hernando-county-planning-20x20-room-addition"; const title="Planning a 20x20 Home Addition in Hernando County | Swift"; const description="Plan a 20x20 room addition in Hernando County around layout, property fit, utilities, roof tie-ins, budget and the way the new space will be used."; export const metadata:Metadata={title,description,alternates:{canonical:path},openGraph:{title,description,url:path,type:"article"}}; export default function Layout({children}:{children:React.ReactNode}){return children}
+import BlogArticleLayout from "@/components/BlogArticleLayout";
+import { getBlogMetadata } from "@/lib/blog";
+
+const slug = "home-additions-hernando-county-planning-20x20-room-addition";
+
+export const metadata = getBlogMetadata(slug);
+
+export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <BlogArticleLayout slug={slug}>{children}</BlogArticleLayout>;
+}

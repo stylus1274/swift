@@ -47,7 +47,7 @@ export default function ContractorLicensingHernandoCountyArticlePage() {
         <p className="eyebrow">CONTRACTOR LICENSING • HERNANDO COUNTY</p>
         <h1>Why Local Contractor Licensing Matters in Hernando County</h1>
         <p className="article-deck">A contractor license is more than a number on a proposal. For homeowners in Spring Hill, Brooksville and the rest of Hernando County, it is one of the first things to verify before trusting someone with structural, remodeling or construction work.</p>
-        <div className="article-meta"><span>HOMEOWNER TRUST</span><span>UPDATED SEPTEMBER 14, 2026</span></div>
+        <div className="article-meta"><span>HOMEOWNER TRUST</span><span>UPDATED SEPTEMBER 27, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>

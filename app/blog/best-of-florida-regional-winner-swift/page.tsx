@@ -3,7 +3,7 @@ import SiteFooter from "@/components/SiteFooter";
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>Best of Florida Regional Winner</span></nav>
-<header className="article-header"><p className="eyebrow">TRUST & RECOGNITION</p><h1>Two-Time Best of Florida Regional Winner: What the Award Means for Homeowners</h1><p className="article-deck">Swift Construction & Painting reports being named a Best of Florida Regional Winner in the Residential Construction/Remodeling Contractors category in 2023 and again in 2025.</p><div className="article-meta"><span>TRUST</span><span>UPDATED SEPTEMBER 21, 2026</span></div>
+<header className="article-header"><p className="eyebrow">TRUST & RECOGNITION</p><h1>Two-Time Best of Florida Regional Winner: What the Award Means for Homeowners</h1><p className="article-deck">Swift Construction & Painting reports being named a Best of Florida Regional Winner in the Residential Construction/Remodeling Contractors category in 2023 and again in 2025.</p><div className="article-meta"><span>TRUST</span><span>UPDATED SEPTEMBER 27, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>

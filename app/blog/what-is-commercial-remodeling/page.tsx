@@ -10,7 +10,7 @@ const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:fa
 
 export default function Page(){return <main className="blog-page article-page"><SiteHeader active="blog"/>
 <nav className="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>What Is Commercial Remodeling?</span></nav>
-<header className="article-header"><p className="eyebrow">COMMERCIAL SERVICES • FAQ</p><h1>What Is Commercial Remodeling?</h1><p className="article-deck">Commercial remodeling improves an existing business or managed property without starting over with a new building. The scope can range from finish updates to larger layout changes and coordinated build-out work.</p><div className="article-meta"><span>COMMERCIAL FAQ</span><span>UPDATED SEPTEMBER 22, 2026</span></div>
+<header className="article-header"><p className="eyebrow">COMMERCIAL SERVICES • FAQ</p><h1>What Is Commercial Remodeling?</h1><p className="article-deck">Commercial remodeling improves an existing business or managed property without starting over with a new building. The scope can range from finish updates to larger layout changes and coordinated build-out work.</p><div className="article-meta"><span>COMMERCIAL FAQ</span><span>UPDATED SEPTEMBER 27, 2026</span></div>
       <div className="article-byline">
         <img className="article-author-avatar" src="/assets/william-swift.jpg" alt="William Swift" />
         <div className="article-author-copy"><span>Author</span><strong>William Swift</strong></div>
