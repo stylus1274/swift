@@ -14,6 +14,15 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 const articles = [
   {
     category: "Remodeling",
+    title: "Cabinet Refacing vs. Replacement: Choosing the Best Option for Your Kitchen",
+    excerpt: "Compare cabinet condition, layout flexibility and costs before choosing refacing or replacement for a Spring Hill kitchen.",
+    image: "/assets/cabinet-refacing-vs-replacement.webp",
+    alt: "Illustration of traditional wood and updated white kitchen cabinets",
+    readTime: "12 MIN READ",
+    href: "/blog/cabinet-refacing-vs-replacement",
+  },
+  {
+    category: "Remodeling",
     title: "How to Compare Remodeling Estimates in Spring Hill: A Comprehensive Guide",
     excerpt: "How to compare scope, contractor credentials, materials, timelines, payment terms and overall value before choosing a remodeling bid.",
     image: "/assets/contact-planning-hero.webp",
