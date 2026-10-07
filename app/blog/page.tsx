@@ -4,6 +4,11 @@ import { useMemo, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
+const blogSchema = [
+    { "@context": "https://schema.org", "@type": "CollectionPage", name: "Swift Construction & Painting Blog", description: "Practical painting, remodeling, construction and property improvement guidance for Florida homeowners and businesses.", url: "https://swiftconstructionandpainting.com/blog" },
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://swiftconstructionandpainting.com/" }, { "@type": "ListItem", position: 2, name: "Blog", item: "https://swiftconstructionandpainting.com/blog" }] },
+  ];
+
 const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 
 const articles = [
@@ -471,6 +476,7 @@ export default function BlogPage() {
       </section>
 
       <SiteFooter />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema).replace(/</g, "\\u003c") }} />
     </main>
   );
 }
