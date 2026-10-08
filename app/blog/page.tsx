@@ -14,6 +14,15 @@ const categories = ["All", "Painting", "Remodeling", "New Homes", "Commercial"];
 const articles = [
   {
     category: "Remodeling",
+    title: "Kitchen Remodel ROI: Which Upgrades Actually Pay Off at Resale?",
+    excerpt: "Compare targeted updates with a major kitchen remodel and plan around your Hernando County home's condition and comparable sales.",
+    image: "/assets/kitchen-remodel-roi-hernando.webp",
+    alt: "Illustrative refreshed Florida kitchen with neutral finishes",
+    readTime: "8 MIN READ",
+    href: "/blog/kitchen-remodel-roi-hernando",
+  },
+  {
+    category: "Remodeling",
     title: "Cabinet Refacing vs. Replacement: Choosing the Best Option for Your Kitchen",
     excerpt: "Compare cabinet condition, layout flexibility and costs before choosing refacing or replacement for a Spring Hill kitchen.",
     image: "/assets/cabinet-refacing-vs-replacement.webp",
