@@ -10,22 +10,22 @@ const interiorServices = [
   {
     number: "01",
     title: "Whole-Home Interior Painting",
-    copy: "Create a consistent finish across connected rooms with one coordinated plan for colors, preparation and sequencing.",
+    copy: "Plan connected rooms together so wall colors, ceiling finishes and trim work meet cleanly at doorways. Include hallways and closets in the scope before comparing estimates.",
   },
   {
     number: "02",
     title: "Walls & Ceilings",
-    copy: "Refresh high-use rooms, open living areas and ceilings with clean coverage and finishes selected for the space.",
+    copy: "Identify nail holes, patched areas, stains and texture changes before painting. Walls and ceilings need separate finish decisions, especially where daylight makes uneven repairs visible.",
   },
   {
     number: "03",
     title: "Trim, Doors & Details",
-    copy: "Complete the room with crisp baseboards, crown molding, doors, casings and architectural details.",
+    copy: "Baseboards, door casings, crown molding and interior doors often need more detailed preparation than walls. Specify which pieces are included, along with any caulking or sanding.",
   },
   {
     number: "04",
     title: "Cabinets & Built-Ins",
-    copy: "Update cabinetry and built-ins with surface preparation and a durable finish planned around daily use.",
+    copy: "Cabinet painting is a separate scope from wall painting. Review the existing finish, grease buildup, door and drawer access, and time needed before returning the cabinets to daily use.",
   },
 ];
 
@@ -44,7 +44,7 @@ const interiorFaqs = [
   },
   {
     question: "How Long Does Interior Painting Take?",
-    answer: "Timing depends on the number of rooms, surface condition, color changes and preparation needs. Swift provides a practical schedule after reviewing the home and planned scope.",
+    answer: "The number of rooms is only one factor. Repairs, high ceilings, cabinetry, large color changes and an occupied home can add work. Swift reviews the scope before proposing a schedule; drying and curing requirements also depend on the selected products.",
   },
   {
     question: "What Areas Do You Serve?",
@@ -77,19 +77,6 @@ export default function InteriorPaintingPage() {
     }
   }
 
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Interior House Painting",
-    provider: {
-      "@type": "HomeAndConstructionBusiness",
-      name: "Swift Construction & Painting, LLC",
-      telephone: "+1-352-701-7458",
-    },
-    areaServed: ["Hernando County", "Citrus County", "Pasco County"],
-    description: "Interior house painting for walls, ceilings, trim, doors and cabinetry in Florida homes.",
-  };
-
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -107,8 +94,8 @@ export default function InteriorPaintingPage() {
       <section className="remodel-hero interior-painting-hero">
         <div className="remodel-hero-copy">
           <p className="eyebrow">INTERIOR PAINTING • SPRING HILL, FL</p>
-          <h1>Interior Painting That Makes the Whole Room Feel Finished.</h1>
-          <p>Clean preparation, careful protection and consistent finishes for the rooms where everyday life happens.</p>
+          <h1>Interior Painting in Spring Hill, FL</h1>
+          <p>Swift paints walls, ceilings, trim, doors and cabinetry in Spring Hill homes. Start with a room-by-room walkthrough to identify repairs, finishes and how the work will fit around your household.</p>
           <div className="remodel-hero-actions">
             <a className="button remodel-primary" href="#interior-painting-quick-project">Get a Free Interior Painting Estimate</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
@@ -140,7 +127,7 @@ export default function InteriorPaintingPage() {
       <section className="remodel-services" id="interior-painting-services">
         <div className="remodel-section-heading">
           <p className="eyebrow">INTERIOR PAINTING SERVICES</p>
-          <h2>A Complete Painting Plan From the Main Walls to the Final Details.</h2>
+          <h2>What Is Included in Your Interior Repaint?</h2>
         </div>
         <div className="remodel-service-grid">
           {interiorServices.map((service) => (
@@ -157,48 +144,49 @@ export default function InteriorPaintingPage() {
       <section className="commercial-coordination commercial-painting-coordination">
         <div className="commercial-coordination-copy">
           <p className="eyebrow">CARE INSIDE YOUR HOME</p>
-          <h2>A Cleaner Painting Experience Begins Before the First Coat.</h2>
-          <p>Interior painting happens around the spaces, furniture and routines you live with every day. Swift plans the protection, preparation and sequence before opening the first can of paint.</p>
+          <h2>Painting an Occupied Home Takes Planning.</h2>
+          <p>An occupied home needs a different work sequence from an empty house. During the walkthrough, discuss which rooms must stay usable, where furniture can be staged, access for children and pets, and any move-in deadline.</p>
           <a className="button remodel-primary" href="#interior-painting-estimate">Plan a Home Walkthrough</a>
         </div>
         <div className="commercial-coordination-list">
-          <article><span>01</span><div><h3>Protect the Space</h3><p>Floors, furniture and adjacent finishes are covered or separated from the active work area.</p></div></article>
-          <article><span>02</span><div><h3>Prepare the Surfaces</h3><p>Patching, sanding, caulking and priming are matched to the condition of the walls and trim.</p></div></article>
-          <article><span>03</span><div><h3>Keep Work Areas Clean</h3><p>Materials, tools and daily cleanup are managed so the project stays organized from room to room.</p></div></article>
+          <article><span>01</span><div><h3>Protect the Space</h3><p>Agree on who moves large furniture and removes wall decor, then identify protection for flooring, fixtures and furnishings beside the work.</p></div></article>
+          <article><span>02</span><div><h3>Prepare the Surfaces</h3><p>Review drywall patches, trim gaps and stains separately. Painting can cover a repaired surface, but it does not correct an active leak or recurring moisture problem.</p></div></article>
+          <article><span>03</span><div><h3>Keep Work Areas Clean</h3><p>Discuss room access, ventilation and cleanup before scheduling. Drying and curing times depend on the selected products and conditions inside the home.</p></div></article>
         </div>
       </section>
 
       <section className="commercial-properties commercial-painting-properties">
         <div className="commercial-properties-heading">
           <p className="eyebrow">ROOMS WE PAINT</p>
-          <h2>Fresh, Consistent Finishes for Every Part of the Home.</h2>
-          <p>The right finish should reflect how the room is used, how much traffic it sees and how the spaces connect.</p>
+          <h2>Choose Finishes by Room, Not Just by Color.</h2>
+          <p>A sheen that looks good on a sample can behave differently across a large wall. Compare samples in the room&apos;s daytime and evening light, and discuss washability and the condition of the surface underneath.</p>
         </div>
         <div className="commercial-property-grid">
-          <article><span>01</span><h3>Living Areas &amp; Bedrooms</h3><p>Coordinated color and finish work for family rooms, bedrooms, hallways and open living spaces.</p></article>
-          <article><span>02</span><h3>Kitchens &amp; Bathrooms</h3><p>Cleanable finishes and careful detail work for rooms exposed to frequent use, moisture and daily activity.</p></article>
-          <article><span>03</span><h3>Entryways &amp; High Ceilings</h3><p>Consistent coverage for foyers, stairwells and taller spaces that require additional access and planning.</p></article>
+          <article><span>01</span><h3>Living Areas &amp; Bedrooms</h3><p>For bedrooms and living rooms, compare appearance with the amount of cleaning the walls will need. Hallways and busy family spaces may need a different finish from a low-traffic bedroom.</p></article>
+          <article><span>02</span><h3>Kitchens &amp; Bathrooms</h3><p>Discuss cleanable coatings for splashes and frequent wiping. Resolve moisture sources before repainting; a new finish is not a substitute for ventilation or leak repairs.</p></article>
+          <article><span>03</span><h3>Entryways &amp; High Ceilings</h3><p>High ceilings, stairwells and difficult access can change setup time and cost. Include ceiling height and the surfaces above cabinets when requesting the walkthrough.</p></article>
         </div>
       </section>
 
       <section className="remodel-process" id="interior-painting-process">
         <div className="remodel-process-heading">
           <p className="eyebrow">HOW IT WORKS</p>
-          <h2>A Clear Interior Painting Process From Walkthrough to Finish.</h2>
+          <h2>Compare Interior Painting Estimates on the Same Scope.</h2>
+          <p>For budgeting, see our <a href="/blog/interior-painting-cost-2000-square-foot-house">interior painting cost guide for a 2,000-square-foot house</a>. A walkthrough is still needed to price your rooms and repairs.</p>
         </div>
         <div className="remodel-process-grid">
-          <article><span>01</span><h3>Walk the Rooms</h3><p>We review the surfaces, colors, repairs and practical needs for each room in the project.</p></article>
-          <article><span>02</span><h3>Define the Scope</h3><p>You receive a written proposal outlining preparation, planned surfaces and included work.</p></article>
-          <article><span>03</span><h3>Prepare &amp; Paint</h3><p>Swift protects the space, completes the agreed preparation and applies the selected finishes.</p></article>
-          <article><span>04</span><h3>Complete the Walkthrough</h3><p>We review the finished rooms together and address final details before project closeout.</p></article>
+          <article><span>01</span><h3>Walk the Rooms</h3><p>List each room and whether its walls, ceiling, trim, doors and closets are included. Note furniture and access needs.</p></article>
+          <article><span>02</span><h3>Define the Scope</h3><p>Ask which repairs, primer and finish work are included. Identify any exclusions before choosing between quotes.</p></article>
+          <article><span>03</span><h3>Prepare &amp; Paint</h3><p>Confirm color changes, sheen and coating requirements in the proposal rather than assuming every estimate covers the same work.</p></article>
+          <article><span>04</span><h3>Complete the Walkthrough</h3><p>Review coverage, cut lines and agreed repairs in the finished rooms, then discuss cleanup and care for the new finish.</p></article>
         </div>
       </section>
 
       <section className="commercial-painting-proof-cta">
         <div>
           <p className="eyebrow">PAINTING WITH A CONTRACTOR’S EYE</p>
-          <h2>Repairs, Carpentry and Finish Work Can Stay Under One Plan.</h2>
-          <p>When fresh paint is part of a larger room update, Swift can coordinate connected repairs and improvements under one licensed building contractor.</p>
+          <h2>Interior Painting or a Larger Room Remodel?</h2>
+          <p>If the project also includes trim changes, flooring or a new layout, discuss that work before scheduling paint. Explore <a href="/home-remodeling">home remodeling</a> for connected improvements, or visit our <a href="/residential-painting">Spring Hill house painting overview</a> if you need both interior and exterior work.</p>
         </div>
         <div className="commercial-painting-proof-actions">
           <a className="button remodel-primary" href="#interior-painting-estimate">Request a Free Estimate</a>
@@ -210,7 +198,7 @@ export default function InteriorPaintingPage() {
         <div className="remodel-faq-heading">
           <p className="eyebrow">INTERIOR PAINTING QUESTIONS</p>
           <h2>What Homeowners Ask Before Interior Painting Begins.</h2>
-          <p>Clear answers make it easier to compare preparation, protection and the contractor responsible for your home.</p>
+          <p>Ask about furniture, repairs and the time between painting and normal room use before scheduling.</p>
         </div>
         <div className="remodel-faq-list">
           {interiorFaqs.map((faq, index) => {
@@ -242,7 +230,6 @@ export default function InteriorPaintingPage() {
 
       <SiteFooter />
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     </main>
   );

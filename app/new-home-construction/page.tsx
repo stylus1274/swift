@@ -53,8 +53,8 @@ export default function NewHomeConstructionPage() {
       <section className="build-hero">
         <div className="build-hero-copy">
           <p className="eyebrow">CUSTOM HOME BUILDING • FLORIDA NATURE COAST</p>
-          <h1>Custom Home Building for the Way You Live.</h1>
-          <p>One experienced contractor to coordinate your new home from early planning and site preparation through construction, finishes and final walkthrough.</p>
+          <h1>Custom Home Building in Hernando County, FL</h1>
+          <p>Swift coordinates custom homes from property and plan review through construction and final walkthrough. Planning a local build? Explore our <a href="/brooksville-fl/new-construction">custom home building service in Brooksville</a> and its completed farmhouse project.</p>
           <div className="build-hero-actions">
             <a className="button build-primary" href="#build-quick-lot">Plan Your New Home</a>
             <a className="build-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>

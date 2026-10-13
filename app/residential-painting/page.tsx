@@ -12,21 +12,24 @@ const paintServices = [
     title: "Interior Painting",
     copy: "Walls, ceilings, trim, doors and detailed finish work completed with careful protection and clean lines.",
     image: "/assets/hero-bathroom-remodel.webp",
-    alt: "Freshly painted bathroom interior with white walls and custom vanity",
+    alt: "Example of painted interior walls and trim",
+    href: "/interior-painting",
   },
   {
     number: "02",
     title: "Exterior Painting",
     copy: "Durable coatings selected for Florida sun, humidity and rain, with the preparation your exterior needs to last.",
     image: "/assets/florida-stucco-painting.jpg",
-    alt: "Painter applying a fresh exterior coating to a Florida stucco home",
+    alt: "Example of exterior painting on a stucco home",
+    href: "/exterior-painting",
   },
   {
     number: "03",
     title: "New Construction Painting",
     copy: "Complete interior and exterior paint systems coordinated with your construction schedule and finish selections.",
     image: "/assets/new-home-exterior.jpg",
-    alt: "New Florida home with a clean exterior paint finish",
+    alt: "Example of exterior finishes on a Florida home",
+    href: "/custom-home-building",
   },
 ];
 
@@ -104,8 +107,8 @@ export default function ResidentialPaintingPage() {
         </div>
         <div className="paint-hero-content">
           <p className="eyebrow">RESIDENTIAL PAINTING • SPRING HILL, FL</p>
-          <h1>Paint That Makes the Whole House Feel Finished.</h1>
-          <p>Interior and exterior painting with careful preparation, clean work areas and finishes made for Florida homes.</p>
+          <h1>House Painters in Spring Hill, FL</h1>
+          <p>Swift Construction & Painting handles interior and exterior house painting in Spring Hill and nearby Hernando County communities. Get a written estimate for the rooms, exterior surfaces and preparation your home needs.</p>
           <div className="paint-hero-actions">
             <a className="button paint-primary" href="#hero-project">Get a free painting estimate</a>
             <a className="paint-hero-call" href="tel:3527017458"><small>OR CALL DIRECTLY</small>(352) 701-7458</a>
@@ -139,11 +142,11 @@ export default function ResidentialPaintingPage() {
       <section className="paint-intro">
         <div>
           <p className="eyebrow">PAINTING DONE THE RIGHT WAY</p>
-          <h2>The Finish Gets Attention.<br />The Preparation Earns It.</h2>
+          <h2>Plan the Whole Painting Project.</h2>
         </div>
         <div className="paint-intro-copy">
-          <p>A lasting paint job is not just about the color. It is about protecting the surfaces, correcting problem areas and applying the right coating with control.</p>
-          <p>Swift manages the full process, from the initial walkthrough and written estimate through cleanup and the final inspection.</p>
+          <p>If you need a house painter, start by deciding what is included: interior rooms, the exterior, trim, doors or a combination. That list makes estimates easier to compare and helps separate repainting from repairs that should happen first.</p>
+          <p>Swift provides a walkthrough and written scope for the proposed work. Interior painting involves room access and finish choices; exterior painting involves weather, surface condition and access around the home.</p>
           <a href="#paint-process">See our painting process <span>→</span></a>
         </div>
       </section>
@@ -159,9 +162,9 @@ export default function ResidentialPaintingPage() {
               <div className="paint-service-image"><img src={service.image} alt={service.alt} /></div>
               <div className="paint-service-body">
                 <span>{service.number}</span>
-                <h3>{service.title}</h3>
+                <h3><a href={service.href}>{service.title}</a></h3>
                 <p>{service.copy}</p>
-                <a href="#paint-estimate">Request an estimate <b>→</b></a>
+                <a href={service.href}>Explore {service.title.toLowerCase()} <b>→</b></a>
               </div>
             </article>
           ))}
@@ -188,21 +191,21 @@ export default function ResidentialPaintingPage() {
 
       <section className="paint-projects">
         <div className="paint-project-heading">
-          <div><p className="eyebrow">SELECTED PAINTING WORK</p><h2>Fresh Finishes.<br />Close to Home.</h2></div>
-          <p>Real project details and photos will replace the mockup content before launch.</p>
+          <div><p className="eyebrow">CHOOSE YOUR SCOPE</p><h2>Inside, Outside<br />or Both?</h2></div>
+          <p>Choose the surfaces first, then review the preparation and access each part of the project needs. The images below illustrate the types of work, rather than individual Swift projects.</p>
         </div>
         <div className="paint-project-grid">
           <article className="paint-project-main">
-            <img src="/assets/florida-stucco-painting.jpg" alt="Exterior painting project on a Florida stucco home" />
-            <div><span>EXTERIOR PAINTING</span><h3>Complete Stucco Repaint</h3><p>Spring Hill, Florida</p></div>
+            <img src="/assets/florida-stucco-painting.jpg" alt="Illustration of painting a stucco home exterior" />
+            <div><span>OUTSIDE THE HOME</span><h3><a href="/exterior-painting">Stucco, Trim &amp; Doors</a></h3><p>Review access, coatings and weather.</p></div>
           </article>
           <article className="paint-project-small">
-            <img src="/assets/hero-bathroom-remodel.webp" alt="Finished residential interior with fresh wall and trim paint" />
-            <div><span>INTERIOR PAINTING</span><h3>Whole-Home Interior Refresh</h3><p>Brooksville, Florida</p></div>
+            <img src="/assets/hero-bathroom-remodel.webp" alt="Illustration of interior walls and trim" />
+            <div><span>INSIDE THE HOME</span><h3><a href="/interior-painting">Rooms, Ceilings &amp; Trim</a></h3><p>Review repairs, finishes and room access.</p></div>
           </article>
         </div>
         <div className="paint-project-cta">
-          <p>Planning something similar?</p>
+          <p>Planning both interior and exterior work?</p>
           <a className="button paint-primary" href="#paint-estimate">Get an estimate for your home</a>
         </div>
       </section>

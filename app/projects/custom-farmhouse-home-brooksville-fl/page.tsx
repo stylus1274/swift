@@ -48,7 +48,7 @@ export default function BrooksvilleCustomFarmhousePage() {
           </p>
           <div className={styles.heroActions}>
             <a className={styles.primaryButton} href="/contact">Request a Free Estimate</a>
-            <a className={styles.secondaryLink} href="/custom-home-building">Explore New Home Construction <span aria-hidden="true">→</span></a>
+            <a className={styles.secondaryLink} href="/brooksville-fl/new-construction">Custom Home Building in Brooksville <span aria-hidden="true">→</span></a>
           </div>
         </div>
         <div className={styles.heroImage}>
@@ -126,13 +126,14 @@ export default function BrooksvilleCustomFarmhousePage() {
           <p className={styles.eyebrow}>PLANNING A NEW HOME IN BROOKSVILLE?</p>
           <h2>Start With the Home You Want to Build.</h2>
           <p>
-            Talk with Swift about your new-construction plans and the scope of work
-            required for your property.
+            Use this finished home as a project example, then discuss your own lot,
+            plans and included work. Visit our <a href="/brooksville-fl/new-construction">Brooksville custom home building service</a>
+            to see what to review before planning a new build.
           </p>
         </div>
         <div className={styles.ctaActions}>
           <a className={styles.primaryButton} href="/contact">Request a Free Estimate</a>
-          <a className={styles.secondaryLink} href="/custom-home-building">New Home Construction <span aria-hidden="true">→</span></a>
+          <a className={styles.secondaryLink} href="/brooksville-fl/new-construction">Brooksville Custom Home Building <span aria-hidden="true">→</span></a>
         </div>
       </section>
 
