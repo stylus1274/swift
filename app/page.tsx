@@ -109,7 +109,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     try {
-      await submitLeadForm(event.currentTarget, "Homepage Estimate");
+      await submitLeadForm(event.currentTarget, "Homepage Estimate", [{ label: "Service", value: estimateService }]);
       setSubmitted(true);
     } catch (error) {
       console.error(error);

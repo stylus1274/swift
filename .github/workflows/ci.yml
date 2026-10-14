@@ -28,5 +28,8 @@ jobs:
       - name: Contact spam protection tests
         run: npm run test:contact
 
+      - name: Site QA regression tests
+        run: node scripts/test-site-qa.mjs
+
       - name: Build
         run: npm run build

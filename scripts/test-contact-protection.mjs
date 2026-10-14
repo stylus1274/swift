@@ -52,3 +52,27 @@ function scan(dir) {
 }
 scan('app');
 console.log(`Contact protection checks passed. ${forms} forms covered. No real emails sent.`);
+
+// City-or-ZIP fields must accept both advertised formats; ZIP-only fields stay strict.
+for (const location of ['Spring Hill', '34609']) {
+ assert.equal(protection.validateLead(fields.map(f => f.label === 'Project ZIP' ? { label: 'Location', value: location } : f)), null);
+}
+class Input {
+ constructor(name, value, type = 'text') { Object.assign(this, { name, value, type, dataset: {}, disabled: false }); }
+}
+class Select {}
+class Textarea {}
+const serviceControl = new Input('name', 'Jane Smith');
+const controls = [serviceControl];
+controls.namedItem = name => name === 'form_started' ? { value: String(Date.now() - 5000) } : null;
+let submittedFields;
+const client = loadTS('lib/submitLead.ts', {}, {
+ HTMLInputElement: Input, HTMLSelectElement: Select, HTMLTextAreaElement: Textarea,
+ window: { location: { href: 'https://swiftconstructionandpainting.com/' } },
+ fetch: async (_, options) => { submittedFields = JSON.parse(options.body).fields; return Response.json({ ok: true }); },
+});
+await client.submitLeadForm({ elements: controls, querySelector: () => null }, 'Homepage Estimate', [{ label: 'Service', value: 'Kitchen Remodeling' }]);
+assert.deepEqual(JSON.parse(JSON.stringify(submittedFields)), [{ label: 'Name', value: 'Jane Smith' }, { label: 'Service', value: 'Kitchen Remodeling' }]);
+assert.match(fs.readFileSync('app/page.tsx', 'utf8'), /label: "Service", value: estimateService/);
+assert.match(fs.readFileSync('app/new-home-construction/page.tsx', 'utf8'), /name="location"/);
+console.log('Location and selected-service regression checks passed.');

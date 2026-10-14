@@ -90,15 +90,30 @@ const sitemapUrl = new URL("/sitemap.xml", base);
 const sitemap = await request(sitemapUrl.href);
 const routeUrls = new Set([new URL("/", base).href]);
 
-if (!sitemap.ok) {
-  issues.push(`Sitemap failed: ${sitemapUrl.href} -> ${sitemap.status || sitemap.error}`);
-} else {
-  const locs = [...sitemap.text.matchAll(/<loc>(.*?)<\/loc>/gi)].map((m) => m[1].trim());
+const visitedSitemaps = new Set();
+async function collectSitemapPages(url, response) {
+  if (visitedSitemaps.has(url)) return;
+  visitedSitemaps.add(url);
+  const result = response || await request(url);
+  if (!result.ok) {
+    issues.push(`Sitemap failed: ${url} -> ${result.status || result.error}`);
+    return;
+  }
+  const isIndex = /<sitemapindex\b/i.test(result.text);
+  if (!isIndex && !/<urlset\b/i.test(result.text)) {
+    issues.push(`Invalid sitemap document: ${url}`);
+    return;
+  }
+  const locs = [...result.text.matchAll(/<loc>(.*?)<\/loc>/gi)].map((m) => decodeHtml(m[1].trim()));
   for (const loc of locs) {
-    try { routeUrls.add(toQaUrl(loc).href); }
-    catch { issues.push(`Invalid sitemap URL: ${loc}`); }
+    let target;
+    try { target = toQaUrl(loc).href; }
+    catch { issues.push(`Invalid sitemap URL: ${loc}`); continue; }
+    if (isIndex) await collectSitemapPages(target);
+    else routeUrls.add(target);
   }
 }
+await collectSitemapPages(sitemapUrl.href, sitemap);
 
 const robotsUrl = new URL("/robots.txt", base);
 const robots = await request(robotsUrl.href);

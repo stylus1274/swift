@@ -78,7 +78,7 @@ function collectFields(form: HTMLFormElement): LeadField[] {
   return fields;
 }
 
-export async function submitLeadForm(form: HTMLFormElement, formName: string) {
+export async function submitLeadForm(form: HTMLFormElement, formName: string, additionalFields: LeadField[] = []) {
   const submitButton = form.querySelector<HTMLButtonElement>('button[type="submit"]');
   if (submitButton) submitButton.disabled = true;
 
@@ -98,7 +98,7 @@ export async function submitLeadForm(form: HTMLFormElement, formName: string) {
         website: (form.elements.namedItem("company_website") as HTMLInputElement | null)?.value || "",
         elapsedMs: Date.now() - started,
         page: window.location.href,
-        fields: collectFields(form),
+        fields: [...collectFields(form), ...additionalFields],
       }),
     });
 
