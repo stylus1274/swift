@@ -1696,7 +1696,7 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
   .paint-hero::before { height: 315px; bottom: auto; background: linear-gradient(180deg, rgba(5,24,39,.08), rgba(5,24,39,.48)); }
   .paint-hero-content { width: auto; padding: 58px 38px 40px; position: static; transform: none; background: var(--paint-navy); }
   .paint-hero-content h1 { font-size: clamp(48px, 7vw, 64px); }
-  .paint-hero-panel { width: auto; min-height: 0; margin: 0 38px 40px; position: static; transform: none; }
+  .paint-hero-panel { width: auto; min-height: 0; margin: 0 38px; position: static; transform: none; }
   .paint-hero-form { top: auto; bottom: auto; }
   .paint-hero-caption { top: 284px; bottom: auto; left: 38px; }
   .paint-ticker { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1714,7 +1714,7 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
   .paint-hero-actions { align-items: stretch; flex-direction: column; gap: 23px; }
   .paint-hero-actions .button { padding-inline: 18px; }
   .paint-hero-call { align-items: center; }
-  .paint-hero-panel { width: auto; min-height: 0; margin: 0 16px 34px; padding: 29px 27px; position: static; }
+  .paint-hero-panel { width: auto; min-height: 0; margin: 0 16px; padding: 29px 27px; position: static; }
   .paint-hero-form { top: auto; transform: none; }
   .paint-hero-form > .paint-hero-form-row { grid-template-columns: 1fr; gap: 0; }
   .paint-hero-caption { top: 284px; bottom: auto; left: 20px; }
