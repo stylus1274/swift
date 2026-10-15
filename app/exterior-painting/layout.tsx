@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 const path = "/exterior-painting";
-const title = "Exterior Painting in Spring Hill, FL | Swift Construction & Painting";
-const description = "Exterior house painting across Hernando, Citrus and Pasco Counties. Free estimate, no deposit required.";
+const title = "Exterior Painting in Spring Hill, FL | Swift";
+const description = "Exterior painting in Spring Hill, FL for stucco, masonry, trim and doors. Review surface preparation and your painting scope with Swift. Free estimate.";
 
 export const metadata: Metadata = {
   alternates: { canonical: path },

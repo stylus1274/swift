@@ -11,22 +11,22 @@ const exteriorServices = [
   {
     number: "01",
     title: "Whole-Home Exterior Painting",
-    copy: "Give the full exterior a consistent, finished appearance with preparation and coatings planned around the existing surfaces.",
+    copy: "Review the main walls, trim, entry doors and garage doors as separate surfaces. Confirm what is included so a lower quote does not leave part of the exterior unfinished.",
   },
   {
     number: "02",
     title: "Stucco & Masonry Coatings",
-    copy: "Address porous, weather-exposed stucco and masonry with cleaning, repairs, primer and finish coats suited to the surface.",
+    copy: "Check chalking, loose coatings, cracks and previous patches before choosing a paint system. Cleaning, repairs and primer depend on the condition of the existing surface.",
   },
   {
     number: "03",
     title: "Trim, Doors & Accents",
-    copy: "Refresh fascia, soffits, shutters, doors and architectural details with clean lines and a coordinated color plan.",
+    copy: "Identify fascia, soffits, shutters and doors that need paint or repair. Rotten trim and failed sealant need attention before a fresh finish can do its job.",
   },
   {
     number: "04",
     title: "Repaints & Maintenance",
-    copy: "Correct fading, chalking and worn finishes before Florida sun and moisture create larger exterior maintenance needs.",
+    copy: "Fading alone and peeling paint are different problems. Ask the walkthrough to separate cosmetic wear from failed coatings, damaged materials or moisture that needs investigation.",
   },
 ];
 
@@ -41,7 +41,7 @@ const exteriorFaqs = [
   },
   {
     question: "How Long Does Exterior House Painting Take?",
-    answer: "Timing varies with the size of the home, surface condition, preparation needs and weather. After the property walkthrough, Swift provides a practical schedule with the written proposal.",
+    answer: "The schedule depends on access, washing and drying, repairs, coating requirements and weather. A smaller home with failed coatings can need more preparation than a larger home in good condition. Swift reviews those factors before proposing a schedule.",
   },
   {
     question: "Can You Help Us Choose Exterior Colors and Coatings?",
@@ -73,19 +73,6 @@ export default function ExteriorPaintingPage() {
     setSubmitted(true);
   }
 
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Exterior House Painting",
-    provider: {
-      "@type": "HomeAndConstructionBusiness",
-      name: "Swift Construction & Painting, LLC",
-      telephone: "+1-352-701-7458",
-    },
-    areaServed: ["Hernando County", "Citrus County", "Pasco County"],
-    description: "Exterior house painting, stucco coatings and trim painting for Florida homeowners.",
-  };
-
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -103,8 +90,8 @@ export default function ExteriorPaintingPage() {
       <section className="remodel-hero exterior-painting-hero">
         <div className="remodel-hero-copy">
           <p className="eyebrow">EXTERIOR PAINTING • SPRING HILL, FL</p>
-          <h1>Exterior Painting Built for Florida Homes.</h1>
-          <p>Careful preparation and durable finishes that protect your home, sharpen its curb appeal and stand up to Florida weather.</p>
+          <h1>Exterior Painting in Spring Hill, FL</h1>
+          <p>Swift repaints stucco, masonry, trim and doors on Spring Hill homes. The estimate starts with the existing coating, needed repairs and the preparation required before new paint goes on.</p>
           <div className="remodel-hero-actions">
             <a className="button remodel-primary" href="#exterior-painting-quick-project">Get a Free Exterior Painting Estimate</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
@@ -136,7 +123,7 @@ export default function ExteriorPaintingPage() {
       <section className="remodel-services" id="exterior-painting-services">
         <div className="remodel-section-heading">
           <p className="eyebrow">EXTERIOR PAINTING SERVICES</p>
-          <h2>A Complete Painting Plan for the Outside of Your Home.</h2>
+          <h2>Exterior Surfaces to Include in Your Estimate.</h2>
         </div>
         <div className="remodel-service-grid">
           {exteriorServices.map((service) => (
@@ -153,48 +140,49 @@ export default function ExteriorPaintingPage() {
       <section className="commercial-coordination commercial-painting-coordination">
         <div className="commercial-coordination-copy">
           <p className="eyebrow">PREPARATION FOR FLORIDA WEATHER</p>
-          <h2>Florida Exteriors Need More Than a Fresh Coat.</h2>
-          <p>Sun, rain and humidity put constant pressure on exterior finishes. Swift starts with the surface condition, then builds a preparation and coating plan around what the home actually needs.</p>
+          <h2>What Is Under the Existing Paint?</h2>
+          <p>A new topcoat cannot solve a loose or dirty surface underneath it. Spring Hill exteriors exposed to sun and rain need a preparation plan based on the current paint, stucco and trim, rather than the color change alone.</p>
           <a className="button remodel-primary" href="#exterior-painting-estimate">Plan a Home Walkthrough</a>
         </div>
         <div className="commercial-coordination-list">
-          <article><span>01</span><div><h3>Evaluate the Surfaces</h3><p>We review existing coatings, stucco, trim, joints and weather-exposed areas before defining the work.</p></div></article>
-          <article><span>02</span><div><h3>Prepare With Care</h3><p>Cleaning, repairs, scraping, caulking, priming and protection are matched to the condition of the home.</p></div></article>
-          <article><span>03</span><div><h3>Apply the Right Finish</h3><p>The coating plan accounts for surface type, color change, exposure and the consistent appearance you expect.</p></div></article>
+          <article><span>01</span><div><h3>Evaluate the Surfaces</h3><p>Check sun-exposed walls for chalking and shaded areas for surface growth. Note peeling paint, open joints and cracks that need closer review.</p></div></article>
+          <article><span>02</span><div><h3>Prepare With Care</h3><p>Include cleaning and drying time, removal of loose material, agreed repairs and required primer in the written scope. Protect windows, doors and nearby landscaping.</p></div></article>
+          <article><span>03</span><div><h3>Apply the Right Finish</h3><p>Select compatible coatings for the surface and existing finish. Application conditions and drying time should follow the chosen product&apos;s instructions.</p></div></article>
         </div>
       </section>
 
       <section className="commercial-properties commercial-painting-properties">
         <div className="commercial-properties-heading">
           <p className="eyebrow">SURFACES WE PAINT</p>
-          <h2>One Coordinated Finish From the Main Walls to the Final Details.</h2>
-          <p>Exterior painting looks best when the body, trim and accents are planned together instead of treated as disconnected tasks.</p>
+          <h2>Weather, Access and Color Decisions Affect the Job.</h2>
+          <p>Plan these details before scheduling. They influence preparation, access and the time needed to complete the exterior.</p>
         </div>
         <div className="commercial-property-grid">
-          <article><span>01</span><h3>Stucco Homes</h3><p>Preparation and finish coats planned for Florida stucco, including faded, chalking and previously repaired surfaces.</p></article>
-          <article><span>02</span><h3>Masonry &amp; Concrete</h3><p>Coating plans for concrete walls, masonry details and other porous exterior surfaces around the property.</p></article>
-          <article><span>03</span><h3>Trim, Fascia &amp; Doors</h3><p>Clean finish work for soffits, fascia, entry doors, shutters and architectural details that complete the exterior.</p></article>
+          <article><span>01</span><h3>Rain &amp; Drying Windows</h3><p>A dry-looking wall may still hold moisture after washing or rain. The schedule needs suitable surface conditions and a forecast that meets the coating requirements.</p></article>
+          <article><span>02</span><h3>Lanais &amp; Landscaping</h3><p>Screen enclosures, shrubs, pavers and narrow side yards affect access and protection. Identify these areas during the walkthrough rather than after work starts.</p></article>
+          <article><span>03</span><h3>Body, Trim &amp; HOA Colors</h3><p>Choose wall, trim and accent colors together. If your neighborhood requires color approval, confirm it before purchasing paint or finalizing the schedule.</p></article>
         </div>
       </section>
 
       <section className="remodel-process" id="exterior-painting-process">
         <div className="remodel-process-heading">
           <p className="eyebrow">HOW IT WORKS</p>
-          <h2>A Clear Exterior Painting Process From Walkthrough to Finish.</h2>
+          <h2>What Changes the Cost of an Exterior Repaint?</h2>
+          <p>See our <a href="/blog/average-cost-paint-house-exterior-florida">Florida exterior house painting cost guide</a> for budget context, then request an estimate for your actual surfaces and access.</p>
         </div>
         <div className="remodel-process-grid">
-          <article><span>01</span><h3>Inspect the Home</h3><p>We walk the exterior, review the surfaces and discuss the color, condition and result you want.</p></article>
-          <article><span>02</span><h3>Define the Scope</h3><p>You receive a written proposal outlining the planned surfaces, preparation and included work.</p></article>
-          <article><span>03</span><h3>Prepare &amp; Paint</h3><p>Swift protects adjacent areas, completes the agreed preparation and applies the finish coats.</p></article>
-          <article><span>04</span><h3>Complete the Walkthrough</h3><p>We review the finished exterior together and address final details before project closeout.</p></article>
+          <article><span>01</span><h3>Size &amp; Access</h3><p>Wall area, building height, rooflines and access around the home affect setup and painting time.</p></article>
+          <article><span>02</span><h3>Surface Condition</h3><p>Cleaning, loose-paint removal, cracks and damaged trim can change the preparation needed before painting.</p></article>
+          <article><span>03</span><h3>Included Surfaces</h3><p>Compare whether fascia, soffits, entry doors, garage doors and accents are included in each written quote.</p></article>
+          <article><span>04</span><h3>Coating &amp; Color Change</h3><p>The specified products, primer requirements and coverage needed for the color change affect the final scope.</p></article>
         </div>
       </section>
 
       <section className="commercial-painting-proof-cta">
         <div>
           <p className="eyebrow">PAINTING WITH A CONTRACTOR’S EYE</p>
-          <h2>Surface Repairs and Finish Work Can Stay Under One Plan.</h2>
-          <p>When the exterior needs more than paint, Swift can coordinate connected repairs and improvements under one licensed building contractor.</p>
+          <h2>Plan Exterior Repairs Before Painting.</h2>
+          <p>Tell Swift about damaged trim, recurring cracks or water intrusion during the walkthrough. For painting inside and outside, see our <a href="/residential-painting">house painting services in Spring Hill</a> and <a href="/interior-painting">interior painting options</a>. Larger changes may need a separate repair or remodeling scope.</p>
         </div>
         <div className="commercial-painting-proof-actions">
           <a className="button remodel-primary" href="#exterior-painting-estimate">Request a Free Estimate</a>
@@ -206,7 +194,7 @@ export default function ExteriorPaintingPage() {
         <div className="remodel-faq-heading">
           <p className="eyebrow">EXTERIOR PAINTING QUESTIONS</p>
           <h2>What Homeowners Ask Before Exterior Painting Begins.</h2>
-          <p>Clear answers make it easier to compare preparation, coatings and the contractor responsible for your home.</p>
+          <p>Discuss rain delays, stucco preparation and color choices before committing to an exterior repaint.</p>
         </div>
         <div className="remodel-faq-list">
           {exteriorFaqs.map((faq, index) => {
@@ -238,7 +226,6 @@ export default function ExteriorPaintingPage() {
 
       <SiteFooter />
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     </main>
   );

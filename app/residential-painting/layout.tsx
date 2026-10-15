@@ -4,11 +4,11 @@ const canonicalUrl = "https://swiftconstructionandpainting.com/residential-paint
 
 export const metadata: Metadata = {
   alternates: { canonical: "/residential-painting" },
-  title: "Residential Painting in Spring Hill, FL | Swift Construction & Painting",
-  description: "Interior and exterior residential painting for homeowners throughout Hernando, Citrus and Pasco Counties.",
+  title: "House Painters in Spring Hill, FL | Swift",
+  description: "House painters in Spring Hill, FL for interior and exterior projects. Compare painting scopes and request a free written estimate from Swift.",
   openGraph: {
-    title: "Residential Painting in Spring Hill, FL | Swift Construction & Painting",
-    description: "Interior and exterior residential painting with careful preparation, clean work areas and durable finishes for Florida homes.",
+    title: "House Painters in Spring Hill, FL | Swift",
+    description: "House painters in Spring Hill, FL for interior and exterior projects. Compare painting scopes and request a free written estimate from Swift.",
     url: "/residential-painting",
     type: "website",
   },
