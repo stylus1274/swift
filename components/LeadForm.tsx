@@ -26,7 +26,13 @@ export default function LeadForm({ children, onSubmit, step = false, ...props }:
       const key = `${path}-${index}`;
       const type = element.type;
       if (type === "button" && element.props.type === "submit") {
-        return cloneElement(element, { disabled: busy || element.props.disabled }, busy && !step ? "Sending your request…" : element.props.children as ReactNode);
+        const text = Children.toArray(element.props.children as ReactNode).filter(child =>
+          !isValidElement(child) || (child.props as Record<string, unknown>)["aria-hidden"] !== true,
+        );
+        return cloneElement(element, { disabled: busy || element.props.disabled },
+          <span className="form-button-text">{busy && !step ? "Sending your request…" : text}</span>,
+          <span className="form-button-arrow" aria-hidden="true">→</span>,
+        );
       }
       if (type === "label") {
         const id = `${prefix}-${key}-label`;

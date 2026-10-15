@@ -11,7 +11,7 @@
 
 form[class] label {
   color: #43574c;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Courier New", monospace;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.5;
@@ -32,9 +32,34 @@ form[class] :is(input, select, textarea),
 form[class] button:focus-visible { outline: 2px solid #1d5d97; outline-offset: 3px; }
 
 form[class] button[type="submit"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  min-height: 54px;
+  padding: 14px 20px;
+  border: 1px solid var(--logo-blue);
+  border-radius: 0;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
   background: var(--logo-blue);
   border-color: var(--logo-blue);
   color: #fff;
+}
+
+form[class] button[type="submit"] .form-button-text {
+  min-width: 0;
+  font-size: inherit;
+  text-align: left;
+}
+
+form[class] button[type="submit"] .form-button-arrow {
+  flex: 0 0 auto;
+  margin-left: auto;
+  font-size: 24px;
+  line-height: 1;
 }
 
 form[class] button[type="submit"]:hover {
