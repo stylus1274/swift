@@ -1710,8 +1710,8 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
   .paint-project-heading h2 { font-size: 44px; }
   .paint-project-heading > p { margin-top: 25px; }
   .paint-project-grid { height: auto; grid-template-columns: 1fr; }
-  .paint-project-grid article { min-height: 440px; }
-  .paint-project-main, .paint-project-small { grid-template-rows: minmax(0, 1fr) 112px; }
+  .paint-project-grid article { min-height: 0; display: block; }
+  .paint-project-grid img { height: clamp(240px, 80vw, 380px); }
   .paint-project-cta { align-items: stretch; flex-direction: column; }
   .paint-project-cta .button { width: 100%; }
   .paint-process { padding: 74px 22px 82px; }
