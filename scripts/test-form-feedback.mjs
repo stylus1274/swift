@@ -27,9 +27,9 @@ const source = ts.transpileModule(fs.readFileSync("components/LeadForm.tsx", "ut
 const context = { exports: {}, HTMLInputElement: Input, HTMLSelectElement: Select, HTMLTextAreaElement: Textarea, Error, TypeError, requestAnimationFrame: callback => callback(), require: name => ({ react: hooks, "react/jsx-runtime": jsx, "@/lib/submitLead": { collectFields: () => fields, labelForControl: control => control.name }, "@/lib/leadValidation": validationContext.exports }[name] || require(name)) };
 vm.runInNewContext(source, context);
 const Form = context.exports.default;
-function setup(onSubmit, controls = [new Input("name"), new Input("phone")], step = false) {
+function setup(onSubmit, controls = [new Input("name"), new Input("phone")], step = false, buttonChildren = "Send") {
   state = []; fields = validFields;
-  const props = { onSubmit, step, className: "test", children: jsx.jsx("button", { type: "submit", children: "Send" }) };
+  const props = { onSubmit, step, className: "test", children: jsx.jsx("button", { type: "submit", children: buttonChildren }) };
   const render = () => { cursor = 0; return Form(props); };
   const event = { preventDefault() {}, currentTarget: { elements: controls } };
   return { render, event };
@@ -64,4 +64,10 @@ assert.equal(sends, 1, "shared server validation rules also run before delivery"
 test = setup(() => {}, [], true);
 await test.render().props.onSubmit(test.event);
 assert.equal(status(test.render()), undefined, "continue steps must not claim that a lead was sent");
+for (const hidden of [true, "true"]) {
+  test = setup(() => {}, [], false, ["Send", jsx.jsx("span", { "aria-hidden": hidden, children: "→" })]);
+  const button = nodes(test.render()).find(node => node.type === "button");
+  assert.equal((JSON.stringify(button).match(/→/g) || []).length, 1, "legacy arrow must be replaced, including string aria-hidden attributes");
+  assert.doesNotMatch(JSON.stringify(test.render()), /Fields marked required/);
+}
 console.log("Form feedback checks passed: progress, success, duplicate prevention, field errors, delivery errors, and continue steps. No requests sent.");

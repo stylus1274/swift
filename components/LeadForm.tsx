@@ -26,9 +26,11 @@ export default function LeadForm({ children, onSubmit, step = false, ...props }:
       const key = `${path}-${index}`;
       const type = element.type;
       if (type === "button" && element.props.type === "submit") {
-        const text = Children.toArray(element.props.children as ReactNode).filter(child =>
-          !isValidElement(child) || (child.props as Record<string, unknown>)["aria-hidden"] !== true,
-        );
+        const text = Children.toArray(element.props.children as ReactNode).filter(child => {
+          if (!isValidElement(child)) return true;
+          const hidden = (child.props as Record<string, unknown>)["aria-hidden"];
+          return hidden !== true && hidden !== "true";
+        });
         return cloneElement(element, { disabled: busy || element.props.disabled },
           <span className="form-button-text">{busy && !step ? "Sending your request…" : text}</span>,
           <span className="form-button-arrow" aria-hidden="true">→</span>,
@@ -103,7 +105,6 @@ export default function LeadForm({ children, onSubmit, step = false, ...props }:
 
   const hasErrors = generalError || Object.keys(errors).length > 0;
   return <form method="post" {...props} noValidate onSubmit={handleSubmit}>
-    <p className="form-instructions">Fields marked required must be completed.{!step && " Use a 10-digit US phone number, with an optional +1 country code."}</p>
     {hasErrors && <div className="form-error-summary" ref={summary} tabIndex={-1} role="alert">
       <p>{generalError || "Please correct the highlighted fields and try again."}</p>
       {Object.entries(errors).map(([id, message]) => <p key={id}><a href={`#${id}`} onClick={event => { event.preventDefault(); document.getElementById(id)?.focus(); }}>{message}</a></p>)}

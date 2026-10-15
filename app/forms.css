@@ -67,12 +67,6 @@ form[class] button[type="submit"]:hover {
   border-color: #2668a3;
 }
 
-form[class] .form-instructions {
-  grid-column: 1 / -1;
-  margin: 0 0 20px;
-  color: #43574c;
-  font: 14px/1.5 Arial, Helvetica, sans-serif;
-}
 form[class] .form-requirement { font-weight: 400; }
 form[class] .form-status {
   grid-column: 1 / -1;
