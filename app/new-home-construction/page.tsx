@@ -72,7 +72,7 @@ export default function NewHomeConstructionPage() {
         <label><span className="form-label-text">Home Size <span className="form-requirement">(required)</span></span><select value={homeSize} onChange={(event) => setHomeSize(event.target.value)} required><option value="" disabled>Select size</option><option>Under 1,800 sq. ft.</option><option>1,800–2,500 sq. ft.</option><option>2,500–3,500 sq. ft.</option><option>Over 3,500 sq. ft.</option><option>Not sure yet</option></select></label>
         <label><span className="form-label-text">Build ZIP <span className="form-requirement">(required)</span></span><input inputMode="numeric" placeholder="34609" value={buildZip} onChange={(event) => setBuildZip(event.target.value)} required /></label>
         <label><span className="form-label-text">Ideal Start <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>Within 3 months</option><option>Within 3–6 months</option><option>Within 6–12 months</option><option>More than 12 months</option><option>Just researching</option></select></label>
-        <button type="submit">Continue My Estimate <span aria-hidden="true">→</span></button>
+        <button type="submit">Continue my estimate <span aria-hidden="true">→</span></button>
       </LeadForm>
 
       <section className="build-scope" id="build-scope">
@@ -146,7 +146,7 @@ export default function NewHomeConstructionPage() {
           <div className="build-form-row"><label><span className="form-label-text">Lot Status <span className="form-requirement">(required)</span></span><select value={lotStatus} onChange={(event) => setLotStatus(event.target.value)} required><option value="" disabled>Select one</option><option>I own a lot</option><option>I am under contract</option><option>I am looking for land</option><option>I need guidance</option></select></label><label><span className="form-label-text">Approximate Home Size <span className="form-requirement">(required)</span></span><select value={homeSize} onChange={(event) => setHomeSize(event.target.value)} required><option value="" disabled>Select size</option><option>Under 1,800 sq. ft.</option><option>1,800–2,500 sq. ft.</option><option>2,500–3,500 sq. ft.</option><option>Over 3,500 sq. ft.</option><option>Not sure yet</option></select></label></div>
           <label><span className="form-label-text">Ideal Start <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>Within 3 months</option><option>Within 3–6 months</option><option>Within 6–12 months</option><option>More than 12 months</option><option>Just researching</option></select></label>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us about your plans, lot, priorities and any decisions you have already made." /></label>
-          <button className="button build-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Get My Project Conversation"}</button>
+          <button className="button build-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my project conversation"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

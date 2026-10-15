@@ -152,7 +152,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
             </div>
             <label htmlFor="alt-zip"><span className="form-label-text">Project ZIP code <span className="form-requirement">(required)</span></span></label>
             <input id="alt-zip" name="hero_zip" placeholder="34609" inputMode="numeric" required />
-            <button type="submit">{heroSubmitted ? "Thank You. We’ll Be in Touch." : "Get My Free Estimate"}<span aria-hidden="true">→</span></button>
+            <button type="submit">{heroSubmitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}<span aria-hidden="true">→</span></button>
             <small className="paint-hero-reassurance">Licensed and insured • Serving local homeowners since 2003</small>
           </LeadForm>
         </section>
