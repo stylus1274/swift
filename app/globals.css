@@ -750,7 +750,7 @@
 .article-sidebar-cta > p { margin: 0; color: var(--blog-blue); font-family: "Courier New", monospace; font-size: 10px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
 .article-sidebar-cta h2 { margin: 17px 0 24px; font-size: 27px; line-height: 1.17; }
 .article-sidebar-cta .button { width: 100%; min-height: 49px; padding: 0 14px; }
-.article-sidebar-cta > a:last-child:not(.button) { margin-top: 18px; display: block; color: var(--blog-navy); font-family: Georgia, serif; font-size: 19px; font-weight: 700; text-align: center; }
+.article-sidebar-cta > a:last-child:not(.button) { margin-top: 18px; display: block; color: var(--blog-navy); font-family: Georgia, serif; font-size: clamp(16px, 1.5vw, 19px); font-weight: 700; white-space: nowrap; text-align: center; }
 .article-sidebar-cta .button.blog-primary, .blog-cta .button.blog-primary {
   border-color: var(--logo-blue);
   background: var(--logo-blue);
@@ -1527,6 +1527,9 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
 .paint-hero-content h1 { max-width: 680px; margin: 26px 0 25px; color: #fff; font-size: clamp(62px, 5.3vw, 86px); line-height: .98; letter-spacing: -.045em; text-shadow: 0 3px 24px rgba(0,0,0,.18); }
 .paint-hero-content > p:not(.eyebrow) { max-width: 600px; margin: 0; color: #d9e6ec; font-size: 19px; line-height: 1.65; }
 .paint-hero-actions { margin-top: 35px; display: flex; align-items: center; gap: 31px; }
+.paint-hero-actions { flex-wrap: wrap; }
+.paint-hero-actions .button { flex-shrink: 0; white-space: nowrap; }
+.remodel-phone, .about-phone, .contact-direct-phone, .blog-phone, .build-phone, .paint-hero-call { flex-shrink: 0; white-space: nowrap; }
 .paint-hero-call { display: flex; flex-direction: column; gap: 5px; color: #fff; font-family: Georgia, serif; font-size: 21px; font-weight: 700; }
 .paint-hero-call small { color: #a9c1cf; font-family: "Courier New", monospace; font-size: 9px; letter-spacing: .16em; }
 .paint-text-link { color: var(--paint-navy); font-size: 15px; font-weight: 700; }
@@ -1677,6 +1680,23 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
   .paint-estimate { gap: 55px; }
 }
 
+@media (max-width: 1280px) {
+  .paint-ticker { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px 20px; overflow: visible; white-space: normal; text-align: center; font-size: 12px; letter-spacing: .1em; }
+  .paint-ticker b { display: none; }
+}
+
+@media (max-width: 1050px) {
+  .paint-hero { min-height: 0; padding-top: 315px; overflow: visible; }
+  .paint-hero-media { height: 315px; bottom: auto; }
+  .paint-hero::before { height: 315px; bottom: auto; background: linear-gradient(180deg, rgba(5,24,39,.08), rgba(5,24,39,.48)); }
+  .paint-hero-content { width: auto; padding: 58px 38px 40px; position: static; transform: none; background: var(--paint-navy); }
+  .paint-hero-content h1 { font-size: clamp(48px, 7vw, 64px); }
+  .paint-hero-panel { width: auto; min-height: 0; margin: 0 38px 40px; position: static; transform: none; }
+  .paint-hero-form { top: auto; bottom: auto; }
+  .paint-hero-caption { top: 284px; bottom: auto; left: 38px; }
+  .paint-ticker { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 700px) {
   .paint-hero { min-height: 0; padding-top: 315px; overflow: visible; }
   .paint-hero-media { height: 315px; bottom: auto; }
@@ -1687,12 +1707,13 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
   .paint-hero-content h1 { font-size: clamp(48px, 13vw, 64px); }
   .paint-hero-content > p:not(.eyebrow) { font-size: 17px; }
   .paint-hero-actions { align-items: stretch; flex-direction: column; gap: 23px; }
+  .paint-hero-actions .button { padding-inline: 18px; }
   .paint-hero-call { align-items: center; }
   .paint-hero-panel { width: auto; min-height: 0; margin: 0 16px 34px; padding: 29px 27px; position: static; }
   .paint-hero-form { top: auto; transform: none; }
   .paint-hero-form > .paint-hero-form-row { grid-template-columns: 1fr; gap: 0; }
   .paint-hero-caption { top: 284px; bottom: auto; left: 20px; }
-  .paint-ticker { justify-content: flex-start; }
+  .paint-ticker { font-size: 11px; letter-spacing: .08em; }
   .paint-intro { padding: 71px 22px; grid-template-columns: 1fr; gap: 10px; }
   .paint-intro h2 { font-size: 43px; }
   .paint-services { padding: 65px 18px 72px; }

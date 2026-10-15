@@ -63,9 +63,9 @@ export default function ServicesPage() {
       </section>
 
       <section style={{ padding: "88px 44px 110px", background: "#fff" }}>
-        <div style={{ maxWidth: 1320, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
+        <div style={{ maxWidth: 1320, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: 24 }}>
           {serviceGroups.map((group) => (
-            <article key={group.title} style={{ border: "1px solid #e1e7e4", padding: "38px 34px", boxShadow: "0 12px 30px rgba(14,43,66,.07)" }}>
+            <article key={group.title} style={{ minWidth: 0, border: "1px solid #e1e7e4", padding: "38px clamp(20px, 3vw, 34px)", boxShadow: "0 12px 30px rgba(14,43,66,.07)" }}>
               <h2 style={{ margin: "0 0 18px", fontSize: 31, lineHeight: 1.15 }}>{group.title}</h2>
               <p style={{ margin: "0 0 28px", color: "#5f7068", lineHeight: 1.7 }}>{group.intro}</p>
               <div style={{ display: "grid", gap: 0 }}>
