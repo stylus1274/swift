@@ -6,6 +6,7 @@ import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
 import LeadProtection from "@/components/LeadProtection";
+import LeadForm from "@/components/LeadForm";
 const commercialServices = [
   { number: "01", title: "Commercial Build-Outs", copy: "Interior construction, layout changes and finish work coordinated around the needs of your space and operation." },
   { number: "02", title: "Commercial Painting", copy: "Interior and exterior painting with durable coatings, organized work areas and scheduling built around your business." },
@@ -37,13 +38,8 @@ export default function CommercialServicesPage() {
 
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    try {
-      await submitLeadForm(event.currentTarget, "Commercial Services Estimate");
-      setSubmitted(true);
-    } catch (error) {
-      console.error(error);
-      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
-    }
+    await submitLeadForm(event.currentTarget, "Commercial Services Estimate");
+    setSubmitted(true);
   }
 
   return (
@@ -70,18 +66,18 @@ export default function CommercialServicesPage() {
         </div>
       </section>
 
-      <form className="remodel-quick-form commercial-quick-form" onSubmit={continueEstimate}>
+      <LeadForm className="remodel-quick-form commercial-quick-form" onSubmit={continueEstimate} step>
           <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR PROJECT</p>
           <h2>What Does Your Property Need?</h2>
         </div>
-        <label htmlFor="commercial-quick-project">Project Type<select id="commercial-quick-project" value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select project</option><option>Commercial build-out</option><option>Commercial painting</option><option>Property improvement</option><option>Facility service</option><option>Other commercial project</option></select></label>
-        <label htmlFor="commercial-quick-property">Property Type<select id="commercial-quick-property" value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Office</option><option>Retail</option><option>Restaurant or hospitality</option><option>Medical or professional</option><option>Multi-tenant property</option><option>Other</option></select></label>
-        <label htmlFor="commercial-quick-zip">Project ZIP<input id="commercial-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
-        <label htmlFor="commercial-quick-timing">Ideal Timing<select id="commercial-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Planning ahead</option></select></label>
-        <button type="submit">Continue My Project Request <span aria-hidden="true">→</span></button>
-      </form>
+        <label htmlFor="commercial-quick-project"><span className="form-label-text">Project Type <span className="form-requirement">(required)</span></span><select id="commercial-quick-project" value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select project</option><option>Commercial build-out</option><option>Commercial painting</option><option>Property improvement</option><option>Facility service</option><option>Other commercial project</option></select></label>
+        <label htmlFor="commercial-quick-property"><span className="form-label-text">Property Type <span className="form-requirement">(required)</span></span><select id="commercial-quick-property" value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Office</option><option>Retail</option><option>Restaurant or hospitality</option><option>Medical or professional</option><option>Multi-tenant property</option><option>Other</option></select></label>
+        <label htmlFor="commercial-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input id="commercial-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
+        <label htmlFor="commercial-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="commercial-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Planning ahead</option></select></label>
+        <button type="submit">Continue my estimate <span aria-hidden="true">→</span></button>
+      </LeadForm>
 
       <section className="remodel-services" id="commercial-services">
         <div className="remodel-section-heading">
@@ -167,16 +163,16 @@ export default function CommercialServicesPage() {
           <div className="remodel-estimate-points"><span>Free initial project walkthrough</span><span>Written commercial proposal</span><span>Licensed and insured contractor</span></div>
           <p className="remodel-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
-        <form className="remodel-estimate-form" onSubmit={submitEstimate}>
+        <LeadForm className="remodel-estimate-form" onSubmit={submitEstimate}>
           <LeadProtection />
-          <div className="remodel-form-row"><label>Name<input id="commercial-lead-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
-          <div className="remodel-form-row"><label>Business Email<input name="email" placeholder="you@company.com" type="email" /></label><label>Project City or ZIP<input name="zip" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
-          <div className="remodel-form-row"><label>Project Type<select value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select project</option><option>Commercial build-out</option><option>Commercial painting</option><option>Property improvement</option><option>Facility service</option><option>Other commercial project</option></select></label><label>Property Type<select value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Office</option><option>Retail</option><option>Restaurant or hospitality</option><option>Medical or professional</option><option>Multi-tenant property</option><option>Other</option></select></label></div>
-          <label>Ideal Timing<select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Planning ahead</option></select></label>
-          <label>Project Details<textarea name="details" placeholder="Tell us about the property, the work you are considering, access requirements and your preferred timing." /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Request My Commercial Estimate"}</button>
+          <div className="remodel-form-row"><label><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input id="commercial-lead-name" name="name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label><label><span className="form-label-text">Phone <span className="form-requirement">(required)</span></span><input name="phone" autoComplete="tel" placeholder="(000) 000-0000" type="tel" required /></label></div>
+          <div className="remodel-form-row"><label><span className="form-label-text">Business Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@company.com" type="email" maxLength={254} /></label><label><span className="form-label-text">Project City or ZIP <span className="form-requirement">(required)</span></span><input name="location" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
+          <div className="remodel-form-row"><label><span className="form-label-text">Project Type <span className="form-requirement">(required)</span></span><select value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select project</option><option>Commercial build-out</option><option>Commercial painting</option><option>Property improvement</option><option>Facility service</option><option>Other commercial project</option></select></label><label><span className="form-label-text">Property Type <span className="form-requirement">(required)</span></span><select value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Office</option><option>Retail</option><option>Restaurant or hospitality</option><option>Medical or professional</option><option>Multi-tenant property</option><option>Other</option></select></label></div>
+          <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Planning ahead</option></select></label>
+          <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us about the property, the work you are considering, access requirements and your preferred timing." /></label>
+          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my commercial estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
-        </form>
+        </LeadForm>
       </section>
 
       <SiteFooter />

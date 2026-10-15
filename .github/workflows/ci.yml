@@ -31,5 +31,8 @@ jobs:
       - name: Site QA regression tests
         run: node scripts/test-site-qa.mjs
 
+      - name: Form accessibility regression tests
+        run: node scripts/test-form-feedback.mjs
+
       - name: Build
         run: npm run build

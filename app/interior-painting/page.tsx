@@ -6,6 +6,7 @@ import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
 import LeadProtection from "@/components/LeadProtection";
+import LeadForm from "@/components/LeadForm";
 const interiorServices = [
   {
     number: "01",
@@ -68,13 +69,8 @@ export default function InteriorPaintingPage() {
 
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    try {
-      await submitLeadForm(event.currentTarget, "Interior Painting Estimate");
-      setSubmitted(true);
-    } catch (error) {
-      console.error(error);
-      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
-    }
+    await submitLeadForm(event.currentTarget, "Interior Painting Estimate");
+    setSubmitted(true);
   }
 
   const faqSchema = {
@@ -111,18 +107,18 @@ export default function InteriorPaintingPage() {
         </div>
       </section>
 
-      <form className="remodel-quick-form commercial-painting-quick-form" onSubmit={continueEstimate}>
+      <LeadForm className="remodel-quick-form commercial-painting-quick-form" onSubmit={continueEstimate} step>
           <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>What Are You Planning to Paint?</h2>
         </div>
-        <label htmlFor="interior-painting-quick-project">Interior Scope<select id="interior-painting-quick-project" value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select scope</option><option>One or two rooms</option><option>Several rooms</option><option>Whole-home interior</option><option>Trim, doors or cabinets</option><option>Other interior project</option></select></label>
-        <label htmlFor="interior-painting-quick-occupancy">Home Status<select id="interior-painting-quick-occupancy" value={occupancy} onChange={(event) => setOccupancy(event.target.value)} required><option value="" disabled>Select status</option><option>Currently occupied</option><option>Vacant home</option><option>Moving in soon</option><option>Preparing to sell</option></select></label>
-        <label htmlFor="interior-painting-quick-zip">Project ZIP<input id="interior-painting-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
-        <label htmlFor="interior-painting-quick-timing">Ideal Timing<select id="interior-painting-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
-        <button type="submit">Continue My Estimate <span aria-hidden="true">→</span></button>
-      </form>
+        <label htmlFor="interior-painting-quick-project"><span className="form-label-text">Interior Scope <span className="form-requirement">(required)</span></span><select id="interior-painting-quick-project" value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select scope</option><option>One or two rooms</option><option>Several rooms</option><option>Whole-home interior</option><option>Trim, doors or cabinets</option><option>Other interior project</option></select></label>
+        <label htmlFor="interior-painting-quick-occupancy"><span className="form-label-text">Home Status <span className="form-requirement">(required)</span></span><select id="interior-painting-quick-occupancy" value={occupancy} onChange={(event) => setOccupancy(event.target.value)} required><option value="" disabled>Select status</option><option>Currently occupied</option><option>Vacant home</option><option>Moving in soon</option><option>Preparing to sell</option></select></label>
+        <label htmlFor="interior-painting-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input id="interior-painting-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
+        <label htmlFor="interior-painting-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="interior-painting-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
+        <button type="submit">Continue my estimate <span aria-hidden="true">→</span></button>
+      </LeadForm>
 
       <section className="remodel-services" id="interior-painting-services">
         <div className="remodel-section-heading">
@@ -216,16 +212,16 @@ export default function InteriorPaintingPage() {
           <div className="remodel-estimate-points"><span>Free project walkthrough</span><span>Written, itemized proposal</span><span>No deposit required</span></div>
           <p className="remodel-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
-        <form className="remodel-estimate-form" onSubmit={submitEstimate}>
+        <LeadForm className="remodel-estimate-form" onSubmit={submitEstimate}>
           <LeadProtection />
-          <div className="remodel-form-row"><label>Name<input id="interior-painting-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
-          <div className="remodel-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>Project City or ZIP<input name="zip" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
-          <div className="remodel-form-row"><label>Interior Scope<select value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select scope</option><option>One or two rooms</option><option>Several rooms</option><option>Whole-home interior</option><option>Trim, doors or cabinets</option><option>Other interior project</option></select></label><label>Home Status<select value={occupancy} onChange={(event) => setOccupancy(event.target.value)} required><option value="" disabled>Select status</option><option>Currently occupied</option><option>Vacant home</option><option>Moving in soon</option><option>Preparing to sell</option></select></label></div>
-          <label>Ideal Timing<select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
-          <label>Project Details<textarea name="details" placeholder="Tell us which rooms and surfaces need paint, whether colors are changing and any repairs you have noticed." /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Request My Interior Painting Estimate"}</button>
+          <div className="remodel-form-row"><label><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input id="interior-painting-name" name="name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label><label><span className="form-label-text">Phone <span className="form-requirement">(required)</span></span><input name="phone" autoComplete="tel" placeholder="(000) 000-0000" type="tel" required /></label></div>
+          <div className="remodel-form-row"><label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label><label><span className="form-label-text">Project City or ZIP <span className="form-requirement">(required)</span></span><input name="location" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
+          <div className="remodel-form-row"><label><span className="form-label-text">Interior Scope <span className="form-requirement">(required)</span></span><select value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select scope</option><option>One or two rooms</option><option>Several rooms</option><option>Whole-home interior</option><option>Trim, doors or cabinets</option><option>Other interior project</option></select></label><label><span className="form-label-text">Home Status <span className="form-requirement">(required)</span></span><select value={occupancy} onChange={(event) => setOccupancy(event.target.value)} required><option value="" disabled>Select status</option><option>Currently occupied</option><option>Vacant home</option><option>Moving in soon</option><option>Preparing to sell</option></select></label></div>
+          <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
+          <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us which rooms and surfaces need paint, whether colors are changing and any repairs you have noticed." /></label>
+          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my interior painting estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
-        </form>
+        </LeadForm>
       </section>
 
       <SiteFooter />

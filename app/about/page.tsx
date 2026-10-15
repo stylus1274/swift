@@ -6,6 +6,7 @@ import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
 import LeadProtection from "@/components/LeadProtection";
+import LeadForm from "@/components/LeadForm";
 const principles = [
   {
     number: "01",
@@ -62,13 +63,8 @@ export default function AboutPage() {
 
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    try {
-      await submitLeadForm(event.currentTarget, "About Page Estimate");
-      setSubmitted(true);
-    } catch (error) {
-      console.error(error);
-      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
-    }
+    await submitLeadForm(event.currentTarget, "About Page Estimate");
+    setSubmitted(true);
   }
 
   return (
@@ -91,14 +87,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <form className="about-quick-form" onSubmit={continueEstimate}>
+      <LeadForm className="about-quick-form" onSubmit={continueEstimate} step>
           <LeadProtection />
         <div className="about-quick-heading"><p className="eyebrow">START A CONVERSATION</p><h2>What Are You Planning?</h2></div>
-        <label htmlFor="about-quick-project">Project Type<select id="about-quick-project" value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select project</option><option>Residential painting</option><option>Residential remodeling</option><option>New home construction</option><option>Commercial services</option><option>Other project</option></select></label>
-        <label htmlFor="about-quick-zip">Project ZIP<input id="about-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
-        <label htmlFor="about-quick-timing">Ideal Timing<select id="about-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Just researching</option></select></label>
-        <button type="submit">Continue My Estimate <span aria-hidden="true">→</span></button>
-      </form>
+        <label htmlFor="about-quick-project"><span className="form-label-text">Project Type <span className="form-requirement">(required)</span></span><select id="about-quick-project" value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select project</option><option>Residential painting</option><option>Residential remodeling</option><option>New home construction</option><option>Commercial services</option><option>Other project</option></select></label>
+        <label htmlFor="about-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input id="about-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
+        <label htmlFor="about-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="about-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Just researching</option></select></label>
+        <button type="submit">Continue my estimate <span aria-hidden="true">→</span></button>
+      </LeadForm>
 
       <section className="about-story">
         <div className="about-story-intro">
@@ -163,15 +159,15 @@ export default function AboutPage() {
           <div className="about-estimate-points"><span>Free, No-Obligation Estimate</span><span>Written, Itemized Proposal</span><span>Licensed and Insured Contractor</span></div>
           <p className="about-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
-        <form className="about-estimate-form" onSubmit={submitEstimate}>
+        <LeadForm className="about-estimate-form" onSubmit={submitEstimate}>
           <LeadProtection />
-          <div className="about-form-row"><label>Name<input id="about-lead-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
-          <div className="about-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>City or ZIP<input name="zip" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
-          <div className="about-form-row"><label>Project Type<select value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select project</option><option>Residential painting</option><option>Residential remodeling</option><option>New home construction</option><option>Commercial services</option><option>Other project</option></select></label><label>Ideal Timing<select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Just researching</option></select></label></div>
-          <label>Project Details<textarea name="details" placeholder="Tell us about the property, the work you are considering and your ideal timing." /></label>
-          <button className="button about-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Request My Free Estimate"}</button>
+          <div className="about-form-row"><label><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input id="about-lead-name" name="name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label><label><span className="form-label-text">Phone <span className="form-requirement">(required)</span></span><input name="phone" autoComplete="tel" placeholder="(000) 000-0000" type="tel" required /></label></div>
+          <div className="about-form-row"><label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label><label><span className="form-label-text">City or ZIP <span className="form-requirement">(required)</span></span><input name="location" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
+          <div className="about-form-row"><label><span className="form-label-text">Project Type <span className="form-requirement">(required)</span></span><select value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select project</option><option>Residential painting</option><option>Residential remodeling</option><option>New home construction</option><option>Commercial services</option><option>Other project</option></select></label><label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Just researching</option></select></label></div>
+          <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us about the property, the work you are considering and your ideal timing." /></label>
+          <button className="button about-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
-        </form>
+        </LeadForm>
       </section>
 
       <SiteFooter />

@@ -6,6 +6,7 @@ import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
 import LeadProtection from "@/components/LeadProtection";
+import LeadForm from "@/components/LeadForm";
 const kitchenServices = [
   { number: "01", title: "Full Kitchen Remodeling", copy: "A connected renovation plan for layout changes, cabinetry, counters, flooring, lighting and finish work." },
   { number: "02", title: "Cabinetry and Storage", copy: "Cabinet replacement and practical storage improvements designed around how your household uses the kitchen." },
@@ -37,13 +38,8 @@ export default function KitchenRemodelingPage() {
 
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    try {
-      await submitLeadForm(event.currentTarget, "Kitchen Remodeling Estimate");
-      setSubmitted(true);
-    } catch (error) {
-      console.error(error);
-      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
-    }
+    await submitLeadForm(event.currentTarget, "Kitchen Remodeling Estimate");
+    setSubmitted(true);
   }
 
   return (
@@ -70,18 +66,18 @@ export default function KitchenRemodelingPage() {
         </div>
       </section>
 
-      <form className="remodel-quick-form kitchen-quick-form" onSubmit={continueEstimate}>
+      <LeadForm className="remodel-quick-form kitchen-quick-form" onSubmit={continueEstimate} step>
           <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>What Are You Planning?</h2>
         </div>
-        <label htmlFor="kitchen-quick-scope">Project Scope<select id="kitchen-quick-scope" value={projectScope} onChange={(event) => setProjectScope(event.target.value)} required><option value="" disabled>Select scope</option><option>Full kitchen remodel</option><option>Cabinets and counters</option><option>Layout changes</option><option>Flooring, lighting and finishes</option><option>Not sure yet</option></select></label>
-        <label htmlFor="kitchen-quick-priority">Main Priority<select id="kitchen-quick-priority" value={mainPriority} onChange={(event) => setMainPriority(event.target.value)} required><option value="" disabled>Select priority</option><option>Better layout</option><option>More storage</option><option>Updated appearance</option><option>Durability and easier upkeep</option><option>Preparing to sell</option></select></label>
-        <label htmlFor="kitchen-quick-zip">Project ZIP<input id="kitchen-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
-        <label htmlFor="kitchen-quick-timing">Ideal Timing<select id="kitchen-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
-        <button type="submit">Continue My Estimate <span aria-hidden="true">→</span></button>
-      </form>
+        <label htmlFor="kitchen-quick-scope"><span className="form-label-text">Project Scope <span className="form-requirement">(required)</span></span><select id="kitchen-quick-scope" value={projectScope} onChange={(event) => setProjectScope(event.target.value)} required><option value="" disabled>Select scope</option><option>Full kitchen remodel</option><option>Cabinets and counters</option><option>Layout changes</option><option>Flooring, lighting and finishes</option><option>Not sure yet</option></select></label>
+        <label htmlFor="kitchen-quick-priority"><span className="form-label-text">Main Priority <span className="form-requirement">(required)</span></span><select id="kitchen-quick-priority" value={mainPriority} onChange={(event) => setMainPriority(event.target.value)} required><option value="" disabled>Select priority</option><option>Better layout</option><option>More storage</option><option>Updated appearance</option><option>Durability and easier upkeep</option><option>Preparing to sell</option></select></label>
+        <label htmlFor="kitchen-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input id="kitchen-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
+        <label htmlFor="kitchen-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="kitchen-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
+        <button type="submit">Continue my estimate <span aria-hidden="true">→</span></button>
+      </LeadForm>
 
       <section className="remodel-services" id="kitchen-services">
         <div className="remodel-section-heading">
@@ -167,16 +163,16 @@ export default function KitchenRemodelingPage() {
           <div className="remodel-estimate-points"><span>Free initial project conversation</span><span>Written remodeling proposal</span><span>Licensed and insured contractor</span></div>
           <p className="remodel-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
-        <form className="remodel-estimate-form" onSubmit={submitEstimate}>
+        <LeadForm className="remodel-estimate-form" onSubmit={submitEstimate}>
           <LeadProtection />
-          <div className="remodel-form-row"><label>Name<input id="kitchen-lead-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
-          <div className="remodel-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>Project City or ZIP<input name="zip" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
-          <div className="remodel-form-row"><label>Project Scope<select value={projectScope} onChange={(event) => setProjectScope(event.target.value)} required><option value="" disabled>Select scope</option><option>Full kitchen remodel</option><option>Cabinets and counters</option><option>Layout changes</option><option>Flooring, lighting and finishes</option><option>Not sure yet</option></select></label><label>Main Priority<select value={mainPriority} onChange={(event) => setMainPriority(event.target.value)} required><option value="" disabled>Select priority</option><option>Better layout</option><option>More storage</option><option>Updated appearance</option><option>Durability and easier upkeep</option><option>Preparing to sell</option></select></label></div>
-          <label>Ideal Timing<select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
-          <label>Project Details<textarea name="details" placeholder="Tell us what is not working, what you want to change and any materials or layout ideas you already have." /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Request My Kitchen Estimate"}</button>
+          <div className="remodel-form-row"><label><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input id="kitchen-lead-name" name="name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label><label><span className="form-label-text">Phone <span className="form-requirement">(required)</span></span><input name="phone" autoComplete="tel" placeholder="(000) 000-0000" type="tel" required /></label></div>
+          <div className="remodel-form-row"><label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label><label><span className="form-label-text">Project City or ZIP <span className="form-requirement">(required)</span></span><input name="location" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
+          <div className="remodel-form-row"><label><span className="form-label-text">Project Scope <span className="form-requirement">(required)</span></span><select value={projectScope} onChange={(event) => setProjectScope(event.target.value)} required><option value="" disabled>Select scope</option><option>Full kitchen remodel</option><option>Cabinets and counters</option><option>Layout changes</option><option>Flooring, lighting and finishes</option><option>Not sure yet</option></select></label><label><span className="form-label-text">Main Priority <span className="form-requirement">(required)</span></span><select value={mainPriority} onChange={(event) => setMainPriority(event.target.value)} required><option value="" disabled>Select priority</option><option>Better layout</option><option>More storage</option><option>Updated appearance</option><option>Durability and easier upkeep</option><option>Preparing to sell</option></select></label></div>
+          <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
+          <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us what is not working, what you want to change and any materials or layout ideas you already have." /></label>
+          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my kitchen estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
-        </form>
+        </LeadForm>
       </section>
 
       <SiteFooter />

@@ -6,6 +6,7 @@ import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
 import LeadProtection from "@/components/LeadProtection";
+import LeadForm from "@/components/LeadForm";
 const paintServices = [
   {
     number: "01",
@@ -74,24 +75,14 @@ export default function ResidentialPaintingPage() {
 
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    try {
-      await submitLeadForm(event.currentTarget, "Residential Painting Estimate");
-      setSubmitted(true);
-    } catch (error) {
-      console.error(error);
-      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
-    }
+    await submitLeadForm(event.currentTarget, "Residential Painting Estimate");
+    setSubmitted(true);
   }
 
   async function submitHeroEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    try {
-      await submitLeadForm(event.currentTarget, "Residential Painting Hero Estimate");
-      setHeroSubmitted(true);
-    } catch (error) {
-      console.error(error);
-      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
-    }
+    await submitLeadForm(event.currentTarget, "Residential Painting Hero Estimate");
+    setHeroSubmitted(true);
   }
 
   return (
@@ -111,24 +102,24 @@ export default function ResidentialPaintingPage() {
             <a className="paint-hero-call" href="tel:3527017458"><small>OR CALL DIRECTLY</small>(352) 701-7458</a>
           </div>
         </div>
-        <form className="paint-hero-panel paint-hero-form" onSubmit={submitHeroEstimate}>
+        <LeadForm className="paint-hero-panel paint-hero-form" onSubmit={submitHeroEstimate}>
           <LeadProtection />
           <p className="paint-panel-label">GET A FREE PAINTING ESTIMATE</p>
           <h2>Start Your Free Painting Estimate.</h2>
           <p className="paint-hero-form-intro">Tell us what you would like painted and when you are hoping to begin.</p>
           <div className="paint-hero-form-row paint-hero-project-row">
-            <label htmlFor="hero-project">What are you painting?<select id="hero-project" name="hero_project" defaultValue="" required><option value="" disabled>Select project</option><option>Interior rooms</option><option>Home exterior</option><option>Interior and exterior</option><option>New construction</option><option>Other</option></select></label>
-            <label htmlFor="hero-timing">Ideal timing<select id="hero-timing" name="hero_timing" defaultValue="" required><option value="" disabled>Select</option><option>As soon as possible</option><option>Within 1 month</option><option>1–3 months</option><option>Just researching</option></select></label>
+            <label htmlFor="hero-project"><span className="form-label-text">What are you painting? <span className="form-requirement">(required)</span></span><select id="hero-project" name="hero_project" defaultValue="" required><option value="" disabled>Select project</option><option>Interior rooms</option><option>Home exterior</option><option>Interior and exterior</option><option>New construction</option><option>Other</option></select></label>
+            <label htmlFor="hero-timing"><span className="form-label-text">Ideal timing <span className="form-requirement">(required)</span></span><select id="hero-timing" name="hero_timing" defaultValue="" required><option value="" disabled>Select</option><option>As soon as possible</option><option>Within 1 month</option><option>1–3 months</option><option>Just researching</option></select></label>
           </div>
           <div className="paint-hero-form-row paint-hero-contact-row">
-            <label htmlFor="hero-name">Name<input id="hero-name" name="hero_name" placeholder="Your name" required /></label>
-            <label htmlFor="hero-phone">Phone<input id="hero-phone" name="hero_phone" placeholder="(000) 000-0000" type="tel" required /></label>
+            <label htmlFor="hero-name"><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input id="hero-name" name="hero_name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label>
+            <label htmlFor="hero-phone"><span className="form-label-text">Phone <span className="form-requirement">(required)</span></span><input id="hero-phone" name="hero_phone" autoComplete="tel" placeholder="(000) 000-0000" type="tel" required /></label>
           </div>
-          <label htmlFor="hero-zip">Project ZIP code</label>
+          <label htmlFor="hero-zip"><span className="form-label-text">Project ZIP code <span className="form-requirement">(required)</span></span></label>
           <input id="hero-zip" name="hero_zip" placeholder="34609" inputMode="numeric" required />
           <button type="submit">{heroSubmitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}<span aria-hidden="true">→</span></button>
           <small className="paint-hero-reassurance">Licensed and insured • Serving local homeowners since 2003</small>
-        </form>
+        </LeadForm>
         <p className="paint-hero-caption">EXTERIOR PAINTING • SPRING HILL, FLORIDA</p>
       </section>
 
@@ -285,21 +276,21 @@ export default function ResidentialPaintingPage() {
           </div>
           <p className="paint-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
-        <form className="paint-estimate-form" onSubmit={submitEstimate}>
+        <LeadForm className="paint-estimate-form" onSubmit={submitEstimate}>
           <LeadProtection />
           <div className="paint-form-row">
-            <label>Name<input name="name" placeholder="Your name" required /></label>
-            <label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label>
+            <label><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input name="name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label>
+            <label><span className="form-label-text">Phone <span className="form-requirement">(required)</span></span><input name="phone" autoComplete="tel" placeholder="(000) 000-0000" type="tel" required /></label>
           </div>
           <div className="paint-form-row">
-            <label>Email<input name="email" placeholder="you@email.com" type="email" /></label>
-            <label>City or ZIP<input name="city" placeholder="Spring Hill" required /></label>
+            <label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label>
+            <label><span className="form-label-text">City or ZIP <span className="form-requirement">(required)</span></span><input name="city" placeholder="Spring Hill" required /></label>
           </div>
-          <label>What would you like painted?<select name="project" defaultValue=""><option value="" disabled>Select your project</option><option>Interior painting</option><option>Exterior painting</option><option>Interior and exterior</option><option>New construction painting</option><option>Other painting project</option></select></label>
-          <label>Project details<textarea name="details" placeholder="Tell us a little about the rooms, exterior or surfaces you would like painted." /></label>
-          <button className="button paint-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Request my free estimate"}</button>
+          <label><span className="form-label-text">What would you like painted? <span className="form-requirement">(optional)</span></span><select name="project" defaultValue=""><option value="" disabled>Select your project</option><option>Interior painting</option><option>Exterior painting</option><option>Interior and exterior</option><option>New construction painting</option><option>Other painting project</option></select></label>
+          <label><span className="form-label-text">Project details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us a little about the rooms, exterior or surfaces you would like painted." /></label>
+          <button className="button paint-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
-        </form>
+        </LeadForm>
       </section>
 
       <SiteFooter />

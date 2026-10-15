@@ -6,6 +6,7 @@ import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
 import LeadProtection from "@/components/LeadProtection";
+import LeadForm from "@/components/LeadForm";
 const pressureWashingServices = [
   { number: "01", title: "Driveways & Walkways", copy: "Lift dirt, algae and surface buildup from concrete driveways, sidewalks and entry paths for a cleaner arrival." },
   { number: "02", title: "House Exterior Washing", copy: "Clean stucco, siding, soffits and exterior details with a method selected for the material and condition." },
@@ -37,13 +38,8 @@ export default function PressureWashingPage() {
 
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    try {
-      await submitLeadForm(event.currentTarget, "Pressure Washing Estimate");
-      setSubmitted(true);
-    } catch (error) {
-      console.error(error);
-      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
-    }
+    await submitLeadForm(event.currentTarget, "Pressure Washing Estimate");
+    setSubmitted(true);
   }
 
   const serviceSchema = {
@@ -74,15 +70,15 @@ export default function PressureWashingPage() {
         </div>
       </section>
 
-      <form className="remodel-quick-form commercial-painting-quick-form" onSubmit={continueEstimate}>
+      <LeadForm className="remodel-quick-form commercial-painting-quick-form" onSubmit={continueEstimate} step>
           <LeadProtection />
         <div className="remodel-quick-heading"><p className="eyebrow">START YOUR ESTIMATE</p><h2>What Would You Like Cleaned?</h2></div>
-        <label htmlFor="pressure-washing-quick-project">Cleaning Scope<select id="pressure-washing-quick-project" value={scope} onChange={(event) => setScope(event.target.value)} required><option value="" disabled>Select an area</option><option>Driveway and walkways</option><option>House exterior</option><option>Pool deck or patio</option><option>Commercial property</option><option>Multiple areas</option></select></label>
-        <label htmlFor="pressure-washing-quick-property">Property Type<select id="pressure-washing-quick-property" value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Single-family home</option><option>HOA or multi-family</option><option>Commercial property</option><option>Other property</option></select></label>
-        <label htmlFor="pressure-washing-quick-zip">Project ZIP<input id="pressure-washing-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
-        <label htmlFor="pressure-washing-quick-timing">Ideal Timing<select id="pressure-washing-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 2 to 4 weeks</option><option>Within 1 to 3 months</option><option>Planning ahead</option></select></label>
-        <button type="submit">Continue My Estimate <span aria-hidden="true">→</span></button>
-      </form>
+        <label htmlFor="pressure-washing-quick-project"><span className="form-label-text">Cleaning Scope <span className="form-requirement">(required)</span></span><select id="pressure-washing-quick-project" value={scope} onChange={(event) => setScope(event.target.value)} required><option value="" disabled>Select an area</option><option>Driveway and walkways</option><option>House exterior</option><option>Pool deck or patio</option><option>Commercial property</option><option>Multiple areas</option></select></label>
+        <label htmlFor="pressure-washing-quick-property"><span className="form-label-text">Property Type <span className="form-requirement">(required)</span></span><select id="pressure-washing-quick-property" value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Single-family home</option><option>HOA or multi-family</option><option>Commercial property</option><option>Other property</option></select></label>
+        <label htmlFor="pressure-washing-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input id="pressure-washing-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
+        <label htmlFor="pressure-washing-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="pressure-washing-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 2 to 4 weeks</option><option>Within 1 to 3 months</option><option>Planning ahead</option></select></label>
+        <button type="submit">Continue my estimate <span aria-hidden="true">→</span></button>
+      </LeadForm>
 
       <section className="remodel-services" id="pressure-washing-services">
         <div className="remodel-section-heading"><p className="eyebrow">PRESSURE WASHING SERVICES</p><h2>Exterior Cleaning Planned Around the Property and Its Surfaces.</h2></div>
@@ -140,16 +136,16 @@ export default function PressureWashingPage() {
           <div className="remodel-estimate-points"><span>Free property walkthrough</span><span>Written, itemized proposal</span><span>No deposit required</span></div>
           <p className="remodel-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
-        <form className="remodel-estimate-form" onSubmit={submitEstimate}>
+        <LeadForm className="remodel-estimate-form" onSubmit={submitEstimate}>
           <LeadProtection />
-          <div className="remodel-form-row"><label>Name<input id="pressure-washing-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
-          <div className="remodel-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>Project City or ZIP<input name="zip" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
-          <div className="remodel-form-row"><label>Cleaning Scope<select value={scope} onChange={(event) => setScope(event.target.value)} required><option value="" disabled>Select an area</option><option>Driveway and walkways</option><option>House exterior</option><option>Pool deck or patio</option><option>Commercial property</option><option>Multiple areas</option></select></label><label>Property Type<select value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Single-family home</option><option>HOA or multi-family</option><option>Commercial property</option><option>Other property</option></select></label></div>
-          <label>Ideal Timing<select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 2 to 4 weeks</option><option>Within 1 to 3 months</option><option>Planning ahead</option></select></label>
-          <label>Project Details<textarea name="details" placeholder="Tell us which surfaces need cleaning, their approximate size and any areas needing special attention." /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Request My Cleaning Estimate"}</button>
+          <div className="remodel-form-row"><label><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input id="pressure-washing-name" name="name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label><label><span className="form-label-text">Phone <span className="form-requirement">(required)</span></span><input name="phone" autoComplete="tel" placeholder="(000) 000-0000" type="tel" required /></label></div>
+          <div className="remodel-form-row"><label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label><label><span className="form-label-text">Project City or ZIP <span className="form-requirement">(required)</span></span><input name="location" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
+          <div className="remodel-form-row"><label><span className="form-label-text">Cleaning Scope <span className="form-requirement">(required)</span></span><select value={scope} onChange={(event) => setScope(event.target.value)} required><option value="" disabled>Select an area</option><option>Driveway and walkways</option><option>House exterior</option><option>Pool deck or patio</option><option>Commercial property</option><option>Multiple areas</option></select></label><label><span className="form-label-text">Property Type <span className="form-requirement">(required)</span></span><select value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Single-family home</option><option>HOA or multi-family</option><option>Commercial property</option><option>Other property</option></select></label></div>
+          <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 2 to 4 weeks</option><option>Within 1 to 3 months</option><option>Planning ahead</option></select></label>
+          <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us which surfaces need cleaning, their approximate size and any areas needing special attention." /></label>
+          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my cleaning estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
-        </form>
+        </LeadForm>
       </section>
 
       <SiteFooter />

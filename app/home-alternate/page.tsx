@@ -1,4 +1,4 @@
-import Home from "../page";
+import Home from "@/components/HomePage";
 
 export default function AlternateHomepage() {
   return <Home alternateHero />;

@@ -6,6 +6,7 @@ import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
 import LeadProtection from "@/components/LeadProtection";
+import LeadForm from "@/components/LeadForm";
 const categories = ["All Projects", "Remodeling", "Painting", "Construction", "Exterior Improvements"];
 
 const projects = [
@@ -27,13 +28,8 @@ export default function GalleryPage() {
 
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    try {
-      await submitLeadForm(event.currentTarget, "Gallery Estimate");
-      setSubmitted(true);
-    } catch (error) {
-      console.error(error);
-      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
-    }
+    await submitLeadForm(event.currentTarget, "Gallery Estimate");
+    setSubmitted(true);
   }
 
   return (
@@ -91,15 +87,15 @@ export default function GalleryPage() {
           <div><span>Free on-site estimate</span><span>No deposit required</span><span>Hernando, Citrus &amp; Pasco Counties</span></div>
           <a href="tel:3527017458">Prefer to call? <strong>(352) 701-7458</strong></a>
         </div>
-        <form className="gallery-estimate-form" onSubmit={submitEstimate}>
+        <LeadForm className="gallery-estimate-form" onSubmit={submitEstimate}>
           <LeadProtection />
-          <div className="remodel-form-row"><label>Name<input name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
-          <div className="remodel-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>Project City or ZIP<input name="location" placeholder="Spring Hill" required /></label></div>
-          <label>Project Type<select defaultValue="" required><option value="" disabled>Select a project</option><option>Painting</option><option>Residential remodeling</option><option>New construction or addition</option><option>Windows, doors or flooring</option><option>Pressure washing</option><option>Commercial property</option><option>Not sure yet</option></select></label>
-          <label>Project Details<textarea name="details" placeholder="Tell us what you liked in the gallery and what you would like to change at your property." required /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Request My Free Estimate"}</button>
+          <div className="remodel-form-row"><label><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input name="name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label><label><span className="form-label-text">Phone <span className="form-requirement">(required)</span></span><input name="phone" autoComplete="tel" placeholder="(000) 000-0000" type="tel" required /></label></div>
+          <div className="remodel-form-row"><label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label><label><span className="form-label-text">Project City or ZIP <span className="form-requirement">(required)</span></span><input name="location" placeholder="Spring Hill" required /></label></div>
+          <label><span className="form-label-text">Project Type <span className="form-requirement">(required)</span></span><select defaultValue="" required><option value="" disabled>Select a project</option><option>Painting</option><option>Residential remodeling</option><option>New construction or addition</option><option>Windows, doors or flooring</option><option>Pressure washing</option><option>Commercial property</option><option>Not sure yet</option></select></label>
+          <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us what you liked in the gallery and what you would like to change at your property."  /></label>
+          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
-        </form>
+        </LeadForm>
       </section>
 
       <SiteFooter />
