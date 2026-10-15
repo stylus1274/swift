@@ -106,7 +106,7 @@ export default function ExteriorPaintingPage() {
           <h1>Exterior Painting Built for Florida Homes.</h1>
           <p>Careful preparation and durable finishes that protect your home, sharpen its curb appeal and stand up to Florida weather.</p>
           <div className="remodel-hero-actions">
-            <a className="button remodel-primary" href="#exterior-painting-quick-project">Get a Free Exterior Painting Estimate</a>
+            <a className="button remodel-primary" href="#exterior-painting-quick-project">Get a Free Painting Estimate</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="remodel-hero-proof">

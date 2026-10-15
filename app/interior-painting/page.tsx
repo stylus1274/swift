@@ -93,7 +93,7 @@ export default function InteriorPaintingPage() {
           <h1>Interior Painting in Spring Hill, FL</h1>
           <p>Swift paints walls, ceilings, trim, doors and cabinetry in Spring Hill homes. Start with a room-by-room walkthrough to identify repairs, finishes and how the work will fit around your household.</p>
           <div className="remodel-hero-actions">
-            <a className="button remodel-primary" href="#interior-painting-quick-project">Get a Free Interior Painting Estimate</a>
+            <a className="button remodel-primary" href="#interior-painting-quick-project">Get a Free Painting Estimate</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="remodel-hero-proof">
