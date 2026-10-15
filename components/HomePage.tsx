@@ -13,6 +13,7 @@ const services = [
     number: "01",
     title: "Interior & Exterior Painting",
     href: "/residential-painting",
+    estimateService: "Painting",
     description:
       "Clean lines, careful preparation and durable finishes for homes, businesses and new construction.",
     image: "/assets/florida-stucco-painting.jpg",
@@ -22,6 +23,7 @@ const services = [
     number: "02",
     title: "Residential Remodeling",
     href: "/residential-remodeling",
+    estimateService: "Remodeling",
     description:
       "Bathrooms, kitchens, flooring, carpentry and full-home renovations coordinated by one contractor.",
     image: "/assets/hero-bathroom-remodel.webp",
@@ -31,6 +33,7 @@ const services = [
     number: "03",
     title: "New Home Construction",
     href: "/new-home-construction",
+    estimateService: "New home",
     description:
       "Ground-up construction managed with a steady hand, clear communication and close attention to every detail.",
     image: "/assets/new-home-exterior.jpg",
@@ -40,6 +43,7 @@ const services = [
     number: "04",
     title: "Commercial Construction",
     href: "/commercial-services",
+    estimateService: "Commercial",
     description:
       "Renovations, painting and facility improvements built around your schedule and business needs.",
     image: "/assets/commercial-renovation.jpg",
@@ -162,10 +166,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
             <p className="eyebrow">SPRING HILL, FLORIDA&nbsp;&nbsp;·&nbsp;&nbsp;ESTABLISHED 2003</p>
             <h1>The Contractor Your<br />Neighbors Already<br />Called.</h1>
             <p className="hero-intro">
-              William Swift has been painting, remodeling and<br className="desktop-break" />
-              building homes in Hernando County for more than<br className="desktop-break" />
-              twenty years. Licensed, insured, and finished when we<br className="desktop-break" />
-              said we'd finish.
+              William Swift has been painting, remodeling and building homes in Hernando County for more than twenty years. Licensed, insured, and finished when we said we'd finish.
             </p>
             <div className="hero-actions">
               <a className="button button-dark" href="#contact">Get a free estimate</a>
@@ -216,7 +217,12 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
               <p>{service.description}</p>
               <button
                 className="service-cta"
-                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => {
+                  setEstimateService(service.estimateService);
+                  const heading = document.getElementById("estimate-heading");
+                  heading?.focus({ preventScroll: true });
+                  heading?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
                 type="button"
               >
                 GET AN ESTIMATE <span aria-hidden="true">→</span>
@@ -390,8 +396,8 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
         <LeadForm className="estimate-card" onSubmit={submitEstimate}>
           <LeadProtection />
           <p className="eyebrow">03 — FREE ESTIMATE</p>
-          <h2>Serving Hernando,<br />Citrus &amp; Pasco Counties.</h2>
-          <p className="estimate-copy">Spring Hill, Brooksville, Weeki Wachee, Hernando Beach and Ridge Manor,<br />plus communities throughout Citrus and Pasco Counties.</p>
+          <h2 id="estimate-heading" tabIndex={-1}>Serving Hernando,<br />Citrus &amp; Pasco Counties.</h2>
+          <p className="estimate-copy">Spring Hill, Brooksville, Weeki Wachee, Hernando Beach and Ridge Manor, plus communities throughout Citrus and Pasco Counties.</p>
           <div className="estimate-services" role="group" aria-label="Choose a service">
             {estimateServices.map((item) => (
               <button

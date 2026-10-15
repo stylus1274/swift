@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 
 type SiteHeaderProps = {
   active?: "home" | "services" | "about" | "blog" | "faq";
@@ -42,6 +43,8 @@ const serviceColumns = [
 ];
 
 export default function SiteHeader({ active, contactHref = "/contact" }: SiteHeaderProps) {
+  const mobileMenu = useRef<HTMLDetailsElement>(null);
+
   return (
     <header className="site-header">
       <Link className="brand" href="/" aria-label="Swift Construction and Painting home">
@@ -78,7 +81,7 @@ export default function SiteHeader({ active, contactHref = "/contact" }: SiteHea
                 ))}
               </section>
             ))}
-            <Link className="mega-all-services" href="/#services">View All Services <span aria-hidden="true">→</span></Link>
+            <Link className="mega-all-services" href="/services">View All Services <span aria-hidden="true">→</span></Link>
           </div>
         </details>
         <Link href="/gallery">Portfolio</Link>
@@ -89,9 +92,18 @@ export default function SiteHeader({ active, contactHref = "/contact" }: SiteHea
         <Link href={contactHref}>Contact</Link>
       </nav>
       <a className="header-call" href="tel:3527017458"><span>CALL</span>(352) 701-7458</a>
-      <details className="mobile-menu">
+      <details className="mobile-menu" ref={mobileMenu}>
         <summary aria-label="Open navigation">Menu</summary>
-        <nav>
+        <nav onClick={(event) => {
+          const link = (event.target as Element).closest("a");
+          if (!link || !mobileMenu.current) return;
+          mobileMenu.current.open = false;
+          mobileMenu.current.querySelectorAll("details").forEach((details) => { details.open = false; });
+          // Keep keyboard focus on a visible control when an in-page link closes the menu.
+          if (link.getAttribute("href")?.startsWith("#")) {
+            mobileMenu.current.querySelector("summary")?.focus({ preventScroll: true });
+          }
+        }}>
           <details className="mobile-services">
             <summary>Services</summary>
             <div>
