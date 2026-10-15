@@ -4,10 +4,10 @@ export type LeadField = {
 };
 
 function cleanLabel(value: string) {
-  return value.replace(/\s+/g, " ").replace(/[:*]+$/, "").trim();
+  return value.replace(/\((?:required|optional)\)/gi, "").replace(/\s+/g, " ").replace(/[:*]+$/, "").trim();
 }
 
-function labelForControl(
+export function labelForControl(
   control: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement,
   index: number,
 ) {
@@ -28,7 +28,7 @@ function labelForControl(
 
   if (label) {
     const clone = label.cloneNode(true) as HTMLLabelElement;
-    clone.querySelectorAll("input, select, textarea, button").forEach((element) => element.remove());
+    clone.querySelectorAll("input, select, textarea, button, .form-field-error").forEach((element) => element.remove());
     const text = cleanLabel(clone.textContent || "");
     if (text) return text;
   }
@@ -48,7 +48,7 @@ function labelForControl(
   return `Field ${index + 1}`;
 }
 
-function collectFields(form: HTMLFormElement): LeadField[] {
+export function collectFields(form: HTMLFormElement): LeadField[] {
   const fields: LeadField[] = [];
   const controls = Array.from(form.elements).filter(
     (element): element is HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement =>

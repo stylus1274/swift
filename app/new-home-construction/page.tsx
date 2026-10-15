@@ -6,6 +6,7 @@ import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
 import LeadProtection from "@/components/LeadProtection";
+import LeadForm from "@/components/LeadForm";
 const buildServices = [
   { number: "01", title: "Lot & Plan Review", copy: "We discuss your lot, plans, priorities and practical considerations before the construction scope is finalized." },
   { number: "02", title: "Permits & Preparation", copy: "Required permitting, site preparation and early project coordination are organized before vertical construction begins." },
@@ -37,13 +38,8 @@ export default function NewHomeConstructionPage() {
 
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    try {
-      await submitLeadForm(event.currentTarget, "New Home Construction Estimate");
-      setSubmitted(true);
-    } catch (error) {
-      console.error(error);
-      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
-    }
+    await submitLeadForm(event.currentTarget, "New Home Construction Estimate");
+    setSubmitted(true);
   }
 
   return (
@@ -66,18 +62,18 @@ export default function NewHomeConstructionPage() {
         </div>
       </section>
 
-      <form className="build-quick-form" onSubmit={continueEstimate}>
+      <LeadForm className="build-quick-form" onSubmit={continueEstimate} step>
           <LeadProtection />
         <div className="build-quick-heading">
           <p className="eyebrow">START YOUR PROJECT</p>
           <h2>What Are You Planning?</h2>
         </div>
-        <label htmlFor="build-quick-lot">Lot Status<select id="build-quick-lot" value={lotStatus} onChange={(event) => setLotStatus(event.target.value)} required><option value="" disabled>Select one</option><option>I own a lot</option><option>I am under contract</option><option>I am looking for land</option><option>I need guidance</option></select></label>
-        <label>Home Size<select value={homeSize} onChange={(event) => setHomeSize(event.target.value)} required><option value="" disabled>Select size</option><option>Under 1,800 sq. ft.</option><option>1,800–2,500 sq. ft.</option><option>2,500–3,500 sq. ft.</option><option>Over 3,500 sq. ft.</option><option>Not sure yet</option></select></label>
-        <label>Build ZIP<input inputMode="numeric" placeholder="34609" value={buildZip} onChange={(event) => setBuildZip(event.target.value)} required /></label>
-        <label>Ideal Start<select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>Within 3 months</option><option>Within 3–6 months</option><option>Within 6–12 months</option><option>More than 12 months</option><option>Just researching</option></select></label>
+        <label htmlFor="build-quick-lot"><span className="form-label-text">Lot Status <span className="form-requirement">(required)</span></span><select id="build-quick-lot" value={lotStatus} onChange={(event) => setLotStatus(event.target.value)} required><option value="" disabled>Select one</option><option>I own a lot</option><option>I am under contract</option><option>I am looking for land</option><option>I need guidance</option></select></label>
+        <label><span className="form-label-text">Home Size <span className="form-requirement">(required)</span></span><select value={homeSize} onChange={(event) => setHomeSize(event.target.value)} required><option value="" disabled>Select size</option><option>Under 1,800 sq. ft.</option><option>1,800–2,500 sq. ft.</option><option>2,500–3,500 sq. ft.</option><option>Over 3,500 sq. ft.</option><option>Not sure yet</option></select></label>
+        <label><span className="form-label-text">Build ZIP <span className="form-requirement">(required)</span></span><input inputMode="numeric" placeholder="34609" value={buildZip} onChange={(event) => setBuildZip(event.target.value)} required /></label>
+        <label><span className="form-label-text">Ideal Start <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>Within 3 months</option><option>Within 3–6 months</option><option>Within 6–12 months</option><option>More than 12 months</option><option>Just researching</option></select></label>
         <button type="submit">Continue My Project Request <span aria-hidden="true">→</span></button>
-      </form>
+      </LeadForm>
 
       <section className="build-scope" id="build-scope">
         <div className="build-section-heading"><p className="eyebrow">WHAT SWIFT MANAGES</p><h2>Every Phase Connected Under One Construction Plan.</h2><p>New-home construction has hundreds of decisions and dependencies. Swift keeps the scope, schedule and communication moving in the same direction.</p></div>
@@ -143,16 +139,16 @@ export default function NewHomeConstructionPage() {
           <div className="build-estimate-points"><span>Free initial project conversation</span><span>Written construction proposal</span><span>Licensed and insured contractor</span></div>
           <p className="build-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
-        <form className="build-estimate-form" onSubmit={submitEstimate}>
+        <LeadForm className="build-estimate-form" onSubmit={submitEstimate}>
           <LeadProtection />
-          <div className="build-form-row"><label>Name<input id="build-lead-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
-          <div className="build-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>Build City or ZIP<input name="location" placeholder="Spring Hill" value={buildZip} onChange={(event) => setBuildZip(event.target.value)} required /></label></div>
-          <div className="build-form-row"><label>Lot Status<select value={lotStatus} onChange={(event) => setLotStatus(event.target.value)} required><option value="" disabled>Select one</option><option>I own a lot</option><option>I am under contract</option><option>I am looking for land</option><option>I need guidance</option></select></label><label>Approximate Home Size<select value={homeSize} onChange={(event) => setHomeSize(event.target.value)} required><option value="" disabled>Select size</option><option>Under 1,800 sq. ft.</option><option>1,800–2,500 sq. ft.</option><option>2,500–3,500 sq. ft.</option><option>Over 3,500 sq. ft.</option><option>Not sure yet</option></select></label></div>
-          <label>Ideal Start<select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>Within 3 months</option><option>Within 3–6 months</option><option>Within 6–12 months</option><option>More than 12 months</option><option>Just researching</option></select></label>
-          <label>Project Details<textarea name="details" placeholder="Tell us about your plans, lot, priorities and any decisions you have already made." /></label>
+          <div className="build-form-row"><label><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input id="build-lead-name" name="name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label><label><span className="form-label-text">Phone <span className="form-requirement">(required)</span></span><input name="phone" autoComplete="tel" placeholder="(000) 000-0000" type="tel" required /></label></div>
+          <div className="build-form-row"><label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label><label><span className="form-label-text">Build City or ZIP <span className="form-requirement">(required)</span></span><input name="location" placeholder="Spring Hill" value={buildZip} onChange={(event) => setBuildZip(event.target.value)} required /></label></div>
+          <div className="build-form-row"><label><span className="form-label-text">Lot Status <span className="form-requirement">(required)</span></span><select value={lotStatus} onChange={(event) => setLotStatus(event.target.value)} required><option value="" disabled>Select one</option><option>I own a lot</option><option>I am under contract</option><option>I am looking for land</option><option>I need guidance</option></select></label><label><span className="form-label-text">Approximate Home Size <span className="form-requirement">(required)</span></span><select value={homeSize} onChange={(event) => setHomeSize(event.target.value)} required><option value="" disabled>Select size</option><option>Under 1,800 sq. ft.</option><option>1,800–2,500 sq. ft.</option><option>2,500–3,500 sq. ft.</option><option>Over 3,500 sq. ft.</option><option>Not sure yet</option></select></label></div>
+          <label><span className="form-label-text">Ideal Start <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>Within 3 months</option><option>Within 3–6 months</option><option>Within 6–12 months</option><option>More than 12 months</option><option>Just researching</option></select></label>
+          <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us about your plans, lot, priorities and any decisions you have already made." /></label>
           <button className="button build-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Request My Project Conversation"}</button>
           <small>Your information is only used to respond to your project request.</small>
-        </form>
+        </LeadForm>
       </section>
 
       <SiteFooter />

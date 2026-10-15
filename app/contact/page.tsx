@@ -6,6 +6,7 @@ import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
 import LeadProtection from "@/components/LeadProtection";
+import LeadForm from "@/components/LeadForm";
 const contactFaqs = [
   {
     question: "Is the Project Estimate Free?",
@@ -35,13 +36,8 @@ export default function ContactPage() {
 
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    try {
-      await submitLeadForm(event.currentTarget, "Contact Page Estimate");
-      setSubmitted(true);
-    } catch (error) {
-      console.error(error);
-      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
-    }
+    await submitLeadForm(event.currentTarget, "Contact Page Estimate");
+    setSubmitted(true);
   }
 
   return (
@@ -64,7 +60,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <form className="contact-estimate-form" id="contact-form" onSubmit={submitEstimate}>
+      <LeadForm className="contact-estimate-form" id="contact-form" onSubmit={submitEstimate}>
           <LeadProtection />
         <div className="contact-form-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
@@ -73,22 +69,22 @@ export default function ContactPage() {
         </div>
         <div className="contact-form-fields">
           <div className="contact-form-row">
-            <label>Name<input name="name" placeholder="Your name" required /></label>
-            <label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label>
+            <label><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input name="name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label>
+            <label><span className="form-label-text">Phone <span className="form-requirement">(required)</span></span><input name="phone" autoComplete="tel" placeholder="(000) 000-0000" type="tel" required /></label>
           </div>
           <div className="contact-form-row">
-            <label>Email<input name="email" placeholder="you@email.com" type="email" /></label>
-            <label>Project ZIP<input name="zip" placeholder="34609" inputMode="numeric" required /></label>
+            <label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label>
+            <label><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input name="zip" placeholder="34609" inputMode="numeric" required /></label>
           </div>
           <div className="contact-form-row">
-            <label>Project Type<select name="project" defaultValue="" required><option value="" disabled>Select project</option><option>Residential painting</option><option>Residential remodeling</option><option>New home construction</option><option>Commercial construction</option><option>Commercial painting</option><option>Facility services</option><option>Other project</option></select></label>
-            <label>Ideal Timing<select name="timing" defaultValue="" required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>More than 6 months</option><option>Just researching</option></select></label>
+            <label><span className="form-label-text">Project Type <span className="form-requirement">(required)</span></span><select name="project" defaultValue="" required><option value="" disabled>Select project</option><option>Residential painting</option><option>Residential remodeling</option><option>New home construction</option><option>Commercial construction</option><option>Commercial painting</option><option>Facility services</option><option>Other project</option></select></label>
+            <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select name="timing" defaultValue="" required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>More than 6 months</option><option>Just researching</option></select></label>
           </div>
-          <label>Project Details<textarea name="details" placeholder="Tell us about the property, the work you need and any important timing details." /></label>
+          <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us about the property, the work you need and any important timing details." /></label>
           <button className="button contact-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Request My Free Estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </div>
-      </form>
+      </LeadForm>
 
       <section className="contact-next">
         <div className="contact-next-heading"><p className="eyebrow">WHAT HAPPENS NEXT</p><h2>A Clear Start Before Any Work Begins.</h2></div>

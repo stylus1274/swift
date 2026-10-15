@@ -6,6 +6,7 @@ import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
 import LeadProtection from "@/components/LeadProtection";
+import LeadForm from "@/components/LeadForm";
 const additionTypes = [
   {
     number: "01",
@@ -67,13 +68,8 @@ export default function HomeAdditionsPage() {
 
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    try {
-      await submitLeadForm(event.currentTarget, "Home Addition Estimate");
-      setSubmitted(true);
-    } catch (error) {
-      console.error(error);
-      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
-    }
+    await submitLeadForm(event.currentTarget, "Home Addition Estimate");
+    setSubmitted(true);
   }
 
   const serviceSchema = {
@@ -123,17 +119,17 @@ export default function HomeAdditionsPage() {
         </div>
       </section>
 
-      <form className="remodel-quick-form additions-quick-form" onSubmit={submitQuickEstimate}>
+      <LeadForm className="remodel-quick-form additions-quick-form" onSubmit={submitQuickEstimate} step>
           <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>What Would You Like to Add?</h2>
         </div>
-        <label htmlFor="addition-quick-project">Addition Type<select id="addition-quick-project" name="project" value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select addition</option><option>Room addition</option><option>Primary suite addition</option><option>In-law suite</option><option>Garage or lanai conversion</option><option>Other addition</option></select></label>
-        <label htmlFor="addition-quick-zip">Project ZIP<input id="addition-quick-zip" name="zip" placeholder="34609" inputMode="numeric" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
-        <label htmlFor="addition-quick-timing">Ideal Timing<select id="addition-quick-timing" name="timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Just researching</option></select></label>
+        <label htmlFor="addition-quick-project"><span className="form-label-text">Addition Type <span className="form-requirement">(required)</span></span><select id="addition-quick-project" name="project" value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select addition</option><option>Room addition</option><option>Primary suite addition</option><option>In-law suite</option><option>Garage or lanai conversion</option><option>Other addition</option></select></label>
+        <label htmlFor="addition-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input id="addition-quick-zip" name="zip" placeholder="34609" inputMode="numeric" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
+        <label htmlFor="addition-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="addition-quick-timing" name="timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Just researching</option></select></label>
         <button type="submit">Continue My Estimate<span aria-hidden="true">→</span></button>
-      </form>
+      </LeadForm>
 
       <section className="remodel-services" id="addition-types">
         <div className="remodel-section-heading">
@@ -223,15 +219,15 @@ export default function HomeAdditionsPage() {
           <div className="remodel-estimate-points"><span>Free, no-obligation estimate</span><span>Written, itemized proposal</span><span>Licensed and insured contractor</span></div>
           <p className="remodel-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
-        <form className="remodel-estimate-form" onSubmit={submitEstimate}>
+        <LeadForm className="remodel-estimate-form" onSubmit={submitEstimate}>
           <LeadProtection />
-          <div className="remodel-form-row"><label>Name<input id="addition-lead-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
-          <div className="remodel-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>Project ZIP<input name="zip" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
-          <div className="remodel-form-row"><label>What would you like to add?<select name="project" value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select your project</option><option>Room addition</option><option>Primary suite addition</option><option>In-law suite</option><option>Garage or lanai conversion</option><option>Other addition</option></select></label><label>Ideal Timing<select name="timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Just researching</option></select></label></div>
-          <label>What do you need the new space to do?<textarea name="details" placeholder="Tell us who will use the space, the rooms you are considering and any priorities for the finished addition." /></label>
+          <div className="remodel-form-row"><label><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input id="addition-lead-name" name="name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label><label><span className="form-label-text">Phone <span className="form-requirement">(required)</span></span><input name="phone" autoComplete="tel" placeholder="(000) 000-0000" type="tel" required /></label></div>
+          <div className="remodel-form-row"><label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label><label><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input name="zip" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
+          <div className="remodel-form-row"><label><span className="form-label-text">What would you like to add? <span className="form-requirement">(required)</span></span><select name="project" value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select your project</option><option>Room addition</option><option>Primary suite addition</option><option>In-law suite</option><option>Garage or lanai conversion</option><option>Other addition</option></select></label><label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select name="timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Just researching</option></select></label></div>
+          <label><span className="form-label-text">What do you need the new space to do? <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us who will use the space, the rooms you are considering and any priorities for the finished addition." /></label>
           <button className="button remodel-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Request My Free Estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
-        </form>
+        </LeadForm>
       </section>
 
       <SiteFooter />

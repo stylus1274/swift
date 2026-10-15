@@ -1,0 +1,89 @@
+/* Shared styles keep every estimate form consistent. */
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #43574c;
+  font-size: 14px;
+  font-weight: 700;
+}
+.form-grid .form-field-wide { grid-column: 1 / -1; }
+
+form[class] label {
+  color: #43574c;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+form[class] small {
+  color: #43574c;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+form[class] :is(input, select, textarea),
+.blog-search input { font-size: 16px; font-weight: 400; }
+
+.estimate-services button { border-color: #74847c; }
+form[class] button:focus-visible { outline: 2px solid #1d5d97; outline-offset: 3px; }
+
+form[class] .form-instructions {
+  grid-column: 1 / -1;
+  margin: 0 0 20px;
+  color: #43574c;
+  font: 14px/1.5 Arial, Helvetica, sans-serif;
+}
+form[class] .form-requirement { font-weight: 400; }
+form[class] .form-status {
+  grid-column: 1 / -1;
+  margin: 12px 0 0;
+  color: #0c2c46;
+  font: 16px/1.5 Arial, Helvetica, sans-serif;
+}
+form[class] .form-status:empty { margin: 0; }
+
+form[class] :is(input, textarea)::placeholder,
+.blog-search input::placeholder {
+  color: #536579;
+  opacity: 1;
+}
+
+form[class] :is(input, select, textarea),
+.blog-search input {
+  border: 1px solid #74847c;
+  box-shadow: none;
+}
+
+form[class] :is(input, select, textarea):focus,
+.blog-search input:focus {
+  border-color: #1d5d97;
+  outline: 2px solid #1d5d97;
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+form[class] .form-error-summary {
+  grid-column: 1 / -1;
+  margin: 0 0 20px;
+  padding: 16px;
+  border: 2px solid #9f2424;
+  background: #fff5f5;
+  color: #7c1d1d;
+}
+
+form[class] .form-error-summary p { margin: 0 0 8px; }
+form[class] .form-error-summary a { text-decoration: underline; }
+form[class] .form-field-error {
+  display: block;
+  margin-top: 6px;
+  color: #9f2424;
+  font: 14px/1.5 Arial, Helvetica, sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+form[class] [aria-invalid="true"] { border: 2px solid #9f2424; }

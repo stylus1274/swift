@@ -10,7 +10,8 @@ function loadTS(path, dependencies = {}, globals = {}) {
   vm.runInNewContext(output, context, { filename: path });
   return context.exports;
 }
-const protection = loadTS('lib/leadProtection.ts');
+const validation = loadTS('lib/leadValidation.ts');
+const protection = loadTS('lib/leadProtection.ts', { './leadValidation': validation });
 const fields = [{ label: 'Name', value: 'Jane Smith' }, { label: 'Phone', value: '(352) 555-1234' }, { label: 'Email', value: 'jane@example.com' }, { label: 'Project ZIP', value: '34609' }, { label: 'Project Details', value: 'Please remodel my kitchen.' }];
 assert.equal(protection.validateLead(fields), null);
 assert.equal(protection.validateLead(fields.filter(f => f.label !== 'Email')), null, 'email remains optional');
@@ -46,11 +47,12 @@ function scan(dir) {
   if (entry.isDirectory()) scan(path);
   else if (path.endsWith('.tsx')) {
    const source = fs.readFileSync(path, 'utf8');
-   for (const match of source.matchAll(/<form\b[^>]*>([\s\S]*?)<\/form>/g)) { forms++; assert.match(match[1], /<LeadProtection \/>/, path); }
+   for (const match of source.matchAll(/<LeadForm\b[^>]*>([\s\S]*?)<\/LeadForm>/g)) { forms++; assert.match(match[1], /<LeadProtection \/>/, path); }
   }
  }
 }
 scan('app');
+scan('components');
 console.log(`Contact protection checks passed. ${forms} forms covered. No real emails sent.`);
 
 // City-or-ZIP fields must accept both advertised formats; ZIP-only fields stay strict.
@@ -73,6 +75,6 @@ const client = loadTS('lib/submitLead.ts', {}, {
 });
 await client.submitLeadForm({ elements: controls, querySelector: () => null }, 'Homepage Estimate', [{ label: 'Service', value: 'Kitchen Remodeling' }]);
 assert.deepEqual(JSON.parse(JSON.stringify(submittedFields)), [{ label: 'Name', value: 'Jane Smith' }, { label: 'Service', value: 'Kitchen Remodeling' }]);
-assert.match(fs.readFileSync('app/page.tsx', 'utf8'), /label: "Service", value: estimateService/);
+assert.match(fs.readFileSync('components/HomePage.tsx', 'utf8'), /label: "Service", value: estimateService/);
 assert.match(fs.readFileSync('app/new-home-construction/page.tsx', 'utf8'), /name="location"/);
 console.log('Location and selected-service regression checks passed.');

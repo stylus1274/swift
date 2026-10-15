@@ -6,6 +6,7 @@ import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
 import LeadProtection from "@/components/LeadProtection";
+import LeadForm from "@/components/LeadForm";
 const exteriorServices = [
   {
     number: "01",
@@ -68,13 +69,8 @@ export default function ExteriorPaintingPage() {
 
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    try {
-      await submitLeadForm(event.currentTarget, "Exterior Painting Estimate");
-      setSubmitted(true);
-    } catch (error) {
-      console.error(error);
-      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
-    }
+    await submitLeadForm(event.currentTarget, "Exterior Painting Estimate");
+    setSubmitted(true);
   }
 
   const serviceSchema = {
@@ -124,18 +120,18 @@ export default function ExteriorPaintingPage() {
         </div>
       </section>
 
-      <form className="remodel-quick-form commercial-painting-quick-form" onSubmit={continueEstimate}>
+      <LeadForm className="remodel-quick-form commercial-painting-quick-form" onSubmit={continueEstimate} step>
           <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>What Are You Planning to Paint?</h2>
         </div>
-        <label htmlFor="exterior-painting-quick-project">Exterior Scope<select id="exterior-painting-quick-project" value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select scope</option><option>Whole-home exterior</option><option>Stucco and masonry</option><option>Trim, doors and accents</option><option>Repaint and maintenance</option><option>Other exterior project</option></select></label>
-        <label htmlFor="exterior-painting-quick-home">Home Type<select id="exterior-painting-quick-home" value={homeType} onChange={(event) => setHomeType(event.target.value)} required><option value="" disabled>Select home</option><option>Single-story home</option><option>Two-story home</option><option>Townhome or villa</option><option>Other</option></select></label>
-        <label htmlFor="exterior-painting-quick-zip">Project ZIP<input id="exterior-painting-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
-        <label htmlFor="exterior-painting-quick-timing">Ideal Timing<select id="exterior-painting-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
+        <label htmlFor="exterior-painting-quick-project"><span className="form-label-text">Exterior Scope <span className="form-requirement">(required)</span></span><select id="exterior-painting-quick-project" value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select scope</option><option>Whole-home exterior</option><option>Stucco and masonry</option><option>Trim, doors and accents</option><option>Repaint and maintenance</option><option>Other exterior project</option></select></label>
+        <label htmlFor="exterior-painting-quick-home"><span className="form-label-text">Home Type <span className="form-requirement">(required)</span></span><select id="exterior-painting-quick-home" value={homeType} onChange={(event) => setHomeType(event.target.value)} required><option value="" disabled>Select home</option><option>Single-story home</option><option>Two-story home</option><option>Townhome or villa</option><option>Other</option></select></label>
+        <label htmlFor="exterior-painting-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input id="exterior-painting-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
+        <label htmlFor="exterior-painting-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="exterior-painting-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
         <button type="submit">Continue My Estimate <span aria-hidden="true">→</span></button>
-      </form>
+      </LeadForm>
 
       <section className="remodel-services" id="exterior-painting-services">
         <div className="remodel-section-heading">
@@ -228,16 +224,16 @@ export default function ExteriorPaintingPage() {
           <div className="remodel-estimate-points"><span>Free project walkthrough</span><span>Written, itemized proposal</span><span>No deposit required</span></div>
           <p className="remodel-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
-        <form className="remodel-estimate-form" onSubmit={submitEstimate}>
+        <LeadForm className="remodel-estimate-form" onSubmit={submitEstimate}>
           <LeadProtection />
-          <div className="remodel-form-row"><label>Name<input id="exterior-painting-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
-          <div className="remodel-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>Project City or ZIP<input name="zip" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
-          <div className="remodel-form-row"><label>Exterior Scope<select value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select scope</option><option>Whole-home exterior</option><option>Stucco and masonry</option><option>Trim, doors and accents</option><option>Repaint and maintenance</option><option>Other exterior project</option></select></label><label>Home Type<select value={homeType} onChange={(event) => setHomeType(event.target.value)} required><option value="" disabled>Select home</option><option>Single-story home</option><option>Two-story home</option><option>Townhome or villa</option><option>Other</option></select></label></div>
-          <label>Ideal Timing<select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
-          <label>Project Details<textarea name="details" placeholder="Tell us about the exterior condition, surfaces, color change and any repairs you have noticed." /></label>
+          <div className="remodel-form-row"><label><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input id="exterior-painting-name" name="name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label><label><span className="form-label-text">Phone <span className="form-requirement">(required)</span></span><input name="phone" autoComplete="tel" placeholder="(000) 000-0000" type="tel" required /></label></div>
+          <div className="remodel-form-row"><label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label><label><span className="form-label-text">Project City or ZIP <span className="form-requirement">(required)</span></span><input name="location" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
+          <div className="remodel-form-row"><label><span className="form-label-text">Exterior Scope <span className="form-requirement">(required)</span></span><select value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select scope</option><option>Whole-home exterior</option><option>Stucco and masonry</option><option>Trim, doors and accents</option><option>Repaint and maintenance</option><option>Other exterior project</option></select></label><label><span className="form-label-text">Home Type <span className="form-requirement">(required)</span></span><select value={homeType} onChange={(event) => setHomeType(event.target.value)} required><option value="" disabled>Select home</option><option>Single-story home</option><option>Two-story home</option><option>Townhome or villa</option><option>Other</option></select></label></div>
+          <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
+          <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us about the exterior condition, surfaces, color change and any repairs you have noticed." /></label>
           <button className="button remodel-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Request My Exterior Painting Estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
-        </form>
+        </LeadForm>
       </section>
 
       <SiteFooter />

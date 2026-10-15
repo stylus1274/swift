@@ -6,6 +6,7 @@ import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { submitLeadForm } from "@/lib/submitLead";
 import LeadProtection from "@/components/LeadProtection";
+import LeadForm from "@/components/LeadForm";
 const flooringServices = [
   {
     number: "01",
@@ -68,13 +69,8 @@ export default function FlooringPage() {
 
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    try {
-      await submitLeadForm(event.currentTarget, "Flooring Estimate");
-      setSubmitted(true);
-    } catch (error) {
-      console.error(error);
-      window.alert("We could not send your request. Please call Swift Construction & Painting at (352) 701-7458.");
-    }
+    await submitLeadForm(event.currentTarget, "Flooring Estimate");
+    setSubmitted(true);
   }
 
   const serviceSchema = {
@@ -124,18 +120,18 @@ export default function FlooringPage() {
         </div>
       </section>
 
-      <form className="remodel-quick-form commercial-painting-quick-form" onSubmit={continueEstimate}>
+      <LeadForm className="remodel-quick-form commercial-painting-quick-form" onSubmit={continueEstimate} step>
           <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>What Flooring Are You Planning?</h2>
         </div>
-        <label htmlFor="flooring-quick-project">Flooring Type<select id="flooring-quick-project" value={flooringType} onChange={(event) => setFlooringType(event.target.value)} required><option value="" disabled>Select flooring</option><option>Luxury vinyl plank</option><option>Tile flooring</option><option>Laminate flooring</option><option>Not sure yet</option><option>Other flooring project</option></select></label>
-        <label htmlFor="flooring-quick-size">Approximate Size<select id="flooring-quick-size" value={projectSize} onChange={(event) => setProjectSize(event.target.value)} required><option value="" disabled>Select size</option><option>One room</option><option>Two to three rooms</option><option>Several rooms</option><option>Whole-home flooring</option><option>Not sure yet</option></select></label>
-        <label htmlFor="flooring-quick-zip">Project ZIP<input id="flooring-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
-        <label htmlFor="flooring-quick-timing">Ideal Timing<select id="flooring-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
+        <label htmlFor="flooring-quick-project"><span className="form-label-text">Flooring Type <span className="form-requirement">(required)</span></span><select id="flooring-quick-project" value={flooringType} onChange={(event) => setFlooringType(event.target.value)} required><option value="" disabled>Select flooring</option><option>Luxury vinyl plank</option><option>Tile flooring</option><option>Laminate flooring</option><option>Not sure yet</option><option>Other flooring project</option></select></label>
+        <label htmlFor="flooring-quick-size"><span className="form-label-text">Approximate Size <span className="form-requirement">(required)</span></span><select id="flooring-quick-size" value={projectSize} onChange={(event) => setProjectSize(event.target.value)} required><option value="" disabled>Select size</option><option>One room</option><option>Two to three rooms</option><option>Several rooms</option><option>Whole-home flooring</option><option>Not sure yet</option></select></label>
+        <label htmlFor="flooring-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input id="flooring-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
+        <label htmlFor="flooring-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="flooring-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
         <button type="submit">Continue My Estimate <span aria-hidden="true">→</span></button>
-      </form>
+      </LeadForm>
 
       <section className="remodel-services" id="flooring-services">
         <div className="remodel-section-heading">
@@ -228,16 +224,16 @@ export default function FlooringPage() {
           <div className="remodel-estimate-points"><span>Free project walkthrough</span><span>Written, itemized proposal</span><span>No deposit required</span></div>
           <p className="remodel-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
-        <form className="remodel-estimate-form" onSubmit={submitEstimate}>
+        <LeadForm className="remodel-estimate-form" onSubmit={submitEstimate}>
           <LeadProtection />
-          <div className="remodel-form-row"><label>Name<input id="flooring-name" name="name" placeholder="Your name" required /></label><label>Phone<input name="phone" placeholder="(000) 000-0000" type="tel" required /></label></div>
-          <div className="remodel-form-row"><label>Email<input name="email" placeholder="you@email.com" type="email" /></label><label>Project City or ZIP<input name="zip" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
-          <div className="remodel-form-row"><label>Flooring Type<select value={flooringType} onChange={(event) => setFlooringType(event.target.value)} required><option value="" disabled>Select flooring</option><option>Luxury vinyl plank</option><option>Tile flooring</option><option>Laminate flooring</option><option>Not sure yet</option><option>Other flooring project</option></select></label><label>Approximate Size<select value={projectSize} onChange={(event) => setProjectSize(event.target.value)} required><option value="" disabled>Select size</option><option>One room</option><option>Two to three rooms</option><option>Several rooms</option><option>Whole-home flooring</option><option>Not sure yet</option></select></label></div>
-          <label>Ideal Timing<select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
-          <label>Project Details<textarea name="details" placeholder="Tell us which rooms need flooring, what is there now and whether you have selected a material." /></label>
+          <div className="remodel-form-row"><label><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input id="flooring-name" name="name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label><label><span className="form-label-text">Phone <span className="form-requirement">(required)</span></span><input name="phone" autoComplete="tel" placeholder="(000) 000-0000" type="tel" required /></label></div>
+          <div className="remodel-form-row"><label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label><label><span className="form-label-text">Project City or ZIP <span className="form-requirement">(required)</span></span><input name="location" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
+          <div className="remodel-form-row"><label><span className="form-label-text">Flooring Type <span className="form-requirement">(required)</span></span><select value={flooringType} onChange={(event) => setFlooringType(event.target.value)} required><option value="" disabled>Select flooring</option><option>Luxury vinyl plank</option><option>Tile flooring</option><option>Laminate flooring</option><option>Not sure yet</option><option>Other flooring project</option></select></label><label><span className="form-label-text">Approximate Size <span className="form-requirement">(required)</span></span><select value={projectSize} onChange={(event) => setProjectSize(event.target.value)} required><option value="" disabled>Select size</option><option>One room</option><option>Two to three rooms</option><option>Several rooms</option><option>Whole-home flooring</option><option>Not sure yet</option></select></label></div>
+          <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
+          <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us which rooms need flooring, what is there now and whether you have selected a material." /></label>
           <button className="button remodel-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Request My Flooring Estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
-        </form>
+        </LeadForm>
       </section>
 
       <SiteFooter />
