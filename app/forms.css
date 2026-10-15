@@ -31,6 +31,17 @@ form[class] :is(input, select, textarea),
 .estimate-services button { border-color: #74847c; }
 form[class] button:focus-visible { outline: 2px solid #1d5d97; outline-offset: 3px; }
 
+form[class] button[type="submit"] {
+  background: var(--logo-blue);
+  border-color: var(--logo-blue);
+  color: #fff;
+}
+
+form[class] button[type="submit"]:hover {
+  background: #2668a3;
+  border-color: #2668a3;
+}
+
 form[class] .form-instructions {
   grid-column: 1 / -1;
   margin: 0 0 20px;
