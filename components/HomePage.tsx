@@ -413,7 +413,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
             <label className="form-field-wide"><span className="form-label-text">Project Description <span className="form-requirement">(optional)</span></span><textarea name="description" placeholder="Tell us about the work you are planning."  /></label>
           </div>
           <button className="button button-dark submit-button" type="submit">
-            {submitted ? "Thank you — we'll be in touch" : "Request my free estimate"}
+            {submitted ? "Thank you — we'll be in touch" : "Get my free estimate"}
           </button>
           <p className="call-line">or call&nbsp;&nbsp; <a href="tel:3527017458">(352) 701-7458</a></p>
         </LeadForm>

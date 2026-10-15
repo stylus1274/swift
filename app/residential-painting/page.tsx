@@ -288,7 +288,7 @@ export default function ResidentialPaintingPage() {
           </div>
           <label><span className="form-label-text">What would you like painted? <span className="form-requirement">(optional)</span></span><select name="project" defaultValue=""><option value="" disabled>Select your project</option><option>Interior painting</option><option>Exterior painting</option><option>Interior and exterior</option><option>New construction painting</option><option>Other painting project</option></select></label>
           <label><span className="form-label-text">Project details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us a little about the rooms, exterior or surfaces you would like painted." /></label>
-          <button className="button paint-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Request my free estimate"}</button>
+          <button className="button paint-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

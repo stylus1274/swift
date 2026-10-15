@@ -81,7 +81,7 @@ export default function ContactPage() {
             <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select name="timing" defaultValue="" required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>More than 6 months</option><option>Just researching</option></select></label>
           </div>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us about the property, the work you need and any important timing details." /></label>
-          <button className="button contact-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Request My Free Estimate"}</button>
+          <button className="button contact-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Get My Free Estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </div>
       </LeadForm>

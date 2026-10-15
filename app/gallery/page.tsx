@@ -93,7 +93,7 @@ export default function GalleryPage() {
           <div className="remodel-form-row"><label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label><label><span className="form-label-text">Project City or ZIP <span className="form-requirement">(required)</span></span><input name="location" placeholder="Spring Hill" required /></label></div>
           <label><span className="form-label-text">Project Type <span className="form-requirement">(required)</span></span><select defaultValue="" required><option value="" disabled>Select a project</option><option>Painting</option><option>Residential remodeling</option><option>New construction or addition</option><option>Windows, doors or flooring</option><option>Pressure washing</option><option>Commercial property</option><option>Not sure yet</option></select></label>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us what you liked in the gallery and what you would like to change at your property."  /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Request My Free Estimate"}</button>
+          <button className="button remodel-primary" type="submit">{submitted ? "Thank You. We’ll Be in Touch." : "Get My Free Estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>
