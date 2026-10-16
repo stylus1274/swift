@@ -144,12 +144,12 @@ export default function AboutPage() {
       </section>
 
       <FaqSection
- eyebrow={<>ABOUT SWIFT</>}
- title={<>What Clients Ask Before the First Walkthrough.</>}
- description={<>Clear answers make it easier to decide whether a contractor is the right fit for your project.</>}
- items={aboutFaqs}
- estimateHref="#about-estimate"
- />
+        eyebrow={<>ABOUT SWIFT</>}
+        title={<>What Clients Ask Before the First Walkthrough.</>}
+        description={<>Clear answers make it easier to decide whether a contractor is the right fit for your project.</>}
+        items={aboutFaqs}
+        estimateHref="#about-estimate"
+      />
 
       <section className="about-estimate" id="about-estimate">
         <div className="about-estimate-copy">

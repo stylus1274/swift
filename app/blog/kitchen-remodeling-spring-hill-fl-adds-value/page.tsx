@@ -216,7 +216,7 @@ export default function KitchenRemodelingValueArticlePage() {
             <p>Swift does not require an upfront deposit. Customers are invoiced after the work is complete, and the owner is on-site and hands-on for most projects.</p>
           </section>
 
-          
+
 
           <section>
             <p className="eyebrow">RELATED PROJECT GUIDES</p>
@@ -249,16 +249,17 @@ export default function KitchenRemodelingValueArticlePage() {
           <a className="article-back" href="/blog"><span>←</span> Back to the Swift Project Library</a>
         </article>
       </div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Kitchen Remodeling Value FAQs</>}
- items={[{ question: <>What Kitchen Upgrade Adds the Most Value?</>, answer: <>The best upgrade depends on the kitchen&apos;s current problems. Improving a poor layout, adding useful storage and replacing worn cabinets or counters usually creates more practical value than adding a luxury feature that does not improve daily use.</> },
-{ question: <>Is a Full Kitchen Remodel Worth It?</>, answer: <>A full remodel can be worthwhile when the layout does not work, cabinets are failing, systems need updating or several surfaces are at the end of their useful life. A focused update may be more sensible when the basic layout and cabinetry are still sound.</> },
-{ question: <>Should I Move Plumbing During a Kitchen Remodel?</>, answer: <>Move plumbing when it solves a meaningful layout or workflow problem. Relocating sinks, dishwashers or gas lines can increase cost, so the functional gain should justify the added work.</> },
-{ question: <>Do Kitchen Remodels Require Permits in Florida?</>, answer: <>Permit requirements depend on the project scope and local jurisdiction. Structural, plumbing, electrical and mechanical changes commonly require permits. Confirm requirements before construction begins.</> },
-{ question: <>Does Swift Require a Deposit for Kitchen Remodeling?</>, answer: <>No. Swift Construction and Painting does not require an upfront deposit. Customers are invoiced after the work is complete.</> }]}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Kitchen Remodeling Value FAQs</>}
+        items={[{ question: <>What Kitchen Upgrade Adds the Most Value?</>, answer: <>The best upgrade depends on the kitchen&apos;s current problems. Improving a poor layout, adding useful storage and replacing worn cabinets or counters usually creates more practical value than adding a luxury feature that does not improve daily use.</> },
+        { question: <>Is a Full Kitchen Remodel Worth It?</>, answer: <>A full remodel can be worthwhile when the layout does not work, cabinets are failing, systems need updating or several surfaces are at the end of their useful life. A focused update may be more sensible when the basic layout and cabinetry are still sound.</> },
+        { question: <>Should I Move Plumbing During a Kitchen Remodel?</>, answer: <>Move plumbing when it solves a meaningful layout or workflow problem. Relocating sinks, dishwashers or gas lines can increase cost, so the functional gain should justify the added work.</> },
+        { question: <>Do Kitchen Remodels Require Permits in Florida?</>, answer: <>Permit requirements depend on the project scope and local jurisdiction. Structural, plumbing, electrical and mechanical changes commonly require permits. Confirm requirements before construction begins.</> },
+        { question: <>Does Swift Require a Deposit for Kitchen Remodeling?</>, answer: <>No. Swift Construction and Painting does not require an upfront deposit. Customers are invoiced after the work is complete.</> }]}
+        estimateHref="/contact#contact-form"
+      />
 
 
       <SiteFooter />

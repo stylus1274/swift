@@ -193,12 +193,12 @@ export default function InteriorPaintingPage() {
       </section>
 
       <FaqSection
- eyebrow={<>INTERIOR PAINTING QUESTIONS</>}
- title={<>What Homeowners Ask Before Interior Painting Begins.</>}
- description={<>Ask about furniture, repairs and the time between painting and normal room use before scheduling.</>}
- items={interiorFaqs}
- estimateHref="#interior-painting-estimate"
- />
+        eyebrow={<>INTERIOR PAINTING QUESTIONS</>}
+        title={<>What Homeowners Ask Before Interior Painting Begins.</>}
+        description={<>Ask about furniture, repairs and the time between painting and normal room use before scheduling.</>}
+        items={interiorFaqs}
+        estimateHref="#interior-painting-estimate"
+      />
 
       <section className="remodel-estimate" id="interior-painting-estimate">
         <div className="remodel-estimate-copy">

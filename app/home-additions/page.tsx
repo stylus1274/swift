@@ -193,12 +193,12 @@ export default function HomeAdditionsPage() {
       </section>
 
       <FaqSection
- eyebrow={<>HOME ADDITION QUESTIONS</>}
- title={<>What Homeowners Ask Before Adding More Space.</>}
- description={<>Clear answers help you evaluate the property, define the scope and prepare for a major improvement.</>}
- items={additionFaqs}
- estimateHref="#addition-estimate"
- />
+        eyebrow={<>HOME ADDITION QUESTIONS</>}
+        title={<>What Homeowners Ask Before Adding More Space.</>}
+        description={<>Clear answers help you evaluate the property, define the scope and prepare for a major improvement.</>}
+        items={additionFaqs}
+        estimateHref="#addition-estimate"
+      />
 
       <section className="remodel-estimate" id="addition-estimate">
         <div className="remodel-estimate-copy">

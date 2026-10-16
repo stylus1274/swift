@@ -37,12 +37,13 @@ export default function Page(){return <main className="blog-page article-page"><
 <section id="process"><p className="eyebrow">PROJECT PROCESS</p><h2>Start With the Property, Then Define the Work.</h2><p>Swift&apos;s commercial process begins with a property walkthrough and written proposal. From there, the project plan can coordinate construction, painting and finish work, along with applicable permitting when the approved scope requires it.</p><p>For a deeper look at the service, read <a href="/blog/commercial-construction-facility-services-hernando-county">Commercial Construction &amp; Facility Services in Hernando County</a> or visit <a href="/commercial-services">Swift&apos;s commercial services page</a>.</p></section>
 
 </article></div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Commercial Remodeling FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Commercial Remodeling FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 <section className="blog-cta"><div><p className="eyebrow">PLANNING A COMMERCIAL REMODEL?</p><h2>Walk the Existing Property Before Finalizing the Scope.</h2><p>Swift can review the space, operating needs and improvements you are considering.</p></div><div><a className="button cta-primary" href="/contact">Request a commercial estimate</a><a href="/commercial-services">Commercial Services</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

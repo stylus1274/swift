@@ -164,7 +164,7 @@ export default function FloridaHomeAdditionTimelineArticlePage() {
             <p>Swift Construction &amp; Painting handles <a href="/home-additions">home additions and room additions</a> across Hernando, Citrus and Pasco Counties. If you are considering more living space, <a href="/contact">request a free project estimate</a> so the property and scope can be reviewed before a schedule is discussed.</p>
           </section>
 
-          
+
 
           <section className="article-sources">
             <p className="eyebrow">OFFICIAL PLANNING RESOURCES</p>
@@ -177,12 +177,13 @@ export default function FloridaHomeAdditionTimelineArticlePage() {
           </section>
         </article>
       </div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Florida Home Addition FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Florida Home Addition FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 
       <section className="blog-cta">

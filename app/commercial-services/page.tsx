@@ -144,12 +144,12 @@ export default function CommercialServicesPage() {
       </section>
 
       <FaqSection
- eyebrow={<>COMMERCIAL QUESTIONS</>}
- title={<>What Property Owners Ask Before Work Begins.</>}
- description={<>Clear answers make it easier to evaluate the scope, schedule and contractor responsible for your property.</>}
- items={commercialFaqs}
- estimateHref="#commercial-estimate"
- />
+        eyebrow={<>COMMERCIAL QUESTIONS</>}
+        title={<>What Property Owners Ask Before Work Begins.</>}
+        description={<>Clear answers make it easier to evaluate the scope, schedule and contractor responsible for your property.</>}
+        items={commercialFaqs}
+        estimateHref="#commercial-estimate"
+      />
 
       <section className="remodel-estimate" id="commercial-estimate">
         <div className="remodel-estimate-copy">

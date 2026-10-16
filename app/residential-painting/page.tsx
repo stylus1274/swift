@@ -246,12 +246,12 @@ export default function ResidentialPaintingPage() {
       </section>
 
       <FaqSection
- eyebrow={<>PAINTING QUESTIONS</>}
- title={<>What Homeowners Ask Before Choosing a Painter.</>}
- description={<>Clear answers help you compare estimates and know what to expect once the project begins.</>}
- items={paintingFaqs}
- estimateHref="#paint-estimate"
- />
+        eyebrow={<>PAINTING QUESTIONS</>}
+        title={<>What Homeowners Ask Before Choosing a Painter.</>}
+        description={<>Clear answers help you compare estimates and know what to expect once the project begins.</>}
+        items={paintingFaqs}
+        estimateHref="#paint-estimate"
+      />
 
       <section className="paint-estimate" id="paint-estimate">
         <div className="paint-estimate-copy">

@@ -172,7 +172,7 @@ export default function Page(){
           <p>That gives homeowners a more useful goal than “paint before hurricane season.” The goal is to enter the season with an exterior that is maintained, known and not hiding obvious problems under a fresh coat.</p>
         </section>
 
-        
+
 
         <section className="article-sources">
           <p className="eyebrow">PLANNING RESOURCES</p>
@@ -185,12 +185,13 @@ export default function Page(){
         </section>
       </article>
     </div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Spring Hill Exterior Painting FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Spring Hill Exterior Painting FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 
     <section className="blog-cta">

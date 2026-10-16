@@ -205,12 +205,12 @@ export default function WindowsDoorsPage() {
       </section>
 
       <FaqSection
- eyebrow={<>WINDOW &amp; DOOR QUESTIONS</>}
- title={<>What Homeowners Ask Before Replacement Begins.</>}
- description={<>Clear answers make it easier to compare products, installation scope and the contractor responsible for your home.</>}
- items={openingFaqs}
- estimateHref="#windows-doors-estimate"
- />
+        eyebrow={<>WINDOW &amp; DOOR QUESTIONS</>}
+        title={<>What Homeowners Ask Before Replacement Begins.</>}
+        description={<>Clear answers make it easier to compare products, installation scope and the contractor responsible for your home.</>}
+        items={openingFaqs}
+        estimateHref="#windows-doors-estimate"
+      />
 
       <section className="remodel-estimate" id="windows-doors-estimate">
         <div className="remodel-estimate-copy">

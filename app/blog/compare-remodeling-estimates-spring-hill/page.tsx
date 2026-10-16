@@ -182,15 +182,16 @@ export default function Page() {
             <p>Local contractors with an established presence in Spring Hill, Brooksville, and Weeki Wachee will also be more familiar with Hernando County permit requirements, local inspection timelines, and the specific conditions that affect construction in this part of Florida, including humidity, soil, and storm season considerations.</p>
           </section>
 
-          
+
         </article>
       </div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Remodeling Estimate FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Remodeling Estimate FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 
       <section className="blog-cta">

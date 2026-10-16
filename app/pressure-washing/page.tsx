@@ -126,12 +126,12 @@ export default function PressureWashingPage() {
       </section>
 
       <FaqSection
- eyebrow={<>PRESSURE WASHING QUESTIONS</>}
- title={<>What Property Owners Ask Before Exterior Cleaning Begins.</>}
- description={<>Clear answers make it easier to compare the scope, methods and contractor responsible for your property.</>}
- items={pressureWashingFaqs}
- estimateHref="#pressure-washing-estimate"
- />
+        eyebrow={<>PRESSURE WASHING QUESTIONS</>}
+        title={<>What Property Owners Ask Before Exterior Cleaning Begins.</>}
+        description={<>Clear answers make it easier to compare the scope, methods and contractor responsible for your property.</>}
+        items={pressureWashingFaqs}
+        estimateHref="#pressure-washing-estimate"
+      />
 
       <section className="remodel-estimate" id="pressure-washing-estimate">
         <div className="remodel-estimate-copy">

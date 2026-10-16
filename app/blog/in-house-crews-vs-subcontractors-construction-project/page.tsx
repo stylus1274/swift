@@ -164,15 +164,16 @@ export default function Page(){
           <p>For a kitchen remodel, bathroom renovation, whole-home remodel, addition or new build, the finished result depends on many individual tasks coming together in the right order. The contractor&apos;s job is to make that complexity feel organized to the homeowner.</p>
         </section>
 
-        
+
       </article>
     </div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>In-House Crew and Subcontractor FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>In-House Crew and Subcontractor FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 
     <section className="blog-cta">

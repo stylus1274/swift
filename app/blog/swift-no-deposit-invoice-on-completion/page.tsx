@@ -39,12 +39,13 @@ export default function Page(){return <main className="blog-page article-page"><
 <section><p className="eyebrow">WHAT TO REVIEW</p><h2>Clear Payment Terms Still Belong in Writing.</h2><p>Even with a simple payment policy, the written proposal should make the scope, exclusions and payment expectations clear. Homeowners comparing contractors should ask each company to explain how deposits, progress payments, change orders and final payment work for the specific project being proposed.</p><p>For more contractor due diligence, read <a href="/blog/how-to-verify-florida-contractor-license-insurance-permit-history">how to verify a Florida contractor before hiring</a>.</p></section>
 
 </article></div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Swift Payment Process FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Swift Payment Process FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 <section className="blog-cta"><div><p className="eyebrow">READY TO DISCUSS YOUR PROJECT?</p><h2>Start With the Scope and the Property.</h2><p>Swift can schedule an in-person estimate and prepare a written project scope.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/services">Explore Services</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

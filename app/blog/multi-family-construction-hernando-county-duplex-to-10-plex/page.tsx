@@ -40,12 +40,13 @@ export default function Page(){return <main className="blog-page article-page">
 <section id="duplex"><p className="eyebrow">LOCAL EXPERIENCE</p><h2>Swift Has a Documented Duplex Build in Spring Hill.</h2><p>Swift&apos;s completed-project records include a ground-up duplex in Spring Hill completed for a repeat customer. The project ran for five months, from December 2025 through May 2026, with a documented investment of $314,490.</p><p><a href="/projects/new-construction-duplex-spring-hill-fl">View the documented Spring Hill duplex project</a> or explore Swift&apos;s broader <a href="/multi-family-construction">multi-family construction services</a>.</p></section>
 
 </article></div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Multi-Family Construction FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Multi-Family Construction FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 <section className="blog-cta"><div><p className="eyebrow">PLANNING A MULTI-FAMILY BUILD?</p><h2>Start With the Property and Unit Count.</h2><p>Swift can review the project and help define the next practical step.</p></div><div><a className="button cta-primary" href="/contact">Request a project conversation</a><a href="/multi-family-construction">Multi-Family Services</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/>

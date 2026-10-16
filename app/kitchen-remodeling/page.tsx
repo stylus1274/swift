@@ -144,12 +144,12 @@ export default function KitchenRemodelingPage() {
       </section>
 
       <FaqSection
- eyebrow={<>KITCHEN REMODELING QUESTIONS</>}
- title={<>What Homeowners Ask Before the Work Begins.</>}
- description={<>Clear answers make it easier to plan the project and choose the right contractor.</>}
- items={kitchenFaqs}
- estimateHref="#kitchen-estimate"
- />
+        eyebrow={<>KITCHEN REMODELING QUESTIONS</>}
+        title={<>What Homeowners Ask Before the Work Begins.</>}
+        description={<>Clear answers make it easier to plan the project and choose the right contractor.</>}
+        items={kitchenFaqs}
+        estimateHref="#kitchen-estimate"
+      />
 
       <section className="remodel-estimate" id="kitchen-estimate">
         <div className="remodel-estimate-copy">

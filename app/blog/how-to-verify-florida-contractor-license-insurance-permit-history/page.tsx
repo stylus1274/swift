@@ -167,7 +167,7 @@ export default function VerifyFloridaContractorArticlePage() {
             <p>Once the verification checks are complete, compare the actual project scope. If you are considering managing the permit yourself, read <a href="/faq/can-homeowner-pull-own-building-permit-florida">how Florida&apos;s owner-builder permit exemption works</a>. Swift provides written proposals for <a href="/services">construction, remodeling and painting services</a> across the Florida Nature Coast.</p>
           </section>
 
-          
+
 
           <section className="article-sources">
             <p className="eyebrow">OFFICIAL RESOURCES</p>
@@ -180,12 +180,13 @@ export default function VerifyFloridaContractorArticlePage() {
           </section>
         </article>
       </div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Florida Contractor Verification FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Florida Contractor Verification FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 
       <section className="blog-cta">

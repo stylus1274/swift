@@ -205,12 +205,12 @@ export default function FlooringPage() {
       </section>
 
       <FaqSection
- eyebrow={<>FLOORING QUESTIONS</>}
- title={<>What Homeowners Ask Before Flooring Installation Begins.</>}
- description={<>Clear answers make it easier to compare materials, preparation and the contractor responsible for your home.</>}
- items={flooringFaqs}
- estimateHref="#flooring-estimate"
- />
+        eyebrow={<>FLOORING QUESTIONS</>}
+        title={<>What Homeowners Ask Before Flooring Installation Begins.</>}
+        description={<>Clear answers make it easier to compare materials, preparation and the contractor responsible for your home.</>}
+        items={flooringFaqs}
+        estimateHref="#flooring-estimate"
+      />
 
       <section className="remodel-estimate" id="flooring-estimate">
         <div className="remodel-estimate-copy">

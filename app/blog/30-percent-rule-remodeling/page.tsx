@@ -37,12 +37,13 @@ export default function Page(){return <main className="blog-page article-page"><
 <section id="swift"><p className="eyebrow">SWIFT PROJECT PLANNING</p><h2>Swift&apos;s Historical Remodeling Range Is Broader Than a Formula.</h2><p>Swift&apos;s client-provided discovery material says its remodeling projects have commonly ranged from about $8,000 to $80,000. That is a broad historical range across different project types, not a fixed price list and not a promise that a particular project will fall inside it.</p><p>Actual pricing depends on the property, project size, structural work, materials, selections, permitting, trade requirements and final written scope.</p><p><a href="/cost-guides">Explore Swift&apos;s remodeling cost guides</a> or review <a href="/home-remodeling">home remodeling services</a>.</p></section>
 
 </article></div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>30% Remodeling Rule FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>30% Remodeling Rule FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 <section className="blog-cta"><div><p className="eyebrow">READY TO MOVE FROM A RULE OF THUMB TO A REAL NUMBER?</p><h2>Define the Scope at the Property.</h2><p>An in-person walkthrough gives you a better basis for budgeting than a percentage alone.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/cost-guides">Cost Guides</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

@@ -124,12 +124,12 @@ export default function NewHomeConstructionPage() {
       </section>
 
       <FaqSection
- eyebrow={<>NEW HOME QUESTIONS</>}
- title={<>What Homeowners Ask Before Building.</>}
- description={<>Clear answers early can prevent expensive surprises later.</>}
- items={buildFaqs}
- estimateHref="#build-estimate"
- />
+        eyebrow={<>NEW HOME QUESTIONS</>}
+        title={<>What Homeowners Ask Before Building.</>}
+        description={<>Clear answers early can prevent expensive surprises later.</>}
+        items={buildFaqs}
+        estimateHref="#build-estimate"
+      />
 
       <section className="build-estimate" id="build-estimate">
         <div className="build-estimate-copy">

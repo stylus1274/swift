@@ -144,12 +144,12 @@ export default function MultiFamilyConstructionPage() {
       </section>
 
       <FaqSection
- eyebrow={<>MULTI-FAMILY QUESTIONS</>}
- title={<>What Owners Ask Before Choosing a Contractor.</>}
- description={<>Clear answers early make it easier to evaluate project fit, scope and next steps.</>}
- items={multiFamilyFaqs}
- estimateHref="#multi-family-estimate"
- />
+        eyebrow={<>MULTI-FAMILY QUESTIONS</>}
+        title={<>What Owners Ask Before Choosing a Contractor.</>}
+        description={<>Clear answers early make it easier to evaluate project fit, scope and next steps.</>}
+        items={multiFamilyFaqs}
+        estimateHref="#multi-family-estimate"
+      />
 
       <section className="remodel-estimate" id="multi-family-estimate">
         <div className="remodel-estimate-copy">

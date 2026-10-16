@@ -37,12 +37,13 @@ export default function Page(){return <main className="blog-page article-page"><
 <section id="process"><p className="eyebrow">HOW IT WORKS</p><h2>From Walkthrough to Final Review.</h2><ol className="article-checklist"><li><strong>Walk the property.</strong> Review the space, access, operating needs and project goal.</li><li><strong>Define the scope.</strong> Prepare a written proposal describing the planned work.</li><li><strong>Coordinate the work.</strong> Manage scheduling, trades and communication as the project moves forward.</li><li><strong>Complete the walkthrough.</strong> Review the finished work and address final details before closeout.</li></ol><p>When the approved scope requires permits, Swift states that it can coordinate the applicable permit process as part of the project plan.</p><p><a href="/commercial-services">Explore Swift&apos;s commercial services</a> or see <a href="/commercial-painting">commercial painting</a>.</p></section>
 
 </article></div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Hernando County Commercial Services FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Hernando County Commercial Services FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 <section className="blog-cta"><div><p className="eyebrow">COMMERCIAL PROJECT IN HERNANDO COUNTY?</p><h2>Bring the Property, Priorities and Timeline to the Walkthrough.</h2><p>Swift can review the site and prepare a written commercial proposal around the actual scope.</p></div><div><a className="button cta-primary" href="/contact">Request a commercial estimate</a><a href="/commercial-services">Commercial Services</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

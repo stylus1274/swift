@@ -205,12 +205,12 @@ export default function CommercialPaintingPage() {
       </section>
 
       <FaqSection
- eyebrow={<>COMMERCIAL PAINTING QUESTIONS</>}
- title={<>What Property Owners Ask Before Painting Begins.</>}
- description={<>Clear answers make it easier to compare the scope, schedule and contractor responsible for your property.</>}
- items={paintingFaqs}
- estimateHref="#commercial-painting-estimate"
- />
+        eyebrow={<>COMMERCIAL PAINTING QUESTIONS</>}
+        title={<>What Property Owners Ask Before Painting Begins.</>}
+        description={<>Clear answers make it easier to compare the scope, schedule and contractor responsible for your property.</>}
+        items={paintingFaqs}
+        estimateHref="#commercial-painting-estimate"
+      />
 
       <section className="remodel-estimate" id="commercial-painting-estimate">
         <div className="remodel-estimate-copy">

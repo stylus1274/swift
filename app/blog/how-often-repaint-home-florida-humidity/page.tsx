@@ -162,7 +162,7 @@ export default function FloridaHumidityRepaintingArticlePage() {
             <p>Swift handles <a href="/residential-painting">residential painting</a>, including <a href="/exterior-painting">exterior painting</a> and <a href="/interior-painting">interior painting</a> across Hernando, Citrus and Pasco Counties. If you are seeing peeling, fading or repeated mildew, <a href="/contact">request a free project estimate</a> and have the condition evaluated before deciding whether the home needs touch-up work or a full repaint.</p>
           </section>
 
-          
+
 
           <section className="article-sources">
             <p className="eyebrow">PAINTING RESOURCES</p>
@@ -176,12 +176,13 @@ export default function FloridaHumidityRepaintingArticlePage() {
           </section>
         </article>
       </div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Florida Exterior Repainting FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Florida Exterior Repainting FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 
       <section className="blog-cta">

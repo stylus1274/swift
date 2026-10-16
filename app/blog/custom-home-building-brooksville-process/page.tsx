@@ -39,12 +39,13 @@ export default function Page(){return <main className="blog-page article-page"><
 <section id="proof"><p className="eyebrow">DOCUMENTED BROOKSVILLE PROJECT</p><h2>A Custom Farmhouse Completed in Eight Months.</h2><p>Swift&apos;s completed-project records document a custom farmhouse in Brooksville that ran from October 23, 2024 through June 26, 2025. The recorded project investment was $421,920. The scope in the client record is concise: build a custom farmhouse home.</p><figure><img src="/assets/projects/brooksville-custom-farmhouse/kitchen.jpg" alt="Kitchen inside Swift's completed Brooksville custom farmhouse"/><figcaption>Interior photography from the documented Brooksville custom farmhouse project.</figcaption></figure><p><a href="/projects/custom-farmhouse-home-brooksville-fl">View the documented Brooksville custom farmhouse</a> or explore <a href="/brooksville-fl/new-construction">new construction in Brooksville</a>.</p></section>
 
 </article></div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Brooksville Custom Home FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Brooksville Custom Home FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 <section className="blog-cta"><div><p className="eyebrow">PLANNING A HOME IN BROOKSVILLE?</p><h2>Start With an In-Person Project Conversation.</h2><p>Bring the property, plans or ideas you already have so Swift can evaluate the actual scope.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/custom-home-building">Custom Home Building</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

@@ -114,12 +114,12 @@ export default function ContactPage() {
       </section>
 
       <FaqSection
- eyebrow={<>ESTIMATE QUESTIONS</>}
- title={<>What to Know Before You Reach Out.</>}
- description={<>A few details now help Swift respond with a clearer and more useful next step.</>}
- items={contactFaqs}
- estimateHref="#contact-form"
- />
+        eyebrow={<>ESTIMATE QUESTIONS</>}
+        title={<>What to Know Before You Reach Out.</>}
+        description={<>A few details now help Swift respond with a clearer and more useful next step.</>}
+        items={contactFaqs}
+        estimateHref="#contact-form"
+      />
 
       <section className="contact-final-cta">
         <div><p className="eyebrow">READY WHEN YOU ARE</p><h2>Start With a Free Project Estimate.</h2><p>Tell us what you are planning and we will help identify the right next step.</p></div>

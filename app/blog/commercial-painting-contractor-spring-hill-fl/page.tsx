@@ -37,12 +37,13 @@ export default function Page(){return <main className="blog-page article-page"><
 <section id="proposal"><p className="eyebrow">COMPARE THE PROPOSAL</p><h2>Do Not Compare Commercial Painting Bids on Price Alone.</h2><p>Two bids are not equivalent if one includes extensive preparation and another assumes a simple repaint. Compare surfaces, preparation, exclusions, scheduling assumptions and the written scope before deciding which proposal actually covers the work you need.</p><p>Swift states that it provides written commercial painting proposals and serves Spring Hill along with commercial properties throughout Hernando, Citrus and Pasco Counties.</p><p><a href="/commercial-painting">Explore Swift&apos;s commercial painting services</a>.</p></section>
 
 </article></div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Commercial Painting FAQs for Property Managers</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Commercial Painting FAQs for Property Managers</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 <section className="blog-cta"><div><p className="eyebrow">COMMERCIAL PROPERTY IN SPRING HILL?</p><h2>Start With a Property Walkthrough.</h2><p>Review the surfaces, access and operating requirements before the painting scope is finalized.</p></div><div><a className="button cta-primary" href="/contact">Request a commercial estimate</a><a href="/commercial-painting">Commercial Painting</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

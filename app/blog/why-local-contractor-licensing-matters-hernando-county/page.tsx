@@ -159,7 +159,7 @@ export default function ContractorLicensingHernandoCountyArticlePage() {
             </div>
           </section>
 
-          
+
 
           <section className="article-sources">
             <p className="eyebrow">OFFICIAL RESOURCES</p>
@@ -171,12 +171,13 @@ export default function ContractorLicensingHernandoCountyArticlePage() {
           </section>
         </article>
       </div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Contractor Licensing FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Contractor Licensing FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 
       <section className="blog-cta">

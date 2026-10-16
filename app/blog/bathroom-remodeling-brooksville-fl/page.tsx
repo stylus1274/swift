@@ -37,12 +37,13 @@ export default function Page(){return <main className="blog-page article-page"><
 <section id="drivers"><p className="eyebrow">SCOPE DRIVERS</p><h2>What Changes the Size of the Project?</h2><div className="article-factor-grid"><div><strong>Layout Changes</strong><p>Moving fixtures can add plumbing and framing work.</p></div><div><strong>Waterproofing</strong><p>Shower rebuilds require proper substrate and waterproofing systems.</p></div><div><strong>Existing Conditions</strong><p>Hidden damage can change the scope once demolition begins.</p></div><div><strong>Finish Level</strong><p>Tile, cabinetry, glass, fixtures and details affect labor and material cost.</p></div></div></section>
 <section id="estimate"><p className="eyebrow">BROOKSVILLE ESTIMATES</p><h2>Walk the Bathroom Before You Decide What It Needs.</h2><p>Swift&apos;s preferred estimating process is an in-person site visit. That allows the contractor to see the existing room, discuss what you want to keep, identify likely trade work and prepare a written scope around the actual bathroom.</p><p>For broader pricing context, see <a href="/blog/realistic-bathroom-remodel-budget">what a realistic bathroom remodeling budget looks like</a> and Swift&apos;s <a href="/bathroom-remodeling">bathroom remodeling service page</a>.</p></section>
 </article></div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Brooksville Bathroom Remodeling FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Brooksville Bathroom Remodeling FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 <section className="blog-cta"><div><p className="eyebrow">BATHROOM PROJECT IN BROOKSVILLE?</p><h2>Get the Scope From the Room, Not a Template.</h2><p>Schedule an on-site walkthrough and discuss what should stay, what should change and what the finished bathroom needs to do better.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/locations/brooksville-fl">Brooksville Services</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

@@ -38,12 +38,13 @@ export default function Page(){return <main className="blog-page article-page"><
 <section id="contractor"><p className="eyebrow">CHECK 5</p><h2>You Know Who Is Responsible for the Project.</h2><p>Clarify who your point of contact is, how changes are handled and what happens at the final walkthrough. Swift says its commercial process includes a property walkthrough, written proposal, preparation and painting, followed by a review of the finished work.</p><div className="article-factor-grid"><div><strong>Inspect</strong><p>Price the actual property and existing conditions.</p></div><div><strong>Prepare</strong><p>Understand the work behind the finish coats.</p></div><div><strong>Document</strong><p>Compare written scopes rather than vague totals.</p></div><div><strong>Coordinate</strong><p>Plan the work around property access and operations.</p></div></div><p><a href="/commercial-painting">See Swift&apos;s commercial painting process</a> or read the <a href="/blog/commercial-painting-contractor-spring-hill-fl">Spring Hill property manager guide</a>.</p></section>
 
 </article></div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Choosing a Commercial Painter FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Choosing a Commercial Painter FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 <section className="blog-cta"><div><p className="eyebrow">COMPARING COMMERCIAL PAINTING PROPOSALS?</p><h2>Make Sure You Are Comparing the Same Scope.</h2><p>Swift can walk your property and prepare a written proposal around the actual surfaces and operating requirements.</p></div><div><a className="button cta-primary" href="/contact">Request a commercial estimate</a><a href="/commercial-painting">Commercial Painting</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

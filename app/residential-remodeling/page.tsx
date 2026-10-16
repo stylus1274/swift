@@ -185,12 +185,12 @@ export default function ResidentialRemodelingPage() {
       </section>
 
       <FaqSection
- eyebrow={<>REMODELING QUESTIONS</>}
- title={<>What Homeowners Ask Before Starting a Renovation.</>}
- description={<>Clear expectations make it easier to compare contractors and prepare for the project ahead.</>}
- items={remodelingFaqs}
- estimateHref="#remodel-estimate"
- />
+        eyebrow={<>REMODELING QUESTIONS</>}
+        title={<>What Homeowners Ask Before Starting a Renovation.</>}
+        description={<>Clear expectations make it easier to compare contractors and prepare for the project ahead.</>}
+        items={remodelingFaqs}
+        estimateHref="#remodel-estimate"
+      />
 
       <section className="remodel-estimate" id="remodel-estimate">
         <div className="remodel-estimate-copy">

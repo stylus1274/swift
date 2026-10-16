@@ -205,12 +205,12 @@ export default function ExteriorPaintingPage() {
       </section>
 
       <FaqSection
- eyebrow={<>EXTERIOR PAINTING QUESTIONS</>}
- title={<>What Homeowners Ask Before Exterior Painting Begins.</>}
- description={<>Clear answers make it easier to compare preparation, coatings and the contractor responsible for your home.</>}
- items={exteriorFaqs}
- estimateHref="#exterior-painting-estimate"
- />
+        eyebrow={<>EXTERIOR PAINTING QUESTIONS</>}
+        title={<>What Homeowners Ask Before Exterior Painting Begins.</>}
+        description={<>Clear answers make it easier to compare preparation, coatings and the contractor responsible for your home.</>}
+        items={exteriorFaqs}
+        estimateHref="#exterior-painting-estimate"
+      />
 
       <section className="remodel-estimate" id="exterior-painting-estimate">
         <div className="remodel-estimate-copy">

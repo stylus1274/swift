@@ -360,12 +360,12 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
       </section>
 
       <FaqSection headingId="faq-heading"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Answers Before   the First   Walkthrough.</>}
- description={<>Every project is different, but these are a few of the questions homeowners and business owners ask most often.</>}
- items={faqs}
- estimateHref="#contact"
- />
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Answers Before   the First   Walkthrough.</>}
+        description={<>Every project is different, but these are a few of the questions homeowners and business owners ask most often.</>}
+        items={faqs}
+        estimateHref="#contact"
+      />
 
       <section className="estimate-section" id="contact">
         <InteractiveServiceMap />

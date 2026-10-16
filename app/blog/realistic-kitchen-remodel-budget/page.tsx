@@ -199,7 +199,7 @@ export default function KitchenRemodelBudgetArticlePage() {
             <p>For a closer look at where the budget tends to create the strongest practical benefit, read <a href="/blog/kitchen-remodeling-spring-hill-fl-adds-value">which kitchen remodeling improvements actually add value in Spring Hill</a>. For scheduling, see <a href="/faq/how-long-does-kitchen-remodel-take-florida">how long a kitchen remodel can take in Florida</a>.</p>
           </section>
 
-          
+
 
           <section className="article-sources">
             <p className="eyebrow">COST BENCHMARKS</p>
@@ -221,16 +221,17 @@ export default function KitchenRemodelBudgetArticlePage() {
           <a className="article-back" href="/blog"><span>←</span> Back to the Swift Project Library</a>
         </article>
       </div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Kitchen Remodel Budget FAQs</>}
- items={[{ question: <>Can You Remodel a Kitchen for $30,000?</>, answer: <>Yes, when the layout stays in place and the work focuses on selected surfaces, fixtures and finishes. A $30,000 budget is less realistic for a full gut remodel with new cabinetry, major system changes and premium appliances.</> },
-{ question: <>What Is Usually the Most Expensive Part of a Kitchen Remodel?</>, answer: <>Cabinetry is often one of the largest individual costs. The total can also rise quickly when the project changes the layout, moves plumbing, upgrades electrical service or adds structural work.</> },
-{ question: <>How Much Contingency Should a Kitchen Remodel Budget Include?</>, answer: <>A planning reserve of 10% to 15% is common when the scope is well understood. Older homes, concealed damage and extensive layout changes may justify a larger reserve.</> },
-{ question: <>Does Moving the Sink Make a Kitchen Remodel More Expensive?</>, answer: <>Usually. Moving a sink can affect supply lines, drainage, venting, cabinetry, flooring and inspections. The impact depends on the new location and how accessible the existing systems are.</> },
-{ question: <>Should I Buy Appliances Before Hiring a Contractor?</>, answer: <>Choose appliance specifications early, but coordinate purchases with the contractor. Exact dimensions, utility requirements and delivery timing can affect cabinets, countertops, electrical work and the schedule.</> }]}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Kitchen Remodel Budget FAQs</>}
+        items={[{ question: <>Can You Remodel a Kitchen for $30,000?</>, answer: <>Yes, when the layout stays in place and the work focuses on selected surfaces, fixtures and finishes. A $30,000 budget is less realistic for a full gut remodel with new cabinetry, major system changes and premium appliances.</> },
+        { question: <>What Is Usually the Most Expensive Part of a Kitchen Remodel?</>, answer: <>Cabinetry is often one of the largest individual costs. The total can also rise quickly when the project changes the layout, moves plumbing, upgrades electrical service or adds structural work.</> },
+        { question: <>How Much Contingency Should a Kitchen Remodel Budget Include?</>, answer: <>A planning reserve of 10% to 15% is common when the scope is well understood. Older homes, concealed damage and extensive layout changes may justify a larger reserve.</> },
+        { question: <>Does Moving the Sink Make a Kitchen Remodel More Expensive?</>, answer: <>Usually. Moving a sink can affect supply lines, drainage, venting, cabinetry, flooring and inspections. The impact depends on the new location and how accessible the existing systems are.</> },
+        { question: <>Should I Buy Appliances Before Hiring a Contractor?</>, answer: <>Choose appliance specifications early, but coordinate purchases with the contractor. Exact dimensions, utility requirements and delivery timing can affect cabinets, countertops, electrical work and the schedule.</> }]}
+        estimateHref="/contact#contact-form"
+      />
 
 
       <SiteFooter />

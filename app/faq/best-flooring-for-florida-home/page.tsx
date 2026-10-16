@@ -83,17 +83,18 @@ export default function Page(){
           <p>If flooring is part of a larger project, Swift can coordinate it with <a href="/residential-remodeling">residential remodeling</a> and <a href="/home-remodeling">whole-home remodeling</a> work under one scope.</p>
         </section>
 
-        
+
 
         <section className="article-sources"><p className="eyebrow">PLANNING RESOURCES</p><h2>Moisture and Installation Conditions Matter.</h2><ul><li><a href="https://www.angi.com/companylist/us/fl/riverview/flooring.htm" target="_blank" rel="noreferrer">Angi: Florida Flooring Material Guidance</a></li><li><a href="https://www.floridabuilding.org/" target="_blank" rel="noreferrer">Florida Building Commission</a></li></ul></section>
       </article>
     </div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Florida Flooring FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Florida Flooring FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 
     <section className="blog-cta"><div><p className="eyebrow">PLANNING NEW FLOORING?</p><h2>Choose the Floor Around the Room, the Slab and the Way You Live.</h2><p>Swift can review the existing flooring, subfloor conditions and finish goals before defining the installation scope.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/faq">More FAQs</a></div></section>

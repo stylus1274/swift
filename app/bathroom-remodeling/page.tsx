@@ -144,12 +144,12 @@ export default function BathroomRemodelingPage() {
       </section>
 
       <FaqSection
- eyebrow={<>BATHROOM REMODELING QUESTIONS</>}
- title={<>What Homeowners Ask Before the Work Begins.</>}
- description={<>Clear answers make it easier to plan the project and choose the right contractor.</>}
- items={bathroomFaqs}
- estimateHref="#bathroom-estimate"
- />
+        eyebrow={<>BATHROOM REMODELING QUESTIONS</>}
+        title={<>What Homeowners Ask Before the Work Begins.</>}
+        description={<>Clear answers make it easier to plan the project and choose the right contractor.</>}
+        items={bathroomFaqs}
+        estimateHref="#bathroom-estimate"
+      />
 
       <section className="remodel-estimate" id="bathroom-estimate">
         <div className="remodel-estimate-copy">

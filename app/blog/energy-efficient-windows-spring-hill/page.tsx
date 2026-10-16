@@ -158,7 +158,7 @@ export default function EnergyEfficientWindowsSpringHillPage() {
             <p>A lower product price does not necessarily mean a lower total project cost if the proposal leaves out repair or finish work around the opening. Compare the complete scope before comparing the bottom line.</p>
           </section>
 
-          
+
 
           <section className="article-sources">
             <p className="eyebrow">OFFICIAL RESOURCES</p>
@@ -171,12 +171,13 @@ export default function EnergyEfficientWindowsSpringHillPage() {
           </section>
         </article>
       </div>
-<FaqSection id="faqs"
- eyebrow={<>COMMON QUESTIONS</>}
- title={<>Energy-Efficient Window FAQs</>}
- items={faqItems}
- estimateHref="/contact#contact-form"
- />
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Energy-Efficient Window FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
 
 
       <section className="blog-cta">
