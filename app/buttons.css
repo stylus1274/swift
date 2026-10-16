@@ -45,52 +45,12 @@ form[class] button[type="submit"] {
 }
 
 /* Shared question typography and toggle for every FAQ presentation. */
-h3.faq-question, .faq-question-card h3 {
+.faq-question-card h3 {
   margin: 0;
   font: 700 18px/1.4 Arial, Helvetica, sans-serif;
   letter-spacing: normal;
 }
 .faq-question-card h3 { margin: 12px 0 15px; }
-.faq-question .faq-question-button,
-.article-faqs .faq-question-summary {
-  width: 100%;
-  min-height: 104px;
-  padding: 24px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-  border: 0;
-  background: transparent;
-  color: #0b2b45;
-  text-align: left;
-  font: 700 18px/1.4 Arial, Helvetica, sans-serif;
-  cursor: pointer;
-  list-style: none;
-}
-.faq-question-summary::-webkit-details-marker { display: none; }
-.faq-question .faq-question-button .faq-circle,
-.article-faqs .faq-question-summary .faq-circle {
-  width: 42px;
-  height: 42px;
-  flex: 0 0 42px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--logo-blue);
-  border-radius: 50%;
-  color: var(--logo-blue);
-  font: 400 23px/1 Arial, Helvetica, sans-serif;
-}
-.faq-question-button[aria-expanded="true"] .faq-circle,
-.article-faqs details[open] .faq-question-summary .faq-circle {
-  background: var(--logo-blue);
-  color: #fff;
-}
-.article-faqs details[open] .faq-question-summary .faq-circle { font-size: 0; }
-.article-faqs details[open] .faq-question-summary .faq-circle::after { content: "−"; font: 400 23px/1 Arial, Helvetica, sans-serif; }
-.faq-question-button:focus-visible,
-.faq-question-summary:focus-visible { outline: 2px solid var(--logo-blue); outline-offset: 4px; }
 
 /* Text actions share the primary CTA blue, including their arrow. */
 .text-action[class] {
@@ -148,32 +108,6 @@ a:is(:hover, :focus-visible) .text-action[class] .text-action-arrow {
 .text-action[class]:focus-visible { outline: 2px solid var(--logo-blue); outline-offset: 4px; }
 
 /* FAQ hover changes the text and toggle without moving the question. */
-.faq-question .faq-question-button[aria-expanded="true"],
-.article-faqs details[open] .faq-question-summary {
-  color: var(--logo-blue);
-}
-.article-faqs details[open] .faq-question-summary h3 { color: inherit; }
-.faq-question .faq-question-button:hover,
-.article-faqs .faq-question-summary:hover {
-  color: var(--logo-blue);
-}
-.faq-question .faq-question-button[aria-expanded="true"]:hover,
-.article-faqs details[open] .faq-question-summary:hover {
-  color: #0b2b45;
-}
-.article-faqs .faq-question-summary:hover h3 { color: inherit; }
-.faq-question .faq-question-button:hover .faq-circle,
-.article-faqs details .faq-question-summary:hover .faq-circle {
-  border-color: #2668a3;
-  background: #2668a3;
-  color: #fff;
-}
-.faq-question .faq-question-button[aria-expanded="true"]:hover .faq-circle,
-.article-faqs details[open] .faq-question-summary:hover .faq-circle {
-  border-color: var(--logo-blue);
-  background: transparent;
-  color: var(--logo-blue);
-}
 @media (prefers-reduced-motion: reduce) {
   .text-action[class] .text-action-arrow { transition: none; }
   .text-action[class]:is(:hover, :focus-visible) .text-action-arrow,

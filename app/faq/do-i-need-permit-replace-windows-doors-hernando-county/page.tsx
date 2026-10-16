@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -28,10 +29,17 @@ export default function Page(){return <main className="blog-page article-page">
 
       <section id="before"><p className="eyebrow">BEFORE INSTALLATION</p><h2>Verify the Opening, Product and Permit Before Work Begins.</h2><p>Do not rely on a general statement that a product is “Florida approved.” The installation still has to match the specific opening, approved product information and applicable local requirements. The contractor should also be able to explain who is handling the permit and inspections when they apply.</p><p>If you are comparing multiple proposals, use the <a href="/blog/compare-remodeling-estimates-spring-hill">remodeling estimate comparison guide</a> to compare scope and contractor responsibility rather than looking only at the total price.</p></section>
 
-      <section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Hernando County Window &amp; Door Permit FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section>
+      
       <section className="article-sources"><p className="eyebrow">OFFICIAL RESOURCES</p><h2>Check the Current County Requirement.</h2><ul><li><a href="https://www.hernandocounty.us/building-development/building/contractors/" target="_blank" rel="noreferrer">Hernando County Contractor &amp; Permit Information</a></li><li><a href="https://www.hernandocounty.us/media/q1oat1te/items-not-requiring-a-building-permit-document.pdf" target="_blank" rel="noreferrer">Hernando County: Items Not Requiring a Building Permit</a></li></ul></section>
     </article>
   </div>
+<FaqSection id="faqs"
+ eyebrow={<>COMMON QUESTIONS</>}
+ title={<>Hernando County Window &amp; Door Permit FAQs</>}
+ items={faqItems}
+ estimateHref="/contact#contact-form"
+ />
+
   <section className="blog-cta"><div><p className="eyebrow">PLANNING WINDOW OR DOOR REPLACEMENT?</p><h2>Price the Complete Opening, Not Just the Product.</h2><p>Swift can review the openings, discuss replacement options and prepare a written project scope.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/faq">More FAQs</a></div></section>
   <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/>
 </main>}

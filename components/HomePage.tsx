@@ -1,5 +1,7 @@
 "use client";
 
+import FaqSection from "@/components/FaqSection";
+
 import { FormEvent, useState } from "react";
 import InteractiveServiceMap from "./InteractiveServiceMap";
 import SiteHeader from "./SiteHeader";
@@ -109,7 +111,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
   const [estimateService, setEstimateService] = useState("Painting");
   const [submitted, setSubmitted] = useState(false);
   const [heroSubmitted, setHeroSubmitted] = useState(false);
-  const [openFaq, setOpenFaq] = useState(0);
+
 
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -357,37 +359,13 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
         </div>
       </section>
 
-      <section className="faq-section" aria-labelledby="faq-heading">
-        <div className="faq-inner">
-          <div className="faq-intro">
-            <p className="faq-eyebrow"><span aria-hidden="true" />COMMON QUESTIONS</p>
-            <h2 id="faq-heading">Answers Before<br />the First<br />Walkthrough.</h2>
-            <p>Every project is different, but these are a few of the questions homeowners and business owners ask most often.</p>
-            <a className="text-action" href="#contact"><span className="text-action-label">Have another question?</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
-          </div>
-          <div className="faq-list">
-            {faqs.map((faq, index) => {
-              const isOpen = openFaq === index;
-              return (
-                <article className={isOpen ? "faq-item open" : "faq-item"} key={faq.question}>
-                  <h3 className="faq-question"><button className="faq-question-button"
-                    aria-expanded={isOpen}
-                    aria-controls={`faq-answer-${index}`}
-                    onClick={() => setOpenFaq(isOpen ? -1 : index)}
-                    type="button"
-                  >
-                    <span>{faq.question}</span>
-                    <span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span>
-                  </button></h3>
-                  <div className="faq-answer" id={`faq-answer-${index}`} hidden={!isOpen}>
-                    <p>{faq.answer}</p>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <FaqSection headingId="faq-heading"
+ eyebrow={<>COMMON QUESTIONS</>}
+ title={<>Answers Before   the First   Walkthrough.</>}
+ description={<>Every project is different, but these are a few of the questions homeowners and business owners ask most often.</>}
+ items={faqs}
+ estimateHref="#contact"
+ />
 
       <section className="estimate-section" id="contact">
         <InteractiveServiceMap />

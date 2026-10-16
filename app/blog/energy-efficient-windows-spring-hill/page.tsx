@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -157,16 +158,7 @@ export default function EnergyEfficientWindowsSpringHillPage() {
             <p>A lower product price does not necessarily mean a lower total project cost if the proposal leaves out repair or finish work around the opening. Compare the complete scope before comparing the bottom line.</p>
           </section>
 
-          <section className="article-faqs" id="faqs">
-            <p className="eyebrow">COMMON QUESTIONS</p>
-            <h2>Energy-Efficient Window FAQs</h2>
-            {faqItems.map((item, index) => (
-              <details open={index === 0} key={item.question}>
-                <summary className="faq-question-summary"><h3 className="faq-question">{item.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary>
-                <p>{item.answer}</p>
-              </details>
-            ))}
-          </section>
+          
 
           <section className="article-sources">
             <p className="eyebrow">OFFICIAL RESOURCES</p>
@@ -179,6 +171,13 @@ export default function EnergyEfficientWindowsSpringHillPage() {
           </section>
         </article>
       </div>
+<FaqSection id="faqs"
+ eyebrow={<>COMMON QUESTIONS</>}
+ title={<>Energy-Efficient Window FAQs</>}
+ items={faqItems}
+ estimateHref="/contact#contact-form"
+ />
+
 
       <section className="blog-cta">
         <div><p className="eyebrow">PLANNING WINDOW REPLACEMENT?</p><h2>Compare the Opening and the Product Together.</h2><p>Swift can review your existing windows, discuss efficiency and impact-rated options, and build the installation and finish work into one written scope.</p></div>

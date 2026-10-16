@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -34,7 +35,14 @@ export default function Page(){return <main className="blog-page article-page"><
 <section id="new-construction"><p className="eyebrow">REMODEL VS. NEW BUILD</p><h2>The Main Difference Is the Existing Building.</h2><p>New construction creates a new structure. Commercial remodeling starts with a building that is already there, which means the project has to account for existing walls, systems, finishes, access and property conditions.</p><p>That existing context can make planning especially important because the work may need to connect new improvements to older construction without disrupting areas that are staying in place.</p></section>
 <section id="operations"><p className="eyebrow">BUSINESS OPERATIONS</p><h2>Commercial Remodeling Often Has to Work Around People Using the Property.</h2><p>Swift&apos;s client discovery information says commercial customers most often contact the company for service issues, remodeling or property maintenance. For occupied properties, the plan should consider employees, tenants, customers, work zones and operating hours before the project begins.</p></section>
 <section id="process"><p className="eyebrow">PROJECT PROCESS</p><h2>Start With the Property, Then Define the Work.</h2><p>Swift&apos;s commercial process begins with a property walkthrough and written proposal. From there, the project plan can coordinate construction, painting and finish work, along with applicable permitting when the approved scope requires it.</p><p>For a deeper look at the service, read <a href="/blog/commercial-construction-facility-services-hernando-county">Commercial Construction &amp; Facility Services in Hernando County</a> or visit <a href="/commercial-services">Swift&apos;s commercial services page</a>.</p></section>
-<section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Commercial Remodeling FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section>
+
 </article></div>
+<FaqSection id="faqs"
+ eyebrow={<>COMMON QUESTIONS</>}
+ title={<>Commercial Remodeling FAQs</>}
+ items={faqItems}
+ estimateHref="/contact#contact-form"
+ />
+
 <section className="blog-cta"><div><p className="eyebrow">PLANNING A COMMERCIAL REMODEL?</p><h2>Walk the Existing Property Before Finalizing the Scope.</h2><p>Swift can review the space, operating needs and improvements you are considering.</p></div><div><a className="button cta-primary" href="/contact">Request a commercial estimate</a><a href="/commercial-services">Commercial Services</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

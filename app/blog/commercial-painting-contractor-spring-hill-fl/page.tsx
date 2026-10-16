@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -34,7 +35,14 @@ export default function Page(){return <main className="blog-page article-page"><
 <section id="operations"><p className="eyebrow">PROPERTY OPERATIONS</p><h2>Plan Access Before the Crew Arrives.</h2><p>Occupied commercial properties require a different plan than an empty space. Customer traffic, tenants, employees, equipment and operating hours can all affect sequencing. Discuss which areas can be closed, when work can occur and how the project will move through the property.</p></section>
 <section id="prep"><p className="eyebrow">PREPARATION</p><h2>The Finish Is Only as Good as the Surface Under It.</h2><p>Preparation should match the existing surface and coating condition. Depending on the property, the scope may include cleaning, scraping, patching, caulking, priming and protecting adjacent areas before finish coats are applied.</p><div className="article-factor-grid"><div><strong>Surface Condition</strong><p>Identify peeling, cracking, damage and areas needing repair.</p></div><div><strong>Protection</strong><p>Define how floors, fixtures, landscaping and occupied areas will be protected.</p></div><div><strong>Access</strong><p>Plan lifts, work zones and entry points before work begins.</p></div><div><strong>Coating Scope</strong><p>Document the surfaces and finish expectations in the proposal.</p></div></div></section>
 <section id="proposal"><p className="eyebrow">COMPARE THE PROPOSAL</p><h2>Do Not Compare Commercial Painting Bids on Price Alone.</h2><p>Two bids are not equivalent if one includes extensive preparation and another assumes a simple repaint. Compare surfaces, preparation, exclusions, scheduling assumptions and the written scope before deciding which proposal actually covers the work you need.</p><p>Swift states that it provides written commercial painting proposals and serves Spring Hill along with commercial properties throughout Hernando, Citrus and Pasco Counties.</p><p><a href="/commercial-painting">Explore Swift&apos;s commercial painting services</a>.</p></section>
-<section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Commercial Painting FAQs for Property Managers</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section>
+
 </article></div>
+<FaqSection id="faqs"
+ eyebrow={<>COMMON QUESTIONS</>}
+ title={<>Commercial Painting FAQs for Property Managers</>}
+ items={faqItems}
+ estimateHref="/contact#contact-form"
+ />
+
 <section className="blog-cta"><div><p className="eyebrow">COMMERCIAL PROPERTY IN SPRING HILL?</p><h2>Start With a Property Walkthrough.</h2><p>Review the surfaces, access and operating requirements before the painting scope is finalized.</p></div><div><a className="button cta-primary" href="/contact">Request a commercial estimate</a><a href="/commercial-painting">Commercial Painting</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

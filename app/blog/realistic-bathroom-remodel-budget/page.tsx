@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
@@ -206,15 +207,7 @@ export default function BathroomRemodelBudgetArticlePage() {
             <p>The strongest decision usually balances how the room needs to work now, how long you expect to remain in the home and whether the design makes sense for the surrounding market.</p>
           </section>
 
-          <section className="article-faqs" id="faqs">
-            <p className="eyebrow">COMMON QUESTIONS</p>
-            <h2>Bathroom Remodel Budget FAQs</h2>
-            <details open><summary className="faq-question-summary"><h3 className="faq-question">Can You Remodel a Bathroom for $10,000?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>It may be possible when the room is small, the layout remains unchanged and the scope is focused. A complete renovation with custom tile, major plumbing changes or concealed damage will usually require a larger budget.</p></details>
-            <details><summary className="faq-question-summary"><h3 className="faq-question">How Much Should I Budget for a Small Bathroom Remodel?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>A practical starting range is about $8,000 to $17,000, depending on the scope, materials and existing conditions. Swift&apos;s verified average bathroom remodel falls between $10,000 and $17,000.</p></details>
-            <details><summary className="faq-question-summary"><h3 className="faq-question">What Is Usually the Most Expensive Part of a Bathroom Remodel?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>The shower is often one of the largest individual costs, especially when it includes custom tile, waterproofing, a bench, niche, frameless glass or relocated plumbing.</p></details>
-            <details><summary className="faq-question-summary"><h3 className="faq-question">Does a Bathroom Remodel Require a Permit in Florida?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>Permit requirements depend on the project and jurisdiction. Plumbing, electrical, structural and certain ventilation changes commonly require permits. Confirm the requirements for the property before construction begins.</p></details>
-            <details><summary className="faq-question-summary"><h3 className="faq-question">Does Swift Require a Deposit for a Bathroom Remodel?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>No. Swift Construction and Painting does not require an upfront deposit. Customers are invoiced after the work is complete.</p></details>
-          </section>
+          
 
           <section className="article-sources">
             <p className="eyebrow">REFERENCE POINTS</p>
@@ -237,6 +230,17 @@ export default function BathroomRemodelBudgetArticlePage() {
           <a className="article-back" href="/blog"><span>←</span> Back to the Swift Project Library</a>
         </article>
       </div>
+<FaqSection id="faqs"
+ eyebrow={<>COMMON QUESTIONS</>}
+ title={<>Bathroom Remodel Budget FAQs</>}
+ items={[{ question: <>Can You Remodel a Bathroom for $10,000?</>, answer: <>It may be possible when the room is small, the layout remains unchanged and the scope is focused. A complete renovation with custom tile, major plumbing changes or concealed damage will usually require a larger budget.</> },
+{ question: <>How Much Should I Budget for a Small Bathroom Remodel?</>, answer: <>A practical starting range is about $8,000 to $17,000, depending on the scope, materials and existing conditions. Swift&apos;s verified average bathroom remodel falls between $10,000 and $17,000.</> },
+{ question: <>What Is Usually the Most Expensive Part of a Bathroom Remodel?</>, answer: <>The shower is often one of the largest individual costs, especially when it includes custom tile, waterproofing, a bench, niche, frameless glass or relocated plumbing.</> },
+{ question: <>Does a Bathroom Remodel Require a Permit in Florida?</>, answer: <>Permit requirements depend on the project and jurisdiction. Plumbing, electrical, structural and certain ventilation changes commonly require permits. Confirm the requirements for the property before construction begins.</> },
+{ question: <>Does Swift Require a Deposit for a Bathroom Remodel?</>, answer: <>No. Swift Construction and Painting does not require an upfront deposit. Customers are invoiced after the work is complete.</> }]}
+ estimateHref="/contact#contact-form"
+ />
+
 
       <SiteFooter />
 

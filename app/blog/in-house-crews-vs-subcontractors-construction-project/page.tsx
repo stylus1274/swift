@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -163,13 +164,16 @@ export default function Page(){
           <p>For a kitchen remodel, bathroom renovation, whole-home remodel, addition or new build, the finished result depends on many individual tasks coming together in the right order. The contractor&apos;s job is to make that complexity feel organized to the homeowner.</p>
         </section>
 
-        <section className="article-faqs" id="faqs">
-          <p className="eyebrow">COMMON QUESTIONS</p>
-          <h2>In-House Crew and Subcontractor FAQs</h2>
-          {faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}
-        </section>
+        
       </article>
     </div>
+<FaqSection id="faqs"
+ eyebrow={<>COMMON QUESTIONS</>}
+ title={<>In-House Crew and Subcontractor FAQs</>}
+ items={faqItems}
+ estimateHref="/contact#contact-form"
+ />
+
 
     <section className="blog-cta">
       <div>

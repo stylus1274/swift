@@ -1,5 +1,7 @@
 "use client";
 
+import FaqSection from "@/components/FaqSection";
+
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
@@ -54,7 +56,7 @@ const remodelingFaqs = [
 ];
 
 export default function ResidentialRemodelingPage() {
-  const [openFaq, setOpenFaq] = useState(0);
+
   const [submitted, setSubmitted] = useState(false);
   const [project, setProject] = useState("");
   const [projectZip, setProjectZip] = useState("");
@@ -182,26 +184,13 @@ export default function ResidentialRemodelingPage() {
         </div>
       </section>
 
-      <section className="remodel-faq">
-        <div className="remodel-faq-heading">
-          <p className="eyebrow">REMODELING QUESTIONS</p>
-          <h2>What Homeowners Ask Before Starting a Renovation.</h2>
-          <p>Clear expectations make it easier to compare contractors and prepare for the project ahead.</p>
-        </div>
-        <p><a className="text-action" href="/faq/what-home-remodeling-projects-require-permit-hernando-county"><span className="text-action-label">See which remodeling projects may require a permit in Hernando County</span><span className="text-action-arrow" aria-hidden="true">→</span></a></p><p><a className="text-action" href="/faq/can-homeowner-pull-own-building-permit-florida"><span className="text-action-label">Can a Florida homeowner pull their own building permit?</span><span className="text-action-arrow" aria-hidden="true">→</span></a></p><div className="remodel-faq-list">
-          {remodelingFaqs.map((faq, index) => {
-            const isOpen = openFaq === index;
-            return (
-              <article className={isOpen ? "open" : ""} key={faq.question}>
-                <h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}>
-                  <span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span>
-                </button></h3>
-                <div hidden={!isOpen}><p>{faq.answer}</p></div>
-              </article>
-            );
-          })}
-        </div>
-      </section>
+      <FaqSection
+ eyebrow={<>REMODELING QUESTIONS</>}
+ title={<>What Homeowners Ask Before Starting a Renovation.</>}
+ description={<>Clear expectations make it easier to compare contractors and prepare for the project ahead.</>}
+ items={remodelingFaqs}
+ estimateHref="#remodel-estimate"
+ />
 
       <section className="remodel-estimate" id="remodel-estimate">
         <div className="remodel-estimate-copy">

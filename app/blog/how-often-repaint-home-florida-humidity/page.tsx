@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -161,16 +162,7 @@ export default function FloridaHumidityRepaintingArticlePage() {
             <p>Swift handles <a href="/residential-painting">residential painting</a>, including <a href="/exterior-painting">exterior painting</a> and <a href="/interior-painting">interior painting</a> across Hernando, Citrus and Pasco Counties. If you are seeing peeling, fading or repeated mildew, <a href="/contact">request a free project estimate</a> and have the condition evaluated before deciding whether the home needs touch-up work or a full repaint.</p>
           </section>
 
-          <section className="article-faqs" id="faqs">
-            <p className="eyebrow">COMMON QUESTIONS</p>
-            <h2>Florida Exterior Repainting FAQs</h2>
-            {faqItems.map((item, index) => (
-              <details open={index === 0} key={item.question}>
-                <summary className="faq-question-summary"><h3 className="faq-question">{item.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary>
-                <p>{item.answer}</p>
-              </details>
-            ))}
-          </section>
+          
 
           <section className="article-sources">
             <p className="eyebrow">PAINTING RESOURCES</p>
@@ -184,6 +176,13 @@ export default function FloridaHumidityRepaintingArticlePage() {
           </section>
         </article>
       </div>
+<FaqSection id="faqs"
+ eyebrow={<>COMMON QUESTIONS</>}
+ title={<>Florida Exterior Repainting FAQs</>}
+ items={faqItems}
+ estimateHref="/contact#contact-form"
+ />
+
 
       <section className="blog-cta">
         <div><p className="eyebrow">READY FOR A FRESH EXTERIOR?</p><h2>Find Out What Your Home Actually Needs.</h2><p>Swift can evaluate the existing coating, surface condition and preparation required before recommending the right repainting scope.</p></div>

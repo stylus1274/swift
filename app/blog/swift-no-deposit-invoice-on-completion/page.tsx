@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -36,7 +37,14 @@ export default function Page(){return <main className="blog-page article-page"><
 <section id="deposit"><p className="eyebrow">STEP 3</p><h2>No Up-Front Deposit.</h2><p>Swift&apos;s client questionnaire specifically says the company does not take a deposit. That policy is one of the questions customers commonly ask before hiring the company.</p><p>This is Swift&apos;s stated company policy. Homeowners should still review the written estimate and any project-specific contract terms so they understand exactly how their particular project will be billed.</p></section>
 <section id="completion"><p className="eyebrow">STEP 4</p><h2>Invoice on Completion.</h2><p>The same client-provided materials state that Swift invoices on completion. The company also says it tries to stay on one project until completion rather than starting several jobs and repeatedly leaving customers waiting for crews to return.</p><div className="article-factor-grid"><div><strong>Site Visit</strong><p>Evaluate the property and scope in person.</p></div><div><strong>Written Estimate</strong><p>Document the work before scheduling.</p></div><div><strong>No Deposit</strong><p>Swift says it does not require an up-front deposit.</p></div><div><strong>Completion Invoice</strong><p>Swift says customers are invoiced when the work is complete.</p></div></div></section>
 <section><p className="eyebrow">WHAT TO REVIEW</p><h2>Clear Payment Terms Still Belong in Writing.</h2><p>Even with a simple payment policy, the written proposal should make the scope, exclusions and payment expectations clear. Homeowners comparing contractors should ask each company to explain how deposits, progress payments, change orders and final payment work for the specific project being proposed.</p><p>For more contractor due diligence, read <a href="/blog/how-to-verify-florida-contractor-license-insurance-permit-history">how to verify a Florida contractor before hiring</a>.</p></section>
-<section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Swift Payment Process FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section>
+
 </article></div>
+<FaqSection id="faqs"
+ eyebrow={<>COMMON QUESTIONS</>}
+ title={<>Swift Payment Process FAQs</>}
+ items={faqItems}
+ estimateHref="/contact#contact-form"
+ />
+
 <section className="blog-cta"><div><p className="eyebrow">READY TO DISCUSS YOUR PROJECT?</p><h2>Start With the Scope and the Property.</h2><p>Swift can schedule an in-person estimate and prepare a written project scope.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/services">Explore Services</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

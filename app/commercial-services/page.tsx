@@ -1,5 +1,7 @@
 "use client";
 
+import FaqSection from "@/components/FaqSection";
+
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
@@ -23,7 +25,7 @@ const commercialFaqs = [
 ];
 
 export default function CommercialServicesPage() {
-  const [openFaq, setOpenFaq] = useState(0);
+
   const [projectType, setProjectType] = useState("");
   const [propertyType, setPropertyType] = useState("");
   const [projectZip, setProjectZip] = useState("");
@@ -141,19 +143,13 @@ export default function CommercialServicesPage() {
         <div><a className="button cta-primary" href="#commercial-estimate">Request a commercial estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
       </section>
 
-      <section className="remodel-faq commercial-faq">
-        <div className="remodel-faq-heading">
-          <p className="eyebrow">COMMERCIAL QUESTIONS</p>
-          <h2>What Property Owners Ask Before Work Begins.</h2>
-          <p>Clear answers make it easier to evaluate the scope, schedule and contractor responsible for your property.</p>
-        </div>
-        <div className="remodel-faq-list">
-          {commercialFaqs.map((faq, index) => {
-            const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
-          })}
-        </div>
-      </section>
+      <FaqSection
+ eyebrow={<>COMMERCIAL QUESTIONS</>}
+ title={<>What Property Owners Ask Before Work Begins.</>}
+ description={<>Clear answers make it easier to evaluate the scope, schedule and contractor responsible for your property.</>}
+ items={commercialFaqs}
+ estimateHref="#commercial-estimate"
+ />
 
       <section className="remodel-estimate" id="commercial-estimate">
         <div className="remodel-estimate-copy">

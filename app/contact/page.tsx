@@ -1,5 +1,7 @@
 "use client";
 
+import FaqSection from "@/components/FaqSection";
+
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
@@ -31,7 +33,7 @@ const contactFaqs = [
 ];
 
 export default function ContactPage() {
-  const [openFaq, setOpenFaq] = useState(0);
+
   const [submitted, setSubmitted] = useState(false);
 
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
@@ -111,15 +113,13 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="contact-faq">
-        <div className="contact-faq-heading"><p className="eyebrow">ESTIMATE QUESTIONS</p><h2>What to Know Before You Reach Out.</h2><p>A few details now help Swift respond with a clearer and more useful next step.</p></div>
-        <div className="contact-faq-list">
-          {contactFaqs.map((faq, index) => {
-            const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
-          })}
-        </div>
-      </section>
+      <FaqSection
+ eyebrow={<>ESTIMATE QUESTIONS</>}
+ title={<>What to Know Before You Reach Out.</>}
+ description={<>A few details now help Swift respond with a clearer and more useful next step.</>}
+ items={contactFaqs}
+ estimateHref="#contact-form"
+ />
 
       <section className="contact-final-cta">
         <div><p className="eyebrow">READY WHEN YOU ARE</p><h2>Start With a Free Project Estimate.</h2><p>Tell us what you are planning and we will help identify the right next step.</p></div>

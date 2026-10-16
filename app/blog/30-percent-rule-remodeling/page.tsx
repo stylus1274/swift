@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -34,7 +35,14 @@ export default function Page(){return <main className="blog-page article-page"><
 <section id="meaning"><p className="eyebrow">WHAT IT IS FOR</p><h2>Think of It as an Over-Improvement Check.</h2><p>The idea behind the rule is that remodeling spending and resale value are not the same thing. A homeowner can invest heavily in finishes or improvements without the market returning every dollar at resale. Comparing the renovation plan with the home&apos;s value can help frame that risk.</p><p>The rule is most relevant when resale economics are a major goal. A homeowner planning to stay long term may weigh comfort, accessibility, layout and daily use differently.</p></section>
 <section id="limits"><p className="eyebrow">WHERE IT FALLS SHORT</p><h2>A Percentage Cannot See Your House.</h2><p>The 30% rule does not know the condition of the property, the local market, structural needs, the number of rooms being renovated, required repairs or the finishes you are choosing. It also does not distinguish between necessary work and optional upgrades.</p><p>That is why it should not replace a written remodeling scope or an in-person estimate.</p></section>
 <section id="swift"><p className="eyebrow">SWIFT PROJECT PLANNING</p><h2>Swift&apos;s Historical Remodeling Range Is Broader Than a Formula.</h2><p>Swift&apos;s client-provided discovery material says its remodeling projects have commonly ranged from about $8,000 to $80,000. That is a broad historical range across different project types, not a fixed price list and not a promise that a particular project will fall inside it.</p><p>Actual pricing depends on the property, project size, structural work, materials, selections, permitting, trade requirements and final written scope.</p><p><a href="/cost-guides">Explore Swift&apos;s remodeling cost guides</a> or review <a href="/home-remodeling">home remodeling services</a>.</p></section>
-<section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>30% Remodeling Rule FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section>
+
 </article></div>
+<FaqSection id="faqs"
+ eyebrow={<>COMMON QUESTIONS</>}
+ title={<>30% Remodeling Rule FAQs</>}
+ items={faqItems}
+ estimateHref="/contact#contact-form"
+ />
+
 <section className="blog-cta"><div><p className="eyebrow">READY TO MOVE FROM A RULE OF THUMB TO A REAL NUMBER?</p><h2>Define the Scope at the Property.</h2><p>An in-person walkthrough gives you a better basis for budgeting than a percentage alone.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/cost-guides">Cost Guides</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

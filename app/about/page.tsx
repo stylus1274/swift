@@ -1,5 +1,7 @@
 "use client";
 
+import FaqSection from "@/components/FaqSection";
+
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
@@ -49,7 +51,7 @@ const aboutFaqs = [
 ];
 
 export default function AboutPage() {
-  const [openFaq, setOpenFaq] = useState(0);
+
   const [project, setProject] = useState("");
   const [projectZip, setProjectZip] = useState("");
   const [timing, setTiming] = useState("");
@@ -141,15 +143,13 @@ export default function AboutPage() {
         <div><a className="button cta-primary" href="#about-estimate">Discuss your project</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
       </section>
 
-      <section className="about-faq">
-        <div className="about-faq-heading"><p className="eyebrow">ABOUT SWIFT</p><h2>What Clients Ask Before the First Walkthrough.</h2><p>Clear answers make it easier to decide whether a contractor is the right fit for your project.</p></div>
-        <div className="about-faq-list">
-          {aboutFaqs.map((faq, index) => {
-            const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
-          })}
-        </div>
-      </section>
+      <FaqSection
+ eyebrow={<>ABOUT SWIFT</>}
+ title={<>What Clients Ask Before the First Walkthrough.</>}
+ description={<>Clear answers make it easier to decide whether a contractor is the right fit for your project.</>}
+ items={aboutFaqs}
+ estimateHref="#about-estimate"
+ />
 
       <section className="about-estimate" id="about-estimate">
         <div className="about-estimate-copy">

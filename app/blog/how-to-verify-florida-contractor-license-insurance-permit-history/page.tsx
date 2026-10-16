@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -166,16 +167,7 @@ export default function VerifyFloridaContractorArticlePage() {
             <p>Once the verification checks are complete, compare the actual project scope. If you are considering managing the permit yourself, read <a href="/faq/can-homeowner-pull-own-building-permit-florida">how Florida&apos;s owner-builder permit exemption works</a>. Swift provides written proposals for <a href="/services">construction, remodeling and painting services</a> across the Florida Nature Coast.</p>
           </section>
 
-          <section className="article-faqs" id="faqs">
-            <p className="eyebrow">COMMON QUESTIONS</p>
-            <h2>Florida Contractor Verification FAQs</h2>
-            {faqItems.map((item, index) => (
-              <details open={index === 0} key={item.question}>
-                <summary className="faq-question-summary"><h3 className="faq-question">{item.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary>
-                <p>{item.answer}</p>
-              </details>
-            ))}
-          </section>
+          
 
           <section className="article-sources">
             <p className="eyebrow">OFFICIAL RESOURCES</p>
@@ -188,6 +180,13 @@ export default function VerifyFloridaContractorArticlePage() {
           </section>
         </article>
       </div>
+<FaqSection id="faqs"
+ eyebrow={<>COMMON QUESTIONS</>}
+ title={<>Florida Contractor Verification FAQs</>}
+ items={faqItems}
+ estimateHref="/contact#contact-form"
+ />
+
 
       <section className="blog-cta">
         <div><p className="eyebrow">READY TO DISCUSS YOUR PROJECT?</p><h2>Verify the Contractor. Then Review the Scope.</h2><p>Swift can review your project and provide a written estimate for construction, remodeling or painting work throughout the local service area.</p></div>

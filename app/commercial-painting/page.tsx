@@ -1,5 +1,7 @@
 "use client";
 
+import FaqSection from "@/components/FaqSection";
+
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
@@ -54,7 +56,7 @@ const paintingFaqs = [
 ];
 
 export default function CommercialPaintingPage() {
-  const [openFaq, setOpenFaq] = useState(0);
+
   const [projectType, setProjectType] = useState("");
   const [propertyType, setPropertyType] = useState("");
   const [projectZip, setProjectZip] = useState("");
@@ -202,19 +204,13 @@ export default function CommercialPaintingPage() {
         </div>
       </section>
 
-      <section className="remodel-faq commercial-faq">
-        <div className="remodel-faq-heading">
-          <p className="eyebrow">COMMERCIAL PAINTING QUESTIONS</p>
-          <h2>What Property Owners Ask Before Painting Begins.</h2>
-          <p>Clear answers make it easier to compare the scope, schedule and contractor responsible for your property.</p>
-        </div>
-        <div className="remodel-faq-list">
-          {paintingFaqs.map((faq, index) => {
-            const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
-          })}
-        </div>
-      </section>
+      <FaqSection
+ eyebrow={<>COMMERCIAL PAINTING QUESTIONS</>}
+ title={<>What Property Owners Ask Before Painting Begins.</>}
+ description={<>Clear answers make it easier to compare the scope, schedule and contractor responsible for your property.</>}
+ items={paintingFaqs}
+ estimateHref="#commercial-painting-estimate"
+ />
 
       <section className="remodel-estimate" id="commercial-painting-estimate">
         <div className="remodel-estimate-copy">
