@@ -106,7 +106,7 @@ export default function ExteriorPaintingPage() {
           <h1>Exterior Painting Built for Florida Homes.</h1>
           <p>Careful preparation and durable finishes that protect your home, sharpen its curb appeal and stand up to Florida weather.</p>
           <div className="remodel-hero-actions">
-            <a className="button remodel-primary" href="#exterior-painting-quick-project">Get a Free Painting Estimate</a>
+            <a className="button cta-primary" href="#exterior-painting-quick-project">Get a free painting estimate</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="remodel-hero-proof">
@@ -144,7 +144,7 @@ export default function ExteriorPaintingPage() {
               <span>{service.number}</span>
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
-              <a href="#exterior-painting-estimate">Discuss Your Home <b>→</b></a>
+              <a className="text-action" href="#exterior-painting-estimate"><span className="text-action-label">Discuss Your Home</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             </article>
           ))}
         </div>
@@ -155,7 +155,7 @@ export default function ExteriorPaintingPage() {
           <p className="eyebrow">PREPARATION FOR FLORIDA WEATHER</p>
           <h2>Florida Exteriors Need More Than a Fresh Coat.</h2>
           <p>Sun, rain and humidity put constant pressure on exterior finishes. Swift starts with the surface condition, then builds a preparation and coating plan around what the home actually needs.</p>
-          <a className="button remodel-primary" href="#exterior-painting-estimate">Plan a Home Walkthrough</a>
+          <a className="button cta-primary" href="#exterior-painting-estimate">Plan a home walkthrough</a>
         </div>
         <div className="commercial-coordination-list">
           <article><span>01</span><div><h3>Evaluate the Surfaces</h3><p>We review existing coatings, stucco, trim, joints and weather-exposed areas before defining the work.</p></div></article>
@@ -197,8 +197,8 @@ export default function ExteriorPaintingPage() {
           <p>When the exterior needs more than paint, Swift can coordinate connected repairs and improvements under one licensed building contractor.</p>
         </div>
         <div className="commercial-painting-proof-actions">
-          <a className="button remodel-primary" href="#exterior-painting-estimate">Request a Free Estimate</a>
-          <a href="/residential-painting">Explore Residential Painting <span aria-hidden="true">→</span></a>
+          <a className="button cta-primary" href="#exterior-painting-estimate">Request a free estimate</a>
+          <a className="text-action" href="/residential-painting"><span className="text-action-label">Explore Residential Painting</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
         </div>
       </section>
 
@@ -211,7 +211,7 @@ export default function ExteriorPaintingPage() {
         <div className="remodel-faq-list">
           {exteriorFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b></button><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
+            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
           })}
         </div>
       </section>
@@ -231,7 +231,7 @@ export default function ExteriorPaintingPage() {
           <div className="remodel-form-row"><label><span className="form-label-text">Exterior Scope <span className="form-requirement">(required)</span></span><select value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select scope</option><option>Whole-home exterior</option><option>Stucco and masonry</option><option>Trim, doors and accents</option><option>Repaint and maintenance</option><option>Other exterior project</option></select></label><label><span className="form-label-text">Home Type <span className="form-requirement">(required)</span></span><select value={homeType} onChange={(event) => setHomeType(event.target.value)} required><option value="" disabled>Select home</option><option>Single-story home</option><option>Two-story home</option><option>Townhome or villa</option><option>Other</option></select></label></div>
           <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us about the exterior condition, surfaces, color change and any repairs you have noticed." /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my exterior painting estimate"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my exterior painting estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

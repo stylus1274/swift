@@ -79,7 +79,7 @@ export default function CustomHomeBuildingArticlePage() {
           <div className="article-sidebar-cta">
             <p>Planning a New Home?</p>
             <h2>Start With the Property and the Priorities.</h2>
-            <a className="button blog-primary" href="/contact">Discuss Your Project</a>
+            <a className="text-action" href="/contact"><span className="text-action-label">Discuss your project</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             <a href="tel:3527017458">Call (352) 701-7458</a>
           </div>
         </aside>
@@ -137,7 +137,7 @@ export default function CustomHomeBuildingArticlePage() {
             <p className="eyebrow">LOCAL CONSTRUCTION NOTE</p>
             <h2>Florida Conditions Need to Be Designed Into the Home.</h2>
             <p>The current Florida Building Code addresses structural, energy, mechanical, plumbing and other requirements that shape a new home. Wind exposure, water management, roofing, openings and site drainage should be considered during design, not treated as late-stage corrections.</p>
-            <a href="/new-home-construction">Explore Swift&apos;s New Home Construction Services <b>→</b></a>
+            <a className="text-action" href="/new-home-construction"><span className="text-action-label">Explore Swift&apos;s New Home Construction Services</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </section>
 
           <section id="building-stages">
@@ -190,11 +190,11 @@ export default function CustomHomeBuildingArticlePage() {
           <section className="article-faqs" id="faqs">
             <p className="eyebrow">COMMON QUESTIONS</p>
             <h2>Custom Home Building FAQs</h2>
-            <details open><summary>How Long Does It Take to Build a Custom Home in Hernando County?<span>+</span></summary><p>A custom home commonly requires several months of preconstruction followed by roughly 8 to 14 months of active construction. The property, plans, permitting, weather, material lead times and owner decisions can all change the schedule.</p></details>
-            <details><summary>Do I Need Plans Before Talking to a Custom Home Builder?<span>+</span></summary><p>No. An early builder conversation can help test the budget, lot conditions and overall feasibility before architectural and engineering work is finalized.</p></details>
-            <details><summary>Who Handles Permits and Inspections for a New Home?<span>+</span></summary><p>The building contractor usually coordinates permit submissions, inspection scheduling and corrections. Design professionals provide the signed and sealed documents required for their disciplines.</p></details>
-            <details><summary>Can Swift Build on Land I Already Own?<span>+</span></summary><p>Yes. The first step is reviewing the property, access, utilities, zoning, flood information and likely site-work requirements before the scope is finalized.</p></details>
-            <details><summary>What Happens Before a Certificate of Occupancy Is Issued?<span>+</span></summary><p>Required trade, building and zoning inspections must be completed, outstanding corrections must be resolved and the property must meet the approved plans and applicable requirements before occupancy is authorized.</p></details>
+            <details open><summary className="faq-question-summary"><h3 className="faq-question">How Long Does It Take to Build a Custom Home in Hernando County?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>A custom home commonly requires several months of preconstruction followed by roughly 8 to 14 months of active construction. The property, plans, permitting, weather, material lead times and owner decisions can all change the schedule.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">Do I Need Plans Before Talking to a Custom Home Builder?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>No. An early builder conversation can help test the budget, lot conditions and overall feasibility before architectural and engineering work is finalized.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">Who Handles Permits and Inspections for a New Home?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>The building contractor usually coordinates permit submissions, inspection scheduling and corrections. Design professionals provide the signed and sealed documents required for their disciplines.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">Can Swift Build on Land I Already Own?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>Yes. The first step is reviewing the property, access, utilities, zoning, flood information and likely site-work requirements before the scope is finalized.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">What Happens Before a Certificate of Occupancy Is Issued?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>Required trade, building and zoning inspections must be completed, outstanding corrections must be resolved and the property must meet the approved plans and applicable requirements before occupancy is authorized.</p></details>
           </section>
 
           <section className="article-sources">
@@ -212,7 +212,7 @@ export default function CustomHomeBuildingArticlePage() {
             <p className="eyebrow">BUILD WITH A CLEARER PLAN</p>
             <h2>Talk With Swift About Your Property and Your New Home.</h2>
             <p>Start with a practical conversation about the lot, the home you want and the decisions that will shape the project.</p>
-            <div><a className="button blog-primary" href="/contact">Plan Your New Home</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
+            <div><a className="text-action" href="/contact"><span className="text-action-label">Plan your new home</span><span className="text-action-arrow" aria-hidden="true">→</span></a><a href="tel:3527017458">Call (352) 701-7458</a></div>
           </section>
 
           <a className="article-back" href="/blog"><span>←</span> Back to the Swift Project Library</a>

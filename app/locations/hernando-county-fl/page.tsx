@@ -20,7 +20,7 @@ export default function HernandoCountyLocationPage(){
         <p className={styles.eyebrow}>HERNANDO COUNTY, FLORIDA</p>
         <h1>Construction & Remodeling Contractor in Hernando County, FL</h1>
         <p className={styles.deck}>Swift Construction & Painting provides new construction, multi-family building, remodeling, painting, additions and commercial services throughout Hernando County.</p>
-        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a><a className={styles.secondaryLink} href="/hernando-county-fl/new-construction">Explore New Construction <span aria-hidden="true">→</span></a></div>
+        <div className={styles.heroActions}><a className="button cta-primary" href="/contact">Request a free estimate</a><a className="text-action" href="/hernando-county-fl/new-construction"><span className="text-action-label">Explore New Construction</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div>
       </div>
       <div className={styles.heroImage}><img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg" alt="Completed Swift remodeling project in Hernando County, Florida"/></div>
     </section>
@@ -36,7 +36,7 @@ export default function HernandoCountyLocationPage(){
     </section>
     <section className={styles.servicesSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>SERVICES ACROSS HERNANDO COUNTY</p><h2>One Contractor Across Residential and Commercial Work.</h2></div>
-      <div className={styles.serviceGrid}>{services.map(([title,href,copy],index)=><a href={href} key={title}><span>{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p><b>Learn More →</b></a>)}</div>
+      <div className={styles.serviceGrid}>{services.map(([title,href,copy],index)=><a href={href} key={title}><span>{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p><b className="text-action"><span className="text-action-label">Learn More</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>)}</div>
     </section>
     <section className={styles.projectsSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>HERNANDO COUNTY PROJECT PROOF</p><h2>Documented Work in Spring Hill and Brooksville.</h2><p>These two completed projects show the range between major remodeling and ground-up custom construction.</p></div>
@@ -46,7 +46,7 @@ export default function HernandoCountyLocationPage(){
       </div>
     </section>
     <section className={styles.processSection}><div><p className={styles.eyebrow}>LOCAL ESTIMATE PROCESS</p><h2>Scope the Project Before You Price It.</h2></div><div className={styles.steps}><p><strong>01</strong><span>Tell Swift what type of work you are planning and where the property is located.</span></p><p><strong>02</strong><span>Meet on site for a walkthrough so the scope can be evaluated in person.</span></p><p><strong>03</strong><span>Review the written estimate, selections and projected schedule before construction begins.</span></p></div></section>
-    <section className={styles.cta}><div><p className={styles.eyebrow}>PLANNING WORK IN HERNANDO COUNTY?</p><h2>Start With a Free On-Site Estimate.</h2><p>Talk through the scope with Swift and get a written estimate for your project.</p></div><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a></section>
+    <section className={styles.cta}><div><p className={styles.eyebrow}>PLANNING WORK IN HERNANDO COUNTY?</p><h2>Start With a Free On-Site Estimate.</h2><p>Talk through the scope with Swift and get a written estimate for your project.</p></div><a className="button cta-primary" href="/contact">Request a free estimate</a></section>
     <SiteFooter />
   </main>;
 }

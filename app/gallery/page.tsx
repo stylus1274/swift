@@ -44,8 +44,8 @@ export default function GalleryPage() {
           <h1>See What Quality Looks Like When the Whole Project Comes Together.</h1>
           <p>Explore painting, remodeling, construction and exterior improvement work planned around Florida homes and properties.</p>
           <div className="gallery-hero-actions">
-            <a className="button remodel-primary" href="#project-gallery">View the Projects</a>
-            <a href="#gallery-estimate">Request a Similar Project <span aria-hidden="true">→</span></a>
+            <a className="button cta-primary-inverse" href="#project-gallery">View the projects</a>
+            <a className="text-action" href="#gallery-estimate"><span className="text-action-label">Request a Similar Project</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
         <div className="gallery-hero-proof"><span>Serving Florida Homeowners Since 2003</span><span>Licensed &amp; Insured • CBC1260893</span><span>Written, Itemized Proposals</span></div>
@@ -63,7 +63,7 @@ export default function GalleryPage() {
           {visibleProjects.map((project, index) => (
             <article className={index % 5 === 0 || index % 5 === 3 ? "gallery-card gallery-card-wide" : "gallery-card"} key={project.title}>
               <div className="gallery-card-image"><img src={project.image} alt={project.alt} /></div>
-              <div className="gallery-card-copy"><div><span>{project.category}</span><h3>{project.title}</h3><p>{project.location}, Florida</p></div><a href="#gallery-estimate" aria-label={`Request a project similar to ${project.title}`}>Request Something Similar <b aria-hidden="true">→</b></a></div>
+              <div className="gallery-card-copy"><div><span>{project.category}</span><h3>{project.title}</h3><p>{project.location}, Florida</p></div><a className="text-action" href="#gallery-estimate" aria-label={`Request a project similar to ${project.title}`}><span className="text-action-label">Request Something Similar</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div>
             </article>
           ))}
         </div>
@@ -93,7 +93,7 @@ export default function GalleryPage() {
           <div className="remodel-form-row"><label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label><label><span className="form-label-text">Project City or ZIP <span className="form-requirement">(required)</span></span><input name="location" placeholder="Spring Hill" required /></label></div>
           <label><span className="form-label-text">Project Type <span className="form-requirement">(required)</span></span><select defaultValue="" required><option value="" disabled>Select a project</option><option>Painting</option><option>Residential remodeling</option><option>New construction or addition</option><option>Windows, doors or flooring</option><option>Pressure washing</option><option>Commercial property</option><option>Not sure yet</option></select></label>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us what you liked in the gallery and what you would like to change at your property."  /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

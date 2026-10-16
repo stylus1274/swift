@@ -77,7 +77,7 @@ export default function AboutPage() {
           <h1>Built Locally. Managed Personally. Finished With Care.</h1>
           <p>Since 2003, Swift has helped homeowners and property owners across Florida&apos;s Nature Coast complete painting, remodeling and construction projects with one experienced contractor responsible for the work.</p>
           <div className="about-hero-actions">
-            <a className="button about-primary" href="#about-quick-project">Request a Free Estimate</a>
+            <a className="button cta-primary" href="#about-quick-project">Request a free estimate</a>
             <a className="about-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="about-hero-proof"><span>Licensed &amp; Insured • CBC1260893</span><span>Serving Local Clients Since 2003</span><span>Written, Itemized Proposals</span></div>
@@ -104,7 +104,7 @@ export default function AboutPage() {
         <div className="about-story-copy">
           <p>Swift Construction &amp; Painting was built around a straightforward idea: clients should know who is responsible for their project, understand what is included and feel confident that the details will be handled with care.</p>
           <p>More than two decades later, that approach still guides the work. Whether the project is a fresh exterior finish, a full renovation, a new home or a commercial improvement, Swift connects planning, coordination and finish work under one clear scope.</p>
-          <a href="#about-values">What Quality Means to Swift <span aria-hidden="true">↓</span></a>
+          <a className="text-action" href="#about-values"><span className="text-action-label">What Quality Means to Swift</span><span className="text-action-arrow" aria-hidden="true">↓</span></a>
         </div>
         <aside className="about-story-stat"><strong>20+</strong><span>Years Serving Local Homeowners and Property Owners</span></aside>
       </section>
@@ -129,16 +129,16 @@ export default function AboutPage() {
       <section className="about-services">
         <div className="about-services-heading"><p className="eyebrow">WHAT WE DO</p><h2>One Contractor for the Work Your Property Needs Next.</h2></div>
         <div className="about-services-grid">
-          <a href="/residential-painting"><span>01</span><h3>Residential Painting</h3><p>Careful interior and exterior preparation with finishes made for Florida homes.</p><b>Explore Painting →</b></a>
-          <a href="/residential-remodeling"><span>02</span><h3>Residential Remodeling</h3><p>Bathrooms, kitchens and whole-home improvements managed under one plan.</p><b>Explore Remodeling →</b></a>
-          <a href="/new-home-construction"><span>03</span><h3>New Home Construction</h3><p>Ground-up construction coordinated from planning through final walkthrough.</p><b>Explore New Homes →</b></a>
-          <a href="/commercial-services"><span>04</span><h3>Commercial Services</h3><p>Construction, painting and facility improvements planned around your property.</p><b>Explore Commercial Work →</b></a>
+          <a href="/residential-painting"><span>01</span><h3>Residential Painting</h3><p>Careful interior and exterior preparation with finishes made for Florida homes.</p><b className="text-action"><span className="text-action-label">Explore painting</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>
+          <a href="/residential-remodeling"><span>02</span><h3>Residential Remodeling</h3><p>Bathrooms, kitchens and whole-home improvements managed under one plan.</p><b className="text-action"><span className="text-action-label">Explore remodeling</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>
+          <a href="/new-home-construction"><span>03</span><h3>New Home Construction</h3><p>Ground-up construction coordinated from planning through final walkthrough.</p><b className="text-action"><span className="text-action-label">Explore new homes</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>
+          <a href="/commercial-services"><span>04</span><h3>Commercial Services</h3><p>Construction, painting and facility improvements planned around your property.</p><b className="text-action"><span className="text-action-label">Explore commercial work</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>
         </div>
       </section>
 
       <section className="about-local">
         <div><p className="eyebrow">LOCAL BY DESIGN</p><h2>Serving Florida&apos;s Nature Coast Since 2003.</h2><p>Swift serves Spring Hill, Brooksville, Weeki Wachee, Hernando Beach, Ridge Manor and communities throughout Hernando, Citrus and Pasco Counties.</p></div>
-        <div><a className="button about-primary" href="#about-estimate">Discuss Your Project</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
+        <div><a className="button cta-primary" href="#about-estimate">Discuss your project</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
       </section>
 
       <section className="about-faq">
@@ -146,7 +146,7 @@ export default function AboutPage() {
         <div className="about-faq-list">
           {aboutFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b></button><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
+            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
           })}
         </div>
       </section>
@@ -165,7 +165,7 @@ export default function AboutPage() {
           <div className="about-form-row"><label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label><label><span className="form-label-text">City or ZIP <span className="form-requirement">(required)</span></span><input name="location" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
           <div className="about-form-row"><label><span className="form-label-text">Project Type <span className="form-requirement">(required)</span></span><select value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select project</option><option>Residential painting</option><option>Residential remodeling</option><option>New home construction</option><option>Commercial services</option><option>Other project</option></select></label><label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Just researching</option></select></label></div>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us about the property, the work you are considering and your ideal timing." /></label>
-          <button className="button about-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

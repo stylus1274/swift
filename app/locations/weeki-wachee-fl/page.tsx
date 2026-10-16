@@ -20,7 +20,7 @@ export default function WeekiWacheeLocationPage(){
         <p className={styles.eyebrow}>WEEKI WACHEE, FLORIDA</p>
         <h1>Construction, Remodeling & Painting in Weeki Wachee, FL</h1>
         <p className={styles.deck}>Swift Construction & Painting serves Weeki Wachee homeowners with remodeling, new construction, painting, additions, windows and doors, and related building services.</p>
-        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a><a className={styles.secondaryLink} href="/gallery">See Swift&apos;s Work <span aria-hidden="true">→</span></a></div>
+        <div className={styles.heroActions}><a className="button cta-primary" href="/contact">Request a free estimate</a><a className="text-action" href="/gallery"><span className="text-action-label">See Swift&apos;s Work</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div>
       </div>
       <div className={styles.heroImage}><img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg" alt="Example of completed Swift remodeling work in Hernando County"/></div>
     </section>
@@ -36,7 +36,7 @@ export default function WeekiWacheeLocationPage(){
     </section>
     <section className={styles.servicesSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>SERVICES IN WEEKI WACHEE</p><h2>Home Construction and Improvement Services.</h2></div>
-      <div className={styles.serviceGrid}>{services.map(([title,href,copy],index)=><a href={href} key={title}><span>{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p><b>Learn More →</b></a>)}</div>
+      <div className={styles.serviceGrid}>{services.map(([title,href,copy],index)=><a href={href} key={title}><span>{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p><b className="text-action"><span className="text-action-label">Learn More</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>)}</div>
     </section>
     <section className={styles.projectsSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>REAL SWIFT PROJECTS</p><h2>Examples of Completed Work Nearby.</h2><p>These projects are verified Swift jobs in Hernando County. They are shown as examples of the company&apos;s work, not represented as Weeki Wachee projects.</p></div>
@@ -46,7 +46,7 @@ export default function WeekiWacheeLocationPage(){
       </div>
     </section>
     <section className={styles.processSection}><div><p className={styles.eyebrow}>HOW ESTIMATES WORK</p><h2>Start With an On-Site Walkthrough.</h2></div><div className={styles.steps}><p><strong>01</strong><span>Tell Swift what you are planning and where the property is located.</span></p><p><strong>02</strong><span>Meet on site so the project can be evaluated in person.</span></p><p><strong>03</strong><span>Review the written estimate and projected schedule before deciding how to proceed.</span></p></div></section>
-    <section className={styles.cta}><div><p className={styles.eyebrow}>PLANNING WORK IN WEEKI WACHEE?</p><h2>Start With a Free Estimate.</h2><p>Talk through your project with Swift and schedule an in-person walkthrough.</p></div><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a></section>
+    <section className={styles.cta}><div><p className={styles.eyebrow}>PLANNING WORK IN WEEKI WACHEE?</p><h2>Start With a Free Estimate.</h2><p>Talk through your project with Swift and schedule an in-person walkthrough.</p></div><a className="button cta-primary" href="/contact">Request a free estimate</a></section>
     <SiteFooter />
   </main>;
 }

@@ -4,6 +4,7 @@ import "./globals.css";
 import "./mega-menu.css";
 import "./sticky-header.css";
 import "./forms.css";
+import "./buttons.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://swiftconstructionandpainting.com"),

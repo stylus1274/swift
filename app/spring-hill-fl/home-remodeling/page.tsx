@@ -20,7 +20,7 @@ export default function SpringHillHomeRemodelingPage(){
         <p className={styles.eyebrow}>HOME REMODELING • SPRING HILL, FL</p>
         <h1>Home Remodeling in Spring Hill, FL</h1>
         <p className={styles.deck}>Swift Construction & Painting handles kitchen, bathroom and whole-home remodeling in Spring Hill with one coordinated scope for the rooms, finishes and trades involved.</p>
-        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a><a className={styles.secondaryLink} href="/projects/whole-home-remodel-spring-hill-fl">See a Spring Hill Remodel <span>→</span></a></div>
+        <div className={styles.heroActions}><a className="button cta-primary" href="/contact">Request a free estimate</a><a className="text-action" href="/projects/whole-home-remodel-spring-hill-fl"><span className="text-action-label">See a Spring Hill Remodel</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div>
       </div>
       <div className={styles.heroImage}><img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg" alt="Completed kitchen in a Swift whole-home remodeling project in Spring Hill, Florida"/></div>
     </section>
@@ -36,7 +36,7 @@ export default function SpringHillHomeRemodelingPage(){
     </section>
     <section className={styles.servicesSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>REMODELING SERVICES</p><h2>Build the Scope Around the Home You Want to Improve.</h2></div>
-      <div className={styles.serviceGrid}>{services.map(([title,href,copy],i)=><a href={href} key={title}><span>{String(i+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p><b>Learn More →</b></a>)}</div>
+      <div className={styles.serviceGrid}>{services.map(([title,href,copy],i)=><a href={href} key={title}><span>{String(i+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p><b className="text-action"><span className="text-action-label">Learn More</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>)}</div>
     </section>
     <section className={styles.projectsSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>DOCUMENTED SPRING HILL REMODEL</p><h2>Before and After From a Real Whole-Home Project.</h2><p>The project ran for four months and had a documented investment of $104,760.</p></div>
@@ -46,7 +46,7 @@ export default function SpringHillHomeRemodelingPage(){
       </div>
     </section>
     <section className={styles.processSection}><div><p className={styles.eyebrow}>REMODELING PROCESS</p><h2>Start With the Rooms and Problems You Want to Solve.</h2></div><div className={styles.steps}><p><strong>01</strong><span>Walk the home and define what should change.</span></p><p><strong>02</strong><span>Build a written scope around the rooms, selections and required work.</span></p><p><strong>03</strong><span>Coordinate construction and review the finished work together.</span></p></div></section>
-    <section className={styles.cta}><div><p className={styles.eyebrow}>PLANNING A REMODEL IN SPRING HILL?</p><h2>Start With an On-Site Walkthrough.</h2><p>Show Swift the spaces you want to change and discuss the scope before pricing the project. Already collecting bids? Read how to <a href="/blog/compare-remodeling-estimates-spring-hill">compare remodeling estimates in Spring Hill</a> before choosing a contractor.</p></div><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a></section>
+    <section className={styles.cta}><div><p className={styles.eyebrow}>PLANNING A REMODEL IN SPRING HILL?</p><h2>Start With an On-Site Walkthrough.</h2><p>Show Swift the spaces you want to change and discuss the scope before pricing the project. Already collecting bids? Read how to <a href="/blog/compare-remodeling-estimates-spring-hill">compare remodeling estimates in Spring Hill</a> before choosing a contractor.</p></div><a className="button cta-primary" href="/contact">Request a free estimate</a></section>
     <SiteFooter />
   </main>;
 }

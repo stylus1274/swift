@@ -60,7 +60,7 @@ export default function PressureWashingPage() {
           <h1>Pressure Washing That Restores a Cleaner, Better-Kept Property.</h1>
           <p>Controlled exterior cleaning for Florida homes, commercial properties and the outdoor surfaces people notice first.</p>
           <div className="remodel-hero-actions">
-            <a className="button remodel-primary" href="#pressure-washing-quick-project">Get a Free Cleaning Estimate</a>
+            <a className="button cta-primary" href="#pressure-washing-quick-project">Get a free cleaning estimate</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="remodel-hero-proof"><span>Licensed &amp; insured • CBC1260893</span><span>Written, itemized proposals</span><span>No deposit required</span></div>
@@ -82,7 +82,7 @@ export default function PressureWashingPage() {
 
       <section className="remodel-services" id="pressure-washing-services">
         <div className="remodel-section-heading"><p className="eyebrow">PRESSURE WASHING SERVICES</p><h2>Exterior Cleaning Planned Around the Property and Its Surfaces.</h2></div>
-        <div className="remodel-service-grid">{pressureWashingServices.map((service) => <article key={service.number}><span>{service.number}</span><h3>{service.title}</h3><p>{service.copy}</p><a href="#pressure-washing-estimate">Discuss Your Property <b>→</b></a></article>)}</div>
+        <div className="remodel-service-grid">{pressureWashingServices.map((service) => <article key={service.number}><span>{service.number}</span><h3>{service.title}</h3><p>{service.copy}</p><a className="text-action" href="#pressure-washing-estimate"><span className="text-action-label">Discuss Your Property</span><span className="text-action-arrow" aria-hidden="true">→</span></a></article>)}</div>
       </section>
 
       <section className="commercial-coordination commercial-painting-coordination">
@@ -90,7 +90,7 @@ export default function PressureWashingPage() {
           <p className="eyebrow">CLEAN WITH CONTROL</p>
           <h2>The Right Pressure Starts With the Surface.</h2>
           <p>Concrete, stucco, painted finishes and outdoor living areas do not all need the same treatment. Swift evaluates the material, buildup and surrounding property before cleaning begins.</p>
-          <a className="button remodel-primary" href="#pressure-washing-estimate">Plan a Property Walkthrough</a>
+          <a className="button cta-primary" href="#pressure-washing-estimate">Plan a property walkthrough</a>
         </div>
         <div className="commercial-coordination-list">
           <article><span>01</span><div><h3>Evaluate the Material</h3><p>We review the surface, age, coating and visible buildup before selecting the cleaning method.</p></div></article>
@@ -120,12 +120,12 @@ export default function PressureWashingPage() {
 
       <section className="commercial-painting-proof-cta">
         <div><p className="eyebrow">PREPARING FOR EXTERIOR PAINT?</p><h2>Coordinate Cleaning and Exterior Improvements With One Contractor.</h2><p>Swift can connect surface cleaning with preparation, repairs and exterior painting under one written project plan.</p></div>
-        <div className="commercial-painting-proof-actions"><a className="button remodel-primary" href="#pressure-washing-estimate">Request a Free Estimate</a><a href="/exterior-painting">Explore Exterior Painting <span aria-hidden="true">→</span></a></div>
+        <div className="commercial-painting-proof-actions"><a className="button cta-primary" href="#pressure-washing-estimate">Request a free estimate</a><a className="text-action" href="/exterior-painting"><span className="text-action-label">Explore Exterior Painting</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div>
       </section>
 
       <section className="remodel-faq commercial-faq">
         <div className="remodel-faq-heading"><p className="eyebrow">PRESSURE WASHING QUESTIONS</p><h2>What Property Owners Ask Before Exterior Cleaning Begins.</h2><p>Clear answers make it easier to compare the scope, methods and contractor responsible for your property.</p></div>
-        <div className="remodel-faq-list">{pressureWashingFaqs.map((faq, index) => { const isOpen = openFaq === index; return <article className={isOpen ? "open" : ""} key={faq.question}><button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b></button><div hidden={!isOpen}><p>{faq.answer}</p></div></article>; })}</div>
+        <div className="remodel-faq-list">{pressureWashingFaqs.map((faq, index) => { const isOpen = openFaq === index; return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>; })}</div>
       </section>
 
       <section className="remodel-estimate" id="pressure-washing-estimate">
@@ -143,7 +143,7 @@ export default function PressureWashingPage() {
           <div className="remodel-form-row"><label><span className="form-label-text">Cleaning Scope <span className="form-requirement">(required)</span></span><select value={scope} onChange={(event) => setScope(event.target.value)} required><option value="" disabled>Select an area</option><option>Driveway and walkways</option><option>House exterior</option><option>Pool deck or patio</option><option>Commercial property</option><option>Multiple areas</option></select></label><label><span className="form-label-text">Property Type <span className="form-requirement">(required)</span></span><select value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Single-family home</option><option>HOA or multi-family</option><option>Commercial property</option><option>Other property</option></select></label></div>
           <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 2 to 4 weeks</option><option>Within 1 to 3 months</option><option>Planning ahead</option></select></label>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us which surfaces need cleaning, their approximate size and any areas needing special attention." /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my cleaning estimate"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my cleaning estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

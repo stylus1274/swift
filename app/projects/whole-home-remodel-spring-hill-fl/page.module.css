@@ -58,17 +58,8 @@
   align-items: center;
   gap: 24px;
 }
-.primaryButton {
-  min-height: 52px;
-  padding: 0 24px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--project-blue);
-  color: #fff;
-  font-weight: 800;
-}
-.primaryButton:hover { background: #236fab; }
+
+
 .secondaryLink {
   color: var(--project-navy);
   font-size: 14px;

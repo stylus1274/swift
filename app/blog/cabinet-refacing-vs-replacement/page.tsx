@@ -43,7 +43,7 @@ export default function Page() {
           <div className="article-sidebar-cta">
             <p>Planning a Kitchen?</p>
             <h2>Start With the Cabinets and the Layout.</h2>
-            <a className="button blog-primary" href="/contact">Request an Estimate</a>
+            <a className="text-action" href="/contact"><span className="text-action-label">Request an estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             <a href="tel:3527017458">Call (352) 701-7458</a>
           </div>
         </aside>
@@ -51,7 +51,7 @@ export default function Page() {
       </div>
       <section className="blog-cta">
         <div><p className="eyebrow">SPRING HILL KITCHEN PLANNING</p><h2>Choose the Scope That Solves the Real Problem.</h2><p>Swift can evaluate cabinet replacement and the broader kitchen layout. Ask about availability for any specific refacing work during your estimate.</p></div>
-        <div><a className="button blog-primary" href="/contact">Request an Estimate</a><a href="/kitchen-remodeling">Kitchen Remodeling</a></div>
+        <div><a className="button cta-primary" href="/contact">Request an estimate</a><a href="/kitchen-remodeling">Kitchen Remodeling</a></div>
       </section>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\u003c") }} />
       <SiteFooter />

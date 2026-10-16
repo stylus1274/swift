@@ -52,7 +52,7 @@ export default function MultiFamilyConstructionPage() {
           <h1>Multi-Family Construction Managed From Plan to Turnover.</h1>
           <p>One licensed contractor to coordinate new construction, property renovations and connected finish work for multi-unit residential projects.</p>
           <div className="remodel-hero-actions">
-            <a className="button remodel-primary" href="#multi-family-quick-stage">Discuss Your Project</a>
+            <a className="button cta-primary" href="#multi-family-quick-stage">Discuss your project</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="remodel-hero-proof">
@@ -90,7 +90,7 @@ export default function MultiFamilyConstructionPage() {
               <span>{service.number}</span>
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
-              <a href="#multi-family-estimate">Discuss Your Project <b>→</b></a>
+              <a className="text-action" href="#multi-family-estimate"><span className="text-action-label">Discuss Your Project</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             </article>
           ))}
         </div>
@@ -101,7 +101,7 @@ export default function MultiFamilyConstructionPage() {
           <p className="eyebrow">BUILT FOR OWNERS AND DEVELOPERS</p>
           <h2>More Units Require More Coordination, Not More Confusion.</h2>
           <p>Swift keeps project information, trade work and communication connected so decisions do not get lost between separate contractors.</p>
-          <a className="button remodel-primary" href="#multi-family-estimate">Schedule a Project Conversation</a>
+          <a className="button cta-primary" href="#multi-family-estimate">Schedule a project conversation</a>
         </div>
         <div className="commercial-coordination-list">
           <article><span>01</span><div><h3>Defined Project Scope</h3><p>Written details create a clearer basis for decisions, planning and stakeholder review.</p></div></article>
@@ -138,7 +138,7 @@ export default function MultiFamilyConstructionPage() {
 
       <section className="commercial-cta multifamily-cta">
         <div><p className="eyebrow">START WITH THE PROPERTY</p><h2>Have Plans, a Site or an Existing Multi-Unit Property?</h2></div>
-        <div><a className="button remodel-primary" href="#multi-family-estimate">Request a Project Conversation</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
+        <div><a className="button cta-primary" href="#multi-family-estimate">Request a project conversation</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
       </section>
 
       <section className="remodel-faq commercial-faq">
@@ -150,7 +150,7 @@ export default function MultiFamilyConstructionPage() {
         <div className="remodel-faq-list">
           {multiFamilyFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b></button><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
+            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
           })}
         </div>
       </section>
@@ -170,7 +170,7 @@ export default function MultiFamilyConstructionPage() {
           <div className="remodel-form-row"><label><span className="form-label-text">Project Stage <span className="form-requirement">(required)</span></span><select value={projectStage} onChange={(event) => setProjectStage(event.target.value)} required><option value="" disabled>Select stage</option><option>Evaluating a property</option><option>Early planning</option><option>Plans in development</option><option>Ready for contractor review</option><option>Existing property renovation</option></select></label><label><span className="form-label-text">Approximate Units <span className="form-requirement">(required)</span></span><select value={unitCount} onChange={(event) => setUnitCount(event.target.value)} required><option value="" disabled>Select units</option><option>2 to 4 units</option><option>5 to 12 units</option><option>13 to 30 units</option><option>More than 30 units</option><option>Not sure yet</option></select></label></div>
           <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us about the property, plans, unit count, scope and decisions already made." /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my project conversation"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my project conversation"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

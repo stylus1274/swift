@@ -137,7 +137,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
             <h1>The Contractor Your Neighbors Already Called.</h1>
             <p>William Swift has been painting, remodeling and building homes in Hernando County for more than twenty years. Licensed, insured, and finished when we said we'd finish.</p>
             <div className="paint-hero-actions">
-              <a className="button paint-primary" href="#alt-project">Get a Free Estimate</a>
+              <a className="button cta-primary" href="#alt-project">Get a free estimate</a>
               <a className="paint-hero-call" href="tel:3527017458"><small>OR CALL DIRECTLY</small>(352) 701-7458</a>
             </div>
           </div>
@@ -169,8 +169,8 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
               William Swift has been painting, remodeling and building homes in Hernando County for more than twenty years. Licensed, insured, and finished when we said we'd finish.
             </p>
             <div className="hero-actions">
-              <a className="button button-dark" href="#contact">Get a free estimate</a>
-              <a className="button button-outline" href="/gallery">View Our Work</a>
+              <a className="button cta-primary" href="#contact">Get a free estimate</a>
+              <a className="button cta-secondary" href="/gallery">View our work</a>
             </div>
             <div className="proof-grid" aria-label="Company benefits">
               <span>Licensed &amp; fully insured</span>
@@ -216,7 +216,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
               <h3>{service.href ? <a href={service.href}>{service.title}</a> : service.title}</h3>
               <p>{service.description}</p>
               <button
-                className="service-cta"
+                className="text-action service-cta"
                 onClick={() => {
                   setEstimateService(service.estimateService);
                   const heading = document.getElementById("estimate-heading");
@@ -224,9 +224,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
                   heading?.scrollIntoView({ behavior: "smooth", block: "start" });
                 }}
                 type="button"
-              >
-                GET AN ESTIMATE <span aria-hidden="true">→</span>
-              </button>
+              ><span className="text-action-label">Get an estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></button>
             </article>
           ))}
         </div>
@@ -295,7 +293,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
             </article>
           </div>
           <div className="process-action">
-            <a className="button button-dark" href="#contact">Start with a free estimate</a>
+            <a className="button cta-primary" href="#contact">Start with a free estimate</a>
             <p>Free estimates. No obligation. Licensed and insured.</p>
           </div>
         </div>
@@ -318,7 +316,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
             <h2>When Quality<br />Matters.</h2>
             <blockquote>“We started Swift to give Florida homeowners and businesses the kind of construction experience they should expect: honest communication, quality work and a team that respects the property.”</blockquote>
             <p className="founder-copy">Since 2003, Swift Construction and Painting has completed residential and commercial projects across Florida while keeping its focus close to home in Spring Hill and Hernando County.</p>
-            <a className="founder-button" href="/gallery">See Our Work <span aria-hidden="true">→</span></a>
+            <a className="button cta-secondary-inverse" href="/gallery">See our work</a>
           </div>
         </div>
       </section>
@@ -355,7 +353,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
           </article>
         </div>
         <div className="reviews-more">
-          <a className="button button-dark" href="/reviews">Read More Reviews</a>
+          <a className="button cta-primary" href="/reviews">Read more reviews</a>
         </div>
       </section>
 
@@ -365,22 +363,22 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
             <p className="faq-eyebrow"><span aria-hidden="true" />COMMON QUESTIONS</p>
             <h2 id="faq-heading">Answers Before<br />the First<br />Walkthrough.</h2>
             <p>Every project is different, but these are a few of the questions homeowners and business owners ask most often.</p>
-            <a href="#contact">Have another question? <span aria-hidden="true">→</span></a>
+            <a className="text-action" href="#contact"><span className="text-action-label">Have another question?</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </div>
           <div className="faq-list">
             {faqs.map((faq, index) => {
               const isOpen = openFaq === index;
               return (
                 <article className={isOpen ? "faq-item open" : "faq-item"} key={faq.question}>
-                  <button
+                  <h3 className="faq-question"><button className="faq-question-button"
                     aria-expanded={isOpen}
                     aria-controls={`faq-answer-${index}`}
                     onClick={() => setOpenFaq(isOpen ? -1 : index)}
                     type="button"
                   >
                     <span>{faq.question}</span>
-                    <span className="faq-toggle" aria-hidden="true">{isOpen ? "×" : "+"}</span>
-                  </button>
+                    <span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span>
+                  </button></h3>
                   <div className="faq-answer" id={`faq-answer-${index}`} hidden={!isOpen}>
                     <p>{faq.answer}</p>
                   </div>
@@ -418,7 +416,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
             <label><span className="form-label-text">Project City <span className="form-requirement">(required)</span></span><input name="city" placeholder="Spring Hill" required /></label>
             <label className="form-field-wide"><span className="form-label-text">Project Description <span className="form-requirement">(optional)</span></span><textarea name="description" placeholder="Tell us about the work you are planning."  /></label>
           </div>
-          <button className="button button-dark submit-button" type="submit">
+          <button className="button cta-primary submit-button" type="submit">
             {submitted ? "Thank you — we'll be in touch" : "Get my free estimate"}
           </button>
           <p className="call-line">or call&nbsp;&nbsp; <a href="tel:3527017458">(352) 701-7458</a></p>

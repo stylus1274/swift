@@ -106,7 +106,7 @@ export default function WindowsDoorsPage() {
           <h1>Window and Door Installation With Every Detail Coordinated.</h1>
           <p>New windows and doors planned around the opening, weather protection and finish work your Florida home needs.</p>
           <div className="remodel-hero-actions">
-            <a className="button remodel-primary" href="#windows-doors-quick-project">Get a Free Installation Estimate</a>
+            <a className="button cta-primary" href="#windows-doors-quick-project">Get a free installation estimate</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="remodel-hero-proof">
@@ -144,7 +144,7 @@ export default function WindowsDoorsPage() {
               <span>{service.number}</span>
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
-              <a href="#windows-doors-estimate">Discuss Your Project <b>→</b></a>
+              <a className="text-action" href="#windows-doors-estimate"><span className="text-action-label">Discuss Your Project</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             </article>
           ))}
         </div>
@@ -155,7 +155,7 @@ export default function WindowsDoorsPage() {
           <p className="eyebrow">MORE THAN A PRODUCT SWAP</p>
           <h2>The Opening Matters as Much as the Window or Door.</h2>
           <p>A successful replacement has to fit, manage Florida weather and look complete inside and out. Swift considers the entire opening before the installation plan is finalized.</p>
-          <a className="button remodel-primary" href="#windows-doors-estimate">Plan a Property Walkthrough</a>
+          <a className="button cta-primary" href="#windows-doors-estimate">Plan a property walkthrough</a>
         </div>
         <div className="commercial-coordination-list">
           <article><span>01</span><div><h3>Verify the Opening</h3><p>Existing dimensions, conditions and access are reviewed before the product and scope are finalized.</p></div></article>
@@ -197,8 +197,8 @@ export default function WindowsDoorsPage() {
           <p>Swift can coordinate the window or door replacement with related carpentry, drywall, stucco and painting under one licensed building contractor.</p>
         </div>
         <div className="commercial-painting-proof-actions">
-          <a className="button remodel-primary" href="#windows-doors-estimate">Request a Free Estimate</a>
-          <a href="/residential-remodeling">Explore Residential Remodeling <span aria-hidden="true">→</span></a>
+          <a className="button cta-primary" href="#windows-doors-estimate">Request a free estimate</a>
+          <a className="text-action" href="/residential-remodeling"><span className="text-action-label">Explore Residential Remodeling</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
         </div>
       </section>
 
@@ -208,10 +208,10 @@ export default function WindowsDoorsPage() {
           <h2>What Homeowners Ask Before Replacement Begins.</h2>
           <p>Clear answers make it easier to compare products, installation scope and the contractor responsible for your home.</p>
         </div>
-        <p><a href="/faq/do-i-need-permit-replace-windows-doors-hernando-county">Read the Hernando County window and door permit FAQ →</a></p><div className="remodel-faq-list">
+        <p><a className="text-action" href="/faq/do-i-need-permit-replace-windows-doors-hernando-county"><span className="text-action-label">Read the Hernando County window and door permit FAQ</span><span className="text-action-arrow" aria-hidden="true">→</span></a></p><div className="remodel-faq-list">
           {openingFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b></button><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
+            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
           })}
         </div>
       </section>
@@ -231,7 +231,7 @@ export default function WindowsDoorsPage() {
           <div className="remodel-form-row"><label><span className="form-label-text">Project Type <span className="form-requirement">(required)</span></span><select value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select project</option><option>Replacement windows</option><option>Exterior entry doors</option><option>Sliding or patio doors</option><option>Windows and doors</option><option>Other opening project</option></select></label><label><span className="form-label-text">Number of Openings <span className="form-requirement">(required)</span></span><select value={openingCount} onChange={(event) => setOpeningCount(event.target.value)} required><option value="" disabled>Select quantity</option><option>1 opening</option><option>2 to 5 openings</option><option>6 to 10 openings</option><option>More than 10</option><option>Not sure yet</option></select></label></div>
           <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us what you want to replace, any damage or leaks you have noticed and whether you are considering impact-rated products." /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my window and door estimate"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my window and door estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

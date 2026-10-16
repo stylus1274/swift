@@ -105,7 +105,7 @@ export default function HomeAdditionsPage() {
           <h1>More Room Without Leaving the Home You Love.</h1>
           <p>Plan and build a home addition that gives your family more space while preserving the character and flow of your existing home.</p>
           <div className="remodel-hero-actions">
-            <a className="button remodel-primary" href="#addition-quick-project">Plan My Home Addition</a>
+            <a className="button cta-primary" href="#addition-quick-project">Plan my home addition</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="remodel-hero-proof">
@@ -142,7 +142,7 @@ export default function HomeAdditionsPage() {
               <span>{type.number}</span>
               <h3>{type.title}</h3>
               <p>{type.copy}</p>
-              <a href="#addition-estimate">Discuss Your Addition <b>→</b></a>
+              <a className="text-action" href="#addition-estimate"><span className="text-action-label">Discuss Your Addition</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             </article>
           ))}
         </div>
@@ -153,7 +153,7 @@ export default function HomeAdditionsPage() {
           <p className="eyebrow">BUILT TO BELONG</p>
           <h2>Your Addition Should Feel Like It Was Always Part of the Home.</h2>
           <p>Adding square footage is only part of the job. The structure, utilities, exterior and interior transitions all need to work together. Swift keeps those decisions connected under one project plan.</p>
-          <a className="button remodel-primary" href="#addition-estimate">Discuss My Property</a>
+          <a className="button cta-primary" href="#addition-estimate">Discuss my property</a>
         </div>
         <div className="additions-integration-grid">
           <article><span>01</span><h3>Structure &amp; Roofline</h3><p>Plan the foundation, framing and roof connection around the existing home.</p></article>
@@ -187,7 +187,7 @@ export default function HomeAdditionsPage() {
           <div><strong>3</strong><span>Counties Across Florida’s Nature Coast</span></div>
           <div><strong>CBC</strong><span>Florida License CBC1260893</span></div>
         </div>
-        <a className="button remodel-primary" href="#addition-estimate">Request a Free Estimate</a>
+        <a className="button cta-primary" href="#addition-estimate">Request a free estimate</a>
       </section>
 
       <section className="remodel-faq additions-faq">
@@ -196,14 +196,14 @@ export default function HomeAdditionsPage() {
           <h2>What Homeowners Ask Before Adding More Space.</h2>
           <p>Clear answers help you evaluate the property, define the scope and prepare for a major improvement.</p>
         </div>
-        <p><a href="/faq/do-i-need-permit-home-addition-hernando-county">Read the Hernando County home addition permit FAQ →</a></p><div className="remodel-faq-list">
+        <p><a className="text-action" href="/faq/do-i-need-permit-home-addition-hernando-county"><span className="text-action-label">Read the Hernando County home addition permit FAQ</span><span className="text-action-arrow" aria-hidden="true">→</span></a></p><div className="remodel-faq-list">
           {additionFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
             return (
               <article className={isOpen ? "open" : ""} key={faq.question}>
-                <button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}>
-                  <span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b>
-                </button>
+                <h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}>
+                  <span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span>
+                </button></h3>
                 <div hidden={!isOpen}><p>{faq.answer}</p></div>
               </article>
             );
@@ -225,7 +225,7 @@ export default function HomeAdditionsPage() {
           <div className="remodel-form-row"><label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label><label><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input name="zip" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
           <div className="remodel-form-row"><label><span className="form-label-text">What would you like to add? <span className="form-requirement">(required)</span></span><select name="project" value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select your project</option><option>Room addition</option><option>Primary suite addition</option><option>In-law suite</option><option>Garage or lanai conversion</option><option>Other addition</option></select></label><label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select name="timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Just researching</option></select></label></div>
           <label><span className="form-label-text">What do you need the new space to do? <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us who will use the space, the rooms you are considering and any priorities for the finished addition." /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

@@ -82,7 +82,7 @@ export default function ResidentialRemodelingPage() {
           <h1>Home Remodeling That Brings the Whole Home Together.</h1>
           <p>One contractor for the planning, coordination and finish work your kitchen, bathroom or full-home renovation needs.</p>
           <div className="remodel-hero-actions">
-            <a className="button remodel-primary" href="#remodel-quick-project">Get a Free Remodeling Estimate</a>
+            <a className="button cta-primary" href="#remodel-quick-project">Get a free remodeling estimate</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="remodel-hero-proof">
@@ -119,7 +119,7 @@ export default function ResidentialRemodelingPage() {
               <span>{service.number}</span>
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
-              <a href="#remodel-estimate">Discuss your project <b>→</b></a>
+              <a className="text-action" href="#remodel-estimate"><span className="text-action-label">Discuss your project</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             </article>
           ))}
         </div>
@@ -178,7 +178,7 @@ export default function ResidentialRemodelingPage() {
         <div className="remodel-review-cta">
           <p className="eyebrow">READY TO TALK?</p>
           <h2>Bring Your Remodeling Ideas to the Walkthrough.</h2>
-          <a className="button remodel-primary" href="#remodel-estimate">Request a free estimate</a>
+          <a className="text-action" href="#remodel-estimate"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
         </div>
       </section>
 
@@ -188,14 +188,14 @@ export default function ResidentialRemodelingPage() {
           <h2>What Homeowners Ask Before Starting a Renovation.</h2>
           <p>Clear expectations make it easier to compare contractors and prepare for the project ahead.</p>
         </div>
-        <p><a href="/faq/what-home-remodeling-projects-require-permit-hernando-county">See which remodeling projects may require a permit in Hernando County →</a></p><p><a href="/faq/can-homeowner-pull-own-building-permit-florida">Can a Florida homeowner pull their own building permit? →</a></p><div className="remodel-faq-list">
+        <p><a className="text-action" href="/faq/what-home-remodeling-projects-require-permit-hernando-county"><span className="text-action-label">See which remodeling projects may require a permit in Hernando County</span><span className="text-action-arrow" aria-hidden="true">→</span></a></p><p><a className="text-action" href="/faq/can-homeowner-pull-own-building-permit-florida"><span className="text-action-label">Can a Florida homeowner pull their own building permit?</span><span className="text-action-arrow" aria-hidden="true">→</span></a></p><div className="remodel-faq-list">
           {remodelingFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
             return (
               <article className={isOpen ? "open" : ""} key={faq.question}>
-                <button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}>
-                  <span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b>
-                </button>
+                <h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}>
+                  <span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span>
+                </button></h3>
                 <div hidden={!isOpen}><p>{faq.answer}</p></div>
               </article>
             );
@@ -217,7 +217,7 @@ export default function ResidentialRemodelingPage() {
           <div className="remodel-form-row"><label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label><label><span className="form-label-text">City or ZIP <span className="form-requirement">(required)</span></span><input name="city" placeholder="Spring Hill" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label></div>
           <div className="remodel-form-row"><label><span className="form-label-text">What would you like to remodel? <span className="form-requirement">(required)</span></span><select name="project" value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select your project</option><option>Bathroom remodeling</option><option>Kitchen remodeling</option><option>Whole-home renovation</option><option>Flooring or carpentry</option><option>Other remodeling project</option></select></label><label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select name="timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Just researching</option></select></label></div>
           <label><span className="form-label-text">Project details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us about the space, the changes you are considering and your ideal timing." /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

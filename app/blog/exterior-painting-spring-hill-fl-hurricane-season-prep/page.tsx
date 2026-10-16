@@ -53,7 +53,7 @@ export default function Page(){
         <div className="article-sidebar-cta">
           <p>Exterior Showing Wear?</p>
           <h2>Inspect It Before the Next Repaint.</h2>
-          <a className="button blog-primary" href="/contact">Request a Free Estimate</a>
+          <a className="text-action" href="/contact"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
         </div>
       </aside>
 
@@ -174,7 +174,7 @@ export default function Page(){
         <section className="article-faqs" id="faqs">
           <p className="eyebrow">COMMON QUESTIONS</p>
           <h2>Spring Hill Exterior Painting FAQs</h2>
-          {faqItems.map((x,i)=><details open={i===0} key={x.question}><summary>{x.question}<span>+</span></summary><p>{x.answer}</p></details>)}
+          {faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}
         </section>
 
         <section className="article-sources">
@@ -196,7 +196,7 @@ export default function Page(){
         <p>Swift can inspect the exterior, define the preparation needed and schedule painting around suitable conditions.</p>
       </div>
       <div>
-        <a className="button blog-primary" href="/contact">Request a Free Estimate</a>
+        <a className="button cta-primary" href="/contact">Request a free estimate</a>
         <a href="/exterior-painting">Exterior Painting</a>
       </div>
     </section>

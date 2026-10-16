@@ -20,7 +20,7 @@ export default function SpringHillLocationPage(){
         <p className={styles.eyebrow}>SPRING HILL, FLORIDA</p>
         <h1>Construction, Remodeling & Painting Contractor in Spring Hill, FL</h1>
         <p className={styles.deck}>Swift Construction & Painting serves Spring Hill homeowners with remodeling, new construction, painting, additions, windows and doors, and other building services backed by more than two decades in the local market.</p>
-        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a><a className={styles.secondaryLink} href="/spring-hill-fl/home-remodeling">Explore Spring Hill Remodeling <span aria-hidden="true">→</span></a></div>
+        <div className={styles.heroActions}><a className="button cta-primary" href="/contact">Request a free estimate</a><a className="text-action" href="/spring-hill-fl/home-remodeling"><span className="text-action-label">Explore Spring Hill Remodeling</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div>
       </div>
       <div className={styles.heroImage}><img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg" alt="Completed whole-home remodeling project in Spring Hill, Florida by Swift Construction and Painting"/></div>
     </section>
@@ -36,7 +36,7 @@ export default function SpringHillLocationPage(){
     </section>
     <section className={styles.servicesSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>SERVICES IN SPRING HILL</p><h2>Construction and Home Improvement Services.</h2></div>
-      <div className={styles.serviceGrid}>{services.map(([title,href,copy],index)=><a href={href} key={title}><span>{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p><b>Learn More →</b></a>)}</div>
+      <div className={styles.serviceGrid}>{services.map(([title,href,copy],index)=><a href={href} key={title}><span>{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p><b className="text-action"><span className="text-action-label">Learn More</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>)}</div>
     </section>
     <section className={styles.projectsSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>DOCUMENTED SPRING HILL PROJECTS</p><h2>Real Work Completed in Spring Hill.</h2><p>These projects come directly from Swift&apos;s completed-project records.</p></div>
@@ -45,14 +45,14 @@ export default function SpringHillLocationPage(){
           <a className={styles.projectImage} href="/projects/whole-home-remodel-spring-hill-fl"><img src="/assets/projects/spring-hill-whole-home-remodel/primary-bath-after.jpg" alt="Completed primary bathroom remodel in Spring Hill, Florida"/></a>
           <div><p className={styles.eyebrow}>REMODELING • SPRING HILL</p><h3><a href="/projects/whole-home-remodel-spring-hill-fl">Whole-Home Remodel</a></h3><p>Four-month remodel covering the kitchen, bathrooms, laundry, living spaces, bedrooms and patio. Documented investment: $104,760.</p></div>
         </article>
-        <article><div className={styles.textProject}><p className={styles.eyebrow}>NEW CONSTRUCTION • SPRING HILL</p><h3><a href="/projects/new-construction-duplex-spring-hill-fl">New Construction Duplex</a></h3><p>Five-month ground-up duplex project completed from December 2025 through May 2026 for a repeat customer. Documented investment: $314,490.</p><a href="/projects/new-construction-duplex-spring-hill-fl">View Project Details →</a></div></article>
+        <article><div className={styles.textProject}><p className={styles.eyebrow}>NEW CONSTRUCTION • SPRING HILL</p><h3><a href="/projects/new-construction-duplex-spring-hill-fl">New Construction Duplex</a></h3><p>Five-month ground-up duplex project completed from December 2025 through May 2026 for a repeat customer. Documented investment: $314,490.</p><a className="text-action" href="/projects/new-construction-duplex-spring-hill-fl"><span className="text-action-label">View Project Details</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div></article>
       </div>
     </section>
     <section className={styles.processSection}>
       <div><p className={styles.eyebrow}>HOW ESTIMATES WORK</p><h2>Start With an On-Site Walkthrough.</h2></div>
       <div className={styles.steps}><p><strong>01</strong><span>Contact Swift and describe the project you are considering.</span></p><p><strong>02</strong><span>Schedule an in-person estimate, typically within a week of the request.</span></p><p><strong>03</strong><span>Review a written scope and estimate, then schedule the project if you decide to move forward.</span></p></div>
     </section>
-    <section className={styles.cta}><div><p className={styles.eyebrow}>PLANNING WORK IN SPRING HILL?</p><h2>Tell Swift What You Want to Build or Change.</h2><p>Start with a free estimate and an in-person look at the property.</p></div><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a></section>
+    <section className={styles.cta}><div><p className={styles.eyebrow}>PLANNING WORK IN SPRING HILL?</p><h2>Tell Swift What You Want to Build or Change.</h2><p>Start with a free estimate and an in-person look at the property.</p></div><a className="button cta-primary" href="/contact">Request a free estimate</a></section>
     <SiteFooter />
   </main>;
 }

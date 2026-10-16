@@ -29,7 +29,7 @@ export default function Page(){
     <div className="article-shell">
       <aside className="article-sidebar">
         <div className="article-contents"><p>On This Page</p><a href="#quick">Quick Answer</a><a href="#range">Typical Timeline</a><a href="#phases">Project Phases</a><a href="#delays">What Causes Delays</a><a href="#planning">Plan Around Downtime</a><a href="#faqs">FAQs</a></div>
-        <div className="article-sidebar-cta"><p>Planning a Bathroom?</p><h2>Understand the Sequence Before Work Starts.</h2><a className="button blog-primary" href="/contact">Request a Free Estimate</a></div>
+        <div className="article-sidebar-cta"><p>Planning a Bathroom?</p><h2>Understand the Sequence Before Work Starts.</h2><a className="text-action" href="/contact"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div>
       </aside>
 
       <article className="article-body">
@@ -77,13 +77,13 @@ export default function Page(){
           <p>If you are still defining the scope, compare <a href="/blog/realistic-bathroom-remodel-budget">realistic bathroom remodel budgets</a> and <a href="/blog/what-not-to-do-bathroom-remodel">common bathroom remodeling mistakes</a> before finalizing the plan.</p>
         </section>
 
-        <section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Bathroom Remodel Timeline FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary>{x.question}<span>+</span></summary><p>{x.answer}</p></details>)}</section>
+        <section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Bathroom Remodel Timeline FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section>
 
         <section className="article-sources"><p className="eyebrow">TIMELINE BENCHMARK</p><h2>Published 2026 Planning Context.</h2><p>The timeline ranges above use current industry guidance as planning context, not a Swift project guarantee.</p><p><a href="https://www.angi.com/articles/how-long-does-take-remodel-bathroom.htm" target="_blank" rel="noreferrer">Angi: How Long Does a Bathroom Remodel Take? Updated July 2026</a></p></section>
       </article>
     </div>
 
-    <section className="blog-cta"><div><p className="eyebrow">PLANNING A BATHROOM REMODEL?</p><h2>Build the Schedule Around the Actual Scope.</h2><p>Swift can walk the room, identify the work involved and prepare a project-specific estimate.</p></div><div><a className="button blog-primary" href="/contact">Request a Free Estimate</a><a href="/faq">More FAQs</a></div></section>
+    <section className="blog-cta"><div><p className="eyebrow">PLANNING A BATHROOM REMODEL?</p><h2>Build the Schedule Around the Actual Scope.</h2><p>Swift can walk the room, identify the work involved and prepare a project-specific estimate.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/faq">More FAQs</a></div></section>
     <SiteFooter/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/>
   </main>;

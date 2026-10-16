@@ -29,7 +29,7 @@ export default function Page(){
     <div className="article-shell">
       <aside className="article-sidebar">
         <div className="article-contents"><p>On This Page</p><a href="#quick">Quick Answer</a><a href="#exemption">Owner-Builder Exemption</a><a href="#responsibility">Your Responsibilities</a><a href="#unlicensed">Unlicensed Contractor Risk</a><a href="#when">When a Licensed Contractor Makes Sense</a><a href="#faqs">FAQs</a></div>
-        <div className="article-sidebar-cta"><p>Planning a Project?</p><h2>Know Who Is Responsible for the Work.</h2><a className="button blog-primary" href="/contact">Request a Free Estimate</a></div>
+        <div className="article-sidebar-cta"><p>Planning a Project?</p><h2>Know Who Is Responsible for the Work.</h2><a className="text-action" href="/contact"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div>
       </aside>
 
       <article className="article-body">
@@ -72,13 +72,13 @@ export default function Page(){
           <p>Swift provides <a href="/residential-remodeling">residential remodeling</a>, <a href="/home-additions">home additions</a> and <a href="/new-home-construction">new home construction</a> under a coordinated project scope.</p>
         </section>
 
-        <section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Florida Owner-Builder Permit FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary>{x.question}<span>+</span></summary><p>{x.answer}</p></details>)}</section>
+        <section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Florida Owner-Builder Permit FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section>
 
         <section className="article-sources"><p className="eyebrow">OFFICIAL SOURCE</p><h2>Read the Florida Owner-Builder Statute.</h2><p><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0489/Sections/0489.103.html" target="_blank" rel="noreferrer">Florida Statute 489.103: Exemptions</a></p></section>
       </article>
     </div>
 
-    <section className="blog-cta"><div><p className="eyebrow">PLANNING A LARGER PROJECT?</p><h2>Decide Who Will Be Responsible Before the Permit Is Pulled.</h2><p>Swift can review the scope and explain how the project would be managed under a licensed contractor.</p></div><div><a className="button blog-primary" href="/contact">Request a Free Estimate</a><a href="/faq">More FAQs</a></div></section>
+    <section className="blog-cta"><div><p className="eyebrow">PLANNING A LARGER PROJECT?</p><h2>Decide Who Will Be Responsible Before the Permit Is Pulled.</h2><p>Swift can review the scope and explain how the project would be managed under a licensed contractor.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/faq">More FAQs</a></div></section>
     <SiteFooter/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/>
   </main>;

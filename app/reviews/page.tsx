@@ -35,7 +35,7 @@ export default function ReviewsPage() {
         <p className={styles.eyebrow}>SWIFT CONSTRUCTION REVIEWS</p>
         <h1>What Customers Say About Working With Swift.</h1>
         <p className={styles.deck}>Reviews matter more when they line up with the finished work. Swift&apos;s Google profile currently shows a 5.0 rating from 9 reviews, and the themes customers mention most are quality, communication, service, timing, and budget.</p>
-        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a><a className={styles.secondaryLink} href="/gallery">See Completed Work <span aria-hidden="true">→</span></a></div>
+        <div className={styles.heroActions}><a className="button cta-primary" href="/contact">Request a free estimate</a><a className="text-action" href="/gallery"><span className="text-action-label">See Completed Work</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div>
       </div>
       <aside className={styles.ratingCard}><p>GOOGLE REVIEW SNAPSHOT</p><strong>5.0</strong><div className={styles.stars} aria-label="5 out of 5 stars">★★★★★</div><span>9 Google reviews</span><small>Snapshot checked September 2026. Review counts can change over time.</small></aside>
     </section>
@@ -51,7 +51,7 @@ export default function ReviewsPage() {
       <div><p className={styles.eyebrow}>WHAT SWIFT SAYS CUSTOMERS NOTICE</p><h2>Efficiency, Clean Work Areas, and Finished Selections That Come Together.</h2></div>
       <p>In Swift&apos;s client discovery material, the company identified efficiency, cleanliness, and how well selections come together as recurring customer compliments. Swift also says it tries to stay on one project through completion rather than constantly shifting crews between jobs.</p>
     </section>
-    <section className={styles.cta}><div><p className={styles.eyebrow}>READY TO TALK ABOUT YOUR PROJECT?</p><h2>Start With a Free On-Site Estimate.</h2><p>Tell Swift what you are planning and schedule an in-person walkthrough.</p></div><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a></section>
+    <section className={styles.cta}><div><p className={styles.eyebrow}>READY TO TALK ABOUT YOUR PROJECT?</p><h2>Start With a Free On-Site Estimate.</h2><p>Tell Swift what you are planning and schedule an in-person walkthrough.</p></div><a className="button cta-primary" href="/contact">Request a free estimate</a></section>
     <SiteFooter />
   </main>;
 }

@@ -52,7 +52,7 @@ export default function NewHomeConstructionPage() {
           <h1>Custom Home Building for the Way You Live.</h1>
           <p>One experienced contractor to coordinate your new home from early planning and site preparation through construction, finishes and final walkthrough.</p>
           <div className="build-hero-actions">
-            <a className="button build-primary" href="#build-quick-lot">Plan Your New Home</a>
+            <a className="button cta-primary" href="#build-quick-lot">Plan your new home</a>
             <a className="build-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="build-hero-proof"><span>Licensed &amp; insured • CBC1260893</span><span>Serving local homeowners since 2003</span><span>Written project proposals</span></div>
@@ -78,7 +78,7 @@ export default function NewHomeConstructionPage() {
       <section className="build-scope" id="build-scope">
         <div className="build-section-heading"><p className="eyebrow">WHAT SWIFT MANAGES</p><h2>Every Phase Connected Under One Construction Plan.</h2><p>New-home construction has hundreds of decisions and dependencies. Swift keeps the scope, schedule and communication moving in the same direction.</p></div>
         <div className="build-scope-grid">
-          {buildServices.map((service) => <article key={service.number}><span>{service.number}</span><h3>{service.title}</h3><p>{service.copy}</p><a href="#build-estimate">Discuss Your Build <b>→</b></a></article>)}
+          {buildServices.map((service) => <article key={service.number}><span>{service.number}</span><h3>{service.title}</h3><p>{service.copy}</p><a className="text-action" href="#build-estimate"><span className="text-action-label">Discuss Your Build</span><span className="text-action-arrow" aria-hidden="true">→</span></a></article>)}
         </div>
       </section>
 
@@ -118,15 +118,15 @@ export default function NewHomeConstructionPage() {
 
       <section className="build-cta">
         <div><p className="eyebrow">START THE CONVERSATION</p><h2>Have a Lot, a Plan or Just an Early Idea?</h2><p>Tell Swift where you are in the process. We will help identify the most useful next step.</p></div>
-        <div><a className="button build-primary" href="#build-estimate">Request a Project Conversation</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
+        <div><a className="button cta-primary" href="#build-estimate">Request a project conversation</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
       </section>
 
       <section className="build-faq">
         <div className="build-faq-heading"><p className="eyebrow">NEW HOME QUESTIONS</p><h2>What Homeowners Ask Before Building.</h2><p>Clear answers early can prevent expensive surprises later.</p></div>
-        <p><a href="/faq/can-homeowner-pull-own-building-permit-florida">Read what Florida homeowners take on when pulling an owner-builder permit →</a></p><div className="build-faq-list">
+        <p><a className="text-action" href="/faq/can-homeowner-pull-own-building-permit-florida"><span className="text-action-label">Read what Florida homeowners take on when pulling an owner-builder permit</span><span className="text-action-arrow" aria-hidden="true">→</span></a></p><div className="build-faq-list">
           {buildFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b></button><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
+            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
           })}
         </div>
       </section>
@@ -146,7 +146,7 @@ export default function NewHomeConstructionPage() {
           <div className="build-form-row"><label><span className="form-label-text">Lot Status <span className="form-requirement">(required)</span></span><select value={lotStatus} onChange={(event) => setLotStatus(event.target.value)} required><option value="" disabled>Select one</option><option>I own a lot</option><option>I am under contract</option><option>I am looking for land</option><option>I need guidance</option></select></label><label><span className="form-label-text">Approximate Home Size <span className="form-requirement">(required)</span></span><select value={homeSize} onChange={(event) => setHomeSize(event.target.value)} required><option value="" disabled>Select size</option><option>Under 1,800 sq. ft.</option><option>1,800–2,500 sq. ft.</option><option>2,500–3,500 sq. ft.</option><option>Over 3,500 sq. ft.</option><option>Not sure yet</option></select></label></div>
           <label><span className="form-label-text">Ideal Start <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>Within 3 months</option><option>Within 3–6 months</option><option>Within 6–12 months</option><option>More than 12 months</option><option>Just researching</option></select></label>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us about your plans, lot, priorities and any decisions you have already made." /></label>
-          <button className="button build-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my project conversation"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my project conversation"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

@@ -79,7 +79,7 @@ export default function KitchenRemodelBudgetArticlePage() {
           <div className="article-sidebar-cta">
             <p>Planning a Kitchen?</p>
             <h2>Start With a Written Scope and Real Numbers.</h2>
-            <a className="button blog-primary" href="/contact">Request an Estimate</a>
+            <a className="text-action" href="/contact"><span className="text-action-label">Request an estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             <a href="tel:3527017458">Call (352) 701-7458</a>
           </div>
         </aside>
@@ -131,7 +131,7 @@ export default function KitchenRemodelBudgetArticlePage() {
             <p className="eyebrow">THE BIGGEST BUDGET QUESTION</p>
             <h2>Are You Updating the Kitchen or Rebuilding How It Works?</h2>
             <p>Replacing finishes within the existing footprint is fundamentally different from moving the sink, opening a wall or expanding the room. Decide which problem you are solving before comparing prices.</p>
-            <a href="/kitchen-remodeling">Explore Swift&apos;s Kitchen Remodeling Services <b>→</b></a>
+            <a className="text-action" href="/kitchen-remodeling"><span className="text-action-label">Explore Swift&apos;s Kitchen Remodeling Services</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </section>
 
           <section id="budget-example">
@@ -201,11 +201,11 @@ export default function KitchenRemodelBudgetArticlePage() {
           <section className="article-faqs" id="faqs">
             <p className="eyebrow">COMMON QUESTIONS</p>
             <h2>Kitchen Remodel Budget FAQs</h2>
-            <details open><summary>Can You Remodel a Kitchen for $30,000?<span>+</span></summary><p>Yes, when the layout stays in place and the work focuses on selected surfaces, fixtures and finishes. A $30,000 budget is less realistic for a full gut remodel with new cabinetry, major system changes and premium appliances.</p></details>
-            <details><summary>What Is Usually the Most Expensive Part of a Kitchen Remodel?<span>+</span></summary><p>Cabinetry is often one of the largest individual costs. The total can also rise quickly when the project changes the layout, moves plumbing, upgrades electrical service or adds structural work.</p></details>
-            <details><summary>How Much Contingency Should a Kitchen Remodel Budget Include?<span>+</span></summary><p>A planning reserve of 10% to 15% is common when the scope is well understood. Older homes, concealed damage and extensive layout changes may justify a larger reserve.</p></details>
-            <details><summary>Does Moving the Sink Make a Kitchen Remodel More Expensive?<span>+</span></summary><p>Usually. Moving a sink can affect supply lines, drainage, venting, cabinetry, flooring and inspections. The impact depends on the new location and how accessible the existing systems are.</p></details>
-            <details><summary>Should I Buy Appliances Before Hiring a Contractor?<span>+</span></summary><p>Choose appliance specifications early, but coordinate purchases with the contractor. Exact dimensions, utility requirements and delivery timing can affect cabinets, countertops, electrical work and the schedule.</p></details>
+            <details open><summary className="faq-question-summary"><h3 className="faq-question">Can You Remodel a Kitchen for $30,000?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>Yes, when the layout stays in place and the work focuses on selected surfaces, fixtures and finishes. A $30,000 budget is less realistic for a full gut remodel with new cabinetry, major system changes and premium appliances.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">What Is Usually the Most Expensive Part of a Kitchen Remodel?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>Cabinetry is often one of the largest individual costs. The total can also rise quickly when the project changes the layout, moves plumbing, upgrades electrical service or adds structural work.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">How Much Contingency Should a Kitchen Remodel Budget Include?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>A planning reserve of 10% to 15% is common when the scope is well understood. Older homes, concealed damage and extensive layout changes may justify a larger reserve.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">Does Moving the Sink Make a Kitchen Remodel More Expensive?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>Usually. Moving a sink can affect supply lines, drainage, venting, cabinetry, flooring and inspections. The impact depends on the new location and how accessible the existing systems are.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">Should I Buy Appliances Before Hiring a Contractor?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>Choose appliance specifications early, but coordinate purchases with the contractor. Exact dimensions, utility requirements and delivery timing can affect cabinets, countertops, electrical work and the schedule.</p></details>
           </section>
 
           <section className="article-sources">
@@ -222,7 +222,7 @@ export default function KitchenRemodelBudgetArticlePage() {
             <p className="eyebrow">GET A PROJECT-SPECIFIC NUMBER</p>
             <h2>Turn the Kitchen You Want Into a Written Scope.</h2>
             <p>Swift Construction &amp; Painting can review the space, discuss priorities and prepare a clear estimate based on the actual work.</p>
-            <div><a className="button blog-primary" href="/contact">Request a Free Estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
+            <div><a className="text-action" href="/contact"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a><a href="tel:3527017458">Call (352) 701-7458</a></div>
           </section>
 
           <a className="article-back" href="/blog"><span>←</span> Back to the Swift Project Library</a>

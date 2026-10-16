@@ -79,7 +79,7 @@ export default function FloridaHumidityRepaintingArticlePage() {
           <div className="article-sidebar-cta">
             <p>Exterior Looking Tired?</p>
             <h2>Get a Local Painting Estimate.</h2>
-            <a className="button blog-primary" href="/contact">Request a Free Estimate</a>
+            <a className="text-action" href="/contact"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             <a href="tel:3527017458">Call (352) 701-7458</a>
           </div>
         </aside>
@@ -130,7 +130,7 @@ export default function FloridaHumidityRepaintingArticlePage() {
             <p className="eyebrow">PAINTING NOTE</p>
             <h2>Preparation Usually Matters More Than the Calendar.</h2>
             <p>A quality coating cannot correct a dirty, wet, loose or damaged surface. Cleaning, removing failing paint, repairing cracks, addressing mildew and allowing the exterior to dry are what give the new system a solid foundation.</p>
-            <a href="/exterior-painting">Explore Swift&apos;s Exterior Painting Services <b>→</b></a>
+            <a className="text-action" href="/exterior-painting"><span className="text-action-label">Explore Swift&apos;s Exterior Painting Services</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </section>
 
           <section id="surfaces">
@@ -166,7 +166,7 @@ export default function FloridaHumidityRepaintingArticlePage() {
             <h2>Florida Exterior Repainting FAQs</h2>
             {faqItems.map((item, index) => (
               <details open={index === 0} key={item.question}>
-                <summary>{item.question}<span>+</span></summary>
+                <summary className="faq-question-summary"><h3 className="faq-question">{item.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary>
                 <p>{item.answer}</p>
               </details>
             ))}
@@ -187,7 +187,7 @@ export default function FloridaHumidityRepaintingArticlePage() {
 
       <section className="blog-cta">
         <div><p className="eyebrow">READY FOR A FRESH EXTERIOR?</p><h2>Find Out What Your Home Actually Needs.</h2><p>Swift can evaluate the existing coating, surface condition and preparation required before recommending the right repainting scope.</p></div>
-        <div><a className="button blog-primary" href="/contact">Request a Free Estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
+        <div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
       </section>
 
       <SiteFooter />

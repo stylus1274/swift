@@ -1,0 +1,185 @@
+/* Four CTA treatments. Form submits reuse the primary treatment. */
+.button[class] {
+  min-height: 56px;
+  padding: 15px 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font: 700 16px/1.3 Arial, Helvetica, sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+.button.cta-primary { background: var(--logo-blue); border-color: var(--logo-blue); color: #fff; }
+.button.cta-primary:hover { background: #2668a3; border-color: #2668a3; }
+.button.cta-secondary { background: transparent; border-color: var(--logo-blue); color: var(--logo-blue); }
+.button.cta-secondary:hover { background: #eef6fb; }
+.button.cta-primary-inverse { background: #fff; border-color: #fff; color: var(--navy); }
+.button.cta-primary-inverse:hover { background: #e8f1f7; border-color: #e8f1f7; }
+.button.cta-secondary-inverse { background: transparent; border-color: #fff; color: #fff; }
+.button.cta-secondary-inverse:hover { background: rgba(255,255,255,.08); }
+.button:focus-visible { outline: 2px solid var(--logo-blue); outline-offset: 4px; }
+.button.cta-primary-inverse:focus-visible,
+.button.cta-secondary-inverse:focus-visible { outline-color: #fff; }
+.text-action.service-cta { margin-top: auto; align-self: flex-start; }
+.founder-story .button { margin-top: 27px; }
+
+form[class] button[type="submit"] {
+  min-height: 56px;
+  border-radius: 2px;
+  font: 700 16px/1.3 Arial, Helvetica, sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+/* The header call button remains orange, with no motion or animation. */
+.header-call, .header-call:hover {
+  transform: none;
+  transition: none;
+  animation: none;
+}
+
+/* Shared question typography and toggle for every FAQ presentation. */
+h3.faq-question, .faq-question-card h3 {
+  margin: 0;
+  font: 700 18px/1.4 Arial, Helvetica, sans-serif;
+  letter-spacing: normal;
+}
+.faq-question-card h3 { margin: 12px 0 15px; }
+.faq-question .faq-question-button,
+.article-faqs .faq-question-summary {
+  width: 100%;
+  min-height: 104px;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  border: 0;
+  background: transparent;
+  color: #0b2b45;
+  text-align: left;
+  font: 700 18px/1.4 Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  list-style: none;
+}
+.faq-question-summary::-webkit-details-marker { display: none; }
+.faq-question .faq-question-button .faq-circle,
+.article-faqs .faq-question-summary .faq-circle {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--logo-blue);
+  border-radius: 50%;
+  color: var(--logo-blue);
+  font: 400 23px/1 Arial, Helvetica, sans-serif;
+}
+.faq-question-button[aria-expanded="true"] .faq-circle,
+.article-faqs details[open] .faq-question-summary .faq-circle {
+  background: var(--logo-blue);
+  color: #fff;
+}
+.article-faqs details[open] .faq-question-summary .faq-circle { font-size: 0; }
+.article-faqs details[open] .faq-question-summary .faq-circle::after { content: "−"; font: 400 23px/1 Arial, Helvetica, sans-serif; }
+.faq-question-button:focus-visible,
+.faq-question-summary:focus-visible { outline: 2px solid var(--logo-blue); outline-offset: 4px; }
+
+/* Text actions share the primary CTA blue, including their arrow. */
+.text-action[class] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--logo-blue);
+  font: 700 16px/1.4 Arial, Helvetica, sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+}
+.text-action[class] :is(span, b) {
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  transform: none;
+}
+.text-action[class]:hover,
+a:hover .text-action[class] {
+  color: #2668a3;
+  background: transparent;
+  text-decoration: none;
+}
+.text-action[class] .text-action-label {
+  transform: none;
+  transition: none;
+  text-decoration: none;
+}
+.text-action[class] .text-action-arrow {
+  display: inline-block;
+  flex: 0 0 auto;
+  transform: translateX(0);
+  transition: transform .2s ease;
+  text-decoration: none;
+}
+.text-action[class]:is(:hover, :focus-visible) .text-action-label,
+a:is(:hover, :focus-visible) .text-action[class] .text-action-label {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.text-action[class]:is(:hover, :focus-visible) .text-action-arrow,
+a:is(:hover, :focus-visible) .text-action[class] .text-action-arrow {
+  transform: translateX(4px);
+}
+.text-action[class]:focus-visible { outline: 2px solid var(--logo-blue); outline-offset: 4px; }
+
+/* FAQ hover changes the text and toggle without moving the question. */
+.faq-question .faq-question-button[aria-expanded="true"],
+.article-faqs details[open] .faq-question-summary {
+  color: var(--logo-blue);
+}
+.article-faqs details[open] .faq-question-summary h3 { color: inherit; }
+.faq-question .faq-question-button:hover,
+.article-faqs .faq-question-summary:hover {
+  color: var(--logo-blue);
+}
+.faq-question .faq-question-button[aria-expanded="true"]:hover,
+.article-faqs details[open] .faq-question-summary:hover {
+  color: #0b2b45;
+}
+.article-faqs .faq-question-summary:hover h3 { color: inherit; }
+.faq-question .faq-question-button:hover .faq-circle,
+.article-faqs details .faq-question-summary:hover .faq-circle {
+  border-color: #2668a3;
+  background: #2668a3;
+  color: #fff;
+}
+.faq-question .faq-question-button[aria-expanded="true"]:hover .faq-circle,
+.article-faqs details[open] .faq-question-summary:hover .faq-circle {
+  border-color: var(--logo-blue);
+  background: transparent;
+  color: var(--logo-blue);
+}
+@media (prefers-reduced-motion: reduce) {
+  .text-action[class] .text-action-arrow { transition: none; }
+  .text-action[class]:is(:hover, :focus-visible) .text-action-arrow,
+  a:is(:hover, :focus-visible) .text-action[class] .text-action-arrow { transform: none; }
+}
+@media (max-width: 650px) {
+  .button[class] { padding-inline: 20px; }
+  .hero-actions .button, .process-action .button { width: 100%; }
+}

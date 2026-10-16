@@ -74,7 +74,7 @@ export default function EnergyEfficientWindowsSpringHillPage() {
           <div className="article-sidebar-cta">
             <p>Planning Window Replacement?</p>
             <h2>Start With the Openings You Have.</h2>
-            <a className="button blog-primary" href="/contact">Request a Free Estimate</a>
+            <a className="text-action" href="/contact"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             <a href="tel:3527017458">Call (352) 701-7458</a>
           </div>
         </aside>
@@ -110,7 +110,7 @@ export default function EnergyEfficientWindowsSpringHillPage() {
             <p className="eyebrow">ENERGY STAR NOTE</p>
             <h2>Efficiency Standards Change by Climate Zone.</h2>
             <p>ENERGY STAR&apos;s current residential window criteria are climate-specific. That is why homeowners should confirm the product is certified for the climate where it will actually be installed rather than assuming every ENERGY STAR window has the same specifications nationwide.</p>
-            <a href="https://www.energystar.gov/products/res_windows_doors_skylights" target="_blank" rel="noopener noreferrer">Review ENERGY STAR Window Guidance <b>→</b></a>
+            <a className="text-action" href="https://www.energystar.gov/products/res_windows_doors_skylights" target="_blank" rel="noopener noreferrer"><span className="text-action-label">Review ENERGY STAR Window Guidance</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </section>
 
           <section id="florida">
@@ -162,7 +162,7 @@ export default function EnergyEfficientWindowsSpringHillPage() {
             <h2>Energy-Efficient Window FAQs</h2>
             {faqItems.map((item, index) => (
               <details open={index === 0} key={item.question}>
-                <summary>{item.question}<span>+</span></summary>
+                <summary className="faq-question-summary"><h3 className="faq-question">{item.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary>
                 <p>{item.answer}</p>
               </details>
             ))}
@@ -182,7 +182,7 @@ export default function EnergyEfficientWindowsSpringHillPage() {
 
       <section className="blog-cta">
         <div><p className="eyebrow">PLANNING WINDOW REPLACEMENT?</p><h2>Compare the Opening and the Product Together.</h2><p>Swift can review your existing windows, discuss efficiency and impact-rated options, and build the installation and finish work into one written scope.</p></div>
-        <div><a className="button blog-primary" href="/contact">Request a Free Estimate</a><a href="/windows-doors">Explore Windows &amp; Doors</a></div>
+        <div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/windows-doors">Explore Windows &amp; Doors</a></div>
       </section>
 
       <SiteFooter />

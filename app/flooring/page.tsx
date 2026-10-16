@@ -106,7 +106,7 @@ export default function FlooringPage() {
           <h1>Flooring Installation That Brings the Whole Room Together.</h1>
           <p>Careful layout, solid preparation and clean finish work for durable floors that feel right throughout your home.</p>
           <div className="remodel-hero-actions">
-            <a className="button remodel-primary" href="#flooring-quick-project">Get a Free Flooring Estimate</a>
+            <a className="button cta-primary" href="#flooring-quick-project">Get a free flooring estimate</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="remodel-hero-proof">
@@ -144,7 +144,7 @@ export default function FlooringPage() {
               <span>{service.number}</span>
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
-              <a href="#flooring-estimate">Discuss Your Project <b>→</b></a>
+              <a className="text-action" href="#flooring-estimate"><span className="text-action-label">Discuss Your Project</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             </article>
           ))}
         </div>
@@ -155,7 +155,7 @@ export default function FlooringPage() {
           <p className="eyebrow">WHAT IS UNDERNEATH MATTERS</p>
           <h2>A Better Finished Floor Starts With the Surface Below It.</h2>
           <p>The material is only part of the project. Existing flooring, subfloor condition, room transitions and finish details all affect how the new floor looks and performs.</p>
-          <a className="button remodel-primary" href="#flooring-estimate">Plan a Home Walkthrough</a>
+          <a className="button cta-primary" href="#flooring-estimate">Plan a home walkthrough</a>
         </div>
         <div className="commercial-coordination-list">
           <article><span>01</span><div><h3>Review the Existing Floor</h3><p>We identify the current material, transitions, access and visible conditions before defining the work.</p></div></article>
@@ -197,8 +197,8 @@ export default function FlooringPage() {
           <p>Swift can connect flooring with cabinetry, carpentry, painting and other room improvements under one licensed building contractor.</p>
         </div>
         <div className="commercial-painting-proof-actions">
-          <a className="button remodel-primary" href="#flooring-estimate">Request a Free Estimate</a>
-          <a href="/residential-remodeling">Explore Residential Remodeling <span aria-hidden="true">→</span></a>
+          <a className="button cta-primary" href="#flooring-estimate">Request a free estimate</a>
+          <a className="text-action" href="/residential-remodeling"><span className="text-action-label">Explore Residential Remodeling</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
         </div>
       </section>
 
@@ -208,10 +208,10 @@ export default function FlooringPage() {
           <h2>What Homeowners Ask Before Flooring Installation Begins.</h2>
           <p>Clear answers make it easier to compare materials, preparation and the contractor responsible for your home.</p>
         </div>
-        <p><a href="/faq/best-flooring-for-florida-home">Compare the best flooring options for a Florida home →</a></p><div className="remodel-faq-list">
+        <p><a className="text-action" href="/faq/best-flooring-for-florida-home"><span className="text-action-label">Compare the best flooring options for a Florida home</span><span className="text-action-arrow" aria-hidden="true">→</span></a></p><div className="remodel-faq-list">
           {flooringFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b></button><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
+            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
           })}
         </div>
       </section>
@@ -231,7 +231,7 @@ export default function FlooringPage() {
           <div className="remodel-form-row"><label><span className="form-label-text">Flooring Type <span className="form-requirement">(required)</span></span><select value={flooringType} onChange={(event) => setFlooringType(event.target.value)} required><option value="" disabled>Select flooring</option><option>Luxury vinyl plank</option><option>Tile flooring</option><option>Laminate flooring</option><option>Not sure yet</option><option>Other flooring project</option></select></label><label><span className="form-label-text">Approximate Size <span className="form-requirement">(required)</span></span><select value={projectSize} onChange={(event) => setProjectSize(event.target.value)} required><option value="" disabled>Select size</option><option>One room</option><option>Two to three rooms</option><option>Several rooms</option><option>Whole-home flooring</option><option>Not sure yet</option></select></label></div>
           <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us which rooms need flooring, what is there now and whether you have selected a material." /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my flooring estimate"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my flooring estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

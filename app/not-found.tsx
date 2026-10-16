@@ -19,8 +19,8 @@ export default function NotFound() {
         <h1>That Page Could Not Be Found.</h1>
         <p>The page may have moved, or the URL may be incorrect.</p>
         <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
-          <Link className="button button-dark" href="/">Return Home</Link>
-          <Link className="button button-outline" href="/#services">View Services</Link>
+          <Link className="button cta-primary" href="/">Return home</Link>
+          <Link className="button cta-secondary" href="/#services">View services</Link>
         </div>
       </section>
     </main>

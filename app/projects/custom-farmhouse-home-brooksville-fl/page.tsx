@@ -47,8 +47,8 @@ export default function BrooksvilleCustomFarmhousePage() {
             the project running from October 2024 through June 2025.
           </p>
           <div className={styles.heroActions}>
-            <a className={styles.primaryButton} href="/contact">Request a Free Estimate</a>
-            <a className={styles.secondaryLink} href="/custom-home-building">Explore New Home Construction <span aria-hidden="true">→</span></a>
+            <a className="button cta-primary" href="/contact">Request a free estimate</a>
+            <a className="text-action" href="/custom-home-building"><span className="text-action-label">Explore New Home Construction</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
         <div className={styles.heroImage}>
@@ -131,8 +131,8 @@ export default function BrooksvilleCustomFarmhousePage() {
           </p>
         </div>
         <div className={styles.ctaActions}>
-          <a className={styles.primaryButton} href="/contact">Request a Free Estimate</a>
-          <a className={styles.secondaryLink} href="/custom-home-building">New Home Construction <span aria-hidden="true">→</span></a>
+          <a className="button cta-primary" href="/contact">Request a free estimate</a>
+          <a className="text-action" href="/custom-home-building"><span className="text-action-label">New Home Construction</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
         </div>
       </section>
 

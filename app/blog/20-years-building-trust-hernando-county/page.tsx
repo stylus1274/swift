@@ -42,7 +42,7 @@ export default function BuildingTrustHernandoCountyArticlePage() {
           <div className="article-sidebar-cta">
             <p>Planning a Project?</p>
             <h2>Talk With a Local Building Contractor.</h2>
-            <a className="button blog-primary" href="/contact">Request a Free Estimate</a>
+            <a className="text-action" href="/contact"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             <a href="tel:3527017458">Call (352) 701-7458</a>
           </div>
         </aside>
@@ -88,7 +88,7 @@ export default function BuildingTrustHernandoCountyArticlePage() {
             <p className="eyebrow">LICENSED CONTRACTOR</p>
             <h2>A License Gives Homeowners Something Concrete to Verify.</h2>
             <p>Swift operates under Florida building contractor license CBC1260893. Before hiring any contractor for structural work, remodeling or new construction, homeowners should verify the active license, confirm the name attached to it and make sure the scope of work fits the contractor&apos;s licensing.</p>
-            <a href="/about">Learn More About Swift Construction &amp; Painting <b>→</b></a>
+            <a className="text-action" href="/about"><span className="text-action-label">Learn More About Swift Construction &amp; Painting</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </section>
 
           <section id="process">
@@ -122,7 +122,7 @@ export default function BuildingTrustHernandoCountyArticlePage() {
 
       <section className="blog-cta">
         <div><p className="eyebrow">LOCAL SINCE 2003</p><h2>Start Your Project With a Contractor You Can Verify.</h2><p>Talk with Swift about the work you are planning, the property and the next step toward a written project scope.</p></div>
-        <div><a className="button blog-primary" href="/contact">Request a Free Estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
+        <div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
       </section>
 
       <SiteFooter />

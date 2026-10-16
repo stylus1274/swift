@@ -20,7 +20,7 @@ export default function CitrusCountyLocationPage(){
         <p className={styles.eyebrow}>CITRUS COUNTY, FLORIDA</p>
         <h1>Custom Home Builder & Contractor in Citrus County, FL</h1>
         <p className={styles.deck}>Swift Construction & Painting serves Citrus County with custom home construction, remodeling, additions, painting, windows and doors, and related residential and commercial building services.</p>
-        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a><a className={styles.secondaryLink} href="/custom-home-building">Explore New Home Construction <span aria-hidden="true">→</span></a></div>
+        <div className={styles.heroActions}><a className="button cta-primary" href="/contact">Request a free estimate</a><a className="text-action" href="/custom-home-building"><span className="text-action-label">Explore New Home Construction</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div>
       </div>
       <div className={styles.heroImage}><img src="/assets/projects/brooksville-custom-farmhouse/exterior.jpg" alt="Example of a completed Swift custom home project"/></div>
     </section>
@@ -36,7 +36,7 @@ export default function CitrusCountyLocationPage(){
     </section>
     <section className={styles.servicesSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>SERVICES IN CITRUS COUNTY</p><h2>Construction and Home Improvement Services.</h2></div>
-      <div className={styles.serviceGrid}>{services.map(([title,href,copy],index)=><a href={href} key={title}><span>{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p><b>Learn More →</b></a>)}</div>
+      <div className={styles.serviceGrid}>{services.map(([title,href,copy],index)=><a href={href} key={title}><span>{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p><b className="text-action"><span className="text-action-label">Learn More</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>)}</div>
     </section>
     <section className={styles.projectsSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>REAL SWIFT PROJECT EXAMPLES</p><h2>See the Type of Work Swift Has Completed.</h2><p>These are verified Swift projects from nearby markets. They are shown as examples of capability, not represented as Citrus County projects.</p></div>
@@ -46,7 +46,7 @@ export default function CitrusCountyLocationPage(){
       </div>
     </section>
     <section className={styles.processSection}><div><p className={styles.eyebrow}>CUSTOM HOME PROCESS</p><h2>From Site Planning Through Completion.</h2></div><div className={styles.steps}><p><strong>01</strong><span>Discuss the property, home concept, budget and design direction.</span></p><p><strong>02</strong><span>Plan the build, coordinate site work and line up the licensed trades required for construction.</span></p><p><strong>03</strong><span>Manage construction through the finishing stages and final walkthrough.</span></p></div></section>
-    <section className={styles.cta}><div><p className={styles.eyebrow}>BUILDING IN CITRUS COUNTY?</p><h2>Start With the Property and the Home You Want to Build.</h2><p>Talk with Swift about your custom-home or construction plans and schedule an initial consultation.</p></div><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a></section>
+    <section className={styles.cta}><div><p className={styles.eyebrow}>BUILDING IN CITRUS COUNTY?</p><h2>Start With the Property and the Home You Want to Build.</h2><p>Talk with Swift about your custom-home or construction plans and schedule an initial consultation.</p></div><a className="button cta-primary" href="/contact">Request a free estimate</a></section>
     <SiteFooter />
   </main>;
 }

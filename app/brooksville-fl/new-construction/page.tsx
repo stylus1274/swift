@@ -20,7 +20,7 @@ export default function BrooksvilleNewConstructionPage(){
         <p className={styles.eyebrow}>NEW CONSTRUCTION • BROOKSVILLE, FL</p>
         <h1>Custom Home Construction in Brooksville, FL</h1>
         <p className={styles.deck}>Swift Construction & Painting builds custom homes in Brooksville and the surrounding Hernando County market, coordinating the project from early planning through construction and completion.</p>
-        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Discuss Your New Home</a><a className={styles.secondaryLink} href="/projects/custom-farmhouse-home-brooksville-fl">See a Brooksville Build <span>→</span></a></div>
+        <div className={styles.heroActions}><a className="button cta-primary" href="/contact">Discuss your new home</a><a className="text-action" href="/projects/custom-farmhouse-home-brooksville-fl"><span className="text-action-label">See a Brooksville Build</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div>
       </div>
       <div className={styles.heroImage}><img src="/assets/projects/brooksville-custom-farmhouse/exterior.jpg" alt="Custom farmhouse built by Swift Construction and Painting in Brooksville, Florida"/></div>
     </section>
@@ -36,7 +36,7 @@ export default function BrooksvilleNewConstructionPage(){
     </section>
     <section className={styles.servicesSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>BUILDING SERVICES</p><h2>What Goes Into a Custom Home Project.</h2></div>
-      <div className={styles.serviceGrid}>{services.map(([title,href,copy],i)=><a href={href} key={title}><span>{String(i+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p><b>Learn More →</b></a>)}</div>
+      <div className={styles.serviceGrid}>{services.map(([title,href,copy],i)=><a href={href} key={title}><span>{String(i+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p><b className="text-action"><span className="text-action-label">Learn More</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>)}</div>
     </section>
     <section className={styles.projectsSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>BROOKSVILLE PROJECT PROOF</p><h2>A Completed Custom Farmhouse.</h2><p>Project details and photos come from Swift&apos;s completed-project records.</p></div>
@@ -46,7 +46,7 @@ export default function BrooksvilleNewConstructionPage(){
       </div>
     </section>
     <section className={styles.processSection}><div><p className={styles.eyebrow}>CUSTOM HOME PROCESS</p><h2>Move From Property Questions to a Defined Build.</h2></div><div className={styles.steps}><p><strong>01</strong><span>Discuss the lot, plans, home goals and major priorities.</span></p><p><strong>02</strong><span>Define the construction scope, permits, trade work and finish selections.</span></p><p><strong>03</strong><span>Coordinate the build through inspections, finishing stages and final walkthrough.</span></p></div></section>
-    <section className={styles.cta}><div><p className={styles.eyebrow}>PLANNING A HOME IN BROOKSVILLE?</p><h2>Start With the Property and the Home You Want.</h2><p>Talk with Swift about your lot, plans and the practical next step toward construction.</p></div><a className={styles.primaryButton} href="/contact">Request a Project Conversation</a></section>
+    <section className={styles.cta}><div><p className={styles.eyebrow}>PLANNING A HOME IN BROOKSVILLE?</p><h2>Start With the Property and the Home You Want.</h2><p>Talk with Swift about your lot, plans and the practical next step toward construction.</p></div><a className="button cta-primary" href="/contact">Request a project conversation</a></section>
     <SiteFooter />
   </main>;
 }

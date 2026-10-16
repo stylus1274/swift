@@ -75,7 +75,7 @@ export default function VerifyFloridaContractorArticlePage() {
           <div className="article-sidebar-cta">
             <p>Planning a Project?</p>
             <h2>Verify First. Then Compare the Scope.</h2>
-            <a className="button blog-primary" href="/contact">Request a Free Estimate</a>
+            <a className="text-action" href="/contact"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             <a href="tel:3527017458">Call (352) 701-7458</a>
           </div>
         </aside>
@@ -116,7 +116,7 @@ export default function VerifyFloridaContractorArticlePage() {
             <p className="eyebrow">OFFICIAL LICENSE CHECK</p>
             <h2>Use the State Record, Not Just the Contractor's Website.</h2>
             <p>Florida DBPR says its verification tools can be used to search licensed individuals by name or license number and review license status.</p>
-            <a href="https://www2.myfloridalicense.com/how-to-verify-a-license/" target="_blank" rel="noopener noreferrer">Open Florida DBPR Verification Guidance <b>→</b></a>
+            <a className="text-action" href="https://www2.myfloridalicense.com/how-to-verify-a-license/" target="_blank" rel="noopener noreferrer"><span className="text-action-label">Open Florida DBPR Verification Guidance</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </section>
 
           <section id="insurance">
@@ -171,7 +171,7 @@ export default function VerifyFloridaContractorArticlePage() {
             <h2>Florida Contractor Verification FAQs</h2>
             {faqItems.map((item, index) => (
               <details open={index === 0} key={item.question}>
-                <summary>{item.question}<span>+</span></summary>
+                <summary className="faq-question-summary"><h3 className="faq-question">{item.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary>
                 <p>{item.answer}</p>
               </details>
             ))}
@@ -191,7 +191,7 @@ export default function VerifyFloridaContractorArticlePage() {
 
       <section className="blog-cta">
         <div><p className="eyebrow">READY TO DISCUSS YOUR PROJECT?</p><h2>Verify the Contractor. Then Review the Scope.</h2><p>Swift can review your project and provide a written estimate for construction, remodeling or painting work throughout the local service area.</p></div>
-        <div><a className="button blog-primary" href="/contact">Request a Free Estimate</a><a href="/services">Explore Services</a></div>
+        <div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/services">Explore Services</a></div>
       </section>
 
       <SiteFooter />

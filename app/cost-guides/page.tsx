@@ -18,7 +18,7 @@ export default function CostGuidesPage(){
         <p className={styles.eyebrow}>PROJECT COST GUIDES</p>
         <h1>Construction & Remodeling Cost Guides for Florida Homeowners</h1>
         <p className={styles.deck}>Use these guides to understand what drives project cost before you request estimates. They are planning resources, not one-size-fits-all price sheets.</p>
-        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Request a Project Estimate</a><a className={styles.secondaryLink} href="/services">Explore Services <span>→</span></a></div>
+        <div className={styles.heroActions}><a className="button cta-primary" href="/contact">Request a project estimate</a><a className="text-action" href="/services"><span className="text-action-label">Explore Services</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div>
       </div>
       <div className={styles.heroImage}><img src="/assets/projects/spring-hill-whole-home-remodel/kitchen-after.jpg" alt="Completed Swift remodeling project used to illustrate project cost planning"/></div>
     </section>
@@ -48,7 +48,7 @@ export default function CostGuidesPage(){
       </div>
     </section>
     <section className={styles.processSection}><div><p className={styles.eyebrow}>FROM GUIDE TO ESTIMATE</p><h2>Use Online Numbers for Planning, Then Price the Real Scope.</h2></div><div className={styles.steps}><p><strong>01</strong><span>Use the guides to identify the likely scope and major cost drivers.</span></p><p><strong>02</strong><span>Walk the property with Swift so existing conditions can be evaluated.</span></p><p><strong>03</strong><span>Review a written estimate based on the actual project rather than a generic average.</span></p></div></section>
-    <section className={styles.cta}><div><p className={styles.eyebrow}>READY FOR A REAL NUMBER?</p><h2>Request an On-Site Project Estimate.</h2><p>Once the scope is clear, Swift can prepare a written estimate based on your property and project.</p></div><a className={styles.primaryButton} href="/contact">Request a Free Estimate</a></section>
+    <section className={styles.cta}><div><p className={styles.eyebrow}>READY FOR A REAL NUMBER?</p><h2>Request an On-Site Project Estimate.</h2><p>Once the scope is clear, Swift can prepare a written estimate based on your property and project.</p></div><a className="button cta-primary" href="/contact">Request a free estimate</a></section>
     <SiteFooter />
   </main>;
 }

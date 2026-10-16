@@ -94,7 +94,7 @@ export default function KitchenRemodelingValueArticlePage() {
           <div className="article-sidebar-cta">
             <p>Planning a Kitchen?</p>
             <h2>Start With the Problems the New Kitchen Needs to Solve.</h2>
-            <a className="button blog-primary" href="/contact">Request an Estimate</a>
+            <a className="text-action" href="/contact"><span className="text-action-label">Request an estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             <a href="tel:3527017458">Call (352) 701-7458</a>
           </div>
         </aside>
@@ -128,7 +128,7 @@ export default function KitchenRemodelingValueArticlePage() {
             <p className="eyebrow">START WITH FUNCTION</p>
             <h2>A Better Kitchen Plan Begins With the Friction You Feel Every Day.</h2>
             <p>Write down what does not work before choosing cabinets or counters. Poor traffic flow, limited prep space, dark work areas and hard-to-reach storage should shape the scope.</p>
-            <a href="/kitchen-remodeling">Explore Swift&apos;s Kitchen Remodeling Services <b>→</b></a>
+            <a className="text-action" href="/kitchen-remodeling"><span className="text-action-label">Explore Swift&apos;s Kitchen Remodeling Services</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </section>
 
           <section id="valuable-upgrades">
@@ -218,11 +218,11 @@ export default function KitchenRemodelingValueArticlePage() {
           <section className="article-faqs" id="faqs">
             <p className="eyebrow">COMMON QUESTIONS</p>
             <h2>Kitchen Remodeling Value FAQs</h2>
-            <details open><summary>What Kitchen Upgrade Adds the Most Value?<span>+</span></summary><p>The best upgrade depends on the kitchen&apos;s current problems. Improving a poor layout, adding useful storage and replacing worn cabinets or counters usually creates more practical value than adding a luxury feature that does not improve daily use.</p></details>
-            <details><summary>Is a Full Kitchen Remodel Worth It?<span>+</span></summary><p>A full remodel can be worthwhile when the layout does not work, cabinets are failing, systems need updating or several surfaces are at the end of their useful life. A focused update may be more sensible when the basic layout and cabinetry are still sound.</p></details>
-            <details><summary>Should I Move Plumbing During a Kitchen Remodel?<span>+</span></summary><p>Move plumbing when it solves a meaningful layout or workflow problem. Relocating sinks, dishwashers or gas lines can increase cost, so the functional gain should justify the added work.</p></details>
-            <details><summary>Do Kitchen Remodels Require Permits in Florida?<span>+</span></summary><p>Permit requirements depend on the project scope and local jurisdiction. Structural, plumbing, electrical and mechanical changes commonly require permits. Confirm requirements before construction begins.</p></details>
-            <details><summary>Does Swift Require a Deposit for Kitchen Remodeling?<span>+</span></summary><p>No. Swift Construction and Painting does not require an upfront deposit. Customers are invoiced after the work is complete.</p></details>
+            <details open><summary className="faq-question-summary"><h3 className="faq-question">What Kitchen Upgrade Adds the Most Value?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>The best upgrade depends on the kitchen&apos;s current problems. Improving a poor layout, adding useful storage and replacing worn cabinets or counters usually creates more practical value than adding a luxury feature that does not improve daily use.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">Is a Full Kitchen Remodel Worth It?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>A full remodel can be worthwhile when the layout does not work, cabinets are failing, systems need updating or several surfaces are at the end of their useful life. A focused update may be more sensible when the basic layout and cabinetry are still sound.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">Should I Move Plumbing During a Kitchen Remodel?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>Move plumbing when it solves a meaningful layout or workflow problem. Relocating sinks, dishwashers or gas lines can increase cost, so the functional gain should justify the added work.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">Do Kitchen Remodels Require Permits in Florida?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>Permit requirements depend on the project scope and local jurisdiction. Structural, plumbing, electrical and mechanical changes commonly require permits. Confirm requirements before construction begins.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">Does Swift Require a Deposit for Kitchen Remodeling?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>No. Swift Construction and Painting does not require an upfront deposit. Customers are invoiced after the work is complete.</p></details>
           </section>
 
           <section>
@@ -250,7 +250,7 @@ export default function KitchenRemodelingValueArticlePage() {
             <p className="eyebrow">PLAN A KITCHEN THAT WORKS</p>
             <h2>Turn Your Priorities Into a Clear Remodeling Scope.</h2>
             <p>Swift Construction &amp; Painting can review your kitchen, discuss the problems you want to solve and prepare a written estimate based on the actual work. Swift is licensed under CBC1260893 and serves homeowners across Hernando, Citrus and Pasco Counties.</p>
-            <div><a className="button blog-primary" href="/contact">Request a Free Estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
+            <div><a className="text-action" href="/contact"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a><a href="tel:3527017458">Call (352) 701-7458</a></div>
           </section>
 
           <a className="article-back" href="/blog"><span>←</span> Back to the Swift Project Library</a>

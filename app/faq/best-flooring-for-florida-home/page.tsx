@@ -29,7 +29,7 @@ export default function Page(){
     <div className="article-shell">
       <aside className="article-sidebar">
         <div className="article-contents"><p>On This Page</p><a href="#quick">Quick Answer</a><a href="#lvp">Luxury Vinyl Plank</a><a href="#tile">Tile</a><a href="#engineered">Engineered Wood</a><a href="#slab">Concrete Slabs & Moisture</a><a href="#rooms">Choosing by Room</a><a href="#faqs">FAQs</a></div>
-        <div className="article-sidebar-cta"><p>Planning New Floors?</p><h2>Choose the Material Around the Room and the Subfloor.</h2><a className="button blog-primary" href="/contact">Request a Free Estimate</a></div>
+        <div className="article-sidebar-cta"><p>Planning New Floors?</p><h2>Choose the Material Around the Room and the Subfloor.</h2><a className="text-action" href="/contact"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div>
       </aside>
 
       <article className="article-body">
@@ -82,13 +82,13 @@ export default function Page(){
           <p>If flooring is part of a larger project, Swift can coordinate it with <a href="/residential-remodeling">residential remodeling</a> and <a href="/home-remodeling">whole-home remodeling</a> work under one scope.</p>
         </section>
 
-        <section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Florida Flooring FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary>{x.question}<span>+</span></summary><p>{x.answer}</p></details>)}</section>
+        <section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Florida Flooring FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section>
 
         <section className="article-sources"><p className="eyebrow">PLANNING RESOURCES</p><h2>Moisture and Installation Conditions Matter.</h2><ul><li><a href="https://www.angi.com/companylist/us/fl/riverview/flooring.htm" target="_blank" rel="noreferrer">Angi: Florida Flooring Material Guidance</a></li><li><a href="https://www.floridabuilding.org/" target="_blank" rel="noreferrer">Florida Building Commission</a></li></ul></section>
       </article>
     </div>
 
-    <section className="blog-cta"><div><p className="eyebrow">PLANNING NEW FLOORING?</p><h2>Choose the Floor Around the Room, the Slab and the Way You Live.</h2><p>Swift can review the existing flooring, subfloor conditions and finish goals before defining the installation scope.</p></div><div><a className="button blog-primary" href="/contact">Request a Free Estimate</a><a href="/faq">More FAQs</a></div></section>
+    <section className="blog-cta"><div><p className="eyebrow">PLANNING NEW FLOORING?</p><h2>Choose the Floor Around the Room, the Slab and the Way You Live.</h2><p>Swift can review the existing flooring, subfloor conditions and finish goals before defining the installation scope.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/faq">More FAQs</a></div></section>
     <SiteFooter/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/>
   </main>;

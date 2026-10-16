@@ -106,7 +106,7 @@ export default function CommercialPaintingPage() {
           <h1>Commercial Painting That Works Around Your Business.</h1>
           <p>Interior and exterior painting with careful preparation, durable finishes and a project schedule built around the people using your property.</p>
           <div className="remodel-hero-actions">
-            <a className="button remodel-primary" href="#commercial-painting-quick-project">Request a Painting Estimate</a>
+            <a className="button cta-primary" href="#commercial-painting-quick-project">Request a painting estimate</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="remodel-hero-proof">
@@ -144,7 +144,7 @@ export default function CommercialPaintingPage() {
               <span>{service.number}</span>
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
-              <a href="#commercial-painting-estimate">Discuss Your Property <b>→</b></a>
+              <a className="text-action" href="#commercial-painting-estimate"><span className="text-action-label">Discuss Your Property</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             </article>
           ))}
         </div>
@@ -155,7 +155,7 @@ export default function CommercialPaintingPage() {
           <p className="eyebrow">PLANNED AROUND YOUR OPERATION</p>
           <h2>A Better Finish With Less Disruption to Your Property.</h2>
           <p>A commercial repaint affects more than walls. Access, customers, tenants, equipment and operating hours all shape the project plan. Swift accounts for those realities before work begins.</p>
-          <a className="button remodel-primary" href="#commercial-painting-estimate">Plan a Property Walkthrough</a>
+          <a className="button cta-primary" href="#commercial-painting-estimate">Plan a property walkthrough</a>
         </div>
         <div className="commercial-coordination-list">
           <article><span>01</span><div><h3>Careful Preparation</h3><p>Surface repairs, masking and protection are defined around the materials and spaces being painted.</p></div></article>
@@ -197,8 +197,8 @@ export default function CommercialPaintingPage() {
           <p>When a project also involves repairs, carpentry, flooring or renovation work, Swift can coordinate the connected scope under one licensed building contractor.</p>
         </div>
         <div className="commercial-painting-proof-actions">
-          <a className="button remodel-primary" href="#commercial-painting-estimate">Request a Commercial Estimate</a>
-          <a href="/commercial-services">Explore Commercial Services <span aria-hidden="true">→</span></a>
+          <a className="button cta-primary" href="#commercial-painting-estimate">Request a commercial estimate</a>
+          <a className="text-action" href="/commercial-services"><span className="text-action-label">Explore Commercial Services</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
         </div>
       </section>
 
@@ -211,7 +211,7 @@ export default function CommercialPaintingPage() {
         <div className="remodel-faq-list">
           {paintingFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b></button><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
+            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
           })}
         </div>
       </section>
@@ -231,7 +231,7 @@ export default function CommercialPaintingPage() {
           <div className="remodel-form-row"><label><span className="form-label-text">Painting Scope <span className="form-requirement">(required)</span></span><select value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select scope</option><option>Interior painting</option><option>Exterior painting</option><option>Interior and exterior</option><option>Maintenance repaint</option><option>Other painting project</option></select></label><label><span className="form-label-text">Property Type <span className="form-requirement">(required)</span></span><select value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Office</option><option>Retail</option><option>Restaurant or hospitality</option><option>Medical or professional</option><option>Multi-tenant property</option><option>Other</option></select></label></div>
           <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us what needs to be painted, whether the property is occupied and any access or scheduling requirements." /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my painting estimate"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my painting estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

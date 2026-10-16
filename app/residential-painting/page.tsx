@@ -98,7 +98,7 @@ export default function ResidentialPaintingPage() {
           <h1>Paint That Makes the Whole House Feel Finished.</h1>
           <p>Interior and exterior painting with careful preparation, clean work areas and finishes made for Florida homes.</p>
           <div className="paint-hero-actions">
-            <a className="button paint-primary" href="#hero-project">Get a free painting estimate</a>
+            <a className="button cta-primary" href="#hero-project">Get a free painting estimate</a>
             <a className="paint-hero-call" href="tel:3527017458"><small>OR CALL DIRECTLY</small>(352) 701-7458</a>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function ResidentialPaintingPage() {
         <div className="paint-intro-copy">
           <p>A lasting paint job is not just about the color. It is about protecting the surfaces, correcting problem areas and applying the right coating with control.</p>
           <p>Swift manages the full process, from the initial walkthrough and written estimate through cleanup and the final inspection.</p>
-          <a href="#paint-process">See our painting process <span>→</span></a>
+          <a className="text-action" href="#paint-process"><span className="text-action-label">See our painting process</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
         </div>
       </section>
 
@@ -152,7 +152,7 @@ export default function ResidentialPaintingPage() {
                 <span>{service.number}</span>
                 <h3>{service.title}</h3>
                 <p>{service.copy}</p>
-                <a href="#paint-estimate">Request an estimate <b>→</b></a>
+                <a className="text-action" href="#paint-estimate"><span className="text-action-label">Request an estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
               </div>
             </article>
           ))}
@@ -194,7 +194,7 @@ export default function ResidentialPaintingPage() {
         </div>
         <div className="paint-project-cta">
           <p>Planning something similar?</p>
-          <a className="button paint-primary" href="#paint-estimate">Get an estimate for your home</a>
+          <a className="button cta-primary" href="#paint-estimate">Get an estimate for your home</a>
         </div>
       </section>
 
@@ -215,7 +215,7 @@ export default function ResidentialPaintingPage() {
         <div className="paint-review-intro">
           <p className="eyebrow">CUSTOMER REVIEWS</p>
           <h2>Chosen for the Details.<br />Recommended for the Experience.</h2>
-          <a href="#paint-estimate">Start your project <span>→</span></a>
+          <a className="text-action" href="#paint-estimate"><span className="text-action-label">Start your project</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
         </div>
         <article className="paint-review-card">
           <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
@@ -254,9 +254,9 @@ export default function ResidentialPaintingPage() {
             const isOpen = openFaq === index;
             return (
               <article className={isOpen ? "open" : ""} key={faq.question}>
-                <button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}>
-                  <span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b>
-                </button>
+                <h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}>
+                  <span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span>
+                </button></h3>
                 <div hidden={!isOpen}><p>{faq.answer}</p></div>
               </article>
             );
@@ -288,7 +288,7 @@ export default function ResidentialPaintingPage() {
           </div>
           <label><span className="form-label-text">What would you like painted? <span className="form-requirement">(optional)</span></span><select name="project" defaultValue=""><option value="" disabled>Select your project</option><option>Interior painting</option><option>Exterior painting</option><option>Interior and exterior</option><option>New construction painting</option><option>Other painting project</option></select></label>
           <label><span className="form-label-text">Project details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us a little about the rooms, exterior or surfaces you would like painted." /></label>
-          <button className="button paint-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

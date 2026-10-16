@@ -109,8 +109,8 @@ export default function FaqHubPage() {
           <h1>Clear Answers Before You Start the Project.</h1>
           <p>Find practical answers about remodeling timelines, permits, owner-builder responsibilities, flooring, home additions, window and door replacement, and custom home planning. Each page is built around one specific homeowner question so you can get to the answer quickly.</p>
           <div className="faq-hub-hero-actions">
-            <a className="button faq-primary" href="#faq-topics">Browse FAQ Topics</a>
-            <a href="/contact">Ask About Your Project <span aria-hidden="true">→</span></a>
+            <a className="button cta-primary" href="#faq-topics">Browse FAQ topics</a>
+            <a className="text-action" href="/contact"><span className="text-action-label">Ask About Your Project</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
         <div className="faq-hub-hero-image">
@@ -162,7 +162,7 @@ export default function FaqHubPage() {
                 <h2>{group.title}</h2>
                 <p>{group.copy}</p>
               </div>
-              <a href={group.serviceHref}>{group.serviceLabel} <span aria-hidden="true">→</span></a>
+              <a className="text-action" href={group.serviceHref}><span className="text-action-label">{group.serviceLabel}</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             </div>
 
             <div className="faq-question-grid">
@@ -179,7 +179,7 @@ export default function FaqHubPage() {
                     <p className="eyebrow">FAQ</p>
                     <h3>{question.title}</h3>
                     <p>{question.copy}</p>
-                    <strong>Read the Full Answer <span aria-hidden="true">→</span></strong>
+                    <strong className="text-action"><span className="text-action-label">Read the Full Answer</span><span className="text-action-arrow" aria-hidden="true">→</span></strong>
                   </div>
                 </a>
                 );
@@ -209,7 +209,7 @@ export default function FaqHubPage() {
           <p>Swift serves homeowners throughout Hernando, Citrus and Pasco Counties.</p>
         </div>
         <div>
-          <a className="button blog-primary" href="/contact">Request a Free Estimate</a>
+          <a className="button cta-primary" href="/contact">Request a free estimate</a>
           <a href="tel:3527017458">Call (352) 701-7458</a>
         </div>
       </section>

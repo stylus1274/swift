@@ -52,7 +52,7 @@ export default function CommercialServicesPage() {
           <h1>Commercial Projects Managed Around Your Operation.</h1>
           <p>One experienced contractor for commercial build-outs, renovations, painting and property improvements from the first walkthrough through the final details.</p>
           <div className="remodel-hero-actions">
-            <a className="button remodel-primary" href="#commercial-quick-project">Request a Commercial Estimate</a>
+            <a className="button cta-primary" href="#commercial-quick-project">Request a commercial estimate</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="remodel-hero-proof">
@@ -90,7 +90,7 @@ export default function CommercialServicesPage() {
               <span>{service.number}</span>
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
-              <a href="#commercial-estimate">Discuss Your Project <b>→</b></a>
+              <a className="text-action" href="#commercial-estimate"><span className="text-action-label">Discuss Your Project</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             </article>
           ))}
         </div>
@@ -101,7 +101,7 @@ export default function CommercialServicesPage() {
           <p className="eyebrow">BUILT AROUND YOUR OPERATION</p>
           <h2>Good Commercial Work Should Not Create More Work for You.</h2>
           <p>Swift keeps the scope, schedule and communication connected so you can stay focused on the property, tenants and customers depending on you.</p>
-          <a className="button remodel-primary" href="#commercial-estimate">Plan a Commercial Walkthrough</a>
+          <a className="button cta-primary" href="#commercial-estimate">Plan a commercial walkthrough</a>
         </div>
         <div className="commercial-coordination-list">
           <article><span>01</span><div><h3>A Clear Scope</h3><p>Written project details help owners and stakeholders understand what is included before work begins.</p></div></article>
@@ -138,7 +138,7 @@ export default function CommercialServicesPage() {
 
       <section className="commercial-cta">
         <div><p className="eyebrow">READY TO TALK?</p><h2>Bring the Property, Priorities and Timeline to the Walkthrough.</h2></div>
-        <div><a className="button remodel-primary" href="#commercial-estimate">Request a Commercial Estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
+        <div><a className="button cta-primary" href="#commercial-estimate">Request a commercial estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
       </section>
 
       <section className="remodel-faq commercial-faq">
@@ -150,7 +150,7 @@ export default function CommercialServicesPage() {
         <div className="remodel-faq-list">
           {commercialFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b></button><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
+            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
           })}
         </div>
       </section>
@@ -170,7 +170,7 @@ export default function CommercialServicesPage() {
           <div className="remodel-form-row"><label><span className="form-label-text">Project Type <span className="form-requirement">(required)</span></span><select value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select project</option><option>Commercial build-out</option><option>Commercial painting</option><option>Property improvement</option><option>Facility service</option><option>Other commercial project</option></select></label><label><span className="form-label-text">Property Type <span className="form-requirement">(required)</span></span><select value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Office</option><option>Retail</option><option>Restaurant or hospitality</option><option>Medical or professional</option><option>Multi-tenant property</option><option>Other</option></select></label></div>
           <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Planning ahead</option></select></label>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us about the property, the work you are considering, access requirements and your preferred timing." /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my commercial estimate"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my commercial estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

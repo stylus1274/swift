@@ -20,7 +20,7 @@ export default function HernandoCountyNewConstructionPage(){
         <p className={styles.eyebrow}>NEW CONSTRUCTION • HERNANDO COUNTY, FL</p>
         <h1>New Home Construction in Hernando County, FL</h1>
         <p className={styles.deck}>Swift Construction & Painting builds custom homes and multi-family projects across Hernando County, coordinating the major phases from early planning through construction and final walkthrough.</p>
-        <div className={styles.heroActions}><a className={styles.primaryButton} href="/contact">Discuss Your Build</a><a className={styles.secondaryLink} href="/custom-home-building">New Home Construction Services <span>→</span></a></div>
+        <div className={styles.heroActions}><a className="button cta-primary" href="/contact">Discuss your build</a><a className="text-action" href="/custom-home-building"><span className="text-action-label">New Home Construction Services</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div>
       </div>
       <div className={styles.heroImage}><img src="/assets/projects/brooksville-custom-farmhouse/exterior.jpg" alt="Completed Swift custom farmhouse in Hernando County, Florida"/></div>
     </section>
@@ -36,17 +36,17 @@ export default function HernandoCountyNewConstructionPage(){
     </section>
     <section className={styles.servicesSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>WHAT SWIFT MANAGES</p><h2>New-Construction Support From Planning Through Handoff.</h2></div>
-      <div className={styles.serviceGrid}>{services.map(([title,href,copy],i)=><a href={href} key={title}><span>{String(i+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p><b>Learn More →</b></a>)}</div>
+      <div className={styles.serviceGrid}>{services.map(([title,href,copy],i)=><a href={href} key={title}><span>{String(i+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p><b className="text-action"><span className="text-action-label">Learn More</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>)}</div>
     </section>
     <section className={styles.projectsSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>DOCUMENTED HERNANDO COUNTY BUILDS</p><h2>Real New-Construction Projects.</h2><p>These are documented Swift projects in Brooksville and Spring Hill.</p></div>
       <div className={styles.projectGrid}>
         <article><a className={styles.projectImage} href="/projects/custom-farmhouse-home-brooksville-fl"><img src="/assets/projects/brooksville-custom-farmhouse/exterior.jpg" alt="Custom farmhouse completed in Brooksville, Florida"/></a><div><p className={styles.eyebrow}>BROOKSVILLE • CUSTOM HOME</p><h3><a href="/projects/custom-farmhouse-home-brooksville-fl">Custom Farmhouse Home</a></h3><p>Eight-month custom home project completed in June 2025 with a documented investment of $421,920.</p></div></article>
-        <article><div className={styles.textProject}><p className={styles.eyebrow}>SPRING HILL • DUPLEX</p><h3><a href="/projects/new-construction-duplex-spring-hill-fl">New Construction Duplex</a></h3><p>Five-month ground-up duplex project completed for a repeat customer in May 2026. Documented investment: $314,490.</p><a href="/projects/new-construction-duplex-spring-hill-fl">View Project Details →</a></div></article>
+        <article><div className={styles.textProject}><p className={styles.eyebrow}>SPRING HILL • DUPLEX</p><h3><a href="/projects/new-construction-duplex-spring-hill-fl">New Construction Duplex</a></h3><p>Five-month ground-up duplex project completed for a repeat customer in May 2026. Documented investment: $314,490.</p><a className="text-action" href="/projects/new-construction-duplex-spring-hill-fl"><span className="text-action-label">View Project Details</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div></article>
       </div>
     </section>
     <section className={styles.processSection}><div><p className={styles.eyebrow}>NEW CONSTRUCTION PROCESS</p><h2>Start With the Property and the Build Plan.</h2></div><div className={styles.steps}><p><strong>01</strong><span>Review the property, plans, priorities and build goals.</span></p><p><strong>02</strong><span>Define scope, permitting needs, selections and construction sequencing.</span></p><p><strong>03</strong><span>Coordinate construction, trade work, inspections and the final walkthrough.</span></p></div></section>
-    <section className={styles.cta}><div><p className={styles.eyebrow}>BUILDING IN HERNANDO COUNTY?</p><h2>Talk Through Your Property and Plans.</h2><p>Start with a project conversation so Swift can understand the site, scope and next steps. If you already own land, read <a href="/faq/can-i-build-custom-home-on-my-own-lot-hernando-county">what to check before building a custom home on your Hernando County lot</a>.</p></div><a className={styles.primaryButton} href="/contact">Request a Project Conversation</a></section>
+    <section className={styles.cta}><div><p className={styles.eyebrow}>BUILDING IN HERNANDO COUNTY?</p><h2>Talk Through Your Property and Plans.</h2><p>Start with a project conversation so Swift can understand the site, scope and next steps. If you already own land, read <a href="/faq/can-i-build-custom-home-on-my-own-lot-hernando-county">what to check before building a custom home on your Hernando County lot</a>.</p></div><a className="button cta-primary" href="/contact">Request a project conversation</a></section>
     <SiteFooter />
   </main>;
 }

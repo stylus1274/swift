@@ -38,8 +38,8 @@ export default function WholeHomeRemodelSpringHillPage() {
             bedrooms, and patio.
           </p>
           <div className={styles.heroActions}>
-            <a className={styles.primaryButton} href="/contact">Request a Free Estimate</a>
-            <a className={styles.secondaryLink} href="/home-remodeling">Explore Remodeling Services <span aria-hidden="true">→</span></a>
+            <a className="button cta-primary" href="/contact">Request a free estimate</a>
+            <a className="text-action" href="/home-remodeling"><span className="text-action-label">Explore Remodeling Services</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
         <div className={styles.heroImage}>
@@ -145,8 +145,8 @@ export default function WholeHomeRemodelSpringHillPage() {
           </p>
         </div>
         <div className={styles.ctaActions}>
-          <a className={styles.primaryButton} href="/contact">Request a Free Estimate</a>
-          <a className={styles.secondaryLink} href="/home-remodeling">Residential Remodeling <span aria-hidden="true">→</span></a>
+          <a className="button cta-primary" href="/contact">Request a free estimate</a>
+          <a className="text-action" href="/home-remodeling"><span className="text-action-label">Residential Remodeling</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
         </div>
       </section>
 

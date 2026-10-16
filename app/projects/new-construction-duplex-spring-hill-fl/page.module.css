@@ -58,16 +58,7 @@
   align-items: center;
   gap: 24px;
 }
-.primaryButton {
-  min-height: 52px;
-  padding: 0 24px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--blue);
-  color: #fff;
-  font-weight: 800;
-}
+
 .secondaryLink {
   color: var(--navy);
   font-size: 14px;

@@ -50,7 +50,7 @@ export default function ContactPage() {
           <h1>Let&apos;s Talk About Your Project.</h1>
           <p>Tell Swift what you are planning, where the property is located and when you would like to begin. We will follow up to discuss the details and the right next step.</p>
           <div className="contact-hero-actions">
-            <a className="button contact-primary" href="#contact-form">Start Your Free Estimate</a>
+            <a className="button cta-primary" href="#contact-form">Start your free estimate</a>
             <a className="contact-direct-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="contact-hero-proof"><span>Licensed &amp; Insured • CBC1260893</span><span>Serving Local Clients Since 2003</span><span>Written, Itemized Proposals</span></div>
@@ -81,7 +81,7 @@ export default function ContactPage() {
             <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select name="timing" defaultValue="" required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>More than 6 months</option><option>Just researching</option></select></label>
           </div>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us about the property, the work you need and any important timing details." /></label>
-          <button className="button contact-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </div>
       </LeadForm>
@@ -98,7 +98,7 @@ export default function ContactPage() {
       <section className="contact-options">
         <div className="contact-options-copy"><p className="eyebrow">CONTACT SWIFT</p><h2>Prefer a Direct Conversation?</h2><p>Call Swift if you would rather discuss the project before completing the estimate form.</p></div>
         <div className="contact-option-grid">
-          <a href="tel:3527017458"><span>CALL</span><strong>(352) 701-7458</strong><b>Speak With Swift →</b></a>
+          <a href="tel:3527017458"><span>CALL</span><strong>(352) 701-7458</strong><b className="text-action"><span className="text-action-label">Speak With Swift</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>
         </div>
       </section>
 
@@ -116,14 +116,14 @@ export default function ContactPage() {
         <div className="contact-faq-list">
           {contactFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b></button><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
+            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
           })}
         </div>
       </section>
 
       <section className="contact-final-cta">
         <div><p className="eyebrow">READY WHEN YOU ARE</p><h2>Start With a Free Project Estimate.</h2><p>Tell us what you are planning and we will help identify the right next step.</p></div>
-        <a className="button contact-primary" href="#contact-form">Request Your Estimate</a>
+        <a className="button cta-primary" href="#contact-form">Request your estimate</a>
       </section>
 
       <SiteFooter />

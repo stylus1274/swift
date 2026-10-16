@@ -62,7 +62,7 @@ export default function Page() {
           <div className="article-sidebar-cta">
             <p>Planning a Remodel?</p>
             <h2>Get a Clear Project Estimate.</h2>
-            <a className="button blog-primary" href="/contact">Request a Free Estimate</a>
+            <a className="text-action" href="/contact"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </div>
         </aside>
 
@@ -186,7 +186,7 @@ export default function Page() {
             <h2>Remodeling Estimate FAQs</h2>
             {faqItems.map((item, index) => (
               <details open={index === 0} key={item.question}>
-                <summary>{item.question}<span>+</span></summary>
+                <summary className="faq-question-summary"><h3 className="faq-question">{item.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary>
                 <p>{item.answer}</p>
               </details>
             ))}
@@ -201,7 +201,7 @@ export default function Page() {
           <p>Swift can review your project, define the work clearly, and prepare an estimate around the actual scope.</p>
         </div>
         <div>
-          <a className="button blog-primary" href="/contact">Request a Free Estimate</a>
+          <a className="button cta-primary" href="/contact">Request a free estimate</a>
           <a href="/spring-hill-fl/home-remodeling">Spring Hill Remodeling</a>
         </div>
       </section>

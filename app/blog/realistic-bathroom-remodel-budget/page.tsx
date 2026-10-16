@@ -79,7 +79,7 @@ export default function BathroomRemodelBudgetArticlePage() {
           <div className="article-sidebar-cta">
             <p>Planning a Bathroom?</p>
             <h2>Start With a Written Scope and Real Numbers.</h2>
-            <a className="button blog-primary" href="/contact">Request an Estimate</a>
+            <a className="text-action" href="/contact"><span className="text-action-label">Request an estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             <a href="tel:3527017458">Call (352) 701-7458</a>
           </div>
         </aside>
@@ -131,7 +131,7 @@ export default function BathroomRemodelBudgetArticlePage() {
             <p className="eyebrow">THE BIGGEST BUDGET QUESTION</p>
             <h2>Are You Refreshing the Bathroom or Rebuilding How It Works?</h2>
             <p>Replacing finishes within the existing footprint is very different from moving the toilet, expanding the shower or changing walls. Decide which problems the remodel needs to solve before comparing prices.</p>
-            <a href="/bathroom-remodeling">Explore Swift&apos;s Bathroom Remodeling Services <b>→</b></a>
+            <a className="text-action" href="/bathroom-remodeling"><span className="text-action-label">Explore Swift&apos;s Bathroom Remodeling Services</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </section>
 
           <section id="cost-drivers">
@@ -209,11 +209,11 @@ export default function BathroomRemodelBudgetArticlePage() {
           <section className="article-faqs" id="faqs">
             <p className="eyebrow">COMMON QUESTIONS</p>
             <h2>Bathroom Remodel Budget FAQs</h2>
-            <details open><summary>Can You Remodel a Bathroom for $10,000?<span>+</span></summary><p>It may be possible when the room is small, the layout remains unchanged and the scope is focused. A complete renovation with custom tile, major plumbing changes or concealed damage will usually require a larger budget.</p></details>
-            <details><summary>How Much Should I Budget for a Small Bathroom Remodel?<span>+</span></summary><p>A practical starting range is about $8,000 to $17,000, depending on the scope, materials and existing conditions. Swift&apos;s verified average bathroom remodel falls between $10,000 and $17,000.</p></details>
-            <details><summary>What Is Usually the Most Expensive Part of a Bathroom Remodel?<span>+</span></summary><p>The shower is often one of the largest individual costs, especially when it includes custom tile, waterproofing, a bench, niche, frameless glass or relocated plumbing.</p></details>
-            <details><summary>Does a Bathroom Remodel Require a Permit in Florida?<span>+</span></summary><p>Permit requirements depend on the project and jurisdiction. Plumbing, electrical, structural and certain ventilation changes commonly require permits. Confirm the requirements for the property before construction begins.</p></details>
-            <details><summary>Does Swift Require a Deposit for a Bathroom Remodel?<span>+</span></summary><p>No. Swift Construction and Painting does not require an upfront deposit. Customers are invoiced after the work is complete.</p></details>
+            <details open><summary className="faq-question-summary"><h3 className="faq-question">Can You Remodel a Bathroom for $10,000?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>It may be possible when the room is small, the layout remains unchanged and the scope is focused. A complete renovation with custom tile, major plumbing changes or concealed damage will usually require a larger budget.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">How Much Should I Budget for a Small Bathroom Remodel?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>A practical starting range is about $8,000 to $17,000, depending on the scope, materials and existing conditions. Swift&apos;s verified average bathroom remodel falls between $10,000 and $17,000.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">What Is Usually the Most Expensive Part of a Bathroom Remodel?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>The shower is often one of the largest individual costs, especially when it includes custom tile, waterproofing, a bench, niche, frameless glass or relocated plumbing.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">Does a Bathroom Remodel Require a Permit in Florida?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>Permit requirements depend on the project and jurisdiction. Plumbing, electrical, structural and certain ventilation changes commonly require permits. Confirm the requirements for the property before construction begins.</p></details>
+            <details><summary className="faq-question-summary"><h3 className="faq-question">Does Swift Require a Deposit for a Bathroom Remodel?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>No. Swift Construction and Painting does not require an upfront deposit. Customers are invoiced after the work is complete.</p></details>
           </section>
 
           <section className="article-sources">
@@ -231,7 +231,7 @@ export default function BathroomRemodelBudgetArticlePage() {
             <p className="eyebrow">GET A PROJECT-SPECIFIC NUMBER</p>
             <h2>Turn Your Bathroom Plans Into a Written Scope.</h2>
             <p>Swift Construction &amp; Painting can review the room, discuss your priorities and prepare a clear estimate based on the actual work. The owner is on-site and hands-on for most projects, and no upfront deposit is required.</p>
-            <div><a className="button blog-primary" href="/contact">Request a Free Estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
+            <div><a className="text-action" href="/contact"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a><a href="tel:3527017458">Call (352) 701-7458</a></div>
           </section>
 
           <a className="article-back" href="/blog"><span>←</span> Back to the Swift Project Library</a>

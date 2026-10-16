@@ -52,7 +52,7 @@ export default function BathroomRemodelingPage() {
           <h1>A Bathroom That Feels Better and Works Better.</h1>
           <p>One experienced contractor to coordinate the waterproofing, construction, tile and finish work behind a complete bathroom remodel.</p>
           <div className="remodel-hero-actions">
-            <a className="button remodel-primary" href="#bathroom-quick-type">Plan Your Bathroom Remodel</a>
+            <a className="button cta-primary" href="#bathroom-quick-type">Plan your bathroom remodel</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="remodel-hero-proof">
@@ -90,7 +90,7 @@ export default function BathroomRemodelingPage() {
               <span>{service.number}</span>
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
-              <a href="#bathroom-estimate">Discuss Your Bathroom <b>→</b></a>
+              <a className="text-action" href="#bathroom-estimate"><span className="text-action-label">Discuss Your Bathroom</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             </article>
           ))}
         </div>
@@ -101,7 +101,7 @@ export default function BathroomRemodelingPage() {
           <p className="eyebrow">BUILT BEYOND THE SURFACE</p>
           <h2>The Best Bathroom Work Is Often the Work You Cannot See.</h2>
           <p>A finished shower is only as reliable as the preparation behind the tile. Swift coordinates moisture protection, trade work and finish details as one connected project.</p>
-          <a className="button remodel-primary" href="#bathroom-estimate">Schedule a Bathroom Walkthrough</a>
+          <a className="button cta-primary" href="#bathroom-estimate">Schedule a bathroom walkthrough</a>
         </div>
         <div className="commercial-coordination-list">
           <article><span>01</span><div><h3>Moisture Management</h3><p>Wet-area preparation is planned before the tile and fixtures are installed.</p></div></article>
@@ -138,7 +138,7 @@ export default function BathroomRemodelingPage() {
 
       <section className="commercial-cta bathroom-cta">
         <div><p className="eyebrow">READY TO PLAN?</p><h2>Show Us What Is Not Working in Your Current Bathroom.</h2></div>
-        <div><a className="button remodel-primary" href="#bathroom-estimate">Request a Bathroom Estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
+        <div><a className="button cta-primary" href="#bathroom-estimate">Request a bathroom estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
       </section>
 
       <section className="remodel-faq commercial-faq">
@@ -147,10 +147,10 @@ export default function BathroomRemodelingPage() {
           <h2>What Homeowners Ask Before the Work Begins.</h2>
           <p>Clear answers make it easier to plan the project and choose the right contractor.</p>
         </div>
-        <p><a href="/faq/how-long-does-bathroom-remodel-take-florida">See how long a bathroom remodel can take in Florida →</a></p><div className="remodel-faq-list">
+        <p><a className="text-action" href="/faq/how-long-does-bathroom-remodel-take-florida"><span className="text-action-label">See how long a bathroom remodel can take in Florida</span><span className="text-action-arrow" aria-hidden="true">→</span></a></p><div className="remodel-faq-list">
           {bathroomFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b></button><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
+            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
           })}
         </div>
       </section>
@@ -170,7 +170,7 @@ export default function BathroomRemodelingPage() {
           <div className="remodel-form-row"><label><span className="form-label-text">Project Type <span className="form-requirement">(required)</span></span><select value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select project</option><option>Full bathroom remodel</option><option>Tub-to-shower conversion</option><option>Walk-in shower remodel</option><option>Vanity, tile and finish updates</option><option>Not sure yet</option></select></label><label><span className="form-label-text">Main Priority <span className="form-requirement">(required)</span></span><select value={mainPriority} onChange={(event) => setMainPriority(event.target.value)} required><option value="" disabled>Select priority</option><option>Safer access</option><option>Easier cleaning</option><option>More storage</option><option>Updated appearance</option><option>Repairing damage</option></select></label></div>
           <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us what is not working, what you want to change and any access, fixture or material ideas you already have." /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my bathroom estimate"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my bathroom estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

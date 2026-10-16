@@ -419,7 +419,7 @@ export default function BlogPage() {
           <h1>Practical Answers Before the Work Begins.</h1>
           <p>Clear guidance on painting, remodeling, new-home construction and commercial improvements from a contractor who understands Florida properties.</p>
           <div className="blog-hero-actions">
-            <a className="button blog-primary" href="#latest-guides">Browse Project Guides</a>
+            <a className="button cta-primary" href="#latest-guides">Browse project guides</a>
             <a className="blog-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="blog-hero-proof"><span>Local Experience Since 2003</span><span>Written for Florida Property Owners</span><span>Straightforward Project Guidance</span></div>
@@ -438,7 +438,7 @@ export default function BlogPage() {
           <h2><a href="/blog/custom-home-building-hernando-county">Custom Home Building in Hernando County</a></h2>
           <p>Follow the complete process from property review and site clearing through the structural build, inspections, final walkthrough and certificate of occupancy.</p>
           <div><span>NEW HOMES</span><span>10 MIN READ</span></div>
-          <a href="/blog/custom-home-building-hernando-county">Read the Featured Guide <b>→</b></a>
+          <a className="text-action" href="/blog/custom-home-building-hernando-county"><span className="text-action-label">Read the Featured Guide</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
         </div>
       </article>
 
@@ -465,7 +465,7 @@ export default function BlogPage() {
                 <div><span>{article.category.toUpperCase()}</span><span>{article.readTime}</span></div>
                 <h3>{"href" in article ? <a href={article.href}>{article.title}</a> : article.title}</h3>
                 <p>{article.excerpt}</p>
-                {"href" in article ? <a className="blog-card-link" href={article.href}>Read Guide <b>→</b></a> : <span className="blog-coming-soon">Coming Soon</span>}
+                {"href" in article ? <a className="blog-card-link text-action" href={article.href}><span className="text-action-label">Read Guide</span><span className="text-action-arrow" aria-hidden="true">→</span></a> : <span className="blog-coming-soon">Coming Soon</span>}
               </div>
             </article>
           ))}
@@ -481,16 +481,16 @@ export default function BlogPage() {
       <section className="blog-topics">
         <div className="blog-topics-heading"><p className="eyebrow">EXPLORE BY SERVICE</p><h2>Start With the Type of Work You Are Considering.</h2></div>
         <div className="blog-topic-grid">
-          <a href="/residential-painting"><span>01</span><h3>Painting</h3><p>Preparation, coatings, color and maintenance for Florida interiors and exteriors.</p><b>Explore Painting Services →</b></a>
-          <a href="/residential-remodeling"><span>02</span><h3>Remodeling</h3><p>Planning, scope and coordination for bathrooms, kitchens and larger renovations.</p><b>Explore Remodeling Services →</b></a>
-          <a href="/new-home-construction"><span>03</span><h3>New Homes</h3><p>Property questions, building stages and decisions that shape a ground-up home.</p><b>Explore New Home Construction →</b></a>
-          <a href="/commercial-services"><span>04</span><h3>Commercial</h3><p>Buildouts, painting, facility improvements and work planned around operations.</p><b>Explore Commercial Services →</b></a>
+          <a href="/residential-painting"><span>01</span><h3>Painting</h3><p>Preparation, coatings, color and maintenance for Florida interiors and exteriors.</p><b className="text-action"><span className="text-action-label">Explore Painting Services</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>
+          <a href="/residential-remodeling"><span>02</span><h3>Remodeling</h3><p>Planning, scope and coordination for bathrooms, kitchens and larger renovations.</p><b className="text-action"><span className="text-action-label">Explore Remodeling Services</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>
+          <a href="/new-home-construction"><span>03</span><h3>New Homes</h3><p>Property questions, building stages and decisions that shape a ground-up home.</p><b className="text-action"><span className="text-action-label">Explore New Home Construction</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>
+          <a href="/commercial-services"><span>04</span><h3>Commercial</h3><p>Buildouts, painting, facility improvements and work planned around operations.</p><b className="text-action"><span className="text-action-label">Explore Commercial Services</span><span className="text-action-arrow" aria-hidden="true">→</span></b></a>
         </div>
       </section>
 
       <section className="blog-cta" id="blog-cta">
         <div><p className="eyebrow">HAVE A PROJECT QUESTION?</p><h2>Get an Answer Specific to Your Property.</h2><p>Online guidance can help you prepare. A walkthrough and written scope are what turn an idea into a real project plan.</p></div>
-        <div><a className="button blog-primary" href="/contact">Request a Free Estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
+        <div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
       </section>
 
       <SiteFooter />

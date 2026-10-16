@@ -79,7 +79,7 @@ export default function FloridaHomeAdditionTimelineArticlePage() {
           <div className="article-sidebar-cta">
             <p>Planning More Space?</p>
             <h2>Start With a Property Walkthrough.</h2>
-            <a className="button blog-primary" href="/contact">Request a Free Estimate</a>
+            <a className="text-action" href="/contact"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             <a href="tel:3527017458">Call (352) 701-7458</a>
           </div>
         </aside>
@@ -133,7 +133,7 @@ export default function FloridaHomeAdditionTimelineArticlePage() {
             <p className="eyebrow">LOCAL PLANNING NOTE</p>
             <h2>Do Not Set a Move-In Date Before the Scope Is Defined.</h2>
             <p>The most dependable timeline comes after the property has been reviewed, the addition is designed and the contractor understands the permit and inspection path. Early dates should be treated as planning ranges until those pieces are clear.</p>
-            <a href="/home-additions">Explore Swift&apos;s Home Addition Services <b>→</b></a>
+            <a className="text-action" href="/home-additions"><span className="text-action-label">Explore Swift&apos;s Home Addition Services</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </section>
 
           <section id="delays">
@@ -168,7 +168,7 @@ export default function FloridaHomeAdditionTimelineArticlePage() {
             <h2>Florida Home Addition FAQs</h2>
             {faqItems.map((item, index) => (
               <details open={index === 0} key={item.question}>
-                <summary>{item.question}<span>+</span></summary>
+                <summary className="faq-question-summary"><h3 className="faq-question">{item.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary>
                 <p>{item.answer}</p>
               </details>
             ))}
@@ -188,7 +188,7 @@ export default function FloridaHomeAdditionTimelineArticlePage() {
 
       <section className="blog-cta">
         <div><p className="eyebrow">PLANNING AN ADDITION?</p><h2>Start With the Property, Scope and Timeline.</h2><p>Swift can review the space you need, how the addition connects to the existing home and the next steps required to move the project forward.</p></div>
-        <div><a className="button blog-primary" href="/contact">Request a Free Estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
+        <div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
       </section>
 
       <SiteFooter />

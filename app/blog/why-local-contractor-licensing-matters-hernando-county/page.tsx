@@ -74,7 +74,7 @@ export default function ContractorLicensingHernandoCountyArticlePage() {
           <div className="article-sidebar-cta">
             <p>Planning a Project?</p>
             <h2>Start With a Licensed Local Contractor.</h2>
-            <a className="button blog-primary" href="/contact">Request a Free Estimate</a>
+            <a className="text-action" href="/contact"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             <a href="tel:3527017458">Call (352) 701-7458</a>
           </div>
         </aside>
@@ -111,7 +111,7 @@ export default function ContractorLicensingHernandoCountyArticlePage() {
             <p className="eyebrow">SWIFT LICENSE</p>
             <h2>Swift Construction &amp; Painting Is a Florida-Licensed Building Contractor.</h2>
             <p>Swift operates under Florida license CBC1260893 and serves homeowners and property owners throughout Hernando, Citrus and Pasco Counties.</p>
-            <a href="/about">Learn More About Swift <b>→</b></a>
+            <a className="text-action" href="/about"><span className="text-action-label">Learn More About Swift</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
           </section>
 
           <section id="local">
@@ -163,7 +163,7 @@ export default function ContractorLicensingHernandoCountyArticlePage() {
             <h2>Contractor Licensing FAQs</h2>
             {faqItems.map((item, index) => (
               <details open={index === 0} key={item.question}>
-                <summary>{item.question}<span>+</span></summary>
+                <summary className="faq-question-summary"><h3 className="faq-question">{item.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary>
                 <p>{item.answer}</p>
               </details>
             ))}
@@ -182,7 +182,7 @@ export default function ContractorLicensingHernandoCountyArticlePage() {
 
       <section className="blog-cta">
         <div><p className="eyebrow">PLANNING WORK IN HERNANDO COUNTY?</p><h2>Verify the Contractor Before You Compare the Price.</h2><p>Swift can review your project, explain the expected scope and provide a written estimate for work throughout Hernando County.</p></div>
-        <div><a className="button blog-primary" href="/contact">Request a Free Estimate</a><a href="/about">About Swift</a></div>
+        <div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/about">About Swift</a></div>
       </section>
 
       <SiteFooter />

@@ -70,9 +70,7 @@ export default function ServicesPage() {
               <p style={{ margin: "0 0 28px", color: "#5f7068", lineHeight: 1.7 }}>{group.intro}</p>
               <div style={{ display: "grid", gap: 0 }}>
                 {group.links.map(([label, href]) => (
-                  <Link key={href} href={href} style={{ padding: "15px 0", borderTop: "1px solid #e1e7e4", color: "#0c2c46", fontWeight: 700 }}>
-                    {label} <span aria-hidden="true" style={{ float: "right", color: "#287fc3" }}>→</span>
-                  </Link>
+                  <Link className="text-action" key={href} href={href} style={{ padding: "15px 0", borderTop: "1px solid #e1e7e4", fontWeight: 700 }}><span className="text-action-label">{label}</span><span className="text-action-arrow" aria-hidden="true">→</span></Link>
                 ))}
               </div>
             </article>
@@ -87,7 +85,7 @@ export default function ServicesPage() {
           <p style={{ margin: "0 auto 30px", maxWidth: 680, color: "#c6d6df", fontSize: 18, lineHeight: 1.7 }}>
             Tell us what you are planning. We can help define the scope and the right next step for the property.
           </p>
-          <Link className="button" href="/contact" style={{ background: "#fff", color: "#0c2c46", borderColor: "#fff" }}>Request a Free Estimate</Link>
+          <Link className="button cta-primary-inverse" href="/contact">Request a free estimate</Link>
         </div>
       </section>
 

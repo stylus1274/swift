@@ -93,7 +93,7 @@ export default function InteriorPaintingPage() {
           <h1>Interior Painting in Spring Hill, FL</h1>
           <p>Swift paints walls, ceilings, trim, doors and cabinetry in Spring Hill homes. Start with a room-by-room walkthrough to identify repairs, finishes and how the work will fit around your household.</p>
           <div className="remodel-hero-actions">
-            <a className="button remodel-primary" href="#interior-painting-quick-project">Get a Free Painting Estimate</a>
+            <a className="button cta-primary" href="#interior-painting-quick-project">Get a free painting estimate</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
           <div className="remodel-hero-proof">
@@ -131,7 +131,7 @@ export default function InteriorPaintingPage() {
               <span>{service.number}</span>
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
-              <a href="#interior-painting-estimate">Discuss Your Home <b>→</b></a>
+              <a className="text-action" href="#interior-painting-estimate"><span className="text-action-label">Discuss Your Home</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
             </article>
           ))}
         </div>
@@ -142,7 +142,7 @@ export default function InteriorPaintingPage() {
           <p className="eyebrow">CARE INSIDE YOUR HOME</p>
           <h2>Painting an Occupied Home Takes Planning.</h2>
           <p>An occupied home needs a different work sequence from an empty house. During the walkthrough, discuss which rooms must stay usable, where furniture can be staged, access for children and pets, and any move-in deadline.</p>
-          <a className="button remodel-primary" href="#interior-painting-estimate">Plan a Home Walkthrough</a>
+          <a className="button cta-primary" href="#interior-painting-estimate">Plan a home walkthrough</a>
         </div>
         <div className="commercial-coordination-list">
           <article><span>01</span><div><h3>Protect the Space</h3><p>Agree on who moves large furniture and removes wall decor, then identify protection for flooring, fixtures and furnishings beside the work.</p></div></article>
@@ -185,8 +185,8 @@ export default function InteriorPaintingPage() {
           <p>If the project also includes trim changes, flooring or a new layout, discuss that work before scheduling paint. Explore <a href="/home-remodeling">home remodeling</a> for connected improvements, or visit our <a href="/residential-painting">Spring Hill house painting overview</a> if you need both interior and exterior work.</p>
         </div>
         <div className="commercial-painting-proof-actions">
-          <a className="button remodel-primary" href="#interior-painting-estimate">Request a Free Estimate</a>
-          <a href="/residential-painting">Explore Residential Painting <span aria-hidden="true">→</span></a>
+          <a className="button cta-primary" href="#interior-painting-estimate">Request a free estimate</a>
+          <a className="text-action" href="/residential-painting"><span className="text-action-label">Explore Residential Painting</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
         </div>
       </section>
 
@@ -199,7 +199,7 @@ export default function InteriorPaintingPage() {
         <div className="remodel-faq-list">
           {interiorFaqs.map((faq, index) => {
             const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><button type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><b aria-hidden="true">{isOpen ? "×" : "+"}</b></button><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
+            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
           })}
         </div>
       </section>
@@ -219,7 +219,7 @@ export default function InteriorPaintingPage() {
           <div className="remodel-form-row"><label><span className="form-label-text">Interior Scope <span className="form-requirement">(required)</span></span><select value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select scope</option><option>One or two rooms</option><option>Several rooms</option><option>Whole-home interior</option><option>Trim, doors or cabinets</option><option>Other interior project</option></select></label><label><span className="form-label-text">Home Status <span className="form-requirement">(required)</span></span><select value={occupancy} onChange={(event) => setOccupancy(event.target.value)} required><option value="" disabled>Select status</option><option>Currently occupied</option><option>Vacant home</option><option>Moving in soon</option><option>Preparing to sell</option></select></label></div>
           <label><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
           <label><span className="form-label-text">Project Details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us which rooms and surfaces need paint, whether colors are changing and any repairs you have noticed." /></label>
-          <button className="button remodel-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my interior painting estimate"}</button>
+          <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my interior painting estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>
         </LeadForm>
       </section>

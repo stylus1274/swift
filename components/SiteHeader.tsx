@@ -91,7 +91,7 @@ export default function SiteHeader({ active, contactHref = "/contact" }: SiteHea
         <Link className={active === "faq" ? "active" : ""} href="/faq">FAQs</Link>
         <Link href={contactHref}>Contact</Link>
       </nav>
-      <a className="header-call" href="tel:3527017458"><span>CALL</span>(352) 701-7458</a>
+      <a className="header-call" href="tel:3527017458"><span>Call</span>(352) 701-7458</a>
       <details className="mobile-menu" ref={mobileMenu}>
         <summary aria-label="Open navigation">Menu</summary>
         <nav onClick={(event) => {
