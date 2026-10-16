@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -163,16 +164,7 @@ export default function FloridaHomeAdditionTimelineArticlePage() {
             <p>Swift Construction &amp; Painting handles <a href="/home-additions">home additions and room additions</a> across Hernando, Citrus and Pasco Counties. If you are considering more living space, <a href="/contact">request a free project estimate</a> so the property and scope can be reviewed before a schedule is discussed.</p>
           </section>
 
-          <section className="article-faqs" id="faqs">
-            <p className="eyebrow">COMMON QUESTIONS</p>
-            <h2>Florida Home Addition FAQs</h2>
-            {faqItems.map((item, index) => (
-              <details open={index === 0} key={item.question}>
-                <summary className="faq-question-summary"><h3 className="faq-question">{item.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary>
-                <p>{item.answer}</p>
-              </details>
-            ))}
-          </section>
+
 
           <section className="article-sources">
             <p className="eyebrow">OFFICIAL PLANNING RESOURCES</p>
@@ -185,6 +177,14 @@ export default function FloridaHomeAdditionTimelineArticlePage() {
           </section>
         </article>
       </div>
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Florida Home Addition FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
+
 
       <section className="blog-cta">
         <div><p className="eyebrow">PLANNING AN ADDITION?</p><h2>Start With the Property, Scope and Timeline.</h2><p>Swift can review the space you need, how the addition connects to the existing home and the next steps required to move the project forward.</p></div>

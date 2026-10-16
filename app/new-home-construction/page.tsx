@@ -1,5 +1,7 @@
 "use client";
 
+import FaqSection from "@/components/FaqSection";
+
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
@@ -23,7 +25,7 @@ const buildFaqs = [
 ];
 
 export default function NewHomeConstructionPage() {
-  const [openFaq, setOpenFaq] = useState(0);
+
   const [lotStatus, setLotStatus] = useState("");
   const [homeSize, setHomeSize] = useState("");
   const [buildZip, setBuildZip] = useState("");
@@ -121,15 +123,13 @@ export default function NewHomeConstructionPage() {
         <div><a className="button cta-primary" href="#build-estimate">Request a project conversation</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
       </section>
 
-      <section className="build-faq">
-        <div className="build-faq-heading"><p className="eyebrow">NEW HOME QUESTIONS</p><h2>What Homeowners Ask Before Building.</h2><p>Clear answers early can prevent expensive surprises later.</p></div>
-        <p><a className="text-action" href="/faq/can-homeowner-pull-own-building-permit-florida"><span className="text-action-label">Read what Florida homeowners take on when pulling an owner-builder permit</span><span className="text-action-arrow" aria-hidden="true">→</span></a></p><div className="build-faq-list">
-          {buildFaqs.map((faq, index) => {
-            const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
-          })}
-        </div>
-      </section>
+      <FaqSection
+        eyebrow={<>NEW HOME QUESTIONS</>}
+        title={<>What Homeowners Ask Before Building.</>}
+        description={<>Clear answers early can prevent expensive surprises later.</>}
+        items={buildFaqs}
+        estimateHref="#build-estimate"
+      />
 
       <section className="build-estimate" id="build-estimate">
         <div className="build-estimate-copy">

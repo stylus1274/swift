@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -158,16 +159,7 @@ export default function ContractorLicensingHernandoCountyArticlePage() {
             </div>
           </section>
 
-          <section className="article-faqs" id="faqs">
-            <p className="eyebrow">COMMON QUESTIONS</p>
-            <h2>Contractor Licensing FAQs</h2>
-            {faqItems.map((item, index) => (
-              <details open={index === 0} key={item.question}>
-                <summary className="faq-question-summary"><h3 className="faq-question">{item.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary>
-                <p>{item.answer}</p>
-              </details>
-            ))}
-          </section>
+
 
           <section className="article-sources">
             <p className="eyebrow">OFFICIAL RESOURCES</p>
@@ -179,6 +171,14 @@ export default function ContractorLicensingHernandoCountyArticlePage() {
           </section>
         </article>
       </div>
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Contractor Licensing FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
+
 
       <section className="blog-cta">
         <div><p className="eyebrow">PLANNING WORK IN HERNANDO COUNTY?</p><h2>Verify the Contractor Before You Compare the Price.</h2><p>Swift can review your project, explain the expected scope and provide a written estimate for work throughout Hernando County.</p></div>

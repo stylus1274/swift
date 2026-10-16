@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -28,10 +29,18 @@ export default function Page(){return <main className="blog-page article-page">
 
       <section id="process"><p className="eyebrow">BUILD PROCESS</p><h2>Move From Property Review to a Buildable Scope.</h2><p>A practical custom-home sequence starts with the land and the goals for the home, then moves into plans, scope, permitting, selections and construction coordination. That sequence helps keep site-specific requirements from becoming late surprises.</p><p>If you are still evaluating land or early plans, the useful first conversation is not “How much is this house per square foot?” It is “What does this property require, and what are we actually building?” You can also read <a href="/blog/custom-home-building-hernando-county">Custom Home Building in Hernando County</a> and <a href="/blog/custom-home-building-brooksville-process">Building a Custom Home in Brooksville: What the Process Actually Looks Like</a>.</p></section>
 
-      <section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Building on Your Own Lot FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section>
+
       <section className="article-sources"><p className="eyebrow">OFFICIAL RESOURCES</p><h2>Check the Property Before Finalizing the Build.</h2><ul><li><a href="https://www.hernandocounty.us/building-development/building/geohub/" target="_blank" rel="noreferrer">Hernando County GeoHub</a></li><li><a href="https://www.hernandocounty.us/building-development/building/planning-and-zoning/zoning-districts/" target="_blank" rel="noreferrer">Hernando County Zoning Districts</a></li><li><a href="https://www.hernandocounty.us/media/aj1f2yby/single-family-owner-builder-application.pdf" target="_blank" rel="noreferrer">Hernando County Single-Family Residence Permit Checklist</a></li></ul></section>
     </article>
   </div>
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Building on Your Own Lot FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
+
   <section className="blog-cta"><div><p className="eyebrow">OWN LAND IN HERNANDO COUNTY?</p><h2>Start With the Property, Then Build the Plan.</h2><p>Swift can discuss the site, the home you want to build and the practical next steps for moving toward construction.</p></div><div><a className="button cta-primary" href="/contact">Discuss your build</a><a href="/faq">More FAQs</a></div></section>
   <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/>
 </main>}

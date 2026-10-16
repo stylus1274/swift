@@ -1,5 +1,7 @@
 "use client";
 
+import FaqSection from "@/components/FaqSection";
+
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
@@ -23,7 +25,7 @@ const bathroomFaqs = [
 ];
 
 export default function BathroomRemodelingPage() {
-  const [openFaq, setOpenFaq] = useState(0);
+
   const [projectType, setProjectType] = useState("");
   const [mainPriority, setMainPriority] = useState("");
   const [projectZip, setProjectZip] = useState("");
@@ -141,19 +143,13 @@ export default function BathroomRemodelingPage() {
         <div><a className="button cta-primary" href="#bathroom-estimate">Request a bathroom estimate</a><a href="tel:3527017458">Call (352) 701-7458</a></div>
       </section>
 
-      <section className="remodel-faq commercial-faq">
-        <div className="remodel-faq-heading">
-          <p className="eyebrow">BATHROOM REMODELING QUESTIONS</p>
-          <h2>What Homeowners Ask Before the Work Begins.</h2>
-          <p>Clear answers make it easier to plan the project and choose the right contractor.</p>
-        </div>
-        <p><a className="text-action" href="/faq/how-long-does-bathroom-remodel-take-florida"><span className="text-action-label">See how long a bathroom remodel can take in Florida</span><span className="text-action-arrow" aria-hidden="true">→</span></a></p><div className="remodel-faq-list">
-          {bathroomFaqs.map((faq, index) => {
-            const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
-          })}
-        </div>
-      </section>
+      <FaqSection
+        eyebrow={<>BATHROOM REMODELING QUESTIONS</>}
+        title={<>What Homeowners Ask Before the Work Begins.</>}
+        description={<>Clear answers make it easier to plan the project and choose the right contractor.</>}
+        items={bathroomFaqs}
+        estimateHref="#bathroom-estimate"
+      />
 
       <section className="remodel-estimate" id="bathroom-estimate">
         <div className="remodel-estimate-copy">

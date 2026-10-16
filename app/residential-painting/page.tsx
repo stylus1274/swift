@@ -1,5 +1,7 @@
 "use client";
 
+import FaqSection from "@/components/FaqSection";
+
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
@@ -69,7 +71,7 @@ function GoogleMark() {
 }
 
 export default function ResidentialPaintingPage() {
-  const [openFaq, setOpenFaq] = useState(0);
+
   const [submitted, setSubmitted] = useState(false);
   const [heroSubmitted, setHeroSubmitted] = useState(false);
 
@@ -243,26 +245,13 @@ export default function ResidentialPaintingPage() {
         </article>
       </section>
 
-      <section className="paint-faq">
-        <div className="paint-faq-heading">
-          <p className="eyebrow">PAINTING QUESTIONS</p>
-          <h2>What Homeowners Ask Before Choosing a Painter.</h2>
-          <p>Clear answers help you compare estimates and know what to expect once the project begins.</p>
-        </div>
-        <div className="paint-faq-list">
-          {paintingFaqs.map((faq, index) => {
-            const isOpen = openFaq === index;
-            return (
-              <article className={isOpen ? "open" : ""} key={faq.question}>
-                <h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}>
-                  <span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span>
-                </button></h3>
-                <div hidden={!isOpen}><p>{faq.answer}</p></div>
-              </article>
-            );
-          })}
-        </div>
-      </section>
+      <FaqSection
+        eyebrow={<>PAINTING QUESTIONS</>}
+        title={<>What Homeowners Ask Before Choosing a Painter.</>}
+        description={<>Clear answers help you compare estimates and know what to expect once the project begins.</>}
+        items={paintingFaqs}
+        estimateHref="#paint-estimate"
+      />
 
       <section className="paint-estimate" id="paint-estimate">
         <div className="paint-estimate-copy">

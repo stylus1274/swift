@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -72,11 +73,19 @@ export default function Page(){
           <p>Swift provides <a href="/residential-remodeling">residential remodeling</a>, <a href="/home-additions">home additions</a> and <a href="/new-home-construction">new home construction</a> under a coordinated project scope.</p>
         </section>
 
-        <section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Florida Owner-Builder Permit FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section>
+
 
         <section className="article-sources"><p className="eyebrow">OFFICIAL SOURCE</p><h2>Read the Florida Owner-Builder Statute.</h2><p><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0489/Sections/0489.103.html" target="_blank" rel="noreferrer">Florida Statute 489.103: Exemptions</a></p></section>
       </article>
     </div>
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Florida Owner-Builder Permit FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
+
 
     <section className="blog-cta"><div><p className="eyebrow">PLANNING A LARGER PROJECT?</p><h2>Decide Who Will Be Responsible Before the Permit Is Pulled.</h2><p>Swift can review the scope and explain how the project would be managed under a licensed contractor.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/faq">More FAQs</a></div></section>
     <SiteFooter/>

@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 
 import SiteFooter from "@/components/SiteFooter";
@@ -21,12 +22,12 @@ const faqSchema = {
         {
           "@type": "Question",
           name: "Who Handles Permits and Inspections for a New Home?",
-          acceptedAnswer: { "@type": "Answer", text: "The building contractor usually coordinates permit submissions, inspection scheduling and corrections, while design professionals provide the signed and sealed documents required for their disciplines." },
+          acceptedAnswer: { "@type": "Answer", text: "The building contractor usually coordinates permit submissions, inspection scheduling and corrections. Design professionals provide the signed and sealed documents required for their disciplines." },
         },
         {
           "@type": "Question",
           name: "Can Swift Build on Land I Already Own?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes. The first step is reviewing the property, access, utilities, zoning, flood information and likely site-work requirements before the project scope is finalized." },
+          acceptedAnswer: { "@type": "Answer", text: "Yes. The first step is reviewing the property, access, utilities, zoning, flood information and likely site-work requirements before the scope is finalized." },
         },
         {
           "@type": "Question",
@@ -187,15 +188,7 @@ export default function CustomHomeBuildingArticlePage() {
             <p>Swift Construction &amp; Painting manages new-home projects with one point of contact, a written scope and coordination from early planning through final walkthrough. Learn more about <a href="/new-home-construction">custom and new home construction</a>, or <a href="/contact">request a project conversation</a>.</p>
           </section>
 
-          <section className="article-faqs" id="faqs">
-            <p className="eyebrow">COMMON QUESTIONS</p>
-            <h2>Custom Home Building FAQs</h2>
-            <details open><summary className="faq-question-summary"><h3 className="faq-question">How Long Does It Take to Build a Custom Home in Hernando County?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>A custom home commonly requires several months of preconstruction followed by roughly 8 to 14 months of active construction. The property, plans, permitting, weather, material lead times and owner decisions can all change the schedule.</p></details>
-            <details><summary className="faq-question-summary"><h3 className="faq-question">Do I Need Plans Before Talking to a Custom Home Builder?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>No. An early builder conversation can help test the budget, lot conditions and overall feasibility before architectural and engineering work is finalized.</p></details>
-            <details><summary className="faq-question-summary"><h3 className="faq-question">Who Handles Permits and Inspections for a New Home?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>The building contractor usually coordinates permit submissions, inspection scheduling and corrections. Design professionals provide the signed and sealed documents required for their disciplines.</p></details>
-            <details><summary className="faq-question-summary"><h3 className="faq-question">Can Swift Build on Land I Already Own?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>Yes. The first step is reviewing the property, access, utilities, zoning, flood information and likely site-work requirements before the scope is finalized.</p></details>
-            <details><summary className="faq-question-summary"><h3 className="faq-question">What Happens Before a Certificate of Occupancy Is Issued?</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>Required trade, building and zoning inspections must be completed, outstanding corrections must be resolved and the property must meet the approved plans and applicable requirements before occupancy is authorized.</p></details>
-          </section>
+
 
           <section className="article-sources">
             <p className="eyebrow">OFFICIAL PLANNING RESOURCES</p>
@@ -218,6 +211,18 @@ export default function CustomHomeBuildingArticlePage() {
           <a className="article-back" href="/blog"><span>←</span> Back to the Swift Project Library</a>
         </article>
       </div>
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Custom Home Building FAQs</>}
+        items={[{ question: <>How Long Does It Take to Build a Custom Home in Hernando County?</>, answer: <>A custom home commonly requires several months of preconstruction followed by roughly 8 to 14 months of active construction. The property, plans, permitting, weather, material lead times and owner decisions can all change the schedule.</> },
+        { question: <>Do I Need Plans Before Talking to a Custom Home Builder?</>, answer: <>No. An early builder conversation can help test the budget, lot conditions and overall feasibility before architectural and engineering work is finalized.</> },
+        { question: <>Who Handles Permits and Inspections for a New Home?</>, answer: <>The building contractor usually coordinates permit submissions, inspection scheduling and corrections. Design professionals provide the signed and sealed documents required for their disciplines.</> },
+        { question: <>Can Swift Build on Land I Already Own?</>, answer: <>Yes. The first step is reviewing the property, access, utilities, zoning, flood information and likely site-work requirements before the scope is finalized.</> },
+        { question: <>What Happens Before a Certificate of Occupancy Is Issued?</>, answer: <>Required trade, building and zoning inspections must be completed, outstanding corrections must be resolved and the property must meet the approved plans and applicable requirements before occupancy is authorized.</> }]}
+        estimateHref="/contact#contact-form"
+      />
+
 
       <SiteFooter />
 

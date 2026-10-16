@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -181,18 +182,17 @@ export default function Page() {
             <p>Local contractors with an established presence in Spring Hill, Brooksville, and Weeki Wachee will also be more familiar with Hernando County permit requirements, local inspection timelines, and the specific conditions that affect construction in this part of Florida, including humidity, soil, and storm season considerations.</p>
           </section>
 
-          <section className="article-faqs" id="faqs">
-            <p className="eyebrow">COMMON QUESTIONS</p>
-            <h2>Remodeling Estimate FAQs</h2>
-            {faqItems.map((item, index) => (
-              <details open={index === 0} key={item.question}>
-                <summary className="faq-question-summary"><h3 className="faq-question">{item.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary>
-                <p>{item.answer}</p>
-              </details>
-            ))}
-          </section>
+
         </article>
       </div>
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Remodeling Estimate FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
+
 
       <section className="blog-cta">
         <div>

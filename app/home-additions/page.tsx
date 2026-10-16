@@ -1,5 +1,7 @@
 "use client";
 
+import FaqSection from "@/components/FaqSection";
+
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
@@ -54,7 +56,7 @@ const additionFaqs = [
 ];
 
 export default function HomeAdditionsPage() {
-  const [openFaq, setOpenFaq] = useState(0);
+
   const [submitted, setSubmitted] = useState(false);
   const [project, setProject] = useState("");
   const [projectZip, setProjectZip] = useState("");
@@ -190,26 +192,13 @@ export default function HomeAdditionsPage() {
         <a className="button cta-primary" href="#addition-estimate">Request a free estimate</a>
       </section>
 
-      <section className="remodel-faq additions-faq">
-        <div className="remodel-faq-heading">
-          <p className="eyebrow">HOME ADDITION QUESTIONS</p>
-          <h2>What Homeowners Ask Before Adding More Space.</h2>
-          <p>Clear answers help you evaluate the property, define the scope and prepare for a major improvement.</p>
-        </div>
-        <p><a className="text-action" href="/faq/do-i-need-permit-home-addition-hernando-county"><span className="text-action-label">Read the Hernando County home addition permit FAQ</span><span className="text-action-arrow" aria-hidden="true">→</span></a></p><div className="remodel-faq-list">
-          {additionFaqs.map((faq, index) => {
-            const isOpen = openFaq === index;
-            return (
-              <article className={isOpen ? "open" : ""} key={faq.question}>
-                <h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}>
-                  <span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span>
-                </button></h3>
-                <div hidden={!isOpen}><p>{faq.answer}</p></div>
-              </article>
-            );
-          })}
-        </div>
-      </section>
+      <FaqSection
+        eyebrow={<>HOME ADDITION QUESTIONS</>}
+        title={<>What Homeowners Ask Before Adding More Space.</>}
+        description={<>Clear answers help you evaluate the property, define the scope and prepare for a major improvement.</>}
+        items={additionFaqs}
+        estimateHref="#addition-estimate"
+      />
 
       <section className="remodel-estimate" id="addition-estimate">
         <div className="remodel-estimate-copy">

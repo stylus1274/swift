@@ -1,5 +1,7 @@
 "use client";
 
+import FaqSection from "@/components/FaqSection";
+
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
@@ -54,7 +56,7 @@ const exteriorFaqs = [
 ];
 
 export default function ExteriorPaintingPage() {
-  const [openFaq, setOpenFaq] = useState(0);
+
   const [projectType, setProjectType] = useState("");
   const [homeType, setHomeType] = useState("");
   const [projectZip, setProjectZip] = useState("");
@@ -202,19 +204,13 @@ export default function ExteriorPaintingPage() {
         </div>
       </section>
 
-      <section className="remodel-faq commercial-faq">
-        <div className="remodel-faq-heading">
-          <p className="eyebrow">EXTERIOR PAINTING QUESTIONS</p>
-          <h2>What Homeowners Ask Before Exterior Painting Begins.</h2>
-          <p>Clear answers make it easier to compare preparation, coatings and the contractor responsible for your home.</p>
-        </div>
-        <div className="remodel-faq-list">
-          {exteriorFaqs.map((faq, index) => {
-            const isOpen = openFaq === index;
-            return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>;
-          })}
-        </div>
-      </section>
+      <FaqSection
+        eyebrow={<>EXTERIOR PAINTING QUESTIONS</>}
+        title={<>What Homeowners Ask Before Exterior Painting Begins.</>}
+        description={<>Clear answers make it easier to compare preparation, coatings and the contractor responsible for your home.</>}
+        items={exteriorFaqs}
+        estimateHref="#exterior-painting-estimate"
+      />
 
       <section className="remodel-estimate" id="exterior-painting-estimate">
         <div className="remodel-estimate-copy">

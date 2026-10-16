@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -35,6 +36,14 @@ export default function Page(){return <main className="blog-page article-page"><
 <section id="full"><p className="eyebrow">FULL RENOVATION</p><h2>When the Room Needs More Than New Finishes.</h2><p>A full renovation becomes more appropriate when the shower or tub is being rebuilt, waterproofing needs to be replaced, plumbing locations change, electrical work is required, or the layout no longer works for the household.</p><p>This is also the point where sequencing matters more. Demolition, rough plumbing, electrical, wall repair, waterproofing, tile, cabinetry and finish work need to happen in the right order.</p></section>
 <section id="drivers"><p className="eyebrow">SCOPE DRIVERS</p><h2>What Changes the Size of the Project?</h2><div className="article-factor-grid"><div><strong>Layout Changes</strong><p>Moving fixtures can add plumbing and framing work.</p></div><div><strong>Waterproofing</strong><p>Shower rebuilds require proper substrate and waterproofing systems.</p></div><div><strong>Existing Conditions</strong><p>Hidden damage can change the scope once demolition begins.</p></div><div><strong>Finish Level</strong><p>Tile, cabinetry, glass, fixtures and details affect labor and material cost.</p></div></div></section>
 <section id="estimate"><p className="eyebrow">BROOKSVILLE ESTIMATES</p><h2>Walk the Bathroom Before You Decide What It Needs.</h2><p>Swift&apos;s preferred estimating process is an in-person site visit. That allows the contractor to see the existing room, discuss what you want to keep, identify likely trade work and prepare a written scope around the actual bathroom.</p><p>For broader pricing context, see <a href="/blog/realistic-bathroom-remodel-budget">what a realistic bathroom remodeling budget looks like</a> and Swift&apos;s <a href="/bathroom-remodeling">bathroom remodeling service page</a>.</p></section>
-<section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Brooksville Bathroom Remodeling FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section></article></div>
+</article></div>
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Brooksville Bathroom Remodeling FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
+
 <section className="blog-cta"><div><p className="eyebrow">BATHROOM PROJECT IN BROOKSVILLE?</p><h2>Get the Scope From the Room, Not a Template.</h2><p>Schedule an on-site walkthrough and discuss what should stay, what should change and what the finished bathroom needs to do better.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/locations/brooksville-fl">Brooksville Services</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -77,11 +78,19 @@ export default function Page(){
           <p>If you are still defining the scope, compare <a href="/blog/realistic-bathroom-remodel-budget">realistic bathroom remodel budgets</a> and <a href="/blog/what-not-to-do-bathroom-remodel">common bathroom remodeling mistakes</a> before finalizing the plan.</p>
         </section>
 
-        <section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Bathroom Remodel Timeline FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section>
+
 
         <section className="article-sources"><p className="eyebrow">TIMELINE BENCHMARK</p><h2>Published 2026 Planning Context.</h2><p>The timeline ranges above use current industry guidance as planning context, not a Swift project guarantee.</p><p><a href="https://www.angi.com/articles/how-long-does-take-remodel-bathroom.htm" target="_blank" rel="noreferrer">Angi: How Long Does a Bathroom Remodel Take? Updated July 2026</a></p></section>
       </article>
     </div>
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Bathroom Remodel Timeline FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
+
 
     <section className="blog-cta"><div><p className="eyebrow">PLANNING A BATHROOM REMODEL?</p><h2>Build the Schedule Around the Actual Scope.</h2><p>Swift can walk the room, identify the work involved and prepare a project-specific estimate.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/faq">More FAQs</a></div></section>
     <SiteFooter/>

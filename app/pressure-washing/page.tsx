@@ -1,5 +1,7 @@
 "use client";
 
+import FaqSection from "@/components/FaqSection";
+
 import { FormEvent, useState } from "react";
 import SiteHeader from "../../components/SiteHeader";
 
@@ -23,7 +25,7 @@ const pressureWashingFaqs = [
 ];
 
 export default function PressureWashingPage() {
-  const [openFaq, setOpenFaq] = useState(0);
+
   const [scope, setScope] = useState("");
   const [propertyType, setPropertyType] = useState("");
   const [projectZip, setProjectZip] = useState("");
@@ -123,10 +125,13 @@ export default function PressureWashingPage() {
         <div className="commercial-painting-proof-actions"><a className="button cta-primary" href="#pressure-washing-estimate">Request a free estimate</a><a className="text-action" href="/exterior-painting"><span className="text-action-label">Explore Exterior Painting</span><span className="text-action-arrow" aria-hidden="true">→</span></a></div>
       </section>
 
-      <section className="remodel-faq commercial-faq">
-        <div className="remodel-faq-heading"><p className="eyebrow">PRESSURE WASHING QUESTIONS</p><h2>What Property Owners Ask Before Exterior Cleaning Begins.</h2><p>Clear answers make it easier to compare the scope, methods and contractor responsible for your property.</p></div>
-        <div className="remodel-faq-list">{pressureWashingFaqs.map((faq, index) => { const isOpen = openFaq === index; return <article className={isOpen ? "open" : ""} key={faq.question}><h3 className="faq-question"><button className="faq-question-button" type="button" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? -1 : index)}><span>{faq.question}</span><span className="faq-circle" aria-hidden="true">{isOpen ? "−" : "+"}</span></button></h3><div hidden={!isOpen}><p>{faq.answer}</p></div></article>; })}</div>
-      </section>
+      <FaqSection
+        eyebrow={<>PRESSURE WASHING QUESTIONS</>}
+        title={<>What Property Owners Ask Before Exterior Cleaning Begins.</>}
+        description={<>Clear answers make it easier to compare the scope, methods and contractor responsible for your property.</>}
+        items={pressureWashingFaqs}
+        estimateHref="#pressure-washing-estimate"
+      />
 
       <section className="remodel-estimate" id="pressure-washing-estimate">
         <div className="remodel-estimate-copy">

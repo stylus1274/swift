@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -38,11 +39,19 @@ return <main className="blog-page article-page">
 
       <section id="before"><p className="eyebrow">BEFORE CONSTRUCTION</p><h2>Confirm the Permit Responsibility in Writing.</h2><p>Before work begins, your proposal should make it clear which parts of the scope require permits and who is responsible for obtaining them. If a contractor suggests skipping a required permit simply to reduce cost or speed up the project, that is a reason to stop and verify the requirement directly.</p><p>Hernando County&apos;s Building Division maintains current permit information and a Civic Access system for permit status and property history. You can also review Swift&apos;s <a href="/blog/how-to-verify-florida-contractor-license-insurance-permit-history">Florida contractor verification checklist</a>.</p></section>
 
-      <section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Hernando County Remodeling Permit FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section>
+
 
       <section className="article-sources"><p className="eyebrow">OFFICIAL RESOURCES</p><h2>Verify the Current Requirement With Hernando County.</h2><ul><li><a href="https://www.hernandocounty.us/media/q1oat1te/items-not-requiring-a-building-permit-document.pdf" target="_blank" rel="noreferrer">Hernando County: Items Not Requiring a Building Permit</a></li><li><a href="https://www.hernandocounty.us/building-development/building/" target="_blank" rel="noreferrer">Hernando County Building Division</a></li></ul></section>
     </article>
   </div>
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Hernando County Remodeling Permit FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
+
   <section className="blog-cta"><div><p className="eyebrow">PLANNING A HERNANDO COUNTY REMODEL?</p><h2>Build the Scope Before You Compare the Price.</h2><p>Swift can review the space, identify the work involved and prepare a written estimate around the actual project.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/faq">More FAQs</a></div></section>
   <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/>
 </main>}

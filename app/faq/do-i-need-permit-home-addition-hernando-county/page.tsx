@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -71,11 +72,19 @@ export default function Page(){
           <p>That is also why the lowest estimate is not automatically the better estimate. Compare what is actually included, including permit coordination, engineering or plan requirements, trade work and finish repairs. Swift&apos;s guide to <a href="/blog/compare-remodeling-estimates-spring-hill">comparing remodeling estimates in Spring Hill</a> explains how to make that comparison.</p>
         </section>
 
-        <section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Home Addition Permit FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section>
+
 
         <section className="article-sources"><p className="eyebrow">OFFICIAL RESOURCE</p><h2>Verify Current Requirements With Hernando County.</h2><p><a href="https://www.hernandocounty.us/media/q1oat1te/items-not-requiring-a-building-permit-document.pdf" target="_blank" rel="noreferrer">Hernando County Building Division: Items Not Requiring a Building Permit</a></p></section>
       </article>
     </div>
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Home Addition Permit FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
+
 
     <section className="blog-cta"><div><p className="eyebrow">PLANNING MORE SPACE?</p><h2>Start With the Home, the Property and the Scope.</h2><p>Swift can review the existing home and talk through the practical path for your addition.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/faq">More FAQs</a></div></section>
     <SiteFooter/>

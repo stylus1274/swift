@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -41,6 +42,14 @@ export default function Page(){return <main className="blog-page article-page"><
         </section>
 {mistakes.map((x,i)=><section id={"mistake-"+(i+1)} key={x[0]}><p className="eyebrow">MISTAKE {i+1}</p><h2>{x[0]}</h2><p>{x[1]}</p></section>)}
 <section><p className="eyebrow">REAL PROJECT CONTEXT</p><h2>A Spring Hill Whole-Home Remodel Shows Why Coordination Matters.</h2><p>Swift&apos;s documented Spring Hill project included the kitchen along with multiple bathrooms, laundry, living spaces, bedrooms and the patio. Treating those scopes as one coordinated project helped keep selections and finish direction connected.</p><p><a href="/projects/whole-home-remodel-spring-hill-fl">View the Spring Hill whole-home remodel</a> or read <a href="/blog/kitchen-remodeling-spring-hill-fl-adds-value">what actually adds value in a Spring Hill kitchen remodel</a>.</p></section>
-<section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Kitchen Remodeling Mistake FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section></article></div>
+</article></div>
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Kitchen Remodeling Mistake FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
+
 <section className="blog-cta"><div><p className="eyebrow">PLANNING A KITCHEN REMODEL?</p><h2>Get the Scope Clear Before the Work Starts.</h2><p>Swift can walk the space, discuss the priorities and prepare a written estimate around the actual project.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/kitchen-remodeling">Kitchen Remodeling</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

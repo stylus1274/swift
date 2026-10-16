@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -36,7 +37,15 @@ export default function Page(){return <main className="blog-page article-page"><
 <section id="build"><p className="eyebrow">STEP 4</p><h2>Coordinate the Ground-Up Build.</h2><p>New-home construction brings together multiple licensed trades and inspections. Swift says its new-construction subcontractors commonly include plumbing, electrical, roofing, block, concrete, drywall, framing and stucco.</p><div className="article-factor-grid"><div><strong>Site & Structure</strong><p>Site preparation, concrete, block and framing establish the physical build.</p></div><div><strong>Building Systems</strong><p>Plumbing and electrical work are coordinated into the construction sequence.</p></div><div><strong>Exterior Shell</strong><p>Roofing and stucco help move the structure toward a weather-protected home.</p></div><div><strong>Interior Completion</strong><p>Drywall and finish work turn the structure into the completed living space.</p></div></div></section>
 <section id="completion"><p className="eyebrow">STEP 5</p><h2>Move Through Final Details and Completion.</h2><p>The exact sequence and duration vary by home, site, inspections, selections and scope. A custom build should be judged against its actual plans and written project documents rather than a generic timeline.</p><p>Swift&apos;s client-provided project records show new-build projects in the roughly $300,000 to $550,000 range, but those figures are broad historical planning ranges, not a quote for a Brooksville home. A site-specific estimate is required.</p></section>
 <section id="proof"><p className="eyebrow">DOCUMENTED BROOKSVILLE PROJECT</p><h2>A Custom Farmhouse Completed in Eight Months.</h2><p>Swift&apos;s completed-project records document a custom farmhouse in Brooksville that ran from October 23, 2024 through June 26, 2025. The recorded project investment was $421,920. The scope in the client record is concise: build a custom farmhouse home.</p><figure><img src="/assets/projects/brooksville-custom-farmhouse/kitchen.jpg" alt="Kitchen inside Swift's completed Brooksville custom farmhouse"/><figcaption>Interior photography from the documented Brooksville custom farmhouse project.</figcaption></figure><p><a href="/projects/custom-farmhouse-home-brooksville-fl">View the documented Brooksville custom farmhouse</a> or explore <a href="/brooksville-fl/new-construction">new construction in Brooksville</a>.</p></section>
-<section className="article-faqs" id="faqs"><p className="eyebrow">COMMON QUESTIONS</p><h2>Brooksville Custom Home FAQs</h2>{faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}</section>
+
 </article></div>
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Brooksville Custom Home FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
+
 <section className="blog-cta"><div><p className="eyebrow">PLANNING A HOME IN BROOKSVILLE?</p><h2>Start With an In-Person Project Conversation.</h2><p>Bring the property, plans or ideas you already have so Swift can evaluate the actual scope.</p></div><div><a className="button cta-primary" href="/contact">Request a free estimate</a><a href="/custom-home-building">Custom Home Building</a></div></section>
 <SiteFooter/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/></main>}

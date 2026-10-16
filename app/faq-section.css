@@ -1,0 +1,91 @@
+/* All FAQ sections follow the Exterior Painting reference. */
+.site-faq {
+  margin: 0;
+  padding: 115px max(45px, calc((100vw - 1320px) / 2)) 120px;
+  background: #fffefb;
+  color: #0b2b45;
+  scroll-margin-top: 120px;
+}
+.site-faq[data-surface="white"] { background: #fff; }
+.site-faq__inner {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
+  gap: 100px;
+}
+.site-faq__eyebrow {
+  margin: 0;
+  color: #2e74b5;
+  font: 700 12px/1.5 "Courier New", monospace;
+  letter-spacing: .2em;
+}
+.site-faq__title {
+  margin: 25px 0 24px;
+  font: 400 52px/1.08 Georgia, "Times New Roman", serif;
+  letter-spacing: -.035em;
+}
+.site-faq__description,
+.site-faq__answer p {
+  color: #5f7068;
+  font: 400 18px/1.72 Arial, Helvetica, sans-serif;
+}
+.site-faq__description { margin: 0; }
+.site-faq__estimate { margin-top: 30px; }
+.site-faq__item { border-top: 1px solid #dce4e3; }
+.site-faq__item:last-child { border-bottom: 1px solid #dce4e3; }
+.site-faq__summary {
+  min-height: 104px;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  color: #0b2b45;
+  text-align: left;
+  cursor: pointer;
+  list-style: none;
+}
+.site-faq__summary::-webkit-details-marker { display: none; }
+.site-faq__question {
+  margin: 0;
+  color: inherit;
+  font: 700 18px/1.4 Arial, Helvetica, sans-serif;
+  letter-spacing: normal;
+}
+.site-faq__toggle {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2e74b5;
+  border-radius: 50%;
+  color: #2e74b5;
+  font: 400 23px/1 Arial, Helvetica, sans-serif;
+}
+.site-faq__toggle::after { content: "+"; }
+.site-faq__item[open] > .site-faq__summary { color: #2e74b5; }
+.site-faq__item[open] .site-faq__toggle { background: #2e74b5; color: #fff; }
+.site-faq__item[open] .site-faq__toggle::after { content: "−"; }
+.site-faq__summary:hover { color: #2e74b5; }
+.site-faq__summary:hover .site-faq__toggle { border-color: #2668a3; background: #2668a3; color: #fff; }
+.site-faq__item[open] > .site-faq__summary:hover { color: #0b2b45; }
+.site-faq__item[open] > .site-faq__summary:hover .site-faq__toggle { border-color: #2e74b5; background: transparent; color: #2e74b5; }
+.site-faq__summary:focus-visible { outline: 2px solid #2e74b5; outline-offset: 4px; }
+.site-faq__answer { padding: 0 72px 28px 0; }
+.site-faq__answer p { margin: -5px 0 0; }
+@media (max-width: 1150px) {
+  .site-faq__inner { gap: 60px; }
+}
+@media (max-width: 800px) {
+  .site-faq { padding: 90px 35px; }
+  .site-faq__inner { grid-template-columns: minmax(0, 1fr); gap: 45px; }
+}
+@media (max-width: 560px) {
+  .site-faq { padding: 75px 22px; }
+  .site-faq__title { font-size: 43px; }
+  .site-faq__answer { padding-right: 0; }
+}

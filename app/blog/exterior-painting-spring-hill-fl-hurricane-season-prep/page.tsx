@@ -1,3 +1,4 @@
+import FaqSection from "@/components/FaqSection";
 import SiteHeader from "../../../components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -171,11 +172,7 @@ export default function Page(){
           <p>That gives homeowners a more useful goal than “paint before hurricane season.” The goal is to enter the season with an exterior that is maintained, known and not hiding obvious problems under a fresh coat.</p>
         </section>
 
-        <section className="article-faqs" id="faqs">
-          <p className="eyebrow">COMMON QUESTIONS</p>
-          <h2>Spring Hill Exterior Painting FAQs</h2>
-          {faqItems.map((x,i)=><details open={i===0} key={x.question}><summary className="faq-question-summary"><h3 className="faq-question">{x.question}</h3><span className="faq-circle" aria-hidden="true">+</span></summary><p>{x.answer}</p></details>)}
-        </section>
+
 
         <section className="article-sources">
           <p className="eyebrow">PLANNING RESOURCES</p>
@@ -188,6 +185,14 @@ export default function Page(){
         </section>
       </article>
     </div>
+
+      <FaqSection id="faqs"
+        eyebrow={<>COMMON QUESTIONS</>}
+        title={<>Spring Hill Exterior Painting FAQs</>}
+        items={faqItems}
+        estimateHref="/contact#contact-form"
+      />
+
 
     <section className="blog-cta">
       <div>
