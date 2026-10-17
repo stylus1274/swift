@@ -1,5 +1,7 @@
 "use client";
 
+import Testimonials from "@/components/Testimonials";
+
 import FaqSection from "@/components/FaqSection";
 
 import { FormEvent, useState } from "react";
@@ -56,19 +58,6 @@ const paintingFaqs = [
   },
 ];
 
-function GoogleMark() {
-  return (
-    <span className="paint-google" aria-label="Google review">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path fill="#4285F4" d="M21.6 12.23c0-.71-.06-1.39-.18-2.05H12v3.87h5.38a4.6 4.6 0 0 1-2 3.02v2.51h3.24c1.9-1.75 2.98-4.33 2.98-7.35Z" />
-        <path fill="#34A853" d="M12 22c2.7 0 4.97-.9 6.62-2.42l-3.24-2.51c-.9.6-2.04.95-3.38.95-2.61 0-4.82-1.76-5.61-4.13H3.05v2.59A10 10 0 0 0 12 22Z" />
-        <path fill="#FBBC05" d="M6.39 13.89A6 6 0 0 1 6.08 12c0-.66.11-1.3.31-1.89V7.52H3.05A10 10 0 0 0 2 12c0 1.61.39 3.13 1.05 4.48l3.34-2.59Z" />
-        <path fill="#EA4335" d="M12 5.98c1.47 0 2.79.51 3.83 1.5l2.87-2.87A9.65 9.65 0 0 0 12 2a10 10 0 0 0-8.95 5.52l3.34 2.59C7.18 7.74 9.39 5.98 12 5.98Z" />
-      </svg>
-      Google Review
-    </span>
-  );
-}
 
 export default function ResidentialPaintingPage() {
 
@@ -213,37 +202,7 @@ export default function ResidentialPaintingPage() {
         </div>
       </section>
 
-      <section className="paint-review-section">
-        <div className="paint-review-intro">
-          <p className="eyebrow">CUSTOMER REVIEWS</p>
-          <h2>Chosen for the Details.<br />Recommended for the Experience.</h2>
-          <a className="text-action" href="#paint-estimate"><span className="text-action-label">Start your project</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
-        </div>
-        <article className="paint-review-card">
-          <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>“We are beyond happy with the work William and his crew did for us. They are extremely professional, punctual and efficient! Highly recommend and will be using them from here on out!”</blockquote>
-          <p><strong>CHAD ALAN FORD</strong></p>
-          <GoogleMark />
-        </article>
-        <article className="paint-review-card second">
-          <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>“I highly recommend Swift Construction for any home remodeling project. They did an excellent job remodeling my kitchen, and I am extremely happy with the results. From start to finish, the team was professional, reliable, and paid close attention to detail.”</blockquote>
-          <p><strong>Suanny Mercedes</strong></p>
-          <GoogleMark />
-        </article>
-        <article className="paint-review-card">
-          <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>“My family real estate company has used Swift Construction and Painting on multiple projects large and small, including interior renovation all the way up to ground up construction. William has proven to be reliable, reasonable and honest. His attention to detail is impeccable.”</blockquote>
-          <p><strong>michael Lopez</strong></p>
-          <GoogleMark />
-        </article>
-        <article className="paint-review-card second">
-          <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>“So glad I found Swift Construction and Painting! Very skilled crew took care of both my home and business. Even fixing an issue that the original builder failed to find or correct.”</blockquote>
-          <p><strong>Kristen Tooley</strong></p>
-          <GoogleMark />
-        </article>
-      </section>
+      <Testimonials topic="painting" title="Chosen for the Details. Recommended for the Experience." />
 
       <FaqSection
         eyebrow={<>PAINTING QUESTIONS</>}

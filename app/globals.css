@@ -85,17 +85,6 @@
 .remodel-process-grid article > span { color: var(--remodel-blue); font-family: Georgia, serif; font-size: 31px; font-style: italic; }
 .remodel-process-grid h3 { margin: 29px 0 15px; font-size: 27px; }
 .remodel-process-grid p { margin: 0; color: var(--remodel-body); font-size: 15px; line-height: 1.72; }
-.remodel-review { min-height: 580px; display: grid; grid-template-columns: 1.2fr .8fr; background: #cfe6f5; }
-.remodel-review-quote { padding: 84px 90px 75px max(60px, calc((100vw - 1440px) / 2)); }
-.remodel-review-quote .stars { color: #f58220; font-size: 20px; letter-spacing: .13em; }
-.remodel-review-quote blockquote { max-width: 820px; margin: 28px 0 30px; font-size: 37px; line-height: 1.34; }
-.remodel-review-quote > p { display: flex; flex-direction: column; gap: 6px; }
-.remodel-review-quote strong { font-family: Georgia, serif; font-size: 19px; font-weight: 400; }
-.remodel-review-quote p span { color: #587186; font-family: "Courier New", monospace; font-size: 10px; font-weight: 800; letter-spacing: .1em; }
-.remodel-review-cta { padding: 82px max(60px, calc((100vw - 1440px) / 2)) 75px 64px; display: flex; flex-direction: column; justify-content: center; background: #fff; }
-.remodel-review-cta .eyebrow { color: var(--remodel-blue); }
-.remodel-review-cta h2 { margin: 23px 0 31px; font-size: 43px; line-height: 1.13; }
-.remodel-review-cta .button { align-self: flex-start; }
 .remodel-estimate { padding: 104px max(50px, calc((100vw - 1360px) / 2)) 110px; display: grid; grid-template-columns: .9fr 1.1fr; gap: 95px; background: var(--remodel-pale); }
 .remodel-estimate-copy h2 { max-width: 620px; margin: 25px 0 22px; font-size: 56px; line-height: 1.07; letter-spacing: -.035em; }
 .remodel-estimate-copy > p:not(.eyebrow):not(.remodel-estimate-phone) { max-width: 600px; color: var(--remodel-body); font-size: 18px; line-height: 1.72; }
@@ -840,9 +829,6 @@
   .remodel-contractor-copy { padding-left: 55px; }
   .remodel-process-grid { grid-template-columns: 1fr 1fr; row-gap: 55px; }
   .remodel-process-grid article:nth-child(2) { border-right: 0; }
-  .remodel-review-quote { padding-left: 50px; padding-right: 55px; }
-  .remodel-review-quote blockquote { font-size: 31px; }
-  .remodel-review-cta { padding-left: 45px; padding-right: 45px; }
   .remodel-estimate { padding-left: 40px; padding-right: 40px; gap: 55px; }
 }
 
@@ -859,7 +845,6 @@
   .remodel-one-contractor { grid-template-columns: 1fr; }
   .remodel-contractor-image { min-height: 560px; }
   .remodel-contractor-copy { padding: 75px 40px; }
-  .remodel-review { grid-template-columns: 1fr; }
   .remodel-estimate { padding: 85px 35px; grid-template-columns: 1fr; gap: 50px; }
 }
 
@@ -887,10 +872,6 @@
   .remodel-process-heading { text-align: left; }
   .remodel-process-grid { margin-top: 58px; grid-template-columns: 1fr; row-gap: 50px; }
   .remodel-process-grid article { padding: 0; border-right: 0; }
-  .remodel-review-quote { padding: 67px 22px 60px; }
-  .remodel-review-quote blockquote { font-size: 29px; }
-  .remodel-review-cta { padding: 66px 22px; }
-  .remodel-review-cta h2 { font-size: 40px; }
   .remodel-estimate { padding: 72px 18px; }
   .remodel-estimate-copy h2 { font-size: 46px; }
   .remodel-estimate-form { padding: 30px 22px; }
@@ -1198,21 +1179,6 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
 .founder-story blockquote { margin: 0; padding: 0 0 0 22px; border-left: 3px solid #2452ff; color: #fff; font-size: 25px; line-height: 1.5; }
 .founder-copy { max-width: 528px; margin: 21px 0 0; color: #b8c8dc; font-size: 13px; line-height: 1.75; }
 
-.reviews-section { padding: 86px 20px 78px; background: var(--review-blue); }
-.reviews-heading { max-width: 760px; margin: 0 auto 40px; text-align: center; }
-.reviews-heading h2 { margin: 16px 0 0; color: #123555; font-size: clamp(34px, 3vw, 50px); line-height: 1.1; letter-spacing: -.025em; }
-.featured-review { max-width: 1000px; margin: 0 auto; text-align: center; }
-.stars { color: #287fc3; font-family: Arial, sans-serif; font-size: 20px; letter-spacing: 2px; }
-.featured-review blockquote { max-width: 960px; margin: 24px auto 24px; font-size: clamp(28px, 2.35vw, 34px); line-height: 1.42; }
-.featured-review p, .review-cards p { margin: 0; color: #23435e; font-size: 14px; }
-.google-review-badge { margin-top: 8px; display: inline-flex; align-items: center; gap: 6px; color: #657483; font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 600; line-height: 1; }
-.google-review-badge svg { width: 15px; height: 15px; display: block; }
-.review-cards { max-width: 1180px; margin: 46px auto 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 21px; align-items: stretch; }
-.review-cards article { min-height: 330px; padding: 30px 31px 28px; display: flex; flex-direction: column; align-items: flex-start; background: rgba(255,255,255,.72); }
-.review-cards blockquote { flex: 1; margin: 17px 0 24px; font-size: 18px; line-height: 1.55; }
-.reviews-more { margin-top: 36px; text-align: center; }
-.reviews-more .button { min-width: 180px; justify-content: center; }
-
 .estimate-section { min-height: 881px; padding: 74px 0 44px 59px; position: relative; overflow: hidden; background: #c9e5eb url('/assets/service-map.jpg') center / cover; }
 .interactive-map { position: absolute; inset: 0; z-index: 0; }
 .interactive-map::after { content: ""; position: absolute; inset: 0; z-index: 450; background: rgba(174, 223, 229, .13); pointer-events: none; }
@@ -1336,10 +1302,6 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
   .founder-story h2 { margin: 18px 0 22px; font-size: 42px; }
   .founder-story blockquote { padding-left: 18px; font-size: 19px; line-height: 1.48; }
   .founder-copy { font-size: 14px; }
-  .reviews-section { padding: 65px 18px; }
-  .featured-review blockquote { font-size: 27px; }
-  .featured-review blockquote br, .review-cards blockquote br { display: none; }
-  .review-cards { grid-template-columns: 1fr; }
   .estimate-section { min-height: 0; padding: 0 16px 32px; display: flex; flex-direction: column; overflow: visible; background-position: 62% center; }
   .interactive-map { height: 390px; margin: 0 -16px; position: relative; inset: auto; order: 0; }
   .interactive-map::after { background: rgba(174, 223, 229, .1); }
@@ -1388,7 +1350,7 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
 .paint-hero-call { display: flex; flex-direction: column; gap: 5px; color: #fff; font-family: Georgia, serif; font-size: 21px; font-weight: 700; }
 .paint-hero-call small { color: #a9c1cf; font-family: "Courier New", monospace; font-size: 9px; letter-spacing: .16em; }
 .paint-text-link { color: var(--paint-navy); font-size: 15px; font-weight: 700; }
-.paint-text-link span, .paint-intro-copy a span, .paint-review-intro a span { margin-left: 9px; color: var(--paint-blue); }
+.paint-text-link span, .paint-intro-copy a span { margin-left: 9px; color: var(--paint-blue); }
 .paint-hero-panel { width: 350px; min-height: 390px; padding: 34px 36px 31px; position: absolute; right: max(40px, calc((100vw - 1440px) / 2)); bottom: 0; background: rgba(255,254,251,.97); color: var(--paint-navy); box-shadow: 0 18px 55px rgba(0,0,0,.2); }
 .paint-panel-label { margin: 0 0 22px; color: var(--paint-blue); font-family: "Courier New", monospace; font-size: 10px; font-weight: 800; letter-spacing: .14em; }
 .paint-hero-panel > div { min-height: 78px; padding: 17px 0; display: grid; grid-template-columns: 75px 1fr; align-items: center; border-top: 1px solid #d9dfdc; }
@@ -1415,7 +1377,7 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
 .paint-ticker { min-height: 58px; padding: 17px 26px; display: flex; align-items: center; justify-content: center; gap: 32px; overflow: hidden; background: var(--paint-navy); color: #c2d7e6; white-space: nowrap; font-family: "Courier New", monospace; font-size: 13px; font-weight: 800; letter-spacing: .14em; }
 .paint-ticker b { color: #57a4da; font-size: 8px; }
 .paint-intro { max-width: 1320px; margin: 0 auto; padding: 113px 45px 106px; display: grid; grid-template-columns: 1.08fr .92fr; gap: 100px; }
-.paint-intro .eyebrow, .paint-section-heading .eyebrow, .paint-prep .eyebrow, .paint-projects .eyebrow, .paint-process .eyebrow, .paint-review-section .eyebrow, .paint-estimate .eyebrow { color: var(--paint-blue); }
+.paint-intro .eyebrow, .paint-section-heading .eyebrow, .paint-prep .eyebrow, .paint-projects .eyebrow, .paint-process .eyebrow, .paint-estimate .eyebrow { color: var(--paint-blue); }
 .paint-intro h2 { margin: 25px 0 0; font-size: clamp(46px, 4vw, 66px); line-height: 1.08; letter-spacing: -.03em; }
 .paint-intro-copy { padding-top: 34px; }
 .paint-intro-copy p { margin: 0 0 20px; color: #5c6d64; font-size: 18px; line-height: 1.78; }
@@ -1475,17 +1437,6 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
 .paint-process-grid article > span { width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; position: relative; top: -28px; border: 1px solid #91bddb; border-radius: 50%; background: #fffefb; color: var(--paint-blue); font-family: Georgia, serif; font-size: 18px; font-style: italic; }
 .paint-process-grid h3 { margin: -4px 0 12px; font-size: 26px; }
 .paint-process-grid p { margin: 0; color: #64746c; font-size: 15px; line-height: 1.7; }
-.paint-review-section { padding: 95px max(42px, calc((100vw - 1320px) / 2)); display: grid; grid-template-columns: 1.1fr .95fr .95fr; gap: 22px; background: #cce3f6; }
-.paint-review-intro { padding: 27px 50px 20px 0; }
-.paint-review-intro h2 { margin: 23px 0 28px; font-size: 48px; line-height: 1.08; }
-.paint-review-intro a { color: var(--paint-navy); font-size: 14px; font-weight: 800; }
-.paint-review-card { min-height: 365px; padding: 38px 37px 32px; display: flex; flex-direction: column; background: rgba(255,255,255,.72); }
-.paint-review-card.second { background: rgba(255,255,255,.5); }
-.paint-review-card blockquote { flex: 1; margin: 23px 0 30px; font-size: 22px; line-height: 1.5; }
-.paint-review-card > p { margin: 0; color: #36556d; font-size: 14px; line-height: 1.6; }
-.paint-review-card > p span { color: #6b7f8e; font-size: 12px; }
-.paint-google { margin-top: 9px; display: inline-flex; align-items: center; gap: 7px; color: #607788; font-size: 11px; font-weight: 700; }
-.paint-google svg { width: 15px; height: 15px; }
 .paint-estimate { padding: 90px max(42px, calc((100vw - 1240px) / 2)); display: grid; grid-template-columns: .9fr 1.1fr; gap: 105px; background: var(--paint-navy); color: #fff; }
 .paint-estimate-copy { padding-top: 27px; }
 .paint-estimate-copy h2 { margin: 23px 0 22px; color: #fff; font-size: 61px; line-height: 1.04; }
@@ -1518,8 +1469,6 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
   .paint-project-grid { height: 580px; }
   .paint-process-grid { grid-template-columns: 1fr 1fr; row-gap: 70px; border-top: 0; }
   .paint-process-grid article { padding-top: 48px; border-top: 1px solid #b7d4e6; }
-  .paint-review-section { grid-template-columns: 1fr 1fr; }
-  .paint-review-intro { grid-column: 1 / -1; }
   .paint-estimate { gap: 55px; }
 }
 
@@ -1583,10 +1532,6 @@ h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; font-we
   .paint-process-heading h2 { font-size: 43px; }
   .paint-process-grid { margin-top: 60px; grid-template-columns: 1fr; row-gap: 60px; }
   .paint-process-grid article { border-right: 0; }
-  .paint-review-section { padding: 69px 18px; grid-template-columns: 1fr; }
-  .paint-review-intro { padding-right: 0; }
-  .paint-review-intro h2 { font-size: 41px; }
-  .paint-review-card { min-height: 330px; padding: 31px 27px; }
   .paint-estimate { padding: 70px 18px; grid-template-columns: 1fr; gap: 48px; }
   .paint-estimate-copy h2 { font-size: 47px; }
   .paint-estimate-form { padding: 30px 22px; }

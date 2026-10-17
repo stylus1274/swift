@@ -1,5 +1,7 @@
 "use client";
 
+import Testimonials from "@/components/Testimonials";
+
 import FaqSection from "@/components/FaqSection";
 
 import { FormEvent, useState } from "react";
@@ -171,18 +173,7 @@ export default function ResidentialRemodelingPage() {
         </div>
       </section>
 
-      <section className="remodel-review">
-        <div className="remodel-review-quote">
-          <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>“I highly recommend Swift Construction for any home remodeling project. They did an excellent job remodeling my kitchen, and I am extremely happy with the results. From start to finish, the team was professional, reliable, and paid close attention to detail.”</blockquote>
-          <p><strong>Suanny Mercedes</strong><span>Google Review</span></p>
-        </div>
-        <div className="remodel-review-cta">
-          <p className="eyebrow">READY TO TALK?</p>
-          <h2>Bring Your Remodeling Ideas to the Walkthrough.</h2>
-          <a className="text-action" href="#remodel-estimate"><span className="text-action-label">Request a free estimate</span><span className="text-action-arrow" aria-hidden="true">→</span></a>
-        </div>
-      </section>
+      <Testimonials topic="remodeling" title="Bring Your Remodeling Ideas to the Walkthrough." />
 
       <FaqSection
         eyebrow={<>REMODELING QUESTIONS</>}

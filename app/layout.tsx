@@ -6,6 +6,7 @@ import "./sticky-header.css";
 import "./forms.css";
 import "./buttons.css";
 import "./faq-section.css";
+import "./testimonials.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://swiftconstructionandpainting.com"),
