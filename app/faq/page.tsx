@@ -30,8 +30,8 @@ const faqGroups = [
   {
     id: "kitchen-bathroom",
     eyebrow: "KITCHEN & BATHROOM",
-    title: "Kitchen & Bathroom Remodeling Timelines",
-    copy: "Understand how long common kitchen and bathroom projects can take, what happens during each phase and what tends to slow the schedule down.",
+    title: "Kitchen & Bathroom Remodeling Questions",
+    copy: "Plan kitchen and bathroom updates with answers about project scope, existing cabinets, remodeling timelines and the work involved.",
     serviceHref: "/residential-remodeling",
     serviceLabel: "Explore Residential Remodeling",
     questions: [
@@ -44,6 +44,11 @@ const faqGroups = [
         title: "How Long Does a Bathroom Remodel Take in Florida?",
         copy: "See how a simple update differs from a full gut renovation and why plumbing, waterproofing, tile and inspections affect timing.",
         href: "/faq/how-long-does-bathroom-remodel-take-florida",
+      },
+      {
+        title: "Can I Replace My Countertops Without Replacing My Cabinets?",
+        copy: "Learn when existing cabinets can stay, what needs evaluation and how sinks, backsplashes and future remodeling plans affect the decision.",
+        href: "/faq/can-i-replace-countertops-without-replacing-cabinets",
       },
     ],
   },

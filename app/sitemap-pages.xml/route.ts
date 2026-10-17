@@ -42,6 +42,7 @@ const pages = [
   "/faq/how-long-does-bathroom-remodel-take-florida",
   "/faq/can-homeowner-pull-own-building-permit-florida",
   "/faq/best-flooring-for-florida-home",
+  "/faq/can-i-replace-countertops-without-replacing-cabinets",
 ];
 
 export function GET() {
