@@ -1,0 +1,22 @@
+figure.featuredImage img {
+  height: auto;
+  aspect-ratio: 1672 / 941;
+}
+
+.supportingImage {
+  margin: 32px 0 0;
+}
+
+.supportingImage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.supportingImage figcaption {
+  margin-top: 12px;
+  color: #53675e;
+  font-size: 13px;
+  line-height: 1.6;
+}
