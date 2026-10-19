@@ -29,6 +29,12 @@ try {
   names.forEach((name) => delete process.env[name]);
   assert.equal((await core.getReviewFeed()).source, "curated");
   assert.equal(data.selectReviews(data.curatedReviews, "painting").length, 0, "Unrelated quotes must not fill Painting");
+  assert.equal(data.selectCuratedReviews("painting").length, 4, "Keep the four published Painting testimonials until Google themes are organized");
+  assert.equal(data.reviewAuthorTitleCase("CHAD ALAN FORD"), "Chad Alan Ford");
+  assert.equal(data.reviewAuthorTitleCase("michael Lopez"), "Michael Lopez");
+  assert.equal(data.reviewAuthorTitleCase("ANNE-MARIE O'NEILL"), "Anne-Marie O'Neill");
+  const curatedPainting = await (await api.GET(new Request("https://example.test/api/reviews?topic=painting"))).json();
+  assert.equal(curatedPainting.reviews.length, 4, "API preserves the same interim Painting reviews as the initial render");
   assert.equal(data.selectReviews(data.curatedReviews, "remodeling").length, 1, "One reviewed remodeling quote uses split layout");
   assert.deepEqual(data.detectReviewTopics("Swift Construction and Painting was professional."), []);
   assert.ok(data.detectReviewTopics("They painted our house exterior.").includes("painting"));

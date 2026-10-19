@@ -1,4 +1,4 @@
-import type { SiteReview } from "@/lib/review-data";
+import { reviewAuthorTitleCase, type SiteReview } from "@/lib/review-data";
 
 export function ReviewStars({ rating = 5 }: { rating?: number }) {
   const value = Math.max(0, Math.min(5, Math.round(rating)));
@@ -19,9 +19,13 @@ export function GoogleReviewMark() {
 
 export default function ReviewCard({ review, variant = "standard" }: { review: SiteReview; variant?: "standard" | "featured" | "listing" }) {
   return <article className={`review-card review-card--${variant}`}>
+    {variant === "featured" && <p className="site-testimonials__eyebrow review-card__eyebrow">CUSTOMER REVIEWS</p>}
     <ReviewStars rating={review.rating} />
     <blockquote className="review-card__quote">“{review.quote}”</blockquote>
-    <p className="review-card__author">{review.author}</p>
-    <GoogleReviewMark />
+    <div className="review-card__footer">
+      <p className="review-card__author">{reviewAuthorTitleCase(review.author)}</p>
+      {variant === "featured" && <a className="text-action review-card__more" href="/reviews"><span className="text-action-label">Read more reviews</span><span className="text-action-arrow" aria-hidden="true">→</span></a>}
+      <GoogleReviewMark />
+    </div>
   </article>;
 }

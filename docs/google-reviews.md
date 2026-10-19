@@ -4,9 +4,10 @@
 
 The site currently has four manually entered testimonials. These remain the
 explicitly labelled curated fallback while no Google connection is configured.
-They are not proof of a live Google sync. None explicitly describes painting, so
-the painting section links to Reviews without displaying an unrelated quote.
-Confirm a customer's actual service before manually assigning a painting topic.
+They are not proof of a live Google sync. At the owner's request, Painting keeps
+its four currently published testimonials during the interim. This is a curated
+display choice, not an assignment of painting topics to those reviews. Confirm
+actual service themes once the Google connection becomes available.
 
 Use an approved Business Profile API project and an OAuth refresh token granted
 by an owner/manager of Swift's verified listing with the `business.manage` scope.
@@ -53,10 +54,14 @@ from the unmodified cached Google response. Recheck assignments if a review's
 service changes. No classification should be inferred from the reviewer name.
 
 The homepage displays up to four general reviews using the Painting grid.
-Service sections display only matching reviews: one uses the Remodeling split
+Once connected, service sections display matching reviews: one uses the Remodeling split
 layout; two or more use the Painting grid; none shows a short link to Reviews.
 The Reviews page retains its existing section order, two-column grid and photo
 sections while sharing stars, author typography and Google attribution.
+Author names are displayed in Title Case without changing their source values.
+The single-review layout places its eyebrow above the stars, its Reviews link
+beside the author, and a primary estimate button beside the quote, linked to the
+page's estimate form. Existing desktop and mobile top padding is retained.
 
 ## Verification
 

@@ -202,7 +202,7 @@ export default function ResidentialPaintingPage() {
         </div>
       </section>
 
-      <Testimonials topic="painting" title="Chosen for the Details. Recommended for the Experience." />
+      <Testimonials topic="painting" title="Chosen for the Details. Recommended for the Experience." estimateHref="#paint-estimate" />
 
       <FaqSection
         eyebrow={<>PAINTING QUESTIONS</>}

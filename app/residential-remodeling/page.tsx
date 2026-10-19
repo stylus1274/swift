@@ -173,7 +173,7 @@ export default function ResidentialRemodelingPage() {
         </div>
       </section>
 
-      <Testimonials topic="remodeling" title="Bring Your Remodeling Ideas to the Walkthrough." />
+      <Testimonials topic="remodeling" title="Bring Your Remodeling Ideas to the Walkthrough." estimateHref="#remodel-estimate" />
 
       <FaqSection
         eyebrow={<>REMODELING QUESTIONS</>}

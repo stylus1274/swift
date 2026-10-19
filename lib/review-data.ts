@@ -16,6 +16,16 @@ export function selectReviews(reviews: SiteReview[], topic: ReviewTopic) {
   return reviews.filter((review) => topic === "all" || review.topics.includes(topic));
 }
 
+// Preserve the testimonials already published on Painting until the Google
+// connection is approved and the service themes have been reviewed.
+export function selectCuratedReviews(topic: ReviewTopic) {
+  return topic === "painting" ? curatedReviews : selectReviews(curatedReviews, topic);
+}
+
+export function reviewAuthorTitleCase(author: string) {
+  return author.toLocaleLowerCase("en-US").replace(/(^|[\s\-'’])\p{L}/gu, (letter) => letter.toLocaleUpperCase("en-US"));
+}
+
 // Specific service phrases only; a business name containing "Painting" is not
 // evidence of painting work. Manual assignments can be reviewed by review ID.
 export function detectReviewTopics(text: string): ReviewTopic[] {
