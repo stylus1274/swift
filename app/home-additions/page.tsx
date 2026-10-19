@@ -1,4 +1,6 @@
 "use client";
+import ProcessSection from "../../components/ProcessSection";
+
 
 import FaqSection from "@/components/FaqSection";
 
@@ -165,18 +167,24 @@ export default function HomeAdditionsPage() {
         </div>
       </section>
 
-      <section className="remodel-process" id="addition-process">
-        <div className="remodel-process-heading">
-          <p className="eyebrow">HOW IT WORKS</p>
-          <h2>A Clear Path From the First Walkthrough to the Finished Addition.</h2>
-        </div>
-        <div className="remodel-process-grid">
-          <article><span>01</span><h3>Walk the Property</h3><p>We discuss the space you need, review the home and identify practical considerations for the addition.</p></article>
-          <article><span>02</span><h3>Define the Scope</h3><p>The proposed layout, construction requirements and finish expectations are organized into a clear project scope.</p></article>
-          <article><span>03</span><h3>Plan &amp; Build</h3><p>Swift coordinates the approved work, applicable permitting, schedule and construction sequence.</p></article>
-          <article><span>04</span><h3>Complete the Walkthrough</h3><p>We review the finished addition together and address final details before the project is closed.</p></article>
-        </div>
-      </section>
+      <ProcessSection id="addition-process" eyebrow="HOW IT WORKS" title="A Clear Path From the First Walkthrough to the Finished Addition." steps={[
+  {
+    "title": "Walk the Property",
+    "description": "We discuss the space you need, review the home and identify practical considerations for the addition."
+  },
+  {
+    "title": "Define the Scope",
+    "description": "The proposed layout, construction requirements and finish expectations are organized into a clear project scope."
+  },
+  {
+    "title": "Plan & Build",
+    "description": "Swift coordinates the approved work, applicable permitting, schedule and construction sequence."
+  },
+  {
+    "title": "Complete the Walkthrough",
+    "description": "We review the finished addition together and address final details before the project is closed."
+  }
+]} />
 
       <section className="additions-proof-cta">
         <div className="additions-proof-copy">

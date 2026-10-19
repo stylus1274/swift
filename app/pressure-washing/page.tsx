@@ -1,4 +1,6 @@
 "use client";
+import ProcessSection from "../../components/ProcessSection";
+
 
 import FaqSection from "@/components/FaqSection";
 
@@ -110,15 +112,24 @@ export default function PressureWashingPage() {
         </div>
       </section>
 
-      <section className="remodel-process" id="pressure-washing-process">
-        <div className="remodel-process-heading"><p className="eyebrow">HOW IT WORKS</p><h2>A Clear Cleaning Process From Walkthrough to Final Review.</h2></div>
-        <div className="remodel-process-grid">
-          <article><span>01</span><h3>Walk the Property</h3><p>We identify the surfaces, buildup, access and any areas needing special attention.</p></article>
-          <article><span>02</span><h3>Define the Scope</h3><p>You receive a written proposal covering the selected areas and planned cleaning method.</p></article>
-          <article><span>03</span><h3>Prepare &amp; Clean</h3><p>Swift protects adjacent areas and cleans each surface with the appropriate approach.</p></article>
-          <article><span>04</span><h3>Complete the Walkthrough</h3><p>We review the cleaned areas and final details with you before project closeout.</p></article>
-        </div>
-      </section>
+      <ProcessSection id="pressure-washing-process" eyebrow="HOW IT WORKS" title="A Clear Cleaning Process From Walkthrough to Final Review." steps={[
+  {
+    "title": "Walk the Property",
+    "description": "We identify the surfaces, buildup, access and any areas needing special attention."
+  },
+  {
+    "title": "Define the Scope",
+    "description": "You receive a written proposal covering the selected areas and planned cleaning method."
+  },
+  {
+    "title": "Prepare & Clean",
+    "description": "Swift protects adjacent areas and cleans each surface with the appropriate approach."
+  },
+  {
+    "title": "Complete the Walkthrough",
+    "description": "We review the cleaned areas and final details with you before project closeout."
+  }
+]} />
 
       <section className="commercial-painting-proof-cta">
         <div><p className="eyebrow">PREPARING FOR EXTERIOR PAINT?</p><h2>Coordinate Cleaning and Exterior Improvements With One Contractor.</h2><p>Swift can connect surface cleaning with preparation, repairs and exterior painting under one written project plan.</p></div>

@@ -1,0 +1,25 @@
+/* Shared four-step process, based on Residential Painting. */
+.site-process.site-process { padding: 108px 42px 115px; background: #fffefb; color: #0c2c46; }
+.site-process .site-process__heading { max-width: 950px; margin: 0 auto; text-align: center; }
+.site-process .site-process__heading .eyebrow { margin: 0; color: #2e74b5; font-family: "Courier New", monospace; font-size: 12px; font-weight: 700; line-height: 1.5; letter-spacing: .2em; }
+.site-process .site-process__heading h2 { margin: 22px 0 0; font-family: Georgia, "Times New Roman", serif; font-size: 58px; font-weight: 400; line-height: 1.08; letter-spacing: -.03em; }
+.site-process .site-process__steps { max-width: 1320px; margin: 72px auto 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid #b7d4e6; list-style: none; }
+.site-process .site-process__steps > li { min-width: 0; padding: 0 31px; position: relative; border-right: 1px solid #deded8; }
+.site-process .site-process__steps > li:last-child { border-right: 0; }
+.site-process .site-process__number { width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; position: relative; top: -28px; border: 1px solid #91bddb; border-radius: 50%; background: #fffefb; color: #2e74b5; font-family: Georgia, serif; font-size: 18px; font-style: italic; }
+.site-process .site-process__steps h3 { margin: -4px 0 12px; font-family: Georgia, "Times New Roman", serif; font-size: 26px; font-weight: 400; line-height: 1.5; }
+.site-process .site-process__steps p { margin: 0; color: #64746c; font-family: Arial, sans-serif; font-size: 15px; line-height: 1.7; }
+.site-process__action { margin: 48px auto 0; text-align: center; }
+.site-process__action p { margin: 15px 0 0; color: #64746c; font-size: 14px; }
+@media (max-width: 1050px) {
+  .site-process .site-process__steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 70px; border-top: 0; }
+  .site-process .site-process__steps > li { padding-top: 48px; border-top: 1px solid #b7d4e6; }
+  .site-process .site-process__steps > li:nth-child(2n) { border-right: 0; }
+}
+@media (max-width: 700px) {
+  .site-process.site-process { padding: 74px 22px 82px; }
+  .site-process .site-process__heading { text-align: left; }
+  .site-process .site-process__heading h2 { font-size: 43px; }
+  .site-process .site-process__steps { margin-top: 60px; grid-template-columns: 1fr; row-gap: 60px; }
+  .site-process .site-process__steps > li { border-right: 0; }
+}

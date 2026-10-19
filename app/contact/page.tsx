@@ -1,4 +1,6 @@
 "use client";
+import ProcessSection from "../../components/ProcessSection";
+
 
 import FaqSection from "@/components/FaqSection";
 
@@ -88,14 +90,24 @@ export default function ContactPage() {
         </div>
       </LeadForm>
 
-      <section className="contact-next">
-        <div className="contact-next-heading"><p className="eyebrow">WHAT HAPPENS NEXT</p><h2>A Clear Start Before Any Work Begins.</h2></div>
-        <div className="contact-next-grid">
-          <article><span>01</span><h3>We Review Your Request</h3><p>Swift looks at the project type, location, timing and details you provide.</p></article>
-          <article><span>02</span><h3>We Talk Through the Scope</h3><p>We contact you to ask questions, discuss priorities and determine whether an on-site walkthrough is needed.</p></article>
-          <article><span>03</span><h3>You Receive a Written Proposal</h3><p>Once the work is defined, you receive an itemized proposal outlining the planned project scope.</p></article>
-        </div>
-      </section>
+      <ProcessSection id="contact-process" eyebrow="HOW IT WORKS" title="From First Call to Final Walkthrough." steps={[
+  {
+    "title": "Walk Us Through Your Project",
+    "description": "Tell us what you’re planning, and we’ll review the project with you to understand the scope, priorities, and expectations."
+  },
+  {
+    "title": "Approve the Estimate",
+    "description": "We’ll provide a clear, written estimate outlining the work so you know what to expect before moving forward."
+  },
+  {
+    "title": "Prepare and Get to Work",
+    "description": "Once approved and scheduled, our team prepares the site and carries out the work according to the agreed scope."
+  },
+  {
+    "title": "Complete the Final Walkthrough",
+    "description": "We’ll review the finished project with you to make sure everything is completed as expected before we wrap up."
+  }
+]} />
 
       <section className="contact-options">
         <div className="contact-options-copy"><p className="eyebrow">CONTACT SWIFT</p><h2>Prefer a Direct Conversation?</h2><p>Call Swift if you would rather discuss the project before completing the estimate form.</p></div>

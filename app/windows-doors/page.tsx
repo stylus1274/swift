@@ -1,4 +1,6 @@
 "use client";
+import ProcessSection from "../../components/ProcessSection";
+
 
 import FaqSection from "@/components/FaqSection";
 
@@ -179,18 +181,24 @@ export default function WindowsDoorsPage() {
         </div>
       </section>
 
-      <section className="remodel-process" id="windows-doors-process">
-        <div className="remodel-process-heading">
-          <p className="eyebrow">HOW IT WORKS</p>
-          <h2>A Clear Installation Process From Walkthrough to Final Fit.</h2>
-        </div>
-        <div className="remodel-process-grid">
-          <article><span>01</span><h3>Review the Openings</h3><p>We discuss your goals and inspect the windows, doors and surrounding conditions.</p></article>
-          <article><span>02</span><h3>Define the Scope</h3><p>You receive a written proposal covering the planned installation and related finish work.</p></article>
-          <article><span>03</span><h3>Install &amp; Finish</h3><p>Swift coordinates removal, fitting, weather protection and the included interior and exterior details.</p></article>
-          <article><span>04</span><h3>Complete the Walkthrough</h3><p>We review operation, appearance and final details together before project closeout.</p></article>
-        </div>
-      </section>
+      <ProcessSection id="windows-doors-process" eyebrow="HOW IT WORKS" title="A Clear Installation Process From Walkthrough to Final Fit." steps={[
+  {
+    "title": "Review the Openings",
+    "description": "We discuss your goals and inspect the windows, doors and surrounding conditions."
+  },
+  {
+    "title": "Define the Scope",
+    "description": "You receive a written proposal covering the planned installation and related finish work."
+  },
+  {
+    "title": "Install & Finish",
+    "description": "Swift coordinates removal, fitting, weather protection and the included interior and exterior details."
+  },
+  {
+    "title": "Complete the Walkthrough",
+    "description": "We review operation, appearance and final details together before project closeout."
+  }
+]} />
 
       <section className="commercial-painting-proof-cta">
         <div>

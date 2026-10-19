@@ -1,4 +1,6 @@
 "use client";
+import ProcessSection from "./ProcessSection";
+
 
 import Testimonials from "@/components/Testimonials";
 
@@ -257,38 +259,27 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
         </div>
       </section>
 
-      <section className="process-section" aria-labelledby="process-heading">
-        <div className="process-inner">
-          <div className="process-heading">
-            <div>
-              <p className="eyebrow">HOW IT WORKS</p>
-              <h2 id="process-heading">From First Call to<br />Final Walkthrough.</h2>
-            </div>
-            <p>Clear expectations, one point of contact and a crew that finishes when they say they will.</p>
-          </div>
-          <div className="process-steps">
-            <article>
-              <span className="process-number">01</span>
-              <h3>Tell Us About Your Project</h3>
-              <p>Choose a service and share a few details about what you are planning.</p>
-            </article>
-            <article>
-              <span className="process-number">02</span>
-              <h3>Meet With Swift</h3>
-              <p>We visit the property, discuss the scope and provide a written, itemized estimate.</p>
-            </article>
-            <article>
-              <span className="process-number">03</span>
-              <h3>Approve the Work</h3>
-              <p>Once approved, we schedule the project, complete the work and walk through everything with you before the job is finished.</p>
-            </article>
-          </div>
-          <div className="process-action">
-            <a className="button cta-primary" href="#contact">Start with a free estimate</a>
-            <p>Free estimates. No obligation. Licensed and insured.</p>
-          </div>
-        </div>
-      </section>
+      <ProcessSection id="process-heading" eyebrow="HOW IT WORKS" title="From First Call to Final Walkthrough." steps={[
+  {
+    "title": "Walk Us Through Your Project",
+    "description": "Tell us what you’re planning, and we’ll review the project with you to understand the scope, priorities, and expectations."
+  },
+  {
+    "title": "Approve the Estimate",
+    "description": "We’ll provide a clear, written estimate outlining the work so you know what to expect before moving forward."
+  },
+  {
+    "title": "Prepare and Get to Work",
+    "description": "Once approved and scheduled, our team prepares the site and carries out the work according to the agreed scope."
+  },
+  {
+    "title": "Complete the Final Walkthrough",
+    "description": "We’ll review the finished project with you to make sure everything is completed as expected before we wrap up."
+  }
+]}>
+        <a className="button cta-primary" href="#contact">Start with a free estimate</a>
+        <p>Free estimates. No obligation. Licensed and insured.</p>
+      </ProcessSection>
 
       <section className="founder-section" id="about">
         <div className="founder-orbit" aria-hidden="true" />

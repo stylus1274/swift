@@ -1,4 +1,6 @@
 "use client";
+import ProcessSection from "../../components/ProcessSection";
+
 
 import FaqSection from "@/components/FaqSection";
 
@@ -125,18 +127,24 @@ export default function MultiFamilyConstructionPage() {
         </div>
       </section>
 
-      <section className="remodel-process" id="multi-family-process">
-        <div className="remodel-process-heading">
-          <p className="eyebrow">HOW IT WORKS</p>
-          <h2>A Clear Path From Property Review to Project Turnover.</h2>
-        </div>
-        <div className="remodel-process-grid">
-          <article><span>01</span><h3>Review the Property</h3><p>We discuss the site, plans, unit count, project stage and result ownership needs to achieve.</p></article>
-          <article><span>02</span><h3>Define the Scope</h3><p>The proposed work, priorities and included project details are organized in writing.</p></article>
-          <article><span>03</span><h3>Coordinate Construction</h3><p>Swift manages scheduling, trade work, inspections and communication as the project moves forward.</p></article>
-          <article><span>04</span><h3>Complete Turnover</h3><p>The finished work is reviewed with ownership and final project details are addressed before closeout.</p></article>
-        </div>
-      </section>
+      <ProcessSection id="multi-family-process" eyebrow="HOW IT WORKS" title="A Clear Path From Property Review to Project Turnover." steps={[
+  {
+    "title": "Review the Property",
+    "description": "We discuss the site, plans, unit count, project stage and result ownership needs to achieve."
+  },
+  {
+    "title": "Define the Scope",
+    "description": "The proposed work, priorities and included project details are organized in writing."
+  },
+  {
+    "title": "Coordinate Construction",
+    "description": "Swift manages scheduling, trade work, inspections and communication as the project moves forward."
+  },
+  {
+    "title": "Complete Turnover",
+    "description": "The finished work is reviewed with ownership and final project details are addressed before closeout."
+  }
+]} />
 
       <section className="commercial-cta multifamily-cta">
         <div><p className="eyebrow">START WITH THE PROPERTY</p><h2>Have Plans, a Site or an Existing Multi-Unit Property?</h2></div>
