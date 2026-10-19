@@ -1,4 +1,6 @@
 "use client";
+import ProcessSection from "../../components/ProcessSection";
+
 
 import FaqSection from "@/components/FaqSection";
 
@@ -179,18 +181,24 @@ export default function ExteriorPaintingPage() {
         </div>
       </section>
 
-      <section className="remodel-process" id="exterior-painting-process">
-        <div className="remodel-process-heading">
-          <p className="eyebrow">HOW IT WORKS</p>
-          <h2>A Clear Exterior Painting Process From Walkthrough to Finish.</h2>
-        </div>
-        <div className="remodel-process-grid">
-          <article><span>01</span><h3>Inspect the Home</h3><p>We walk the exterior, review the surfaces and discuss the color, condition and result you want.</p></article>
-          <article><span>02</span><h3>Define the Scope</h3><p>You receive a written proposal outlining the planned surfaces, preparation and included work.</p></article>
-          <article><span>03</span><h3>Prepare &amp; Paint</h3><p>Swift protects adjacent areas, completes the agreed preparation and applies the finish coats.</p></article>
-          <article><span>04</span><h3>Complete the Walkthrough</h3><p>We review the finished exterior together and address final details before project closeout.</p></article>
-        </div>
-      </section>
+      <ProcessSection id="exterior-painting-process" eyebrow="HOW IT WORKS" title="A Clear Exterior Painting Process From Walkthrough to Finish." steps={[
+  {
+    "title": "Inspect the Home",
+    "description": "We walk the exterior, review the surfaces and discuss the color, condition and result you want."
+  },
+  {
+    "title": "Define the Scope",
+    "description": "You receive a written proposal outlining the planned surfaces, preparation and included work."
+  },
+  {
+    "title": "Prepare & Paint",
+    "description": "Swift protects adjacent areas, completes the agreed preparation and applies the finish coats."
+  },
+  {
+    "title": "Complete the Walkthrough",
+    "description": "We review the finished exterior together and address final details before project closeout."
+  }
+]} />
 
       <section className="commercial-painting-proof-cta">
         <div>

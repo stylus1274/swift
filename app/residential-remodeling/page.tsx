@@ -1,4 +1,6 @@
 "use client";
+import ProcessSection from "../../components/ProcessSection";
+
 
 import Testimonials from "@/components/Testimonials";
 
@@ -160,18 +162,24 @@ export default function ResidentialRemodelingPage() {
         </div>
       </section>
 
-      <section className="remodel-process" id="remodel-process">
-        <div className="remodel-process-heading">
-          <p className="eyebrow">HOW IT WORKS</p>
-          <h2>A Clear Remodeling Plan From Walkthrough to Final Details.</h2>
-        </div>
-        <div className="remodel-process-grid">
-          <article><span>01</span><h3>Walk the Space</h3><p>We discuss what is not working, what you want to change and the priorities for the finished space.</p></article>
-          <article><span>02</span><h3>Define the Scope</h3><p>You receive a written proposal that outlines the planned remodeling work before scheduling.</p></article>
-          <article><span>03</span><h3>Coordinate the Build</h3><p>Swift manages the project sequence, trade work and communication as the renovation moves forward.</p></article>
-          <article><span>04</span><h3>Review the Finish</h3><p>We walk the completed project together and address the final details before wrapping up.</p></article>
-        </div>
-      </section>
+      <ProcessSection id="remodel-process" eyebrow="HOW IT WORKS" title="A Clear Remodeling Plan From Walkthrough to Final Details." steps={[
+  {
+    "title": "Walk the Space",
+    "description": "We discuss what is not working, what you want to change and the priorities for the finished space."
+  },
+  {
+    "title": "Define the Scope",
+    "description": "You receive a written proposal that outlines the planned remodeling work before scheduling."
+  },
+  {
+    "title": "Coordinate the Build",
+    "description": "Swift manages the project sequence, trade work and communication as the renovation moves forward."
+  },
+  {
+    "title": "Review the Finish",
+    "description": "We walk the completed project together and address the final details before wrapping up."
+  }
+]} />
 
       <Testimonials topic="remodeling" title="Bring Your Remodeling Ideas to the Walkthrough." estimateHref="#remodel-estimate" />
 

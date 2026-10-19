@@ -1,4 +1,6 @@
 "use client";
+import ProcessSection from "../../components/ProcessSection";
+
 
 import Testimonials from "@/components/Testimonials";
 
@@ -189,18 +191,24 @@ export default function ResidentialPaintingPage() {
         </div>
       </section>
 
-      <section className="paint-process" id="paint-process">
-        <div className="paint-process-heading">
-          <p className="eyebrow">HOW IT WORKS</p>
-          <h2>A Clear Path From Color Ideas to Final Walkthrough.</h2>
-        </div>
-        <div className="paint-process-grid">
-          <article><span>01</span><h3>Walk the Project</h3><p>We look at the surfaces, discuss your goals and identify the preparation the home needs.</p></article>
-          <article><span>02</span><h3>Review Your Estimate</h3><p>You receive a written, itemized scope so you know what is included before scheduling.</p></article>
-          <article><span>03</span><h3>Prepare and Paint</h3><p>Our crew protects the work area, prepares the surfaces and applies the selected finishes.</p></article>
-          <article><span>04</span><h3>Walk It Together</h3><p>We inspect the completed work with you and address final details before wrapping up.</p></article>
-        </div>
-      </section>
+      <ProcessSection id="paint-process" eyebrow="HOW IT WORKS" title="A Clear Path From Color Ideas to Final Walkthrough." steps={[
+  {
+    "title": "Walk the Project",
+    "description": "We look at the surfaces, discuss your goals and identify the preparation the home needs."
+  },
+  {
+    "title": "Review Your Estimate",
+    "description": "You receive a written, itemized scope so you know what is included before scheduling."
+  },
+  {
+    "title": "Prepare and Paint",
+    "description": "Our crew protects the work area, prepares the surfaces and applies the selected finishes."
+  },
+  {
+    "title": "Walk It Together",
+    "description": "We inspect the completed work with you and address final details before wrapping up."
+  }
+]} />
 
       <Testimonials topic="painting" title="Chosen for the Details. Recommended for the Experience." estimateHref="#paint-estimate" />
 

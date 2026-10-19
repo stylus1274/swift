@@ -1,4 +1,6 @@
 "use client";
+import ProcessSection from "../../components/ProcessSection";
+
 
 import FaqSection from "@/components/FaqSection";
 
@@ -125,18 +127,24 @@ export default function BathroomRemodelingPage() {
         </div>
       </section>
 
-      <section className="remodel-process" id="bathroom-process">
-        <div className="remodel-process-heading">
-          <p className="eyebrow">HOW IT WORKS</p>
-          <h2>From the First Walkthrough to the Finished Bathroom.</h2>
-        </div>
-        <div className="remodel-process-grid">
-          <article><span>01</span><h3>Walk the Bathroom</h3><p>We review the room, current problems, access needs and the changes you are considering.</p></article>
-          <article><span>02</span><h3>Define the Scope</h3><p>The fixtures, materials and included construction work become a clear written proposal.</p></article>
-          <article><span>03</span><h3>Coordinate the Remodel</h3><p>Swift manages scheduling, trade work and communication as the bathroom comes together.</p></article>
-          <article><span>04</span><h3>Complete the Walkthrough</h3><p>We review the finished room with you and address final project details before closeout.</p></article>
-        </div>
-      </section>
+      <ProcessSection id="bathroom-process" eyebrow="HOW IT WORKS" title="From the First Walkthrough to the Finished Bathroom." steps={[
+  {
+    "title": "Walk the Bathroom",
+    "description": "We review the room, current problems, access needs and the changes you are considering."
+  },
+  {
+    "title": "Define the Scope",
+    "description": "The fixtures, materials and included construction work become a clear written proposal."
+  },
+  {
+    "title": "Coordinate the Remodel",
+    "description": "Swift manages scheduling, trade work and communication as the bathroom comes together."
+  },
+  {
+    "title": "Complete the Walkthrough",
+    "description": "We review the finished room with you and address final project details before closeout."
+  }
+]} />
 
       <section className="commercial-cta bathroom-cta">
         <div><p className="eyebrow">READY TO PLAN?</p><h2>Show Us What Is Not Working in Your Current Bathroom.</h2></div>

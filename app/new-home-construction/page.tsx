@@ -1,4 +1,6 @@
 "use client";
+import ProcessSection from "../../components/ProcessSection";
+
 
 import FaqSection from "@/components/FaqSection";
 
@@ -107,16 +109,24 @@ export default function NewHomeConstructionPage() {
         </div>
       </section>
 
-      <section className="build-process" id="build-process">
-        <div className="build-process-heading"><p className="eyebrow">THE BUILDING PROCESS</p><h2>From Property Questions to the Keys in Your Hand.</h2></div>
-        <div className="build-process-grid">
-          <article><span>01</span><h3>Start With the Property</h3><p>We discuss your lot, location, goals and the information needed to evaluate the project.</p></article>
-          <article><span>02</span><h3>Define the Home</h3><p>Plans, priorities, finishes and practical requirements become a clear construction scope.</p></article>
-          <article><span>03</span><h3>Prepare to Build</h3><p>Permits, site preparation, scheduling and early coordination are organized before construction.</p></article>
-          <article><span>04</span><h3>Manage Construction</h3><p>Swift coordinates the build sequence, inspections, trades and communication as the home takes shape.</p></article>
-          <article><span>05</span><h3>Complete the Walkthrough</h3><p>We review the finished home together and address final project details before handoff.</p></article>
-        </div>
-      </section>
+      <ProcessSection id="build-process" eyebrow="THE BUILDING PROCESS" title="From Property Questions to the Keys in Your Hand." steps={[
+  {
+    "title": "Plan the Home",
+    "description": "We review your lot, goals, plans, priorities, and practical requirements to define a clear construction scope."
+  },
+  {
+    "title": "Prepare to Build",
+    "description": "Permits, site preparation, scheduling, and early coordination are organized before construction begins."
+  },
+  {
+    "title": "Build the Home",
+    "description": "Swift coordinates the construction sequence, trades, inspections, and communication as your home takes shape."
+  },
+  {
+    "title": "Complete the Final Walkthrough",
+    "description": "We review the finished home with you, address final details, and prepare the project for handoff."
+  }
+]} />
 
       <section className="build-cta">
         <div><p className="eyebrow">START THE CONVERSATION</p><h2>Have a Lot, a Plan or Just an Early Idea?</h2><p>Tell Swift where you are in the process. We will help identify the most useful next step.</p></div>

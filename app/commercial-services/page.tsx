@@ -1,4 +1,6 @@
 "use client";
+import ProcessSection from "../../components/ProcessSection";
+
 
 import FaqSection from "@/components/FaqSection";
 
@@ -125,18 +127,24 @@ export default function CommercialServicesPage() {
         </div>
       </section>
 
-      <section className="remodel-process" id="commercial-process">
-        <div className="remodel-process-heading">
-          <p className="eyebrow">HOW IT WORKS</p>
-          <h2>A Commercial Project Plan With Clear Next Steps.</h2>
-        </div>
-        <div className="remodel-process-grid">
-          <article><span>01</span><h3>Walk the Property</h3><p>We review the space, access, operating needs and the result you need the project to achieve.</p></article>
-          <article><span>02</span><h3>Define the Scope</h3><p>You receive a written proposal outlining the planned work and included project details.</p></article>
-          <article><span>03</span><h3>Coordinate the Work</h3><p>Swift manages scheduling, trade work and communication as the project moves forward.</p></article>
-          <article><span>04</span><h3>Complete the Walkthrough</h3><p>We review the finished work together and address final details before project closeout.</p></article>
-        </div>
-      </section>
+      <ProcessSection id="commercial-process" eyebrow="HOW IT WORKS" title="A Commercial Project Plan With Clear Next Steps." steps={[
+  {
+    "title": "Walk the Property",
+    "description": "We review the space, access, operating needs and the result you need the project to achieve."
+  },
+  {
+    "title": "Define the Scope",
+    "description": "You receive a written proposal outlining the planned work and included project details."
+  },
+  {
+    "title": "Coordinate the Work",
+    "description": "Swift manages scheduling, trade work and communication as the project moves forward."
+  },
+  {
+    "title": "Complete the Walkthrough",
+    "description": "We review the finished work together and address final details before project closeout."
+  }
+]} />
 
       <section className="commercial-cta">
         <div><p className="eyebrow">READY TO TALK?</p><h2>Bring the Property, Priorities and Timeline to the Walkthrough.</h2></div>

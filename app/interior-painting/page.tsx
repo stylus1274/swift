@@ -1,4 +1,6 @@
 "use client";
+import ProcessSection from "../../components/ProcessSection";
+
 
 import FaqSection from "@/components/FaqSection";
 
@@ -166,19 +168,24 @@ export default function InteriorPaintingPage() {
         </div>
       </section>
 
-      <section className="remodel-process" id="interior-painting-process">
-        <div className="remodel-process-heading">
-          <p className="eyebrow">HOW IT WORKS</p>
-          <h2>Compare Interior Painting Estimates on the Same Scope.</h2>
-          <p>For budgeting, see our <a href="/blog/interior-painting-cost-2000-square-foot-house">interior painting cost guide for a 2,000-square-foot house</a>. A walkthrough is still needed to price your rooms and repairs.</p>
-        </div>
-        <div className="remodel-process-grid">
-          <article><span>01</span><h3>Walk the Rooms</h3><p>List each room and whether its walls, ceiling, trim, doors and closets are included. Note furniture and access needs.</p></article>
-          <article><span>02</span><h3>Define the Scope</h3><p>Ask which repairs, primer and finish work are included. Identify any exclusions before choosing between quotes.</p></article>
-          <article><span>03</span><h3>Prepare &amp; Paint</h3><p>Confirm color changes, sheen and coating requirements in the proposal rather than assuming every estimate covers the same work.</p></article>
-          <article><span>04</span><h3>Complete the Walkthrough</h3><p>Review coverage, cut lines and agreed repairs in the finished rooms, then discuss cleanup and care for the new finish.</p></article>
-        </div>
-      </section>
+      <ProcessSection id="interior-painting-process" eyebrow="HOW IT WORKS" title="Compare Interior Painting Estimates on the Same Scope." steps={[
+  {
+    "title": "Walk the Rooms",
+    "description": "List each room and whether its walls, ceiling, trim, doors and closets are included. Note furniture and access needs."
+  },
+  {
+    "title": "Define the Scope",
+    "description": "Ask which repairs, primer and finish work are included. Identify any exclusions before choosing between quotes."
+  },
+  {
+    "title": "Prepare & Paint",
+    "description": "Confirm color changes, sheen and coating requirements in the proposal rather than assuming every estimate covers the same work."
+  },
+  {
+    "title": "Complete the Walkthrough",
+    "description": "Review coverage, cut lines and agreed repairs in the finished rooms, then discuss cleanup and care for the new finish."
+  }
+]} />
 
       <section className="commercial-painting-proof-cta">
         <div>
