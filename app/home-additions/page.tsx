@@ -100,40 +100,39 @@ export default function HomeAdditionsPage() {
   };
 
   return (
-    <main className="remodel-page additions-page">
+    <main className="remodel-page additions-page service-hero-page">
       <SiteHeader active="services" contactHref="#addition-estimate" />
 
       <section className="remodel-hero additions-hero">
         <div className="remodel-hero-copy">
-          <p className="eyebrow">HOME ADDITIONS • SPRING HILL, FL</p>
+          <p className="eyebrow"><span>HOME ADDITIONS</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />HERNANDO</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />CITRUS</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />PASCO</span></p>
           <h1>More Room Without Leaving the Home You Love.</h1>
           <p>Plan and build a home addition that gives your family more space while preserving the character and flow of your existing home.</p>
           <div className="remodel-hero-actions">
             <a className="button cta-primary" href="#addition-quick-project">Plan my home addition</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
-          <div className="remodel-hero-proof">
-            <span>Licensed &amp; insured • CBC1260893</span>
-            <span>Serving local homeowners since 2003</span>
-            <span>Written, itemized proposals</span>
-          </div>
+
         </div>
         <div className="remodel-hero-visual">
           <img className="remodel-hero-main additions-hero-image" src="/assets/home-additions-hero.png" alt="Finished home addition on a Florida stucco house" />
         </div>
       </section>
 
-      <LeadForm className="remodel-quick-form additions-quick-form" onSubmit={submitQuickEstimate} step>
+      <div className="service-hero-estimate-band">
+      <LeadForm className="remodel-quick-form additions-quick-form service-quick-form service-quick-form--three" onSubmit={submitQuickEstimate} step compactErrors>
           <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>What Would You Like to Add?</h2>
         </div>
-        <label htmlFor="addition-quick-project"><span className="form-label-text">Addition Type <span className="form-requirement">(required)</span></span><select id="addition-quick-project" name="project" value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select addition</option><option>Room addition</option><option>Primary suite addition</option><option>In-law suite</option><option>Garage or lanai conversion</option><option>Other addition</option></select></label>
-        <label htmlFor="addition-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input id="addition-quick-zip" name="zip" placeholder="34609" inputMode="numeric" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
-        <label htmlFor="addition-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="addition-quick-timing" name="timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Just researching</option></select></label>
-        <button type="submit">Continue my estimate<span aria-hidden="true">→</span></button>
+        <label htmlFor="addition-quick-project"><span className="form-label-text">Addition Type <span className="form-requirement" aria-hidden="true">*</span></span><select id="addition-quick-project" name="project" value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select addition</option><option>Room addition</option><option>Primary suite addition</option><option>In-law suite</option><option>Garage or lanai conversion</option><option>Other addition</option></select></label>
+        <label htmlFor="addition-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement" aria-hidden="true">*</span></span><select id="addition-quick-timing" name="timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Just researching</option></select></label>
+        <label htmlFor="addition-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement" aria-hidden="true">*</span></span><input id="addition-quick-zip" name="zip" placeholder="34604" inputMode="numeric" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
+        <button type="submit">Continue estimate<span aria-hidden="true">→</span></button>
       </LeadForm>
+      <div className="service-ticker service-hero-trust" aria-label="Swift contractor qualifications"><span>Licensed &amp; Insured</span><b aria-hidden="true">◆</b><span>Written, itemized proposals</span><b aria-hidden="true">◆</b><span>One contractor from start to finish</span></div>
+      </div>
 
       <section className="remodel-services" id="addition-types">
         <div className="remodel-section-heading">

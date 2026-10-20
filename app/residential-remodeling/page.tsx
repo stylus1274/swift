@@ -79,40 +79,39 @@ export default function ResidentialRemodelingPage() {
   }
 
   return (
-    <main className="remodel-page">
+    <main className="remodel-page service-hero-page">
       <SiteHeader active="services" contactHref="#remodel-estimate" />
 
       <section className="remodel-hero">
         <div className="remodel-hero-copy">
-          <p className="eyebrow">HOME REMODELING • HERNANDO COUNTY, FL</p>
+          <p className="eyebrow"><span>HOME REMODELING</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />HERNANDO</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />CITRUS</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />PASCO</span></p>
           <h1>Home Remodeling That Brings the Whole Home Together.</h1>
           <p>One contractor for the planning, coordination and finish work your kitchen, bathroom or full-home renovation needs.</p>
           <div className="remodel-hero-actions">
             <a className="button cta-primary" href="#remodel-quick-project">Get a free remodeling estimate</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
-          <div className="remodel-hero-proof">
-            <span>Licensed &amp; insured • CBC1260893</span>
-            <span>Serving local homeowners since 2003</span>
-            <span>Written, itemized proposals</span>
-          </div>
+
         </div>
         <div className="remodel-hero-visual">
           <img className="remodel-hero-main" src="/assets/hero-bathroom-remodel.webp" alt="Finished residential bathroom remodeling project" />
         </div>
       </section>
 
-      <LeadForm className="remodel-quick-form" onSubmit={submitQuickEstimate} step>
+      <div className="service-hero-estimate-band">
+      <LeadForm className="remodel-quick-form service-quick-form service-quick-form--three" onSubmit={submitQuickEstimate} step compactErrors>
           <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>What Are You Planning?</h2>
         </div>
-        <label htmlFor="remodel-quick-project"><span className="form-label-text">Project Type <span className="form-requirement">(required)</span></span><select id="remodel-quick-project" name="project" value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select project</option><option>Bathroom remodeling</option><option>Kitchen remodeling</option><option>Whole-home renovation</option><option>Flooring or carpentry</option><option>Other remodeling project</option></select></label>
-        <label htmlFor="remodel-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input id="remodel-quick-zip" name="zip" placeholder="34609" inputMode="numeric" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
-        <label htmlFor="remodel-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="remodel-quick-timing" name="timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Just researching</option></select></label>
-        <button type="submit">Continue my estimate<span aria-hidden="true">→</span></button>
+        <label htmlFor="remodel-quick-project"><span className="form-label-text">Project Type <span className="form-requirement" aria-hidden="true">*</span></span><select id="remodel-quick-project" name="project" value={project} onChange={(event) => setProject(event.target.value)} required><option value="" disabled>Select project</option><option>Bathroom remodeling</option><option>Kitchen remodeling</option><option>Whole-home renovation</option><option>Flooring or carpentry</option><option>Other remodeling project</option></select></label>
+        <label htmlFor="remodel-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement" aria-hidden="true">*</span></span><select id="remodel-quick-timing" name="timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Just researching</option></select></label>
+        <label htmlFor="remodel-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement" aria-hidden="true">*</span></span><input id="remodel-quick-zip" name="zip" placeholder="34604" inputMode="numeric" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
+        <button type="submit">Continue estimate<span aria-hidden="true">→</span></button>
       </LeadForm>
+      <div className="service-ticker service-hero-trust" aria-label="Swift contractor qualifications"><span>Licensed &amp; Insured</span><b aria-hidden="true">◆</b><span>Written, itemized proposals</span><b aria-hidden="true">◆</b><span>One contractor from start to finish</span></div>
+      </div>
 
       <section className="remodel-services" id="remodeling-services">
         <div className="remodel-section-heading">

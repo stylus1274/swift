@@ -47,41 +47,40 @@ export default function BathroomRemodelingPage() {
   }
 
   return (
-    <main className="remodel-page bathroom-page">
+    <main className="remodel-page bathroom-page service-hero-page">
       <SiteHeader active="services" contactHref="#bathroom-estimate" />
 
       <section className="remodel-hero bathroom-hero">
         <div className="remodel-hero-copy">
-          <p className="eyebrow">BATHROOM REMODELING • FLORIDA NATURE COAST</p>
+          <p className="eyebrow"><span>BATHROOM REMODELING</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />HERNANDO</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />CITRUS</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />PASCO</span></p>
           <h1>A Bathroom That Feels Better and Works Better.</h1>
           <p>One experienced contractor to coordinate the waterproofing, construction, tile and finish work behind a complete bathroom remodel.</p>
           <div className="remodel-hero-actions">
             <a className="button cta-primary" href="#bathroom-quick-type">Plan your bathroom remodel</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
-          <div className="remodel-hero-proof">
-            <span>Licensed &amp; insured • CBC1260893</span>
-            <span>Written, itemized proposals</span>
-            <span>One contractor from start to finish</span>
-          </div>
+
         </div>
         <div className="remodel-hero-visual">
           <img className="remodel-hero-main bathroom-hero-image" src="/assets/bathroom-remodeling-hero.png" alt="Completed bathroom remodel with a tiled walk-in shower and wood vanity" />
         </div>
       </section>
 
-      <LeadForm className="remodel-quick-form bathroom-quick-form" onSubmit={continueEstimate} step>
+      <div className="service-hero-estimate-band">
+      <LeadForm className="remodel-quick-form bathroom-quick-form service-quick-form" onSubmit={continueEstimate} step compactErrors>
           <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>What Are You Planning?</h2>
         </div>
-        <label htmlFor="bathroom-quick-type"><span className="form-label-text">Project Type <span className="form-requirement">(required)</span></span><select id="bathroom-quick-type" value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select project</option><option>Full bathroom remodel</option><option>Tub-to-shower conversion</option><option>Walk-in shower remodel</option><option>Vanity, tile and finish updates</option><option>Not sure yet</option></select></label>
-        <label htmlFor="bathroom-quick-priority"><span className="form-label-text">Main Priority <span className="form-requirement">(required)</span></span><select id="bathroom-quick-priority" value={mainPriority} onChange={(event) => setMainPriority(event.target.value)} required><option value="" disabled>Select priority</option><option>Safer access</option><option>Easier cleaning</option><option>More storage</option><option>Updated appearance</option><option>Repairing damage</option></select></label>
-        <label htmlFor="bathroom-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input id="bathroom-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
-        <label htmlFor="bathroom-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="bathroom-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
-        <button type="submit">Continue my estimate <span aria-hidden="true">→</span></button>
+        <label htmlFor="bathroom-quick-type"><span className="form-label-text">Project Type <span className="form-requirement" aria-hidden="true">*</span></span><select id="bathroom-quick-type" value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select project</option><option>Full bathroom remodel</option><option>Tub-to-shower conversion</option><option>Walk-in shower remodel</option><option>Vanity, tile and finish updates</option><option>Not sure yet</option></select></label>
+        <label htmlFor="bathroom-quick-priority"><span className="form-label-text">Main Priority <span className="form-requirement" aria-hidden="true">*</span></span><select id="bathroom-quick-priority" value={mainPriority} onChange={(event) => setMainPriority(event.target.value)} required><option value="" disabled>Select priority</option><option>Safer access</option><option>Easier cleaning</option><option>More storage</option><option>Updated appearance</option><option>Repairing damage</option></select></label>
+        <label htmlFor="bathroom-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement" aria-hidden="true">*</span></span><select id="bathroom-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
+        <label htmlFor="bathroom-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement" aria-hidden="true">*</span></span><input id="bathroom-quick-zip" inputMode="numeric" placeholder="34604" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
+        <button type="submit">Continue estimate <span aria-hidden="true">→</span></button>
       </LeadForm>
+      <div className="service-ticker service-hero-trust" aria-label="Swift contractor qualifications"><span>Licensed &amp; Insured</span><b aria-hidden="true">◆</b><span>Written, itemized proposals</span><b aria-hidden="true">◆</b><span>One contractor from start to finish</span></div>
+      </div>
 
       <section className="remodel-services" id="bathroom-services">
         <div className="remodel-section-heading">

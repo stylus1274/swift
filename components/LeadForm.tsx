@@ -1,16 +1,17 @@
 "use client";
 
-import { Children, cloneElement, isValidElement, useId, useRef, useState, type ComponentProps, type FormEvent, type ReactElement, type ReactNode } from "react";
+import { Children, cloneElement, isValidElement, useId, useRef, useState, type ComponentProps, type ChangeEvent, type FormEvent, type ReactElement, type ReactNode } from "react";
 import { collectFields, labelForControl } from "@/lib/submitLead";
 import { validateLead } from "@/lib/leadValidation";
 
 type Props = Omit<ComponentProps<"form">, "onSubmit"> & {
   onSubmit: (event: FormEvent<HTMLFormElement>) => void | Promise<void>;
   step?: boolean;
+  compactErrors?: boolean;
 };
 type Control = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 
-export default function LeadForm({ children, onSubmit, step = false, ...props }: Props) {
+export default function LeadForm({ children, onSubmit, step = false, compactErrors = false, ...props }: Props) {
   const prefix = useId();
   const summary = useRef<HTMLDivElement>(null);
   const sending = useRef(false);
@@ -51,10 +52,21 @@ export default function LeadForm({ children, onSubmit, step = false, ...props }:
         const error = errors[id];
         return <>{cloneElement(element, {
           id,
+          onChange: (event: ChangeEvent<Control>) => {
+            (element.props.onChange as ((event: ChangeEvent<Control>) => void) | undefined)?.(event);
+            if (compactErrors && errors[id] && event.currentTarget.validity.valid) {
+              setErrors(current => {
+                if (!current[id]) return current;
+                const remaining = { ...current };
+                delete remaining[id];
+                return remaining;
+              });
+            }
+          },
           "aria-labelledby": labelId || element.props["aria-labelledby"],
           "aria-invalid": error ? true : undefined,
           "aria-describedby": [element.props["aria-describedby"], error ? `${id}-error` : null].filter(Boolean).join(" ") || undefined,
-        })}{error && <span className="form-field-error" id={`${id}-error`}>{error}</span>}</>;
+        })}{error && <span className={compactErrors ? "sr-only" : "form-field-error"} id={`${id}-error`}>{error}</span>}</>;
       }
       if (element.props.children) return cloneElement(element, {}, decorate(element.props.children as ReactNode, key, labelId));
       return node;
@@ -66,7 +78,7 @@ export default function LeadForm({ children, onSubmit, step = false, ...props }:
     const field = keyword ? controls.find((control, index) => keyword.test(labelForControl(control, index))) : undefined;
     setErrors(field ? { [field.id]: message } : {});
     setGeneralError(field ? "" : message);
-    requestAnimationFrame(() => { summary.current?.focus(); });
+    requestAnimationFrame(() => { if (compactErrors && field) field.focus(); else summary.current?.focus(); });
   }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -81,7 +93,10 @@ export default function LeadForm({ children, onSubmit, step = false, ...props }:
     setStatus("");
     setErrors(invalid);
     if (Object.keys(invalid).length) {
-      requestAnimationFrame(() => { summary.current?.focus(); });
+      requestAnimationFrame(() => {
+        if (compactErrors) controls.find(control => invalid[control.id])?.focus();
+        else summary.current?.focus();
+      });
       return;
     }
     if (!step) {
@@ -107,7 +122,7 @@ export default function LeadForm({ children, onSubmit, step = false, ...props }:
   return <form method="post" {...props} noValidate onSubmit={handleSubmit}>
     {hasErrors && <div className="form-error-summary" ref={summary} tabIndex={-1} role="alert">
       <p>{generalError || "Please correct the highlighted fields and try again."}</p>
-      {Object.entries(errors).map(([id, message]) => <p key={id}><a href={`#${id}`} onClick={event => { event.preventDefault(); document.getElementById(id)?.focus(); }}>{message}</a></p>)}
+      {!compactErrors && Object.entries(errors).map(([id, message]) => <p key={id}><a href={`#${id}`} onClick={event => { event.preventDefault(); document.getElementById(id)?.focus(); }}>{message}</a></p>)}
     </div>}
     {decorate(children)}
     {!step && <p className="form-status" role="status" aria-live="polite" aria-atomic="true">{status}</p>}

@@ -101,41 +101,40 @@ export default function CommercialPaintingPage() {
   };
 
   return (
-    <main className="remodel-page commercial-page commercial-painting-page">
+    <main className="remodel-page commercial-page commercial-painting-page service-hero-page">
       <SiteHeader active="services" contactHref="#commercial-painting-estimate" />
 
       <section className="remodel-hero commercial-painting-hero">
         <div className="remodel-hero-copy">
-          <p className="eyebrow">COMMERCIAL PAINTING • FLORIDA NATURE COAST</p>
+          <p className="eyebrow"><span>COMMERCIAL PAINTING</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />HERNANDO</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />CITRUS</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />PASCO</span></p>
           <h1>Commercial Painting That Works Around Your Business.</h1>
           <p>Interior and exterior painting with careful preparation, durable finishes and a project schedule built around the people using your property.</p>
           <div className="remodel-hero-actions">
             <a className="button cta-primary" href="#commercial-painting-quick-project">Request a painting estimate</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
-          <div className="remodel-hero-proof">
-            <span>Licensed &amp; insured • CBC1260893</span>
-            <span>Written, itemized proposals</span>
-            <span>No deposit required</span>
-          </div>
+
         </div>
         <div className="remodel-hero-visual">
           <img className="remodel-hero-main commercial-painting-hero-image" src="/assets/commercial-painting-hero.png" alt="Commercial painter coating a Florida office building from a lift" />
         </div>
       </section>
 
-      <LeadForm className="remodel-quick-form commercial-painting-quick-form" onSubmit={continueEstimate} step>
+      <div className="service-hero-estimate-band">
+      <LeadForm className="remodel-quick-form commercial-painting-quick-form service-quick-form" onSubmit={continueEstimate} step compactErrors>
           <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>What Needs to Be Painted?</h2>
         </div>
-        <label htmlFor="commercial-painting-quick-project"><span className="form-label-text">Painting Scope <span className="form-requirement">(required)</span></span><select id="commercial-painting-quick-project" value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select scope</option><option>Interior painting</option><option>Exterior painting</option><option>Interior and exterior</option><option>Maintenance repaint</option><option>Other painting project</option></select></label>
-        <label htmlFor="commercial-painting-quick-property"><span className="form-label-text">Property Type <span className="form-requirement">(required)</span></span><select id="commercial-painting-quick-property" value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Office</option><option>Retail</option><option>Restaurant or hospitality</option><option>Medical or professional</option><option>Multi-tenant property</option><option>Other</option></select></label>
-        <label htmlFor="commercial-painting-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input id="commercial-painting-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
-        <label htmlFor="commercial-painting-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="commercial-painting-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
-        <button type="submit">Continue my estimate <span aria-hidden="true">→</span></button>
+        <label htmlFor="commercial-painting-quick-project"><span className="form-label-text">Painting Scope <span className="form-requirement" aria-hidden="true">*</span></span><select id="commercial-painting-quick-project" value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select scope</option><option>Interior painting</option><option>Exterior painting</option><option>Interior and exterior</option><option>Maintenance repaint</option><option>Other painting project</option></select></label>
+        <label htmlFor="commercial-painting-quick-property"><span className="form-label-text">Property Type <span className="form-requirement" aria-hidden="true">*</span></span><select id="commercial-painting-quick-property" value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Office</option><option>Retail</option><option>Restaurant or hospitality</option><option>Medical or professional</option><option>Multi-tenant property</option><option>Other</option></select></label>
+        <label htmlFor="commercial-painting-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement" aria-hidden="true">*</span></span><select id="commercial-painting-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
+        <label htmlFor="commercial-painting-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement" aria-hidden="true">*</span></span><input id="commercial-painting-quick-zip" inputMode="numeric" placeholder="34604" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
+        <button type="submit">Continue estimate <span aria-hidden="true">→</span></button>
       </LeadForm>
+      <div className="service-ticker service-hero-trust" aria-label="Swift contractor qualifications"><span>Licensed &amp; Insured</span><b aria-hidden="true">◆</b><span>Written, itemized proposals</span><b aria-hidden="true">◆</b><span>One contractor from start to finish</span></div>
+      </div>
 
       <section className="remodel-services" id="commercial-painting-services">
         <div className="remodel-section-heading">

@@ -64,7 +64,9 @@ const paintingFaqs = [
 export default function ResidentialPaintingPage() {
 
   const [submitted, setSubmitted] = useState(false);
-  const [heroSubmitted, setHeroSubmitted] = useState(false);
+  const [project, setProject] = useState("");
+  const [timing, setTiming] = useState("");
+  const [projectZip, setProjectZip] = useState("");
 
   async function submitEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -72,52 +74,44 @@ export default function ResidentialPaintingPage() {
     setSubmitted(true);
   }
 
-  async function submitHeroEstimate(event: FormEvent<HTMLFormElement>) {
+  function continueEstimate(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    await submitLeadForm(event.currentTarget, "Residential Painting Hero Estimate");
-    setHeroSubmitted(true);
+    document.getElementById("paint-estimate")?.scrollIntoView({ behavior: "smooth" });
+    window.setTimeout(() => document.getElementById("paint-lead-name")?.focus(), 550);
   }
 
   return (
-    <main className="painting-page">
+    <main className="remodel-page painting-page service-hero-page">
       <SiteHeader active="services" contactHref="#paint-estimate" />
 
-      <section className="paint-hero">
-        <div className="paint-hero-media" aria-hidden="true">
-          <img src="/assets/florida-stucco-painting.jpg" alt="" />
-        </div>
-        <div className="paint-hero-content">
-          <p className="eyebrow">RESIDENTIAL PAINTING • SPRING HILL, FL</p>
+      <section className="remodel-hero painting-service-hero">
+        <div className="remodel-hero-copy">
+          <p className="eyebrow"><span>RESIDENTIAL PAINTING</span><span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />HERNANDO</span><span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />CITRUS</span><span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />PASCO</span></p>
           <h1>Paint That Makes the Whole House Feel Finished.</h1>
           <p>Interior and exterior painting with careful preparation, clean work areas and finishes made for Florida homes.</p>
-          <div className="paint-hero-actions">
+          <div className="remodel-hero-actions">
             <a className="button cta-primary" href="#hero-project">Get a free painting estimate</a>
-            <a className="paint-hero-call" href="tel:3527017458"><small>OR CALL DIRECTLY</small>(352) 701-7458</a>
+            <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
+
         </div>
-        <LeadForm className="paint-hero-panel paint-hero-form" onSubmit={submitHeroEstimate}>
-          <LeadProtection />
-          <p className="paint-panel-label">GET A FREE PAINTING ESTIMATE</p>
-          <h2>Start Your Free Painting Estimate.</h2>
-          <p className="paint-hero-form-intro">Tell us what you would like painted and when you are hoping to begin.</p>
-          <div className="paint-hero-form-row paint-hero-project-row">
-            <label htmlFor="hero-project"><span className="form-label-text">What are you painting? <span className="form-requirement">(required)</span></span><select id="hero-project" name="hero_project" defaultValue="" required><option value="" disabled>Select project</option><option>Interior rooms</option><option>Home exterior</option><option>Interior and exterior</option><option>New construction</option><option>Other</option></select></label>
-            <label htmlFor="hero-timing"><span className="form-label-text">Ideal timing <span className="form-requirement">(required)</span></span><select id="hero-timing" name="hero_timing" defaultValue="" required><option value="" disabled>Select</option><option>As soon as possible</option><option>Within 1 month</option><option>1–3 months</option><option>Just researching</option></select></label>
-          </div>
-          <div className="paint-hero-form-row paint-hero-contact-row">
-            <label htmlFor="hero-name"><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input id="hero-name" name="hero_name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label>
-            <label htmlFor="hero-phone"><span className="form-label-text">Phone <span className="form-requirement">(required)</span></span><input id="hero-phone" name="hero_phone" autoComplete="tel" placeholder="(000) 000-0000" type="tel" required /></label>
-          </div>
-          <label htmlFor="hero-zip"><span className="form-label-text">Project ZIP code <span className="form-requirement">(required)</span></span></label>
-          <input id="hero-zip" name="hero_zip" placeholder="34609" inputMode="numeric" required />
-          <button type="submit">{heroSubmitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}<span aria-hidden="true">→</span></button>
-          <small className="paint-hero-reassurance">Licensed and insured • Serving local homeowners since 2003</small>
-        </LeadForm>
-        <p className="paint-hero-caption">EXTERIOR PAINTING • SPRING HILL, FLORIDA</p>
+        <div className="remodel-hero-visual">
+          <img className="remodel-hero-main painting-service-hero-image" src="/assets/florida-stucco-painting.jpg" alt="Painter applying an exterior coating to a Florida stucco home" />
+        </div>
       </section>
 
-      <div className="paint-ticker" aria-label="Painting benefits">
-        <span>CAREFUL PREPARATION</span><b>◆</b><span>CLEAN WORK AREAS</span><b>◆</b><span>QUALITY COATINGS</span><b>◆</b><span>FINAL WALKTHROUGH</span>
+      <div className="service-hero-estimate-band">
+        <LeadForm className="remodel-quick-form painting-quick-form service-quick-form service-quick-form--three" onSubmit={continueEstimate} step compactErrors>
+          <LeadProtection />
+          <div className="remodel-quick-heading"><p className="eyebrow">START YOUR ESTIMATE</p><h2>What Are You Painting?</h2></div>
+          <label htmlFor="hero-project"><span className="form-label-text">Project Scope <span className="form-requirement" aria-hidden="true">*</span></span><select id="hero-project" value={project} onChange={event => setProject(event.target.value)} required><option value="" disabled>Select project</option><option>Interior painting</option><option>Exterior painting</option><option>Interior and exterior</option><option>New construction painting</option><option>Other painting project</option></select></label>
+          <label htmlFor="hero-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement" aria-hidden="true">*</span></span><select id="hero-timing" value={timing} onChange={event => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 month</option><option>1–3 months</option><option>Just researching</option></select></label>
+          <label htmlFor="hero-zip"><span className="form-label-text">Project ZIP <span className="form-requirement" aria-hidden="true">*</span></span><input id="hero-zip" inputMode="numeric" placeholder="34604" value={projectZip} onChange={event => setProjectZip(event.target.value)} required /></label>
+          <button type="submit">Continue estimate <span aria-hidden="true">→</span></button>
+        </LeadForm>
+        <div className="service-ticker service-hero-trust" aria-label="Swift contractor qualifications">
+          <span>Licensed &amp; Insured</span><b aria-hidden="true">◆</b><span>Written, itemized proposals</span><b aria-hidden="true">◆</b><span>One contractor from start to finish</span>
+        </div>
       </div>
 
       <section className="paint-intro">
@@ -233,16 +227,17 @@ export default function ResidentialPaintingPage() {
           <p className="paint-estimate-phone">Prefer to call?<a href="tel:3527017458">(352) 701-7458</a></p>
         </div>
         <LeadForm className="paint-estimate-form" onSubmit={submitEstimate}>
+          <input type="hidden" name="timing" value={timing} />
           <LeadProtection />
           <div className="paint-form-row">
-            <label><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input name="name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label>
+            <label><span className="form-label-text">Name <span className="form-requirement">(required)</span></span><input id="paint-lead-name" name="name" autoComplete="name" maxLength={120} placeholder="Your name" required /></label>
             <label><span className="form-label-text">Phone <span className="form-requirement">(required)</span></span><input name="phone" autoComplete="tel" placeholder="(000) 000-0000" type="tel" required /></label>
           </div>
           <div className="paint-form-row">
             <label><span className="form-label-text">Email <span className="form-requirement">(optional)</span></span><input name="email" autoComplete="email" placeholder="you@email.com" type="email" maxLength={254} /></label>
-            <label><span className="form-label-text">City or ZIP <span className="form-requirement">(required)</span></span><input name="city" placeholder="Spring Hill" required /></label>
+            <label><span className="form-label-text">City or ZIP <span className="form-requirement">(required)</span></span><input name="city" placeholder="Spring Hill" value={projectZip} onChange={event => setProjectZip(event.target.value)} required /></label>
           </div>
-          <label><span className="form-label-text">What would you like painted? <span className="form-requirement">(optional)</span></span><select name="project" defaultValue=""><option value="" disabled>Select your project</option><option>Interior painting</option><option>Exterior painting</option><option>Interior and exterior</option><option>New construction painting</option><option>Other painting project</option></select></label>
+          <label><span className="form-label-text">What would you like painted? <span className="form-requirement">(optional)</span></span><select name="project" value={project} onChange={event => setProject(event.target.value)}><option value="" disabled>Select your project</option><option>Interior painting</option><option>Exterior painting</option><option>Interior and exterior</option><option>New construction painting</option><option>Other painting project</option></select></label>
           <label><span className="form-label-text">Project details <span className="form-requirement">(optional)</span></span><textarea name="details" placeholder="Tell us a little about the rooms, exterior or surfaces you would like painted." /></label>
           <button className="button cta-primary" type="submit">{submitted ? "Thank you. We’ll be in touch." : "Get my free estimate"}</button>
           <small>Your information is only used to respond to your project request.</small>

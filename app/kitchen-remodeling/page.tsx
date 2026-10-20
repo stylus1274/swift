@@ -47,41 +47,46 @@ export default function KitchenRemodelingPage() {
   }
 
   return (
-    <main className="remodel-page kitchen-page">
+    <main className="remodel-page kitchen-page service-hero-page">
       <SiteHeader active="services" contactHref="#kitchen-estimate" />
 
       <section className="remodel-hero kitchen-hero">
         <div className="remodel-hero-copy">
-          <p className="eyebrow">KITCHEN REMODELING • FLORIDA NATURE COAST</p>
+          <p className="eyebrow"><span>KITCHEN REMODELING</span><span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />HERNANDO</span><span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />CITRUS</span><span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />PASCO</span></p>
           <h1>Kitchen Remodeling That Works Better Every Day.</h1>
           <p>One experienced contractor to coordinate the layout, construction and finish work that turns an outdated kitchen into a room built around your household.</p>
           <div className="remodel-hero-actions">
             <a className="button cta-primary" href="#kitchen-quick-scope">Plan your kitchen remodel</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
-          <div className="remodel-hero-proof">
-            <span>Licensed &amp; insured • CBC1260893</span>
-            <span>Written, itemized proposals</span>
-            <span>One contractor from start to finish</span>
-          </div>
+
         </div>
         <div className="remodel-hero-visual">
           <img className="remodel-hero-main kitchen-hero-image" src="/assets/kitchen-remodeling-hero.png" alt="Completed kitchen remodel with white cabinetry and a light wood island" />
         </div>
       </section>
 
-      <LeadForm className="remodel-quick-form kitchen-quick-form" onSubmit={continueEstimate} step>
+      <div className="service-hero-estimate-band">
+      <LeadForm className="remodel-quick-form kitchen-quick-form service-quick-form" onSubmit={continueEstimate} step compactErrors>
           <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
           <h2>What Are You Planning?</h2>
         </div>
-        <label htmlFor="kitchen-quick-scope"><span className="form-label-text">Project Scope <span className="form-requirement">(required)</span></span><select id="kitchen-quick-scope" value={projectScope} onChange={(event) => setProjectScope(event.target.value)} required><option value="" disabled>Select scope</option><option>Full kitchen remodel</option><option>Cabinets and counters</option><option>Layout changes</option><option>Flooring, lighting and finishes</option><option>Not sure yet</option></select></label>
-        <label htmlFor="kitchen-quick-priority"><span className="form-label-text">Main Priority <span className="form-requirement">(required)</span></span><select id="kitchen-quick-priority" value={mainPriority} onChange={(event) => setMainPriority(event.target.value)} required><option value="" disabled>Select priority</option><option>Better layout</option><option>More storage</option><option>Updated appearance</option><option>Durability and easier upkeep</option><option>Preparing to sell</option></select></label>
-        <label htmlFor="kitchen-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input id="kitchen-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
-        <label htmlFor="kitchen-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="kitchen-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
-        <button type="submit">Continue my estimate <span aria-hidden="true">→</span></button>
+        <label htmlFor="kitchen-quick-scope"><span className="form-label-text">Project Scope <span className="form-requirement" aria-hidden="true">*</span></span><select id="kitchen-quick-scope" value={projectScope} onChange={(event) => setProjectScope(event.target.value)} required><option value="" disabled>Select scope</option><option>Full kitchen remodel</option><option>Cabinets and counters</option><option>Layout changes</option><option>Flooring, lighting and finishes</option><option>Not sure yet</option></select></label>
+        <label htmlFor="kitchen-quick-priority"><span className="form-label-text">Main Priority <span className="form-requirement" aria-hidden="true">*</span></span><select id="kitchen-quick-priority" value={mainPriority} onChange={(event) => setMainPriority(event.target.value)} required><option value="" disabled>Select priority</option><option>Better layout</option><option>More storage</option><option>Updated appearance</option><option>Durability and easier upkeep</option><option>Preparing to sell</option></select></label>
+        <label htmlFor="kitchen-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement" aria-hidden="true">*</span></span><select id="kitchen-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
+        <label htmlFor="kitchen-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement" aria-hidden="true">*</span></span><input id="kitchen-quick-zip" inputMode="numeric" placeholder="34604" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
+        <button type="submit">Continue estimate <span aria-hidden="true">→</span></button>
       </LeadForm>
+        <div className="service-ticker service-hero-trust" aria-label="Swift contractor qualifications">
+          <span>Licensed &amp; Insured</span>
+          <b aria-hidden="true">◆</b>
+          <span>Written, itemized proposals</span>
+          <b aria-hidden="true">◆</b>
+          <span>One contractor from start to finish</span>
+        </div>
+      </div>
 
       <section className="remodel-services" id="kitchen-services">
         <div className="remodel-section-heading">

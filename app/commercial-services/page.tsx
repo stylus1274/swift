@@ -47,41 +47,40 @@ export default function CommercialServicesPage() {
   }
 
   return (
-    <main className="remodel-page commercial-page">
+    <main className="remodel-page commercial-page service-hero-page">
       <SiteHeader active="services" contactHref="#commercial-estimate" />
 
       <section className="remodel-hero commercial-hero">
         <div className="remodel-hero-copy">
-          <p className="eyebrow">COMMERCIAL SERVICES • FLORIDA NATURE COAST</p>
+          <p className="eyebrow"><span>COMMERCIAL SERVICES</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />HERNANDO</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />CITRUS</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />PASCO</span></p>
           <h1>Commercial Projects Managed Around Your Operation.</h1>
           <p>One experienced contractor for commercial build-outs, renovations, painting and property improvements from the first walkthrough through the final details.</p>
           <div className="remodel-hero-actions">
             <a className="button cta-primary" href="#commercial-quick-project">Request a commercial estimate</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
-          <div className="remodel-hero-proof">
-            <span>Licensed &amp; insured • CBC1260893</span>
-            <span>Written commercial proposals</span>
-            <span>Scheduling built around your operation</span>
-          </div>
+
         </div>
         <div className="remodel-hero-visual">
           <img className="remodel-hero-main commercial-hero-image" src="/assets/commercial-office-reception.webp" alt="Finished modern office reception and commercial interior renovation" />
         </div>
       </section>
 
-      <LeadForm className="remodel-quick-form commercial-quick-form" onSubmit={continueEstimate} step>
+      <div className="service-hero-estimate-band">
+      <LeadForm className="remodel-quick-form commercial-quick-form service-quick-form" onSubmit={continueEstimate} step compactErrors>
           <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR PROJECT</p>
           <h2>What Does Your Property Need?</h2>
         </div>
-        <label htmlFor="commercial-quick-project"><span className="form-label-text">Project Type <span className="form-requirement">(required)</span></span><select id="commercial-quick-project" value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select project</option><option>Commercial build-out</option><option>Commercial painting</option><option>Property improvement</option><option>Facility service</option><option>Other commercial project</option></select></label>
-        <label htmlFor="commercial-quick-property"><span className="form-label-text">Property Type <span className="form-requirement">(required)</span></span><select id="commercial-quick-property" value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Office</option><option>Retail</option><option>Restaurant or hospitality</option><option>Medical or professional</option><option>Multi-tenant property</option><option>Other</option></select></label>
-        <label htmlFor="commercial-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input id="commercial-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
-        <label htmlFor="commercial-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="commercial-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Planning ahead</option></select></label>
-        <button type="submit">Continue my estimate <span aria-hidden="true">→</span></button>
+        <label htmlFor="commercial-quick-project"><span className="form-label-text">Project Type <span className="form-requirement" aria-hidden="true">*</span></span><select id="commercial-quick-project" value={projectType} onChange={(event) => setProjectType(event.target.value)} required><option value="" disabled>Select project</option><option>Commercial build-out</option><option>Commercial painting</option><option>Property improvement</option><option>Facility service</option><option>Other commercial project</option></select></label>
+        <label htmlFor="commercial-quick-property"><span className="form-label-text">Property Type <span className="form-requirement" aria-hidden="true">*</span></span><select id="commercial-quick-property" value={propertyType} onChange={(event) => setPropertyType(event.target.value)} required><option value="" disabled>Select property</option><option>Office</option><option>Retail</option><option>Restaurant or hospitality</option><option>Medical or professional</option><option>Multi-tenant property</option><option>Other</option></select></label>
+        <label htmlFor="commercial-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement" aria-hidden="true">*</span></span><select id="commercial-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Planning ahead</option></select></label>
+        <label htmlFor="commercial-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement" aria-hidden="true">*</span></span><input id="commercial-quick-zip" inputMode="numeric" placeholder="34604" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
+        <button type="submit">Continue estimate <span aria-hidden="true">→</span></button>
       </LeadForm>
+      <div className="service-ticker service-hero-trust" aria-label="Swift contractor qualifications"><span>Licensed &amp; Insured</span><b aria-hidden="true">◆</b><span>Written, itemized proposals</span><b aria-hidden="true">◆</b><span>One contractor from start to finish</span></div>
+      </div>
 
       <section className="remodel-services" id="commercial-services">
         <div className="remodel-section-heading">
