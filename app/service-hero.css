@@ -47,3 +47,6 @@
   .kitchen-page .service-hero-trust { display: grid; grid-template-columns: 1fr; gap: 16px; }
   .kitchen-page .service-hero-trust b { display: none; }
 }
+
+.kitchen-page .kitchen-quick-form .form-error-summary { padding: 10px 16px; margin: 0; }
+.kitchen-page .kitchen-quick-form .form-error-summary p { margin: 0; }

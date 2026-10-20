@@ -1,6 +1,6 @@
 "use client";
 
-import { Children, cloneElement, isValidElement, useId, useRef, useState, type ComponentProps, type FormEvent, type ReactElement, type ReactNode } from "react";
+import { Children, cloneElement, isValidElement, useId, useRef, useState, type ComponentProps, type ChangeEvent, type FormEvent, type ReactElement, type ReactNode } from "react";
 import { collectFields, labelForControl } from "@/lib/submitLead";
 import { validateLead } from "@/lib/leadValidation";
 
@@ -52,6 +52,17 @@ export default function LeadForm({ children, onSubmit, step = false, compactErro
         const error = errors[id];
         return <>{cloneElement(element, {
           id,
+          onChange: (event: ChangeEvent<Control>) => {
+            (element.props.onChange as ((event: ChangeEvent<Control>) => void) | undefined)?.(event);
+            if (compactErrors && errors[id] && event.currentTarget.validity.valid) {
+              setErrors(current => {
+                if (!current[id]) return current;
+                const remaining = { ...current };
+                delete remaining[id];
+                return remaining;
+              });
+            }
+          },
           "aria-labelledby": labelId || element.props["aria-labelledby"],
           "aria-invalid": error ? true : undefined,
           "aria-describedby": [element.props["aria-describedby"], error ? `${id}-error` : null].filter(Boolean).join(" ") || undefined,
