@@ -52,7 +52,7 @@ export default function KitchenRemodelingPage() {
 
       <section className="remodel-hero kitchen-hero">
         <div className="remodel-hero-copy">
-          <p className="eyebrow">KITCHEN REMODELING ◆ HERNANDO ◆ CITRUS ◆ PASCO</p>
+          <p className="eyebrow"><span>KITCHEN REMODELING</span><span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />HERNANDO</span><span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />CITRUS</span><span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />PASCO</span></p>
           <h1>Kitchen Remodeling That Works Better Every Day.</h1>
           <p>One experienced contractor to coordinate the layout, construction and finish work that turns an outdated kitchen into a room built around your household.</p>
           <div className="remodel-hero-actions">

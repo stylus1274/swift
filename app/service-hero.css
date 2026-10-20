@@ -3,11 +3,19 @@
 .kitchen-page .remodel-hero-proof > span { display: inline-flex; align-items: center; gap: 10px; }
 .kitchen-page .remodel-hero-proof > span::before { width: 5px; height: 5px; margin: 0; flex: 0 0 5px; }
 
+.kitchen-page .remodel-hero-copy > .eyebrow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.kitchen-page .service-hero-county { display: inline-flex; align-items: center; gap: 12px; }
+.kitchen-page .service-hero-diamond { display: inline-block; width: 5px; height: 5px; flex: 0 0 5px; background: currentColor; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+.kitchen-page .remodel-hero-copy h1 { margin-top: 26px; }
+@media (max-width: 700px) {
+  .kitchen-page .remodel-hero-copy h1 { margin-top: 20px; }
+}
+
 @media (min-width: 1100px) {
   .kitchen-page .remodel-hero { min-height: clamp(480px, calc(100svh - 260px), 640px); grid-template-columns: 46% 54%; }
   .kitchen-page .remodel-hero-copy { padding: 32px 40px 56px max(40px, calc((100vw - 1440px) / 2)); display: grid; grid-template-columns: max-content minmax(0, 1fr); align-content: center; justify-content: normal; }
   .kitchen-page .remodel-hero-copy > * { grid-column: 1 / -1; }
-  .kitchen-page .remodel-hero-copy h1 { margin: 14px 0 16px; font-size: clamp(48px, 3.8vw, 56px); line-height: 1.05; letter-spacing: -.035em; }
+  .kitchen-page .remodel-hero-copy h1 { margin: 26px 0 16px; font-size: clamp(48px, 3.8vw, 56px); line-height: 1.05; letter-spacing: -.035em; }
   .kitchen-page .remodel-hero-copy > p:not(.eyebrow) { font-size: 18px; line-height: 1.5; }
   .kitchen-page .remodel-hero-actions { margin-top: 20px; gap: 22px; display: grid; grid-template-columns: subgrid; }
   .kitchen-page .remodel-hero-actions .cta-primary { min-height: 48px; padding: 13px 20px; font-size: 16px; }
@@ -30,10 +38,11 @@
 @media (min-width: 1100px) and (max-height: 800px) {
   .kitchen-page .remodel-hero { min-height: 540px; }
   .kitchen-page .remodel-hero-copy { padding-top: 24px; padding-bottom: 48px; }
-  .kitchen-page .remodel-hero-copy h1 { font-size: 48px; margin-top: 12px; margin-bottom: 14px; }
+  .kitchen-page .remodel-hero-copy h1 { font-size: 48px; margin-top: 26px; margin-bottom: 14px; }
   .kitchen-page .remodel-hero-actions { margin-top: 16px; }
 }
 
 @media (min-width: 1100px) and (max-height: 720px) {
   .kitchen-page .remodel-hero { min-height: 440px; }
+  .kitchen-page .remodel-hero-copy { padding-top: 16px; padding-bottom: 40px; }
 }
