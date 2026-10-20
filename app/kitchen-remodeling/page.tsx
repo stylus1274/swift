@@ -59,17 +59,14 @@ export default function KitchenRemodelingPage() {
             <a className="button cta-primary" href="#kitchen-quick-scope">Plan your kitchen remodel</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
-          <div className="remodel-hero-proof">
-            <span>Licensed &amp; insured • CBC1260893</span>
-            <span>Written, itemized proposals</span>
-            <span>One contractor from start to finish</span>
-          </div>
+
         </div>
         <div className="remodel-hero-visual">
           <img className="remodel-hero-main kitchen-hero-image" src="/assets/kitchen-remodeling-hero.png" alt="Completed kitchen remodel with white cabinetry and a light wood island" />
         </div>
       </section>
 
+      <div className="service-hero-estimate-band">
       <LeadForm className="remodel-quick-form kitchen-quick-form" onSubmit={continueEstimate} step>
           <LeadProtection />
         <div className="remodel-quick-heading">
@@ -82,6 +79,14 @@ export default function KitchenRemodelingPage() {
         <label htmlFor="kitchen-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="kitchen-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
         <button type="submit">Continue my estimate <span aria-hidden="true">→</span></button>
       </LeadForm>
+        <div className="service-ticker service-hero-trust" aria-label="Swift contractor qualifications">
+          <span>Licensed &amp; Insured · CBC1260893</span>
+          <b aria-hidden="true">◆</b>
+          <span>Written, itemized proposals</span>
+          <b aria-hidden="true">◆</b>
+          <span>One contractor from start to finish</span>
+        </div>
+      </div>
 
       <section className="remodel-services" id="kitchen-services">
         <div className="remodel-section-heading">

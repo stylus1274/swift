@@ -1,7 +1,4 @@
 /* Kitchen Remodeling is the review reference before the service-wide rollout. */
-.kitchen-page .remodel-hero-proof { margin-top: 40px; }
-.kitchen-page .remodel-hero-proof > span { display: inline-flex; align-items: center; gap: 10px; }
-.kitchen-page .remodel-hero-proof > span::before { width: 5px; height: 5px; margin: 0; flex: 0 0 5px; }
 
 .kitchen-page .remodel-hero-copy > .eyebrow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
 .kitchen-page .service-hero-county { display: inline-flex; align-items: center; gap: 12px; }
@@ -13,19 +10,12 @@
 
 @media (min-width: 1100px) {
   .kitchen-page .remodel-hero { min-height: clamp(480px, calc(100svh - 260px), 640px); grid-template-columns: 46% 54%; }
-  .kitchen-page .remodel-hero-copy { padding: 32px 40px 56px max(40px, calc((100vw - 1440px) / 2)); display: grid; grid-template-columns: max-content minmax(0, 1fr); align-content: center; justify-content: normal; }
-  .kitchen-page .remodel-hero-copy > * { grid-column: 1 / -1; }
+  .kitchen-page .remodel-hero-copy { padding: 32px 40px 56px max(40px, calc((100vw - 1440px) / 2)); display: flex; flex-direction: column; justify-content: center; }
   .kitchen-page .remodel-hero-copy h1 { margin: 26px 0 16px; font-size: clamp(48px, 3.8vw, 56px); line-height: 1.05; letter-spacing: -.035em; }
   .kitchen-page .remodel-hero-copy > p:not(.eyebrow) { font-size: 18px; line-height: 1.5; }
-  .kitchen-page .remodel-hero-actions { margin-top: 20px; gap: 22px; display: grid; grid-template-columns: subgrid; }
+  .kitchen-page .remodel-hero-actions { margin-top: 20px; gap: 22px; display: flex; }
   .kitchen-page .remodel-hero-actions .cta-primary { min-height: 48px; padding: 13px 20px; font-size: 16px; }
   .kitchen-page .remodel-phone { font-size: 21px; gap: 4px; white-space: nowrap; }
-  .kitchen-page .remodel-hero-proof { margin-top: 40px; gap: 8px 22px; font-size: 13px; line-height: 1.5; display: grid; grid-template-columns: subgrid; }
-  .kitchen-page .remodel-hero-proof > span { position: relative; padding-left: 15px; display: block; }
-  .kitchen-page .remodel-hero-proof > span::before { position: absolute; left: 0; top: .75em; transform: translateY(-50%); }
-  .kitchen-page .remodel-hero-proof > span:nth-child(2) { padding-left: 0; }
-  .kitchen-page .remodel-hero-proof > span:nth-child(2)::before { left: -15px; }
-  .kitchen-page .remodel-hero-proof > span:nth-child(3) { grid-column: 1 / -1; }
   .kitchen-page .remodel-hero-visual { min-height: 0; position: relative; }
   .kitchen-page .remodel-hero-main { position: absolute; inset: 0; }
   .kitchen-page .kitchen-quick-form { width: min(1360px, calc(100% - 64px)); min-height: 140px; margin-top: -32px; padding: 20px 24px; grid-template-columns: 1.1fr 1.15fr 1.1fr .65fr 1.1fr 1.15fr; align-items: end; gap: 14px; }
@@ -45,4 +35,15 @@
 @media (min-width: 1100px) and (max-height: 720px) {
   .kitchen-page .remodel-hero { min-height: 440px; }
   .kitchen-page .remodel-hero-copy { padding-top: 16px; padding-bottom: 40px; }
+}
+
+.kitchen-page .service-hero-estimate-band { display: flow-root; background: #0c2c46; }
+.kitchen-page .service-hero-trust { height: auto; min-height: 73px; padding: 24px 28px; text-transform: uppercase; }
+.kitchen-page .service-hero-trust b { display: block; width: 5px; height: 5px; flex: 0 0 5px; background: #287fc3; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); font-size: 0; }
+@media (max-width: 1279px) {
+  .kitchen-page .service-hero-trust { display: flex; flex-wrap: wrap; gap: 16px 24px; overflow: visible; white-space: normal; }
+}
+@media (max-width: 700px) {
+  .kitchen-page .service-hero-trust { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  .kitchen-page .service-hero-trust b { display: none; }
 }
