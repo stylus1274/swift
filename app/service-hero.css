@@ -50,3 +50,13 @@
 
 .kitchen-page .kitchen-quick-form .form-error-summary { padding: 10px 16px; margin: 0; }
 .kitchen-page .kitchen-quick-form .form-error-summary p { margin: 0; }
+
+@media (max-width: 1099px) {
+  .kitchen-page .kitchen-quick-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kitchen-page .kitchen-quick-form .remodel-quick-heading,
+  .kitchen-page .kitchen-quick-form button[type="submit"] { grid-column: 1 / -1; }
+  .kitchen-page .kitchen-quick-form button[type="submit"] { white-space: nowrap; }
+}
+@media (max-width: 700px) {
+  .kitchen-page .kitchen-quick-form { grid-template-columns: minmax(0, 1fr); }
+}
