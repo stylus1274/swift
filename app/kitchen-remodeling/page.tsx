@@ -67,7 +67,7 @@ export default function KitchenRemodelingPage() {
       </section>
 
       <div className="service-hero-estimate-band">
-      <LeadForm className="remodel-quick-form kitchen-quick-form" onSubmit={continueEstimate} step>
+      <LeadForm className="remodel-quick-form kitchen-quick-form" onSubmit={continueEstimate} step compactErrors>
           <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>
