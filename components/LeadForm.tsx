@@ -82,7 +82,10 @@ export default function LeadForm({ children, onSubmit, step = false, compactErro
     setStatus("");
     setErrors(invalid);
     if (Object.keys(invalid).length) {
-      requestAnimationFrame(() => { summary.current?.focus(); });
+      requestAnimationFrame(() => {
+        if (compactErrors) controls.find(control => invalid[control.id])?.focus();
+        else summary.current?.focus();
+      });
       return;
     }
     if (!step) {
