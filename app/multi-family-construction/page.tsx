@@ -47,41 +47,40 @@ export default function MultiFamilyConstructionPage() {
   }
 
   return (
-    <main className="remodel-page multifamily-page">
+    <main className="remodel-page multifamily-page service-hero-page">
       <SiteHeader active="services" contactHref="#multi-family-estimate" />
 
       <section className="remodel-hero multifamily-hero">
         <div className="remodel-hero-copy">
-          <p className="eyebrow">MULTI-FAMILY CONSTRUCTION • FLORIDA NATURE COAST</p>
+          <p className="eyebrow"><span>MULTI-FAMILY CONSTRUCTION</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />HERNANDO</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />CITRUS</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />PASCO</span></p>
           <h1>Multi-Family Construction Managed From Plan to Turnover.</h1>
           <p>One licensed contractor to coordinate new construction, property renovations and connected finish work for multi-unit residential projects.</p>
           <div className="remodel-hero-actions">
             <a className="button cta-primary" href="#multi-family-quick-stage">Discuss your project</a>
             <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
-          <div className="remodel-hero-proof">
-            <span>Licensed &amp; insured • CBC1260893</span>
-            <span>Written project proposals</span>
-            <span>One point of project responsibility</span>
-          </div>
+
         </div>
         <div className="remodel-hero-visual">
           <img className="remodel-hero-main multifamily-hero-image" src="/assets/multi-family-construction-hero.png" alt="Completed multi-family residential property in Florida" />
         </div>
       </section>
 
-      <LeadForm className="remodel-quick-form multifamily-quick-form" onSubmit={continueEstimate} step>
+      <div className="service-hero-estimate-band">
+      <LeadForm className="remodel-quick-form multifamily-quick-form service-quick-form" onSubmit={continueEstimate} step compactErrors>
           <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR PROJECT</p>
           <h2>What Are You Planning?</h2>
         </div>
-        <label htmlFor="multi-family-quick-stage"><span className="form-label-text">Project Stage <span className="form-requirement">(required)</span></span><select id="multi-family-quick-stage" value={projectStage} onChange={(event) => setProjectStage(event.target.value)} required><option value="" disabled>Select stage</option><option>Evaluating a property</option><option>Early planning</option><option>Plans in development</option><option>Ready for contractor review</option><option>Existing property renovation</option></select></label>
-        <label htmlFor="multi-family-quick-units"><span className="form-label-text">Approximate Units <span className="form-requirement">(required)</span></span><select id="multi-family-quick-units" value={unitCount} onChange={(event) => setUnitCount(event.target.value)} required><option value="" disabled>Select units</option><option>2 to 4 units</option><option>5 to 12 units</option><option>13 to 30 units</option><option>More than 30 units</option><option>Not sure yet</option></select></label>
-        <label htmlFor="multi-family-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement">(required)</span></span><input id="multi-family-quick-zip" inputMode="numeric" placeholder="34609" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
-        <label htmlFor="multi-family-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement">(required)</span></span><select id="multi-family-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
-        <button type="submit">Continue my estimate <span aria-hidden="true">→</span></button>
+        <label htmlFor="multi-family-quick-stage"><span className="form-label-text">Project Stage <span className="form-requirement" aria-hidden="true">*</span></span><select id="multi-family-quick-stage" value={projectStage} onChange={(event) => setProjectStage(event.target.value)} required><option value="" disabled>Select stage</option><option>Evaluating a property</option><option>Early planning</option><option>Plans in development</option><option>Ready for contractor review</option><option>Existing property renovation</option></select></label>
+        <label htmlFor="multi-family-quick-units"><span className="form-label-text">Approximate Units <span className="form-requirement" aria-hidden="true">*</span></span><select id="multi-family-quick-units" value={unitCount} onChange={(event) => setUnitCount(event.target.value)} required><option value="" disabled>Select units</option><option>2 to 4 units</option><option>5 to 12 units</option><option>13 to 30 units</option><option>More than 30 units</option><option>Not sure yet</option></select></label>
+        <label htmlFor="multi-family-quick-timing"><span className="form-label-text">Ideal Timing <span className="form-requirement" aria-hidden="true">*</span></span><select id="multi-family-quick-timing" value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>As soon as possible</option><option>Within 1 to 3 months</option><option>Within 3 to 6 months</option><option>Planning ahead</option></select></label>
+        <label htmlFor="multi-family-quick-zip"><span className="form-label-text">Project ZIP <span className="form-requirement" aria-hidden="true">*</span></span><input id="multi-family-quick-zip" inputMode="numeric" placeholder="34604" value={projectZip} onChange={(event) => setProjectZip(event.target.value)} required /></label>
+        <button type="submit">Continue estimate <span aria-hidden="true">→</span></button>
       </LeadForm>
+      <div className="service-ticker service-hero-trust" aria-label="Swift contractor qualifications"><span>Licensed &amp; Insured</span><b aria-hidden="true">◆</b><span>Written, itemized proposals</span><b aria-hidden="true">◆</b><span>One contractor from start to finish</span></div>
+      </div>
 
       <section className="remodel-services" id="multi-family-services">
         <div className="remodel-section-heading">

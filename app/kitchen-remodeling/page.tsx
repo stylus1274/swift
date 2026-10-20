@@ -47,7 +47,7 @@ export default function KitchenRemodelingPage() {
   }
 
   return (
-    <main className="remodel-page kitchen-page">
+    <main className="remodel-page kitchen-page service-hero-page">
       <SiteHeader active="services" contactHref="#kitchen-estimate" />
 
       <section className="remodel-hero kitchen-hero">
@@ -67,7 +67,7 @@ export default function KitchenRemodelingPage() {
       </section>
 
       <div className="service-hero-estimate-band">
-      <LeadForm className="remodel-quick-form kitchen-quick-form" onSubmit={continueEstimate} step compactErrors>
+      <LeadForm className="remodel-quick-form kitchen-quick-form service-quick-form" onSubmit={continueEstimate} step compactErrors>
           <LeadProtection />
         <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR ESTIMATE</p>

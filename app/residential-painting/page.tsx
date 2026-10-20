@@ -81,7 +81,7 @@ export default function ResidentialPaintingPage() {
   }
 
   return (
-    <main className="remodel-page painting-page">
+    <main className="remodel-page painting-page service-hero-page">
       <SiteHeader active="services" contactHref="#paint-estimate" />
 
       <section className="remodel-hero painting-service-hero">
@@ -101,7 +101,7 @@ export default function ResidentialPaintingPage() {
       </section>
 
       <div className="service-hero-estimate-band">
-        <LeadForm className="remodel-quick-form painting-quick-form" onSubmit={continueEstimate} step compactErrors>
+        <LeadForm className="remodel-quick-form painting-quick-form service-quick-form service-quick-form--three" onSubmit={continueEstimate} step compactErrors>
           <LeadProtection />
           <div className="remodel-quick-heading"><p className="eyebrow">START YOUR ESTIMATE</p><h2>What Are You Painting?</h2></div>
           <label htmlFor="hero-project"><span className="form-label-text">Project Scope <span className="form-requirement" aria-hidden="true">*</span></span><select id="hero-project" value={project} onChange={event => setProject(event.target.value)} required><option value="" disabled>Select project</option><option>Interior painting</option><option>Exterior painting</option><option>Interior and exterior</option><option>New construction painting</option><option>Other painting project</option></select></label>

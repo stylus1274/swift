@@ -47,37 +47,40 @@ export default function NewHomeConstructionPage() {
   }
 
   return (
-    <main className="build-page">
+    <main className="remodel-page build-page service-hero-page">
       <SiteHeader active="services" contactHref="#build-estimate" />
 
-      <section className="build-hero">
-        <div className="build-hero-copy">
-          <p className="eyebrow">CUSTOM HOME BUILDING • FLORIDA NATURE COAST</p>
+      <section className="remodel-hero">
+        <div className="remodel-hero-copy">
+          <p className="eyebrow"><span>CUSTOM HOME BUILDING</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />HERNANDO</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />CITRUS</span> <span className="service-hero-county"><span className="service-hero-diamond" aria-hidden="true" />PASCO</span></p>
           <h1>Custom Home Building for the Way You Live.</h1>
           <p>One experienced contractor to coordinate your new home from early planning and site preparation through construction, finishes and final walkthrough.</p>
-          <div className="build-hero-actions">
+          <div className="remodel-hero-actions">
             <a className="button cta-primary" href="#build-quick-lot">Plan your new home</a>
-            <a className="build-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
+            <a className="remodel-phone" href="tel:3527017458"><small>OR CALL SWIFT</small>(352) 701-7458</a>
           </div>
-          <div className="build-hero-proof"><span>Licensed &amp; insured • CBC1260893</span><span>Serving local homeowners since 2003</span><span>Written project proposals</span></div>
+
         </div>
-        <div className="build-hero-visual">
-          <img src="/assets/new-home-construction-hero.png" alt="Newly completed custom Florida home" />
+        <div className="remodel-hero-visual">
+          <img className="remodel-hero-main" src="/assets/new-home-construction-hero.png" alt="Newly completed custom Florida home" />
         </div>
       </section>
 
-      <LeadForm className="build-quick-form" onSubmit={continueEstimate} step>
+      <div className="service-hero-estimate-band">
+      <LeadForm className="remodel-quick-form service-quick-form" onSubmit={continueEstimate} step compactErrors>
           <LeadProtection />
-        <div className="build-quick-heading">
+        <div className="remodel-quick-heading">
           <p className="eyebrow">START YOUR PROJECT</p>
           <h2>What Are You Planning?</h2>
         </div>
-        <label htmlFor="build-quick-lot"><span className="form-label-text">Lot Status <span className="form-requirement">(required)</span></span><select id="build-quick-lot" value={lotStatus} onChange={(event) => setLotStatus(event.target.value)} required><option value="" disabled>Select one</option><option>I own a lot</option><option>I am under contract</option><option>I am looking for land</option><option>I need guidance</option></select></label>
-        <label><span className="form-label-text">Home Size <span className="form-requirement">(required)</span></span><select value={homeSize} onChange={(event) => setHomeSize(event.target.value)} required><option value="" disabled>Select size</option><option>Under 1,800 sq. ft.</option><option>1,800–2,500 sq. ft.</option><option>2,500–3,500 sq. ft.</option><option>Over 3,500 sq. ft.</option><option>Not sure yet</option></select></label>
-        <label><span className="form-label-text">Build ZIP <span className="form-requirement">(required)</span></span><input inputMode="numeric" placeholder="34609" value={buildZip} onChange={(event) => setBuildZip(event.target.value)} required /></label>
-        <label><span className="form-label-text">Ideal Start <span className="form-requirement">(required)</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>Within 3 months</option><option>Within 3–6 months</option><option>Within 6–12 months</option><option>More than 12 months</option><option>Just researching</option></select></label>
-        <button type="submit">Continue my estimate <span aria-hidden="true">→</span></button>
+        <label htmlFor="build-quick-lot"><span className="form-label-text">Lot Status <span className="form-requirement" aria-hidden="true">*</span></span><select id="build-quick-lot" value={lotStatus} onChange={(event) => setLotStatus(event.target.value)} required><option value="" disabled>Select one</option><option>I own a lot</option><option>I am under contract</option><option>I am looking for land</option><option>I need guidance</option></select></label>
+        <label><span className="form-label-text">Home Size <span className="form-requirement" aria-hidden="true">*</span></span><select value={homeSize} onChange={(event) => setHomeSize(event.target.value)} required><option value="" disabled>Select size</option><option>Under 1,800 sq. ft.</option><option>1,800–2,500 sq. ft.</option><option>2,500–3,500 sq. ft.</option><option>Over 3,500 sq. ft.</option><option>Not sure yet</option></select></label>
+        <label><span className="form-label-text">Ideal Start <span className="form-requirement" aria-hidden="true">*</span></span><select value={timing} onChange={(event) => setTiming(event.target.value)} required><option value="" disabled>Select timing</option><option>Within 3 months</option><option>Within 3–6 months</option><option>Within 6–12 months</option><option>More than 12 months</option><option>Just researching</option></select></label>
+        <label><span className="form-label-text">Build ZIP <span className="form-requirement" aria-hidden="true">*</span></span><input inputMode="numeric" placeholder="34604" value={buildZip} onChange={(event) => setBuildZip(event.target.value)} required /></label>
+        <button type="submit">Continue estimate <span aria-hidden="true">→</span></button>
       </LeadForm>
+      <div className="service-ticker service-hero-trust" aria-label="Swift contractor qualifications"><span>Licensed &amp; Insured</span><b aria-hidden="true">◆</b><span>Written, itemized proposals</span><b aria-hidden="true">◆</b><span>One contractor from start to finish</span></div>
+      </div>
 
       <section className="build-scope" id="build-scope">
         <div className="build-section-heading"><p className="eyebrow">WHAT SWIFT MANAGES</p><h2>Every Phase Connected Under One Construction Plan.</h2><p>New-home construction has hundreds of decisions and dependencies. Swift keeps the scope, schedule and communication moving in the same direction.</p></div>
