@@ -8,6 +8,7 @@ import "./buttons.css";
 import "./faq-section.css";
 import "./testimonials.css";
 import "./process-section.css";
+import "./service-hero.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://swiftconstructionandpainting.com"),
