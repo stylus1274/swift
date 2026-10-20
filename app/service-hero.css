@@ -38,10 +38,10 @@
 }
 
 .kitchen-page .service-hero-estimate-band { display: flow-root; background: #0c2c46; }
-.kitchen-page .service-hero-trust { height: auto; min-height: 73px; padding: 24px 28px; text-transform: uppercase; }
+.kitchen-page .service-hero-trust { height: 57px; min-height: 57px; padding: 0 28px; text-transform: uppercase; }
 .kitchen-page .service-hero-trust b { display: block; width: 5px; height: 5px; flex: 0 0 5px; background: #287fc3; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); font-size: 0; }
 @media (max-width: 1279px) {
-  .kitchen-page .service-hero-trust { display: flex; flex-wrap: wrap; gap: 16px 24px; overflow: visible; white-space: normal; }
+  .kitchen-page .service-hero-trust { height: auto; padding: 18px 24px; display: flex; flex-wrap: wrap; gap: 16px 24px; overflow: visible; white-space: normal; }
 }
 @media (max-width: 700px) {
   .kitchen-page .service-hero-trust { display: grid; grid-template-columns: 1fr; gap: 16px; }
