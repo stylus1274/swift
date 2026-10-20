@@ -80,7 +80,7 @@ export default function KitchenRemodelingPage() {
         <button type="submit">Continue my estimate <span aria-hidden="true">→</span></button>
       </LeadForm>
         <div className="service-ticker service-hero-trust" aria-label="Swift contractor qualifications">
-          <span>Licensed &amp; Insured · CBC1260893</span>
+          <span>Licensed &amp; Insured</span>
           <b aria-hidden="true">◆</b>
           <span>Written, itemized proposals</span>
           <b aria-hidden="true">◆</b>
