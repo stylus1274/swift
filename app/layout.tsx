@@ -80,6 +80,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <Script id="contentforge-traffic" src="https://contentforge.abacusai.app/api/track/script" strategy="afterInteractive" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DWLCF5RPMS"
           strategy="afterInteractive"
