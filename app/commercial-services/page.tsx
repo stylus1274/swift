@@ -48,7 +48,7 @@ export default function CommercialServicesPage() {
 
   return (
     <main className="remodel-page commercial-page service-hero-page">
-      <SiteHeader active="services" contactHref="#commercial-estimate" />
+      <SiteHeader active="services" />
 
       <section className="remodel-hero commercial-hero">
         <div className="remodel-hero-copy">

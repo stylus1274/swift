@@ -48,7 +48,7 @@ export default function BathroomRemodelingPage() {
 
   return (
     <main className="remodel-page bathroom-page service-hero-page">
-      <SiteHeader active="services" contactHref="#bathroom-estimate" />
+      <SiteHeader active="services" />
 
       <section className="remodel-hero bathroom-hero">
         <div className="remodel-hero-copy">

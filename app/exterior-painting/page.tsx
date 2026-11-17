@@ -102,7 +102,7 @@ export default function ExteriorPaintingPage() {
 
   return (
     <main className="remodel-page commercial-page commercial-painting-page exterior-painting-page service-hero-page">
-      <SiteHeader active="services" contactHref="#exterior-painting-estimate" />
+      <SiteHeader active="services" />
 
       <section className="remodel-hero exterior-painting-hero">
         <div className="remodel-hero-copy">

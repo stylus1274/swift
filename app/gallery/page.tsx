@@ -34,7 +34,7 @@ export default function GalleryPage() {
 
   return (
     <main className="remodel-page gallery-page">
-      <SiteHeader contactHref="#gallery-estimate" />
+      <SiteHeader />
 
       <section className="gallery-hero">
         <img src="/assets/gallery-hero.png" alt="Completed Florida home renovation opening to a finished outdoor living area" />

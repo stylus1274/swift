@@ -48,7 +48,7 @@ export default function KitchenRemodelingPage() {
 
   return (
     <main className="remodel-page kitchen-page service-hero-page">
-      <SiteHeader active="services" contactHref="#kitchen-estimate" />
+      <SiteHeader active="services" />
 
       <section className="remodel-hero kitchen-hero">
         <div className="remodel-hero-copy">

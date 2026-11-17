@@ -102,7 +102,7 @@ export default function WindowsDoorsPage() {
 
   return (
     <main className="remodel-page commercial-page commercial-painting-page windows-doors-page service-hero-page">
-      <SiteHeader active="services" contactHref="#windows-doors-estimate" />
+      <SiteHeader active="services" />
 
       <section className="remodel-hero windows-doors-hero">
         <div className="remodel-hero-copy">

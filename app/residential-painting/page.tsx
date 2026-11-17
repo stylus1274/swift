@@ -82,7 +82,7 @@ export default function ResidentialPaintingPage() {
 
   return (
     <main className="remodel-page painting-page service-hero-page">
-      <SiteHeader active="services" contactHref="#paint-estimate" />
+      <SiteHeader active="services" />
 
       <section className="remodel-hero painting-service-hero">
         <div className="remodel-hero-copy">

@@ -48,7 +48,7 @@ export default function NewHomeConstructionPage() {
 
   return (
     <main className="remodel-page build-page service-hero-page">
-      <SiteHeader active="services" contactHref="#build-estimate" />
+      <SiteHeader active="services" />
 
       <section className="remodel-hero">
         <div className="remodel-hero-copy">

@@ -80,7 +80,7 @@ export default function ResidentialRemodelingPage() {
 
   return (
     <main className="remodel-page service-hero-page">
-      <SiteHeader active="services" contactHref="#remodel-estimate" />
+      <SiteHeader active="services" />
 
       <section className="remodel-hero">
         <div className="remodel-hero-copy">

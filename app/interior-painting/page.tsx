@@ -89,7 +89,7 @@ export default function InteriorPaintingPage() {
 
   return (
     <main className="remodel-page commercial-page commercial-painting-page interior-painting-page service-hero-page">
-      <SiteHeader active="services" contactHref="#interior-painting-estimate" />
+      <SiteHeader active="services" />
 
       <section className="remodel-hero interior-painting-hero">
         <div className="remodel-hero-copy">

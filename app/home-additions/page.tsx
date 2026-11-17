@@ -101,7 +101,7 @@ export default function HomeAdditionsPage() {
 
   return (
     <main className="remodel-page additions-page service-hero-page">
-      <SiteHeader active="services" contactHref="#addition-estimate" />
+      <SiteHeader active="services" />
 
       <section className="remodel-hero additions-hero">
         <div className="remodel-hero-copy">
