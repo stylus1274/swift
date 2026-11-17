@@ -48,7 +48,7 @@ export default function MultiFamilyConstructionPage() {
 
   return (
     <main className="remodel-page multifamily-page service-hero-page">
-      <SiteHeader active="services" contactHref="#multi-family-estimate" />
+      <SiteHeader active="services" />
 
       <section className="remodel-hero multifamily-hero">
         <div className="remodel-hero-copy">

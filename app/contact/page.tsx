@@ -46,7 +46,7 @@ export default function ContactPage() {
 
   return (
     <main className="contact-page">
-      <SiteHeader contactHref="#contact-form" />
+      <SiteHeader />
 
       <section className="contact-hero">
         <div className="contact-hero-copy">

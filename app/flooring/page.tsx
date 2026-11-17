@@ -102,7 +102,7 @@ export default function FlooringPage() {
 
   return (
     <main className="remodel-page commercial-page commercial-painting-page flooring-page service-hero-page">
-      <SiteHeader active="services" contactHref="#flooring-estimate" />
+      <SiteHeader active="services" />
 
       <section className="remodel-hero flooring-hero">
         <div className="remodel-hero-copy">

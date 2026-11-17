@@ -118,7 +118,7 @@ export default function Home({ alternateHero = false }: { alternateHero?: boolea
 
   return (
     <main className={alternateHero ? "home-alt-page" : undefined}>
-      <SiteHeader active="home" contactHref="#contact" />
+      <SiteHeader active="home" />
 
       {alternateHero ? (
         <section className="paint-hero home-alt-hero" id="home">

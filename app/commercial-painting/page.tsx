@@ -102,7 +102,7 @@ export default function CommercialPaintingPage() {
 
   return (
     <main className="remodel-page commercial-page commercial-painting-page service-hero-page">
-      <SiteHeader active="services" contactHref="#commercial-painting-estimate" />
+      <SiteHeader active="services" />
 
       <section className="remodel-hero commercial-painting-hero">
         <div className="remodel-hero-copy">

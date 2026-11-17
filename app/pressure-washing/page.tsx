@@ -56,7 +56,7 @@ export default function PressureWashingPage() {
 
   return (
     <main className="remodel-page commercial-page commercial-painting-page pressure-washing-page service-hero-page">
-      <SiteHeader active="services" contactHref="#pressure-washing-estimate" />
+      <SiteHeader active="services" />
 
       <section className="remodel-hero pressure-washing-hero">
         <div className="remodel-hero-copy">

@@ -71,7 +71,7 @@ export default function AboutPage() {
 
   return (
     <main className="about-page">
-      <SiteHeader active="about" contactHref="#about-estimate" />
+      <SiteHeader active="about" />
 
       <section className="about-hero">
         <div className="about-hero-copy">
