@@ -31,8 +31,8 @@ export default function HernandoCountyLocationPage(){
       <div><span>Florida License</span><strong>CBC1260893</strong></div>
     </section>
     <section className={styles.intro}>
-      <div><p className={styles.eyebrow}>BUILT AROUND HERNANDO COUNTY</p><h2>Local Work Across Multiple Project Types.</h2></div>
-      <div><p>We build custom homes, duplexes, additions and outdoor structures throughout Hernando County. Our remodeling work includes kitchens, bathrooms and whole-home renovations, with completed projects in Spring Hill and Brooksville.</p></div>
+      <div><p className={styles.eyebrow}>BUILT AROUND HERNANDO COUNTY</p><h2>Home Construction &amp; Remodeling in Hernando County</h2></div>
+      <div><p>Swift Construction &amp; Painting provides <a href="/custom-home-building">custom home building</a>, <a href="/home-additions">home additions</a> and remodeling throughout Hernando County. From a new home in Brooksville to a kitchen renovation in Spring Hill, we help property owners plan the scope, review selections and understand the work before construction begins.</p><p>Our residential services include <a href="/kitchen-remodeling">kitchen remodeling</a>, <a href="/bathroom-remodeling">bathroom remodeling</a>, whole-home renovations, duplex construction and additions that expand your existing living space. Depending on your project, the work may involve cabinetry, flooring, windows, doors, painting and coordinated interior improvements.</p><p>Our completed local work includes a Spring Hill whole-home remodel covering the kitchen, multiple bathrooms, bedrooms and living spaces, plus a custom farmhouse in Brooksville. Explore these projects below to see examples of the spaces we build and renovate.</p></div>
     </section>
     <section className={styles.servicesSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>SERVICES ACROSS HERNANDO COUNTY</p><h2>One Contractor Across Residential and Commercial Work.</h2></div>

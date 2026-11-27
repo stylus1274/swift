@@ -38,11 +38,11 @@ export default function SpringHillDuplexPage() {
         </div>
 
         <aside className={styles.projectRecord}>
-          <p className={styles.recordLabel}>DOCUMENTED PROJECT RECORD</p>
+          <p className={styles.recordLabel}>SPRING HILL DUPLEX</p>
           <h2>Built From Beginning to End.</h2>
           <p>
-            Swift&apos;s completed-project profile describes the scope as building a
-            new-construction duplex home from beginning to end.
+            We managed this new-construction duplex from the start of the build
+            through completion for a returning customer.
           </p>
           <dl>
             <div><dt>Client Relationship</dt><dd>Repeat Customer</dd></div>
@@ -65,30 +65,27 @@ export default function SpringHillDuplexPage() {
         </div>
         <div className={styles.storyCopy}>
           <p>
-            The Usher St project was a five-month new-construction duplex build in
-            Spring Hill. According to the project profile supplied by Swift, the
-            company was responsible for the duplex from the beginning of construction
-            through completion.
+            We built this ground-up duplex on Usher St in Spring Hill for a customer
+            who had worked with us before. Our responsibility covered the project
+            from the beginning of construction through completion.
           </p>
           <p>
-            The project began on December 29, 2025 and was completed on May 26, 2026,
-            as a documented ground-up duplex project for a repeat customer.
+            Construction began on December 29, 2025 and finished on May 26, 2026,
+            a five-month schedule for the duplex build.
           </p>
           <p>
-            The customer had worked with Swift before. That repeat relationship is
-            part of the project record and is one of the clearest pieces of context
-            available for this job.
+            Planning a similar project? Explore our <a href="/multi-family-construction">multi-family construction services</a> and discuss your property, intended unit count and building plans with us.
           </p>
         </div>
       </section>
 
       <section className={styles.scopeSection}>
         <div className={styles.scopeIntro}>
-          <p className={styles.eyebrow}>DOCUMENTED SCOPE</p>
+          <p className={styles.eyebrow}>PROJECT SCOPE</p>
           <h2>Ground-Up Duplex Construction.</h2>
           <p>
-            The client-provided project profile gives one concise scope statement:
-            build a new-construction duplex home from beginning to end.
+            Our scope was a complete new-construction duplex, with responsibility
+            for the build from start to finish.
           </p>
         </div>
         <div className={styles.scopeCard}>
@@ -96,8 +93,8 @@ export default function SpringHillDuplexPage() {
           <div>
             <h3>New Construction Duplex Home</h3>
             <p>
-              Full project responsibility from the start of construction through
-              completion, as documented by Swift.
+              We managed the duplex build from the start of construction through
+              completion.
             </p>
           </div>
         </div>
@@ -108,10 +105,10 @@ export default function SpringHillDuplexPage() {
           <p className={styles.eyebrow}>SWIFT&apos;S NEW-CONSTRUCTION PROCESS</p>
           <h2>What “Beginning to End” Means at Swift.</h2>
           <p>
-            Swift&apos;s discovery questionnaire describes its general new-construction
-            work as ground-up building from site clearing through certificate of
-            occupancy. These steps describe Swift&apos;s broader process, not additional
-            project-specific details for the Usher St duplex.
+            For a new construction project, we review the property and plans before
+            defining the work. Our general building process covers planning, site
+            preparation, construction and completion. The approved scope and site
+            conditions determine the steps for each project.
           </p>
         </div>
         <div className={styles.processGrid}>
@@ -119,31 +116,28 @@ export default function SpringHillDuplexPage() {
             <span>01</span>
             <h3>Planning &amp; Design</h3>
             <p>
-              Swift can begin with one of its existing home designs or assist the
-              customer during the design phase before construction starts.
+              We can begin with an existing home design or assist during the design
+              phase before construction starts.
             </p>
           </article>
           <article>
             <span>02</span>
             <h3>Site to Structure</h3>
             <p>
-              The company describes its new-home scope as starting with site clearing
-              and continuing through the ground-up construction process.
+              We coordinate site clearing and the stages of ground-up construction
+              around the approved project scope.
             </p>
           </article>
           <article>
             <span>03</span>
             <h3>Through Completion</h3>
             <p>
-              Swift&apos;s stated new-construction process continues through completion
+              We coordinate the final stages of new construction through completion
               and certificate of occupancy.
             </p>
           </article>
         </div>
-        <p className={styles.photoDisclosure}>
-          Swift has not submitted a photo set that can be confidently matched to the
-          Usher St duplex, so no unrelated project photography is shown on this page.
-        </p>
+
       </section>
 
       <section className={styles.cta}>
