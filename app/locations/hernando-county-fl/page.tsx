@@ -32,7 +32,7 @@ export default function HernandoCountyLocationPage(){
     </section>
     <section className={styles.intro}>
       <div><p className={styles.eyebrow}>BUILT AROUND HERNANDO COUNTY</p><h2>Local Work Across Multiple Project Types.</h2></div>
-      <div><p>Swift&apos;s documented work in Hernando County spans remodeling, custom homes, new-construction duplexes, garages and outdoor structures. The company identifies custom homes, multi-family duplex builds and kitchen/home remodels among its strongest revenue-producing services.</p><p>Swift also says its growth priority is new construction and additions, while maintaining its existing remodeling, painting and property-improvement work.</p></div>
+      <div><p>We build custom homes, duplexes, additions and outdoor structures throughout Hernando County. Our remodeling work includes kitchens, bathrooms and whole-home renovations, with completed projects in Spring Hill and Brooksville.</p></div>
     </section>
     <section className={styles.servicesSection}>
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>SERVICES ACROSS HERNANDO COUNTY</p><h2>One Contractor Across Residential and Commercial Work.</h2></div>
